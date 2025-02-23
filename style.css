@@ -1,0 +1,2469 @@
+:root {
+  --waiting-color:red;
+  --gradient-theme:linear-gradient(to bottom, green,lime,yellowgreen);
+  --buttColorz:#FFFFFF;
+  --numsecs:5;
+  --secs:5.3s;
+  --secs2:5s;
+  --buttShadow: 0 0 3px #000000;
+  --numReady: 4;
+  
+  
+  --screenWidth:0px
+  --screenHeight:0px;
+  
+  --halfScreenWidth:0px;
+  --circleCircunfirence:0;
+  
+  --circleCircunfirenceMinus:0;
+  --circleRadius:0px;
+  --circleRadiusSides:0px;
+  --leftPercent:0px;
+  --getreadyColor:white;
+  --profilepicHeight:0px;
+  
+}
+
+
+
+@font-face {
+    font-family:'lefa';
+    src: url('14 Segment LED Regular.ttf');
+
+
+
+}
+
+@font-face {
+    font-family:'topNums';
+    src: url('Technology.ttf');
+
+
+
+}
+
+@font-face {
+    font-family:'regularText';
+    src: url('ByteBounce.ttf');
+
+
+
+}
+
+body{
+    
+ 
+
+
+    background: #000000;
+    
+    
+    overflow: hidden;
+}
+
+
+.global {
+    position: relative;
+
+
+    display: flex;
+    width: 100%;
+ 
+   
+    height: var(--screenHeight);
+
+    flex-direction: column;
+
+
+    justify-content: top;
+    align-items: center;
+    overflow: hidden;
+
+
+
+}
+.nav {
+    position: relative;
+    
+    
+    width: 100%;
+   
+
+   
+
+    height:60px;
+
+
+
+
+    border-radius: 10px;
+
+    border: solid blue 0.5px;
+}
+
+
+
+.navGreen {
+
+    background: linear-gradient(to right, yellowgreen,lime);
+
+}
+
+
+
+.navBlack{
+    
+    
+    background: linear-gradient(to right, black,black,#303030,#282828);
+    
+    border: solid white;
+    
+}
+.navRed{
+    
+    background: linear-gradient(to right, red,#D2042D);
+    
+}
+.navOrange{
+    
+    background: linear-gradient(to right, orange,darkorange,tomato);
+    
+}
+
+.navSpace{
+    
+    background: linear-gradient(to right, indigo,darkblue);
+}
+.navWhite {
+
+    background: linear-gradient(to right, white,lightblue);
+
+}
+
+
+
+.navPink {
+
+
+
+
+    background: linear-gradient(to right, pink,magenta);
+
+
+
+}
+
+.navBlue {
+
+
+
+
+    background: linear-gradient(to right, cyan,dodgerblue);
+
+
+
+}
+
+.navYellow {
+
+
+
+
+    background: linear-gradient(to right, yellowgreen,orange);
+
+
+
+}
+
+.navBrown {
+
+
+
+
+    background: linear-gradient(to right, #1e170f,#4b3620,#5C4033);
+
+
+
+}
+
+
+
+.barPreview{
+    
+    accent-color:var(--waiting-color);
+}
+
+.sampleYellow{
+    
+    background: linear-gradient(to right, yellowgreen,orange);
+    width: 50px;
+    height: 50px;
+}
+
+.samplePink{
+    
+    background: linear-gradient(to right, pink,magenta);
+    width: 50px;
+    height: 50px;
+}
+
+
+.sampleBlue{
+    
+    background: linear-gradient(to right, dodgerblue, blue);
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+.sampleWhite{
+    
+    background: linear-gradient(to right, white,grey);
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.sampleGreen{
+    
+    background: linear-gradient(to right, lime,green);
+    width: 50px;
+    height: 50px;
+}
+.topFunctions {
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: solid 0.3px magenta;
+
+
+    width: 100%;
+    height: 30px;
+
+}
+
+.topselects {
+
+
+    background: black;
+    font-family: topNums;
+    font-size: 20px;
+
+    font-weight: bold;
+    border: none;
+    width: 80px;
+    color: var(--buttColorz);
+    border: solid white;
+    outline-color: var(--waiting-color) ;
+    
+    
+    
+}
+
+
+
+.topselects option:active,
+.topselects option:checked{
+     
+      
+       
+    }
+
+
+
+
+
+
+.mainBlock {
+
+
+
+
+
+
+
+
+
+
+    width: 100%;
+    height: 180px;
+    border: solid 1px #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.numsBlockGo{
+    
+    background: #000000;
+    
+    
+    
+}
+.numsBlock {
+
+
+    display: flex;
+
+
+    align-items: center;
+    justify-content: space-around;
+
+
+    height: 150px;
+
+    width: 100%;
+    max-width: 100%;
+
+
+    border-radius: 10px;
+}
+
+.numsBlockGreenish {
+
+
+    background: linear-gradient(to bottom,#004526 30%,lime,white,black);
+
+}
+
+
+
+
+.numsBlockBlackish {
+
+
+    background: linear-gradient(to bottom, black,#303030,white,black);
+    
+    
+    color: black;
+
+}
+.numsBlockBrownish {
+
+
+
+
+    background: linear-gradient(to bottom,#130d08,#4b3620,white,black);
+
+}
+.numsBlockSpace{
+    
+    background: linear-gradient(to bottom,indigo,darkblue,white,black);
+    
+    
+    
+}
+.numsBlockOrangeish{
+    
+      background: linear-gradient(to bottom, orangered,darkorange,white, black);
+}
+.numsBlockReddish{
+    background: linear-gradient(to bottom,#8B0000,red,white,black);
+    
+}
+.numsBlockWhitish {
+
+
+    background: linear-gradient(to bottom,grey,lightgrey,white,black);
+
+}
+
+.numsBlockPinkish {
+
+    background: linear-gradient(to bottom,purple,purple,pink,white,black);
+
+
+
+
+
+}
+
+
+
+.numsBlockBlueish {
+
+    background: linear-gradient(to bottom,darkblue,blue,lightblue,white,black);
+
+
+
+
+
+}
+
+
+.numsBlockYellowish {
+
+  background: linear-gradient(to bottom,orange,gold,yellowgreen,white,black);
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.progressBar {
+
+
+    width: 0%;
+   
+
+    margin-top: 0px;
+    height: 30px;
+
+
+    
+
+
+
+    box-shadow: 0 0 20px 2px white;
+
+    transition: 1s width linear;
+
+}
+
+
+.progressBarGreen{
+    
+    background: linear-gradient(to right,lime,yellowgreen,white);
+    
+}
+
+
+.progressBarBlack{
+    
+    background: linear-gradient(to right,black,black,darkgrey,white);
+    
+    text-shadow: 0 0 0 10px white,0 0 0 10px white;
+    
+    
+    
+}
+.progressBarBrown{
+    
+    
+    
+    background: linear-gradient(to right, #130d08,#5C4033,#5C4033,white);
+}
+.progressBarOrange{
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+}
+
+.progressBarSpace{
+    
+    background: linear-gradient(to right,darkviolet,white);}
+    
+    
+    
+.progressBarRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red,white);
+    
+    
+    
+}
+.progressBarBlue{
+    
+    
+    
+    background: linear-gradient(to right,dodgerblue,blue,white);
+    
+    
+}
+
+.progressBarPink{
+    
+    
+    
+    background: linear-gradient(to right,magenta,pink,white);
+    
+    
+}
+.progressBarYellow{
+    
+    
+    
+    background: linear-gradient(to right,yellowgreen,yellow,white);
+    
+    
+}
+
+.progressBarWhite{
+    
+    
+    
+    background: linear-gradient(to right,cyan,grey,white);
+    
+    box-shadow: 0 0 20px 2px black;
+    
+    
+}
+
+
+
+
+
+
+.progressBarParent {
+
+
+    width: 100%;
+    margin-top: 5px;
+    height: 30px;
+
+    border: solid white 0.5px;
+    overflow: hidden;
+
+}
+.mins,.secs {
+
+    font-family: lefa;
+
+    color: black;
+    font-size: 9em;
+    font-weight: 2;
+    border-radius: 10px;
+
+
+
+}
+
+
+
+.numsGo{
+    
+    font-family:lefa;
+
+    color: var(--waiting-color);
+    font-size: 9em;
+    font-weight: 2;
+  
+    border-radius: 10px;
+    
+    animation: numsGoanima 0.5s forwards linear;
+}
+
+
+@keyframes numsGoanima{
+    
+    
+    
+    50%{
+        
+        transform: scale(1.3);
+        
+    }
+    
+    100%{
+        
+        transform: scale(1);
+        
+    }
+}
+.collen {
+
+
+
+    font-family: Times New Roman;
+    font-size: 4em;
+
+
+}
+
+
+.timeup {
+
+
+    position: absolute;
+    top: 40%;
+
+    left: 10%;
+    z-index: 5;
+
+    width: 80%;
+
+    height: 40%;
+
+
+    background: #222222;
+
+    border: solid 1px lime;
+    outline: solid;
+    outline-color: #FFFFFF;
+    
+    z-index: 10;
+    
+    transform: scale(0);
+    animation: popTimeup 0.3s forwards linear;
+    
+    opacity: 0.7;
+}
+
+
+@keyframes popTimeup{
+    
+    100%{
+        transform: scale(1);
+        
+        
+    }
+    
+    
+}
+
+.topBartimeup {
+
+
+
+
+
+    width: 100%;
+
+    height: 10%;
+    border-bottom: solid 1px #FFFFFF;:;
+
+
+    
+}
+
+.topBartimeupGreen{
+    
+    background: linear-gradient(to right, yellowgreen,lime, green);
+    
+}
+
+
+.topBartimeupBlack{
+    
+    background: linear-gradient(to right, black,darkgrey, black);
+    
+}
+
+
+.topBartimeupBrown{
+    
+    
+    
+    
+    background: linear-gradient(to right,#5C4033,chocolate,brown);
+}
+.topBartimeupSpace{
+    
+    background: linear-gradient(to right, darkblue,indigo,#452c63);
+    
+}
+
+.topBartimeupOrange{
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+}
+
+.topBartimeupRed{
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+    
+}
+.topBartimeupRed{
+    
+        background: linear-gradient(to right, darkred,#D2042D, red);
+    
+    
+    
+}
+
+.topBartimeupWhite{
+    
+    background: linear-gradient(to right, white,grey,cyan
+    );
+    
+}
+.topBartimeupBlue{
+    
+    background: linear-gradient(to right, lightblue,dodgerblue,blue
+    );
+    
+}
+
+.topBartimeupPink{
+    
+    background: linear-gradient(to right, pink, magenta,purple
+    );
+    
+}
+
+.topBartimeupYellow{
+    
+    background: linear-gradient(to right, yellow, yellowgreen,orange
+    );
+    
+}
+
+
+
+
+
+
+.subdivTimeup {
+
+
+
+    display: flex;
+
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+}
+
+.timeuptext {
+
+
+
+    font-family: regularText;
+
+
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+.acceptButt {
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+    
+    text-shadow: var(--buttShadow);
+    
+
+    
+
+
+    border: solid #ffffff;
+
+    
+      padding-left: 25px;
+    padding-right: 25px;
+}
+.acceptButtGreen{
+    
+    background: linear-gradient(to right,green,lime,yellowgreen);
+    
+    
+    
+}
+
+
+.acceptButtBrown{
+    
+        background: linear-gradient(to right,#5C4033,#B87333);
+    
+    
+    
+}
+
+
+
+.acceptButtBlack{
+    
+    
+    
+    background: linear-gradient(to right, black,darkgrey, black);
+    
+}
+.acceptButtSpace{
+    
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+    
+    
+    
+}
+
+.acceptButtOrange{
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+}
+
+
+
+.acceptButtRed{
+    
+    background: linear-gradient(to right, darkred, #D2042D,red);
+    
+    
+    
+}
+.acceptButtBlue{
+    
+    background: linear-gradient(to right,blue,dodgerblue,lightblue);
+    
+    
+    
+}
+.acceptButtPink{
+    
+    background: linear-gradient(to right, purple, magenta,pink);
+    
+    
+    
+}
+
+
+
+.acceptButtWhite{
+    
+    background: linear-gradient(to right,darkgrey,grey, white);
+    
+    
+    
+}
+
+
+
+.acceptButtYellow{
+    
+    background: linear-gradient(to right,orange,yellowgreen,yellow);
+    
+    
+    
+}
+
+
+
+
+    
+    
+    
+@keyframes waited{
+    
+    
+    0%{
+        
+       color:#FFFFFF;
+    }
+    100%{
+        
+        
+            color: var(--waiting-color);
+        
+    }
+}
+.setButt {
+
+    position: absolute;
+    
+    
+   
+
+
+    top: 50%;
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 100%;
+    text-shadow:var(--buttShadow);
+
+
+
+
+    border: solid #ffffff;
+
+    padding: 30px;
+
+
+}
+
+.setButtGreen{
+    background: linear-gradient(to right,green,lime,yellowgreen);
+
+
+}
+
+.setButtBrown{
+    
+    
+    
+    
+    background: linear-gradient(to right,#5C4033,#B87333);
+    
+}
+
+
+
+.setButtBlack{
+    
+    
+    background: linear-gradient(to right, black,darkgrey, black);
+    
+    box-shadow: 0 0 0 10px white, 0 0 0 10px white;
+    
+}
+.setButtSpace{
+
+
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+
+
+}
+
+
+.setButtOrange{
+    
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+}
+.setButtRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+.setButtGreen {
+    background: linear-gradient(to right,green,lime,yellowgreen);
+
+
+}
+.setButtWhite{
+    background: linear-gradient(to right, darkgrey,grey,white);
+
+
+}
+
+.setButtPink {
+
+
+    background: linear-gradient(to right, purple,magenta,pink);
+}
+
+
+
+.setButtBlue {
+
+
+    background: linear-gradient(to right, blue,dodgerblue,lightblue);
+}
+
+.setButtYellow {
+
+
+    background: linear-gradient(to right, orange,yellowgreen,yellow);
+}
+
+
+
+
+.start {
+
+    position: absolute;
+
+    display: none;
+    
+    
+
+
+    top: 55%;
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15%;
+   text-shadow: 0 0 2px #000000;
+
+
+
+    border: solid #ffffff;
+
+      padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.startButtGreen {
+
+
+    background: linear-gradient(to right,green,lime,yellowgreen);
+
+
+}
+
+.startButtSpace {
+
+
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+
+
+}
+
+
+
+.startButtBrown{
+    
+    
+    
+    background: linear-gradient(to right,#5C4033,#B87333);
+    
+}
+.startButtOrange{
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange);
+    
+}
+
+.startButtRed{
+    
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+
+
+.startButtWhite {
+
+background: linear-gradient(to right, darkgrey,grey,white)
+    
+
+}
+.startButtPink {
+
+
+
+    background: linear-gradient(to right, purple,magenta,pink);
+
+}
+
+
+
+.startButtBlue {
+
+
+
+    background: linear-gradient(to right, blue,dodgerblue,lightblue);
+}
+.startButtYellow {
+
+
+
+   
+    background: linear-gradient(to right, orange,yellowgreen,yellow);
+}
+
+
+
+
+.setWrap {
+    display: block;
+    position: absolute;
+
+  
+
+    
+
+    opacity: 0.7;
+
+    width: 80%;
+    height: 70%;
+    left: 10%;
+    top: 15%;
+    border: solid 1px var(--waiting-color);
+    outline: solid;
+    outline-color: #FFFFFF;
+    background: linear-gradient(to right,darkgrey,#000000);
+    
+    transform: scale(1);
+    
+    
+    z-index: 10;
+    
+    animation: setPop 0.5s forwards linear;
+
+
+
+
+
+
+}
+
+
+@keyframes setPop{
+    0%{
+        
+        
+        transform: scale(1);
+    }
+    
+    50%{
+        
+      transform: scale(4);
+    }
+    
+    100{
+        transform: scale(1);
+        
+        
+    }
+    
+  
+}
+
+.navSet {
+
+
+
+
+    display: flex;
+        height: 8%;
+
+    justify-content: right;
+    align-items: center;
+
+
+
+    
+   
+    border-bottom: solid #FFFFFF 2px;
+    margin: 0;
+
+    
+}
+
+
+.navSetGreen{
+    
+    background: linear-gradient(to right, green, lime,yellowgreen);
+    
+    
+}
+
+
+.navSetSpace{
+    
+    background: linear-gradient(to right, darkblue,indigo, #452c63);
+    
+}
+
+.navSetBrown{
+    
+    
+    background: linear-gradient(to right,#5C4033,chocolate, brown,#B87333);
+    
+}
+
+.navSetOrange{
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato, darkorange,orange);
+}
+.navSetRed{
+    
+    
+    background: linear-gradient(to right, darkred, #D2042D,red);
+    
+    
+}
+.navSetBlue{
+    
+    background: linear-gradient(to right, blue, dodgerblue,lightblue);
+    
+    
+}
+
+
+.navSetPink{
+    
+    background: linear-gradient(to right, purple, magenta,pink);
+    
+    
+}
+
+
+.navSetWhite{
+    
+    background: linear-gradient(to right, cyan, grey,#FFFFFF);
+    
+    
+}
+
+
+.navSetYellow{
+    
+  background: linear-gradient(to right,orange,yellowgreen,yellow);
+    
+    
+}
+
+.exitIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 8%;
+    width: 15%;
+
+z-index: 40;
+
+}
+.numsRow{
+    position: relative;
+
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%; 
+height: 12%;
+    
+
+
+    
+ 
+  
+
+
+
+}
+.numsRow2 {
+    position: relative;
+
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+   
+    width: 100%;
+        height: 5%;
+  
+
+border: solid ;
+
+}
+
+
+.numsRow3 {
+    position: relative;
+
+    
+
+
+    
+   
+    width: 100%;
+    
+    
+    height: 70px;
+    
+    
+    
+}
+
+
+
+.numsRow4 {
+    position: relative;
+
+
+    
+
+    width: 100%;
+
+    
+    height: 16.6%;
+   
+  
+   
+
+}
+
+.wrapRow4{
+    
+    
+    position: absolute;
+    left: 0px;
+    bottom: 0px;;
+    height: 100%;
+    width: 40%;
+
+
+    display: flex;
+       
+
+justify-content: center;
+    align-items: flex-end;
+
+    
+
+    
+  gap: 5px;
+   
+   
+}
+.wrapRow4Right{
+    
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 40%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  
+    border-left: solid transparent;
+   
+    
+
+    
+}
+.numsRow5 {
+
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    
+  height: 16.6%;
+   margin: 0;
+    
+   
+
+}
+
+
+.numsRow6{
+    
+        
+    
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin: 0;
+    gap: 5px;
+    width: 100%;
+    height: 16.6%;
+    
+}
+
+.numsRow7{
+    
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+   
+   
+    
+}
+
+.numsRow8{
+    
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+   
+   
+    
+    
+}
+.switchText{
+    color: #FFFFFF;
+    font-size:0.7em;
+    font-weight: bold;
+   
+    text-shadow: 0 1px 0px black,0 1px 0px black, 0 0 1px black;
+    
+    
+}
+
+
+
+.switchDelay{
+    
+   
+    
+   border: solid 1px #FFFFFF;
+   
+   border-radius: 10px;
+   
+   font-weight: bold;
+   
+   width: 20%;
+  
+  
+    
+}
+.numsTopDisplay {
+    
+    
+        font-family: topNums;
+       
+
+
+
+    font-size: 4rem;
+
+    color: #FFFFFF;
+    padding: 0;
+    border: solid var(--waiting-color);
+    border-radius: 5px;
+}
+
+
+
+
+
+.minsSelect,.secsSelect,.repsSelect,.transitionSecsSelect,.getReadySelect {
+
+
+
+
+   
+    font-size: 1rem;
+    color: #000000;
+    background: var(--waiting-color);
+   
+    font-family: topNums;
+    font-weight: bold;
+
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
+
+.repsSelect{
+    
+   
+    position: absolute;
+    left: 50%;
+    bottom:0%;
+   
+    transform: translateX(-50%);
+    
+}
+
+.repsSelect:before{
+    
+    
+    
+    content: "repes";
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.secsTopDisplay,.minsTopDisplay{
+    transform: translateX(-30%);
+    
+    
+}
+
+
+
+.repsTopDisplay{
+        
+    position: absolute;
+        left: 50%;
+        bottom:-100%;
+        
+   
+    transform: translateX(-50%);
+    
+    
+    
+  
+}
+
+.transitionSecsSelect{
+    
+    
+}
+
+.transitionSecsTopDisplay{
+    
+    position: absolute;
+    bottom: -75%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+  
+    
+    
+} 
+    .getreadysecsTopDisplay{
+        
+        position: absolute;
+    bottom: -75%;
+    left: 50%;
+    transform: translateX(-50%);
+        
+        
+    }
+
+.secsSelect:before {
+
+
+    content: "Seconds";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: blue;
+    width: 50px;
+    height: 20px;
+    font-size: 8px;
+    color: #FFFFFF;
+
+}
+
+
+
+
+
+
+
+.SECONDS{
+    position: absolute;
+    font-size: 0.9rem;
+   right:33%;
+   
+   transform: translateX(50%);
+   bottom:0px;
+   
+   
+   text-shadow: 0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000    ;
+   
+   background: var(--waiting-color);
+   
+   padding-left: 10px;
+   
+   border-radius: 10px;
+  
+  
+    
+}
+    
+.MINUTES{
+    
+    position: absolute;
+    font-size: 0.9rem;
+    
+   left:33%;
+   
+   transform: translateX(-86%);
+   bottom:0px;
+   
+   
+   
+   text-shadow: 0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000    ;
+   background: var(--waiting-color);
+      padding-left: 10px;
+            border-radius: 10px;
+}   
+    
+    
+ .REPETITIONS{
+     
+    position: absolute;
+    left: calc(50% - 10px);
+    transform: translateX(-50%);
+    bottom: -15%;
+    z-index: 10;
+    font-size: 0.9rem;
+    background: var(--waiting-color);
+    padding-left: 10px;
+      
+
+    text-shadow: 0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000    ;
+          border-radius: 10px;
+
+
+     
+ }  
+    
+.TRANSITIONSECONDS{
+    position: absolute;
+    font-size: 0.65rem;
+   
+    
+    bottom:calc(0%  - 5px);
+    left: 0%;
+    
+    text-shadow: 0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000    ;
+  
+  
+       
+       background: var(--waiting-color);
+      padding-top:5px;
+      
+      border-radius: 10px;
+     
+       
+   } 
+   
+   
+   
+   .GETREADYSECONDS{
+       
+       
+   position: absolute;
+   font-size: 0.9rem;
+   width: 70%;
+   
+    
+    bottom:calc(0%  - 10px);
+    left: 40%;
+    transform: translateX(-50%);
+    
+    text-shadow: 0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000,  0 0 2px #000000    ;
+  
+  
+       
+     background: var(--waiting-color);
+      
+      
+      border-radius: 10px;
+       
+       
+       
+       
+   }
+.acceptSetButt {
+
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+    text-shadow: var(--buttShadow);
+
+    
+
+    border: solid #ffffff;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+
+}
+
+
+.acceptSetButtGreen{
+    
+    
+    
+  background: linear-gradient(to right,green,lime,yellowgreen);
+  
+  
+  border: solid white;
+  
+}
+
+
+
+.acceptSetButtBlack{
+    
+    
+    
+    background: linear-gradient(to right, black,darkgrey, black);
+    
+}
+
+.acceptSetButtBrown{
+    
+    
+     background: linear-gradient(to right,#5C4033, chocolate,#B87333);
+    
+}
+
+.acceptSetButtSpace{
+    
+    
+   
+
+
+ 
+background: linear-gradient(to right,#452c63,indigo,darkblue);
+
+
+  
+}
+
+
+.acceptSetButtOrange{
+    
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato, darkorange,orange);
+}
+.acceptSetButtRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+
+.acceptSetButtBlue{
+    
+    
+    
+  background: linear-gradient(to right,blue,dodgerblue,lightblue);
+  
+}
+.acceptSetButtPink{
+    
+    
+    
+  background: linear-gradient(to right,purple,magenta,pink);
+  
+}
+
+
+
+.acceptSetButtWhite{
+    
+    
+    
+  background: linear-gradient(to right,darkgrey,grey,#FFFFFF);
+  
+}
+
+
+
+.acceptSetButtYellow{
+    
+    
+    
+  background: linear-gradient(to right,orange,yellowgreen,yellow);
+  
+}
+
+
+.backShadow {
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.8;
+    z-index: 6;
+
+
+
+}
+
+.svg{
+    
+    
+    
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: var(--leftPercent);
+    
+    background: transparent;
+   
+    
+    
+    rotate: -90deg;
+   
+    height: var(--halfScreenWidth);
+    width: var(--halfScreenWidth);
+    z-index: -5;
+ 
+}
+
+.circle{
+   
+    
+    r:var(--circleRadius);
+    stroke-dasharray: var(--circleCircunfirence);
+    stroke-dashoffset: var(--circleCircunfirence);
+    
+  
+    cx:var(--circleRadiusSides) ;
+    cy: var(--circleRadiusSides);
+    stroke-width: 5px;
+    stroke: var(--waiting-color);
+    fill: transparent;
+    stroke-linecap: round;
+    
+    filter: drop-shadow(0px 2px 8px #FFFFFF);
+    animation: circ var(--secs) forwards linear;
+}
+
+@keyframes circ{
+    
+    0%{
+        stroke-dashoffset: 0;
+       
+    }
+    100%{
+        
+        
+stroke-dashoffset:var(--circleCircunfirenceMinus);
+    }
+      
+    
+}
+
+
+.waitingrunning{
+    
+    
+   
+    
+  
+
+    font-family: regularText;
+    font-size: 6em;
+    
+    color: var(--waiting-color);
+    text-shadow: var(--buttShadow);
+    
+    animation: waited 0.2s infinite linear;
+    z-index: 2;
+}
+
+
+
+.waitingrunningWrap{
+    
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+    width:100%;
+    height: 15%;
+   
+    top:67%;
+    left: 0%;
+    z-index: 200;
+    
+    
+    
+}
+.fireAnima{
+  
+    
+    width:90%;
+    height: 100%;
+    transform:rotate(25deg) ;
+  
+   
+
+    z-index: 0;
+}
+.fireAnimaWrap{
+    
+    display: none;
+    position: absolute;
+    justify-content: left;
+    align-items: center;
+    
+    width:100%;
+    height: 46%;
+   
+    top:48%;
+    left: 0%;
+    z-index: 0;
+   
+    
+    
+}
+.fireAnima2{
+    display: none;
+   
+    width:100%;
+    height: 100%;
+    transform:rotate(0deg) ;
+    
+    z-index: 0;
+}
+
+.fireAnima2Wrap{
+    
+    
+    display: none;
+    position: absolute;
+    justify-content: right;
+    align-items: center;
+    
+    width:100%;
+    height: 80%;
+   
+    bottom:0%;
+    left: 50%;
+    z-index: 0;
+   
+}
+
+.GOOOcontainer{
+    
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top:15%;
+    font-family:Comic Sans MS;
+    left: 0%;
+    
+    width: 100%;
+    height: 30%;
+    
+    z-index: 130;
+    
+    
+    
+    
+}
+
+.GOOO{
+    
+    
+    color: #FFFFFF;
+    font-size: 1em;
+    animation: GOOOanima 0.2s forwards linear;
+    text-shadow:0px 0px 1px #000000, 0px 1px #000000,0px 0px 3px #FFFFFF;
+    z-index: 20;
+}
+
+@keyframes GOOOanima{
+    
+    0%{
+        
+        transform: scale(1);
+    }
+    
+    100%{
+        
+        transform: scale(10);
+               
+
+        
+    }
+ 
+    
+  
+}
+.pauseResumeContainer{
+    
+    position: absolute;
+    top: 45%;
+    left: 0%;
+   
+    display: none;
+    width: 100%;
+    height: 8%;
+    
+    justify-content: space-around;
+    align-items: center;
+    
+    z-index: 15;
+}
+
+.stopbutts{
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+    text-shadow:var(--buttShadow);
+
+   
+
+   border: solid 1px var(--buttColorz);
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+
+    
+}
+
+
+.stopbuttsGreen{
+    
+    
+    
+  background: linear-gradient(to right,green,lime,yellowgreen);
+  
+}
+.stopbuttsOrange{
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato, darkorange,orange);
+}
+
+.stopbuttsBrown{
+    
+    
+    
+     background: linear-gradient(to right,#5C4033, chocolate,#B87333);
+    
+}
+
+.stopbuttsSpace{
+    
+    
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+    
+    
+    
+}
+.stopbuttsRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+
+.stopbuttsBlack{
+    
+    background: linear-gradient(to right, black,darkgrey,black);
+    
+    
+    box-shadow: 0 0 10px 0 white,0 0 10px 0 white;
+    
+}
+
+.stopbuttsBlue{
+    
+    
+    
+  background: linear-gradient(to right,blue,dodgerblue,lightblue);
+  
+}
+.stopbuttsPink{
+    
+    
+    
+  background: linear-gradient(to right,purple,magenta,pink);
+  
+}
+
+
+
+.stopbuttsWhite{
+    
+    
+    
+  background: linear-gradient(to right,darkgrey,grey,#FFFFFF);
+  
+}
+
+
+
+.stopbuttsYellow{
+    
+    
+    
+  background: linear-gradient(to right,orange,yellowgreen,yellow);
+  
+}
+
+.musicThemeHolder{
+    
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    
+    width: 98%;
+    height: 3%;
+    bottom: 1%;
+    left: 0%;
+    border-radius: 20px;
+    
+}
+.musicThemeDisplay{
+    
+    font-size: 0.7rem;
+    
+    ;
+}
+
+.musicThemeDisplayGreen{
+    
+    color: lime;
+    
+    ;
+}
+.musicThemeDisplaySpace{
+    
+    color: indigo;
+    background: #000000;
+    border-radius: 26px;
+    
+    ;
+}
+
+.musicThemeDisplayOrange{
+    
+    
+    
+    color: darkorange;
+}
+
+
+
+.musicThemeDisplayBlack{
+    
+    
+    
+    color: white;
+}
+.musicThemeDisplayRed{
+    
+   color: red;
+}
+.musicThemeDisplayPink{
+    
+    color: magenta;
+    ;
+}
+.musicThemeDisplayBlue{
+    
+color: dodgerblue;
+    
+    ;
+}
+.musicThemeDisplayYellow{
+    
+    color: yellowgreen;
+    
+    ;
+}
+.musicThemeDisplayWhite{
+    
+    color: lightgrey;
+    
+    ;
+}
+
+
+.musicThemeDisplayBrown{
+    
+    
+    color: #4b3620;
+}
+.numReady{
+    
+    animation: ready 1s  infinite ease-out;
+}
+
+@keyframes ready {
+    
+    
+    
+    
+    0%{
+        
+        transform: scale(1);
+        color: var(--getreadyColor);
+        
+           text-shadow: 0 0 2px var(--getreadyColor);
+    }
+    
+    99%{
+        
+        
+        
+        
+        transform: scale(var(--numReady));
+        
+    }
+    
+    
+    
+    100%{
+        
+       text-shadow: 0 0 0 black;
+        
+        color: black;
+
+    }
+}
+
+
+.musicSelectPopText{
+    
+    position: absolute;
+    text-shadow: 0 0 5px #000000;
+    font-size: 2rem;
+    
+    color:#FFFFFF;
+    font-family: regularText;
+    animation: poptext 2s forwards ease-out;
+    
+    
+    
+}
+
+@keyframes poptext{
+    
+    
+    
+    
+    
+    0%{
+        right:-20%;
+        top: 2%;
+        
+        
+        
+        
+    }
+    
+    
+    20%{
+        
+        
+        right: 5%;
+        
+        top: 2%;
+    }
+    80%{
+        
+        
+        right: 5%;
+        
+        top: 2%;
+        
+        
+    }
+    
+    
+    100%{
+        
+        
+        right: 5%;
+        
+        top: 95%;
+    }
+}
+.labels{
+    
+    font-family: topNums;
+    
+    
+    color: #FFFFFF;
+    font-weight: bold;
+    
+}
+
+
+.setsLeftWrap{
+    display: none;
+   
+    justify-content: center;
+    align-items: center;
+    
+    
+    position: absolute;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc( 10% + 10px);
+    width:9% ;
+    height: 45px;
+    border-bottom: solid var(--waiting-color);
+   
+    
+}
+
+.setsLeftWrap:before{
+    content:"Sets";
+    font-family: regularText;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: bold;
+    transform: translateX(-50%);
+    left:50%;
+    bottom: 0px;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000 ,0 0 1px #000000, 0 0 1px #000000;
+    
+    
+    color: var(--waiting-color);
+}
+.setsLeft{
+    
+    font-family: topNums;
+    font-size: 2rem;
+    color: var(--waiting-color);
+    text-shadow: 0 0 2px #FFFFFF,0 0 2px #FFFFFF,0 0 2px #FFFFFF,0 0 2px #FFFFFF,0 0 2px #FFFFFF;
+    align-content: center;
+
+}
+.setsLeftundertext{
+    color: var(--waiting-color);
+    align-content: center;
+    
+    
+}
+
+
+.nameInput{
+    
+    
+    border-radius: 20px;
+    
+    
+    outline: var(--waiting-color);
+    border:solid white;
+}
+.profilepicBox{
+    
+    
+    position: absolute;
+    right: 0%;
+    
+    top: 0%;
+    border: solid white;
+    border-radius: 10px;
+    
+    height: 100%;
+    
+    width: var(--profilepicHeight);
+    
+    
+}
+
+.profilepic{
+    
+    
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+background: transparent;
+
+
+        
+ background-size=cover;
+ 
+      
+    top: 50%;
+  
+    width: 80%;
+    height: 80%;
+    border: solid white 0.5px;
+    border-radius: 5px;
+}
+
+
+.usernameWrap{
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    
+    bottom: 50%;
+
+    font-size: 12px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.username{
+    
+        
+    
+
+    font-size: 12px;
+    
+    color: white;
+    
+    
+    text-shadow: 0 0 2px #000000,  0 0 2px #000000,0 0 2px #000000,0 0 2px #000000 ;
+    
+}
+.inputaS3x{
+    
+    
+    border-radius: 25px;
+    
+    font-weight: bold;
+    font-size: auto;
+    outline-color: var(--waiting-color);
+}
+.myCanvas{
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    
+}
