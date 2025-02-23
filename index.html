@@ -1,0 +1,3696 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>County-Downy</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="global">
+        <nav class="nav">
+
+            <div class="profilepicBox">
+
+                <div class="profilepic">
+
+                </div>
+                <div class="usernameWrap">
+
+
+                    <h5 class="username">username</h5>
+
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <div class="topFunctions">
+
+
+
+
+
+
+            <select name="" id="" class="selectTheme topselects">
+
+
+                <option value="">
+                    COLORS
+                </option>
+                
+                 <option value="blackish">Black theme
+                </option>
+
+
+
+                <option value="blueish">Blue theme
+                </option>
+                
+                 <option value="brownish">Brown theme
+                </option>
+
+                <option value="greenish">Green theme
+                </option>
+
+                <option value="orangeish">Orange theme
+                </option>
+
+
+
+
+
+                <option value="reddish">Red theme
+                </option>
+
+
+
+
+                <option value="pinkish">Pink theme
+                </option>
+
+
+                <option value="whitish">White theme
+                </option>
+
+
+
+                <option value="yellowish">Yellow theme</option>
+
+
+
+                <option value="space">Space 🌌 theme</option>
+
+
+
+
+
+
+
+            </select>
+
+            <select name="" id="" class="musicSelect topselects">
+
+
+                <option value="">MUSICS</option></option>
+            <option value="african">African War Drums</option>
+
+            <option value="tiger">Eye of the Tiger</option>
+            <option value="NTM">French Hip Hop-NTM</option>
+               <option value="NTM2">French Hip Hop-NTM 2</option>
+                  <option value="NTM3">French Hip Hop-NTM 3</option>
+               
+               <option value="StreetFighter2">Street Fighter II theme medley</option>
+
+
+
+
+        </select>
+
+
+
+
+    </div>
+
+
+
+    <div class="mainBlock">
+
+        <div class="numsBlock">
+
+
+            <h1 class="mins nums">00</h1>
+
+
+            <p class="collen nums">
+                :
+            </p>
+
+            <h1 class="secs nums">00</h1>
+        </div>
+
+        <div class="progressBarParent">
+
+            <div class="progressBar">
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="GOOOcontainer">
+        <h1 class="GOOO">GO</h1>
+    </div>
+
+    <div class="pauseResumeContainer">
+        <button class="stopButt stopbutts">STOP</button>
+
+        <button class="pauseButt stopbutts">PAUSE</button>
+
+
+
+    </div>
+
+
+
+
+    <button class="SetButt" onclick="SET()">SET</button>
+
+
+
+    <button class="start" onclick="startUp()">Start</button>
+
+
+
+    <div class="waitingrunningWrap">
+        <p class="waitingrunning">
+            waiting
+        </p>
+    </div>
+
+    <div class="fireAnimaWrap">
+
+        <img class="fireAnima" src="fireball.gif" alt="" />
+
+    </div>
+
+
+    <div class="fireAnima2Wrap">
+
+
+
+        <img class="fireAnima2" src="fyah.gif" />
+
+    </div>
+
+    <div class="setsLeftWrap">
+        <h1 class="setsLeft">0</h1>
+
+
+    </div>
+
+
+    <svg class="svg">
+
+
+
+        <circle class="circle"></circle>
+    </svg>
+
+    <span class="musicThemeHolder"> <p class="musicThemeDisplay"></p>
+    </span>
+
+
+
+    <canvas class="myCanvas">
+
+    </canvas>
+</div>
+
+<!–– <button onclick="navigator.vibrate(2000)">vib</button>-->
+
+
+
+
+    console.log(navigator," lefa");
+
+
+
+
+
+
+
+
+    <script type="text/javascript" charset="utf-8">
+    
+    
+    
+    
+    
+    const bearsleep= document.createElement("img");
+    
+    
+    bearsleep.src="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"
+    
+    
+    bearsleep.style=`position:absolute;top:10%; left:10%;z-index:150`;
+    
+    document.body.appendChild(bearsleep);
+    
+
+
+        //ALL QUERY SELECTORS OF THE APP
+
+   const global = document.querySelector(".global");
+   let secsHtml = document.querySelector(".secs");
+   let minsHtml = document.querySelector(".mins");
+   let barHtml = document.querySelector(".progressBar");
+   let startButt = document.querySelector(".start");
+   const setButt = document.querySelector(".SetButt");
+   let secsList = document.querySelector(".secsList");
+   let themeSelect = document.querySelector(".selectTheme");
+
+   let mainBlock = document.querySelector(".mainBlock");
+   let numsBlock = document.querySelector(".numsBlock");
+   let numz = document.querySelector(".nums");
+   let secz = document.querySelector(".secs");
+   let cssRoot= document.querySelector(":root");
+   let minz = document.querySelectorAll(".mins");
+   // const backShadow = document.querySelector(".backShadow");
+   const nav = document.querySelector(".nav");
+   let waitingrunning = document.querySelector(".waitingrunning");
+   let svgCircle = document.querySelector('.svg');
+   let fireAnima = document.querySelector('.fireAnima');
+   let fireAnimaWrap = document.querySelector('.fireAnimaWrap');
+   let fireAnima2 = document.querySelector('.fireAnima2');
+   let fireAnima2Wrap = document.querySelector('.fireAnima2Wrap');
+   let waitingrunningWrap = document.querySelector('.waitingrunningWrap');
+   let GOOO = document.querySelector('.GOOO');
+   let GOOOcontainer = document.querySelector('.GOOOcontainer');
+   let musicSelect = document.querySelector('.musicSelect');
+   let stopbutt = document.querySelector('.stopButt');
+   let pausebutt = document.querySelector('.pauseButt');
+   let pauseStopWrap = document.querySelector('.pauseResumeContainer');
+   let musicThemeDisplay = document.querySelector('.musicThemeDisplay');
+   let setsLeft = document.querySelector('.setsLeft');
+   let setsLeftWrap = document.querySelector('.setsLeftWrap');
+   let profilepicBox = document.querySelector('.profilepicBox');
+   let profilepic = document.querySelector('.profilepic');
+   let username = document.querySelector('.username');
+   const c = document.querySelector(".myCanvas");
+   const ctx = c.getContext("2d");
+ //---------GLOBAL VARIABLES OF THE APP------------------------&&&
+       
+       
+       // MUSICS AND SOUNDS VARIABLES 
+       
+    let nowreadychick = new Audio("chuckchuckchuck.mp3");
+    let nowReady = new Audio("NowRready.mp3");
+    let runMusic = new Audio("audiodrums.mp3");
+    let GOOOsound = new Audio("GOOO.mp3");
+    let onlyTimeUp = new Audio ("onlyTimeUp.mp3");
+    let selectSelection = new Audio("selectSelection.mp3");
+    let openselects = new Audio("openselects mp3");
+    let musicTheme = new Audio("audiodrums.mp3");
+    let timeupSound = new Audio("timeupvroom.mp3");
+    
+    
+    
+    
+
+ // VARIABLES OF INTERFACES CONTROL 
+ 
+   let running = false;
+   let running2 = false;
+   let x = 0;
+   let y = 0;
+
+   let newx;
+   let newy;
+   let initalReps=0;
+   let initialSecs = 0;
+   let initialMins = 0;
+   let secs = initialSecs;
+   let mins = initialMins;
+   let reps = 1;
+   let transitionSecs = 5000;
+   let getReadySecs = 5000;
+   let interval;
+   let delay = false;
+   
+   
+   let zero2 = mins < 10 ? "0": "";
+   let zero = secs < 10 ? "0": "";
+   secsHtml.innerHTML = zero+ secs;
+   minsHtml.innerHTML = zero2+ mins;
+   let bar = 0;
+   let barLen = 0;
+   let barLen2 = 0; 
+   //let barLen=(100/(((initialMins>0 ? initialMins :0) * (initialMins>0 ? 60:0))+ initialSecs-1));
+           
+   let currentColor = localStorage.getItem("colortheme");
+   let currentColorCap = localStorage.getItem("colortheme").charAt(0).toUpperCase() + localStorage.getItem("colortheme").slice(1, -3);
+   //console.log(currentColorCap, "chupame la lefa..ok????");
+   let currentColor2 = String(localStorage.getItem("colortheme")).charAt(0).toUpperCase()+localStorage.getItem("colortheme").slice(1);
+   //console.log(currentColor2, "fuguhugreuigfijg");
+   let waitingColor = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+   
+   const TIMEUP = "TIME UP!!!";
+   const noNameDetected = "I detect you haven't given us a name, please type a name";
+   const editName = "Change your new name";
+
+
+
+        
+      
+
+
+
+        window.addEventListener("load", ()=> {
+
+            setStylesatRuntime();
+
+
+
+
+
+        });
+
+
+
+     // CREATION OF LOCALSTORAGE PROPERTIES 
+
+
+    if (!localStorage.getItem("secs")) {
+            localStorage.setItem("secs", 1);
+    }
+
+    if (!localStorage.getItem("mins")) {
+            localStorage.setItem("mins", 1);
+    }
+
+
+   if (!localStorage.getItem("reps")) {
+        localStorage.setItem("reps", 1);
+   }
+
+   if (!localStorage.getItem("musictheme")) {
+       localStorage.setItem("musictheme", "african");
+   }
+   
+   if (!localStorage.getItem("colortheme")) {
+
+      localStorage.setItem("colortheme", "greenish");
+    }
+
+
+
+
+   if (!localStorage.getItem("SEX")) {
+            profilepic.style.backgroundImage = "url('MarioQuestion.png')";
+
+       
+   } else if (localStorage.getItem("SEX") === "male"){
+   
+               profilepic.style.backgroundImage = `url("male.png")`;
+   
+   }else if (localStorage.getItem("SEX") === "female") {
+
+
+            profilepic.style.backgroundImage = `url("female.png")`;
+
+
+
+
+        }
+
+        profilepic.style.backgroundRepeat = "no-repeat";
+
+        profilepic.style.backgroundSize = "100%";
+        profilepic.style.backgroundAttachment = "fixed";
+
+        profilepic.style.backgroundPosition = "top center";
+
+
+        if (!localStorage.getItem("NAME")) {
+
+            createTimeup(noNameDetected);
+
+        } else {
+
+         
+         
+         username.innerText = localStorage.getItem("NAME");
+        }
+        
+        username.addEventListener("click", ()=> {
+
+       createTimeup(editName);
+
+        });
+        
+        
+        
+    
+    if (!localStorage.getItem("getreadysecs")) {
+            localStorage.setItem("getreadysecs", 9);
+    }
+
+
+
+
+
+ 
+//FUNCION GLOBAL SPINNER 
+
+    let cw = window.innerWidth/5;
+    let countCircle = 0
+    let circleFulltime;
+    let lefaInterval;
+    let putaInterval;
+    let cointcirc = 0;
+        
+function fullCircleBar(c, barLen2, cw, lineWidth) {
+
+    c.style.display = "block";
+
+
+    let canvasWidth = cw
+    let canvasHeight = cw;
+    console.log(canvasWidth, "and ", canvasHeight)
+    c.width = canvasWidth;
+    c.height = canvasHeight;
+    //let lineWidth=6;
+    let radius = (canvasWidth/2);
+    //let countCircle=0;
+    let maxCircle = 100;
+    
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+    
+    ctx.beginPath();
+    
+    ctx.lineWidth = lineWidth;
+    
+    ctx.strokeStyle = "#000000";
+    
+    ctx.arc(radius, radius, radius- 2*lineWidth, 0,Math.PI*2, false);
+    ctx.stroke();
+    
+    
+    
+    ctx.beginPath();
+    
+    
+    ctx.strokeStyle = "#FFFFFF";
+    ctx.shadowOffsetY = 0;
+    ctx.shadowBlur = lineWidth+2;
+    ctx.lineCap = "round";
+    ctx.shadowColor = `${getComputedStyle(cssRoot).getPropertyValue("--waiting-color")}`;
+    ctx.arc(radius, radius, radius- 2*lineWidth, -(Math.PI/2), ((countCircle/100)*(Math.PI*2))-Math.PI/2, false);
+    ctx.stroke();
+
+    if (running) {
+
+                  
+    countCircle += (10/((barLen2 -0.5)));
+    
+    console.log("countCircle=  "+countCircle," cointcirc= ",cointcirc);    
+    //(100/(barLen2))/10;
+                }
+
+//if (cointcirc%10 ===0) {
+      //  clearInterval(lefaInterval);
+        
+//}
+ //if (countCircle >= maxCircle) {
+//ctx.arc(radius, radius, radius - 2*lineWidth, -(Math.PI/2), ((countCircle/100)*(Math.PI*2))-Math.PI/2, false);
+ //  ctx.stroke();
+ //countCircle = 0;
+//  cointcirc = 0;
+//  c.style.display = "none";
+  //  clearInterval(lefaInterval);
+                    //clearInterval(putaInterval);
+ //  }
+// 2 4 5 6  25 64
+
+          }
+
+
+//function fullCircleBar(c,barLen2,cw,lineWidth)
+ // fullCircleBar(c,100,cw,3);
+ /* putaInterval=     setInterval(   ()=>{ fullCircleBar(c,10,(window.innerWidth/6),6)}
+  ,1000 );
+ */
+
+
+        let perceofscreen;
+
+
+
+        let halfScreenWidth;
+        let circleRadius;
+        let circleRadiusSides;
+        let circleCircunfirence;
+        let circleCircunfirenceMinus;
+        let leftDynamicPercent;
+        let leftPercent;
+
+ if (window.innerWidth < window.innerHeight) {
+
+
+            perceofscreen = 50;
+
+            halfScreenWidth = Number ((window.innerWidth))*(perceofscreen/100);
+
+
+            circleRadius = ((halfScreenWidth/2))-10;
+
+            circleRadiusSides = ((halfScreenWidth/2));
+
+
+
+            circleCircunfirence = (circleRadius)*2*(Math.PI);
+
+
+
+            circleCircunfirenceMinus =-1*(circleRadius)*2*(Math.PI);
+
+
+            leftDynamicPercent = ((100- perceofscreen)/2)/100;
+
+
+            leftPercent = ((window.innerWidth)*leftDynamicPercent)-10;
+
+        } else {
+
+
+
+
+
+            perceofscreen = 25;
+
+            halfScreenWidth = Number ((window.innerWidth))*(perceofscreen/100);
+
+
+            circleRadius = ((halfScreenWidth/2))-10;
+
+            circleRadiusSides = ((halfScreenWidth/2));
+
+
+
+            circleCircunfirence = (circleRadius)*2*(Math.PI);
+
+
+
+            circleCircunfirenceMinus =-1*(circleRadius)*2*(Math.PI);
+
+
+            leftDynamicPercent = ((100- perceofscreen)/2)/100;
+
+
+            leftPercent = ((window.innerWidth)*leftDynamicPercent)-10;
+
+        }
+
+
+
+
+
+
+   // INSERTION CSS VARIABLES FOR SPINNER ANIMATION 
+
+    cssRoot.style.setProperty("--screenHeight", window.innerHeight+"px");
+    cssRoot.style.setProperty("--screenWidth", window.innerWidth+"px");
+    cssRoot.style.setProperty("--halfScreenWidth", halfScreenWidth+"px");
+    cssRoot.style.setProperty("--circleCircunfirence", circleCircunfirence);
+    cssRoot.style.setProperty("--circleCircunfirenceMinus", circleCircunfirenceMinus);
+    cssRoot.style.setProperty("--circleRadius", circleRadius +"px");
+    cssRoot.style.setProperty("--circleRadiusSides", circleRadiusSides +"px");
+    cssRoot.style.setProperty("--leftPercent", leftPercent+"px");
+    cssRoot.style.setProperty("--profilepicHeight", (Number(nav.getBoundingClientRect().height)*0.9)+"px");
+    //console.log(leftPercent, " circum my fucki cock and lefa de trigo");
+    
+    console.log("window innerHeight= ",window.innerHeight);
+
+
+
+
+
+
+
+
+        let intervalpreview;
+
+        function previewBar() {
+
+            let bartemp = document.createElement("input");
+
+            bartemp.type = "range";
+            bartemp.max = 30;
+            bartemp.value = 0;
+            bartemp.className = "barPreview"
+
+            bartemp.style.position = "absolute";
+            bartemp.style.bottom = "5%";
+            bartemp.style.right = "5%";
+            bartemp.style.background = "#000000";
+
+
+
+
+            bartemp.style.zIndex = "25";
+            document.body.appendChild(bartemp);
+
+            let count = 0;
+
+            intervalpreview = setInterval(()=> {
+
+
+                if (count < 31) {
+
+                    bartemp.value = count;
+
+
+
+                } else if (count > 31) {
+
+
+                    bartemp.remove();
+                    clearInterval(intervalpreview);
+                }
+
+
+                count++
+
+
+            },
+                100)
+
+        }
+
+
+
+ musicThemeDisplay.addEventListener("click", ()=> {
+
+ console.log("am I touching correctly????")
+
+    if (!running2) {
+         let preview = new Audio("");
+         if (localStorage.getItem("musictheme") === "african") {
+                preview = new Audio ("audiodrums.mp3");
+
+    } else if (localStorage.getItem("musictheme") === "tiger"){
+              preview = new Audio ("Tigeru.mp3");
+
+          } else if (localStorage.getItem("musictheme") === "NTM") {
+
+
+               preview = new Audio ("NTMdeChezToi.mp3");
+
+        }else if(localStorage.getItem("musictheme")==="StreetFighter2"){
+                
+         preview = new Audio ("streetFighter2Medley.mp3");
+                
+        }else if(localStorage.getItem("musictheme")==="NTM2"){
+                
+         preview = new Audio ("NtmSaintDennis.mp3");
+                
+      }else if(localStorage.getItem("musictheme")==="NTM3"){
+                
+         preview = new Audio ("NTMPoseTonGun.mp3");
+                
+            }
+
+
+                let backShadow = document.createElement("div");
+                backShadow.style.width = "100%";
+                backShadow.style.height = "100%";
+                backShadow.style.position = "absolute";
+                backShadow.style.top = "0%";
+                backShadow.style.left = "0%";
+                backShadow.style.background = "#000000";
+                backShadow.style.opacity = "0.6";
+                backShadow.style.display = "block";
+                backShadow.style.zIndex = "25";
+                document.body.appendChild(backShadow);
+
+
+
+                preview.currentTime = 3;
+
+
+
+                preview.play();
+                previewBar();
+
+                document.body.appendChild(backShadow);
+
+
+
+
+
+
+                setTimeout(()=> {
+
+                    preview.pause();
+                    preview.currentTime = 0;
+
+
+                    backShadow.remove();
+
+
+
+                }, 3000);
+
+            } else {
+
+
+                new Audio("laughEffect.mp3").play();
+            }
+
+        });
+
+
+
+
+
+ function getreadyCountdown(transitionSecs, top, left, fontSize, width, height, realParent, getreadyColor, lastdigit) {
+
+
+ cssRoot.style.setProperty("--getreadyColor",
+                getreadyColor);
+
+
+            let intervalTransition;
+
+            let trasitionCount = (transitionSecs/1000);
+            let parent = document.createElement("div");
+
+            parent.style.zIndex = 20;
+
+            parent.style.position = "absolute";
+            parent.style.top = top;
+            parent.style.left = left;
+            parent.style.width = width;
+            parent.style.height = height;
+            parent.style.display = "flex";
+            parent.style.justifyContent = "center";
+            parent.style.alignItems = "center";
+            //parent.style.border = "solid "+waitingColor;
+
+
+
+
+
+
+            let numReady = document.createElement("h1");
+
+
+
+            if (lastdigit === "") {
+
+
+                numReady.style.fontFamily = "regularText";
+
+            }
+
+
+
+
+            numReady.style.color = "#FFFFFF";
+            numReady.style.fontSize = fontSize+ "rem";
+
+
+            //  numReady.style.transition="transform 1s ease"
+
+            numReady.style.zIndex = "25";
+            numReady.innerText = trasitionCount;
+
+
+            parent.appendChild(numReady)
+
+            realParent.appendChild(parent);;
+
+            intervalTransition = setInterval(()=> {
+                numReady.className = "numReady"
+                if (trasitionCount > 0) {
+
+
+                    trasitionCount--;
+
+
+
+                    if (trasitionCount < 1) {
+
+                        trasitionCount = lastdigit;
+
+                        cssRoot.style.setProperty("--numReady", 2)
+
+
+
+                    }
+
+
+
+                    numReady.innerText = trasitionCount;
+
+
+
+
+
+                    console.log(trasitionCount, "   pinga mia de lefa")
+
+
+
+                } else {
+
+                    numReady.remove();
+                    parent.remove();
+
+                    clearInterval(intervalTransition);
+                }
+            },
+                1000);
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        //function getreadyCountdown(transitionSecs,top,left,fontSize, width,height)
+
+
+        //getreadyCountdown(transitionSecs,65,35,1,30,5);
+
+
+
+
+
+        //MUSICS FOR WHEN I LOAD APP
+
+        if (localStorage.getItem("musictheme") === "african") {
+
+            musicTheme = new Audio("audiodrums.mp3");
+
+
+
+        } else if (localStorage.getItem("musictheme") === "tiger") {
+
+            musicTheme = new Audio("Tigeru.mp3");
+
+        } else if (localStorage.getItem("musictheme") === "NTM") {
+
+            musicTheme = new Audio("NTMdeChezToi.mp3");
+
+        }else if (localStorage.getItem("musictheme") === "StreetFighter2") {
+
+            musicTheme = new Audio("streetFighter2Medley.mp3");
+}else if (localStorage.getItem("musictheme") === "NTM2") {
+
+            musicTheme = new Audio("NtmSaintDennis.mp3");
+}else if (localStorage.getItem("musictheme") === "NTM3") {
+
+            musicTheme = new Audio("NTMPoseTonGun.mp3");
+}
+
+
+
+
+    function putinthecolorthemes(color, color2, maincolor, colorlower) {
+
+            numsBlock.className = "numsBlock numsBlock"+color2;
+            nav.className = "nav nav"+color;
+
+            startButt.className = "start startButt"+color;;
+            setButt.className = "setButt setButt"+color;
+
+            cssRoot.style.setProperty("--waiting-color", maincolor);
+
+
+            //  cssRoot.style.setProperty("--gradient-theme", "linear-gradient(to bottom, green,lime,yellowgreen)");
+
+
+            barHtml.className = " progressBar progressBar"+color;
+
+
+
+
+
+
+            stopbutt.className = "stopbutts stopbutts"+color;
+
+            pausebutt.className = "stopbutts stopbutts"+color;;
+
+
+            musicThemeDisplay.className = "musicThemeDisplay musicThemeDisplay"+color;
+
+
+
+
+            if (color === "Space") {
+
+                document.body.style.backgroundImage = "url(space.jpg)";
+                document.body.style.backgroundRepeat = "no-repeat";
+
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundAttachment = "fixed";
+                document.body.style.backgroundLocation = "center";
+
+
+
+            }
+
+            currentColorCap = color;
+
+            currentColor = colorlower;
+            currentColor2 = color2.toLowerCase();
+            waitingColor = maincolor;
+            cssRoot.style.setProperty("--waiting-color", maincolor);
+
+
+
+        }
+
+
+
+
+        function setStylesatRuntime() {
+
+
+
+
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+
+
+                putinthecolorthemes("Green", "Greenish", "lime", "green")
+
+
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+                putinthecolorthemes("Pink", "Pinkish", "magenta", "pink");
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+
+                putinthecolorthemes("Blue", "Blueish", "dodgerblue", "blue");
+
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+
+                profilepicBox.style.border = "solid black";
+
+                profilepic.style.border = "solid black 0.5px";
+
+
+                username.style.color = "black";
+
+
+
+
+
+                putinthecolorthemes("White", "Whitish", "lightgrey", "white");
+
+
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+                putinthecolorthemes("Yellow", "Yellowish", "yellowgreen", "yellow");
+
+
+
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+
+                putinthecolorthemes("Red", "Reddish", "red", "red");
+
+
+
+      } else if (localStorage.getItem("colortheme") === "space") {
+
+                putinthecolorthemes("Space", "Space", "darkviolet", "darkviolet");
+
+
+
+
+
+
+
+
+
+
+
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+                putinthecolorthemes("Orange", "Orangeish", "darkorange", "darkorange");
+
+            }else if (localStorage.getItem("colortheme") === "brownish") {
+
+                putinthecolorthemes("Brown", "Brownish", "#4b3620", "#4b3620");
+
+            }else if (localStorage.getItem("colortheme") === "blackish") {
+
+                putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
+
+            }
+
+
+        }
+
+
+
+
+
+        let musicThemeString = "";
+
+
+        switch (localStorage.getItem("musictheme")) {
+
+            case "african":
+                musicThemeString = "African War Drums";
+                break;
+            case "tiger":
+                musicThemeString = "Eye of the Tiger";
+                break;
+
+            case "NTM":
+                musicThemeString = "NTM d'Chez Toi";
+                break;
+                
+             case "StreetFighter2":
+             musicThemeString = "Street Fighter II SNES Medley";
+                break;
+                
+                
+           case "NTM2":
+             musicThemeString = "NTM -Saint Dennis Style-";
+                break;
+                
+                
+           case "NTM3":
+             musicThemeString = "NTM -Pose Ton Gun 'IV My people' Remix-";
+                break;
+
+        }
+
+
+
+        console.log(getComputedStyle(cssRoot).getPropertyValue("--waiting-color"));
+
+
+
+        musicThemeDisplay.innerText = "🔊 "+musicThemeString;
+
+        let currentsoundeffectpath = "";
+
+
+        function setMusicselectEffects(input) {
+
+
+       if (input === "tiger" || input === "african" || input==="NTM" || input==="NTM2"|| input===  "NTM3" || input==="StreetFighter2") {
+
+
+                currentsoundeffectpath = "selectSelection2.mp3";
+
+
+
+
+            }
+        }
+
+
+        function musicSelectPopText() {
+
+
+            let text = document.createElement("h2");
+
+            text.innerText = localStorage.getItem("musictheme")+" selected";
+
+
+            text.className = "musicSelectPopText";
+
+
+            global.appendChild(text);
+
+
+
+            setTimeout(()=> {
+
+
+
+                text.remove();
+
+
+
+            }, 2100);
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        function getmusicSelected() {
+
+            let variable = 0;
+
+            switch (localStorage.getItem("musictheme")) {
+
+
+                case "african":
+                    variable = 1;
+                    break;
+
+                case "tiger":
+                    variable = 2;
+                    break;
+
+
+                case "NTM":
+                    variable = 3;
+                    break;
+                    
+                case "NTM2":
+                    variable = 4;
+                    break;
+                case "NTM3":
+                    variable = 5;
+                    break;
+                    
+                    
+                case "StreetFighter2":
+                    variable = 6;
+                    break;
+
+
+
+
+
+            }
+
+
+            return variable;
+        }
+
+
+
+
+
+
+
+
+        let musiccount = 0;
+
+
+        musicSelect.addEventListener("click", (e)=> {
+
+            new Audio("openselectsTrimmed.mp3").play();
+
+
+
+
+
+
+
+            e.target.selectedIndex = getmusicSelected();
+
+
+
+
+
+
+
+
+        });
+
+
+
+
+        musicSelect.addEventListener("change", (e)=> {
+
+
+
+
+
+            if (!running2) {
+
+
+
+            if (e.target.value === "african") {
+
+
+         musicTheme = new Audio("audiodrums.mp3");
+
+
+        localStorage.setItem("musictheme", "african");
+                    
+                    musicThemeDisplay.innerText = "🔊 African War Drums";
+
+
+
+                } else if (e.target.value === "NTM") {
+
+
+                    musicTheme = new Audio("NTMdeChezToi.mp3");
+
+                    localStorage.setItem("musictheme", "NTM");
+                    musicThemeDisplay.innerText = "🔊 NTM d'Prez Toi";
+
+
+
+                } else if (e.target.value === "tiger") {
+
+
+                    musicTheme = new Audio("Tigeru.mp3");
+
+                    localStorage.setItem("musictheme", "tiger");
+                    musicThemeDisplay.innerText = "🔊 Eye of the Tiger";
+
+
+      }else if (e.target.value === "StreetFighter2") {
+
+
+            musicTheme = new Audio("streetFighter2Medley.mp3");
+
+           localStorage.setItem("musictheme", "StreetFighter2");
+           
+        musicThemeDisplay.innerText = "🔊 Street Fighter-II SNES ,Medley";
+
+
+                
+      }else if (e.target.value === "NTM2") {
+
+
+            musicTheme = new Audio("NtmSaintDennis.mp3");
+
+           localStorage.setItem("musictheme", "NTM2");
+           
+        musicThemeDisplay.innerText = "🔊 NTM -Saint Dennis Style-";
+
+
+                
+      }else if (e.target.value === "NTM3") {
+
+
+            musicTheme = new Audio("NTMPoseTonGun.mp3");
+
+           localStorage.setItem("musictheme", "NTM3");
+           
+        musicThemeDisplay.innerText = "🔊 NTM -Pose Ton Gun 'IV My people' Remix-";
+
+
+                
+      }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+       if (e.target.selectedIndex != 0) {
+                    new Audio("selectSelection2.mp3").play();
+
+
+                    musicSelectPopText()
+                }
+
+            } else {
+
+                new Audio("laughEffect.mp3").play();
+
+            }
+
+
+
+            e.target.selectedIndex = "0";
+
+        });
+
+
+
+
+        function getthemeSelected() {
+
+            let variab = 0;
+
+            switch (localStorage.getItem("colortheme")) {
+                
+                
+                case "blackish":
+                    variab = 1;
+                    break;
+
+
+                case "blueish":
+                    variab = 2;
+                    break;
+                    
+                    
+                case "brownish":
+                    variab = 3;
+                    break;
+
+                case "greenish":
+                    variab = 4;
+                    break;
+
+
+
+                case "orangeish":
+                    variab = 5;
+                    break;
+
+                case "reddish":
+                    variab = 6;
+                    break;
+
+                case "pinkish":
+                    variab = 7;
+                    break;
+
+                case "whitish":
+                    variab = 8;
+                    break;
+
+                case "yellowish":
+                    variab = 9;
+                    break;
+
+                case "space":
+                    variab = 10;
+                    break;
+
+
+
+
+
+            }
+
+            return variab;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        themeSelect.addEventListener("click", (e)=> {
+
+            new Audio("openselectsTrimmed.mp3").play();
+
+
+
+            e.target.selectedIndex = getthemeSelected();
+            console.log(getthemeSelected(), " mi chupa podia??? ");
+        });
+
+
+
+        themeSelect.addEventListener("change", (e)=> {
+
+
+            profilepicBox.style.border = "solid white";
+
+            profilepic.style.border = "solid white 0.5px";
+
+
+            username.style.color = "white";
+
+
+            if (e.target.value === "whitish") {
+
+                putinthecolorthemes("White", "Whitish", "lightgrey", "lightgrey");
+
+
+
+                localStorage.setItem("colortheme", "whitish");
+
+
+                console.log("color white");
+
+
+
+
+                profilepicBox.style.border = "solid black";
+
+                profilepic.style.border = "solid black 0.5px";
+
+
+                username.style.color = "black";
+
+
+
+
+
+
+
+
+
+            } else if (e.target.value === "blueish") {
+                putinthecolorthemes("Blue", "Blueish", "dodgerblue", "blue");
+
+                localStorage.setItem("colortheme", "blueish");
+
+                console.log("theme blueish");
+
+
+
+
+
+
+
+
+
+            } else if (e.target.value === "pinkish") {
+
+
+
+                putinthecolorthemes("Pink", "Pinkish", "magenta", "pink");
+
+
+                localStorage.setItem("colortheme", "pinkish");
+
+
+                console.log("theme pinkish");
+
+
+
+
+
+
+
+
+
+            } else if (e.target.value === "greenish") {
+
+                putinthecolorthemes("Green", "Greenish", "lime", "green");
+
+                localStorage.setItem("colortheme", "greenish");
+
+                console.log("theme Greenish");
+
+
+
+
+
+
+
+            } else if (e.target.value === "yellowish") {
+
+
+
+                putinthecolorthemes("Yellow", "Yellowish", "yellowgreen", "yellow");
+
+
+
+                localStorage.setItem("colortheme", "yellowish");
+
+
+                console.log("theme Yellowish");
+
+
+
+
+
+
+            } else if (e.target.value === "reddish") {
+
+                putinthecolorthemes("Red", "Reddish", "red", "red")
+
+
+
+
+                localStorage.setItem("colortheme", "reddish");
+
+                console.log("theme Reddish");
+
+
+
+
+
+
+            } else if (e.target.value === "space") {
+
+
+                putinthecolorthemes("Space", "Space", "darkviolet", "darkviolet")
+
+                localStorage.setItem("colortheme", "space");
+
+
+                console.log("Space theme");
+
+
+            } else if (e.target.value === "orangeish") {
+
+
+                putinthecolorthemes("Orange", "Orangeish", "darkorange", "orange")
+
+                localStorage.setItem("colortheme", "orangeish");
+
+
+                console.log("Orange theme");
+
+
+            }else if(e.target.value==="brownish"){
+                
+                
+                putinthecolorthemes("Brown", "Brownish", "#4b3620", "#4b3620");
+                
+               localStorage.setItem("colortheme", "brownish");
+               
+                
+                
+              console.log("Brown theme");
+              
+                
+                
+                
+       }else if(e.target.value==="blackish"){
+                
+                
+                putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
+                
+               localStorage.setItem("colortheme", "blackish");
+               
+                
+                
+              console.log("Black theme");
+              
+                
+                
+                
+            }
+
+
+            if (e.target.value !== "space" && e.target.value !== "") {
+                document.body.style.background = "#000000";
+
+
+            }
+
+
+
+
+
+
+
+
+            selectSelection.play();
+
+
+            e.target.selectedIndex = "0";
+
+        });
+
+
+        console.log(localStorage.getItem("mylefà"), " es lefa????");
+
+        let switchCount = 0;
+
+
+        function SET() {
+
+
+            new Audio("openselectsTrimmed.mp3").play();
+
+            let backShadow = document.createElement("div");
+
+            let setWrap = document.createElement("div");
+
+            setWrap.draggable = true;
+            setWrap.className = "setWrap";
+
+            backShadow.className = "backShadow";
+
+            backShadow.style.display = "block";
+
+
+            let secsSelect = document.createElement("select");
+
+
+            let repsSelect = document.createElement("select");
+
+
+            let transitionSecsSelect = document.createElement("select");
+            
+            let minsSelect = document.createElement("select");
+
+            let getReadySelect = document.createElement("select");
+
+            let exitIcon = document.createElement("img");
+
+
+            let navSet = document.createElement("div");
+
+
+            let br = document.createElement("br");
+
+
+
+
+
+            let numsRow = document.createElement("div");
+
+
+            let numsRow2 = document.createElement("div");
+
+            let numsRow3 = document.createElement("div");
+            let numsRow4 = document.createElement("div");
+            let numsRow5 = document.createElement("div");
+            let numsRow6 = document.createElement("div");
+            let numsRow7 = document.createElement("div");
+
+            let numsRow8 = document.createElement("div");
+
+
+            let minsTopDisplay = document.createElement("p");
+            let secsTopDisplay = document.createElement("p");
+            let repsTopDisplay = document.createElement("p");
+
+
+            let transitionSecsTopDisplay = document.createElement("p");
+            let getreadysecsTopDisplay = document.createElement("p");
+            
+            
+
+            let acceptSetButt = document.createElement("p");
+
+            let switchText = document.createElement("p");
+
+            let switchDelay = document.createElement("button");
+
+
+            let SECONDS = document.createElement("h1");
+            let MINUTES = document.createElement("h1");
+            let REPETITIONS = document.createElement("h1");
+  let TRANSITIONSECONDS = document.createElement("h1");
+  
+  let GETREADYSECONDS = document.createElement("h1");
+  
+  
+  
+  let wrapRow4= document.createElement("div");
+  
+  let wrapRow4Right= document.createElement("div");
+       
+    wrapRow4.className="wrapRow4";
+    wrapRow4Right.className="wrapRow4Right";
+
+
+            SECONDS.innerText = "SECONDS";
+            MINUTES.innerText = "MINUTES";
+            REPETITIONS.innerText = "REPETITIONS";
+            TRANSITIONSECONDS.innerText = "TRANSITION SECONDS";
+            GETREADYSECONDS.innerText="START DELAY";
+
+            SECONDS.className = "SECONDS labels";
+            MINUTES.className = "MINUTES labels";
+            REPETITIONS.className = "REPETITIONS labels";
+            TRANSITIONSECONDS.className = "TRANSITIONSECONDS labels";
+            GETREADYSECONDS.className="GETREADYSECONDS labels";
+
+
+
+
+
+
+            switchDelay.className = "switchDelay";
+
+
+
+            switchText.innerText = "Delayed Transition";
+            switchText.className = "switchText";
+
+
+
+
+
+            backShadow.className = "backShadow";
+            setWrap.className = "setWrap";
+            exitIcon.className = "exitIcon";
+
+            exitIcon.src = "exit-icon.png";
+
+
+
+
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                navSet.className = "navSet navSetGreen";
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+                navSet.className = "navSet navSetBlue";
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+                navSet.className = "navSet navSetPink";
+
+
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                navSet.className = "navSet navSetWhite";
+
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+                navSet.className = "navSet navSetYellow";
+
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+                navSet.className = "navSet navSetRed";
+
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+                navSet.className = "navSet navSetSpace";
+
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+                navSet.className = "navSet navSetOrange";
+
+
+            }else if (localStorage.getItem("colortheme") === "brownish") {
+
+                navSet.className = "navSet navSetBrown";
+
+
+            }
+            
+
+
+
+
+
+
+
+
+            numsRow.className = "numsRow";
+            numsRow2.className = "numsRow2";
+
+            numsRow3.className = "numsRow3";
+            numsRow4.className = "numsRow4";
+            numsRow5.className = "numsRow5";
+            numsRow6.className = "numsRow6";
+            numsRow6.appendChild(switchDelay);
+
+            numsRow6.appendChild(switchText);
+
+
+
+
+
+            minsSelect.className = "minsSelect";
+            secsSelect.className = "secsSelect";
+            repsSelect.className = "repsSelect";
+
+            transitionSecsSelect.className = "transitionSecsSelect";
+            
+            getReadySelect.className="getReadySelect";
+
+
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtBlue";
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtPink";
+
+
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtWhite";
+
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
+
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtRed";
+
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtSpace";
+
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
+
+
+            }else if (localStorage.getItem("colortheme") === "brownish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtBrown";
+            }
+
+
+
+
+            if (!localStorage.getItem("secs")) {
+
+                localStorage.setItem("secs", 5);
+            }
+            if (!localStorage.getItem("mins")) {
+
+                localStorage.setItem("mins", 1);
+            }
+            if (!localStorage.getItem("reps")) {
+                localStorage.setItem("reps", 1)
+
+            }
+            if (!localStorage.getItem("transitionsecs")) {
+
+
+                localStorage.setItem("transitionsecs", 5)
+
+            }
+
+
+
+
+
+
+            secsTopDisplay.className = "numsTopDisplay";
+
+            minsTopDisplay.className = "numsTopDisplay";
+            repsTopDisplay.className = "numsTopDisplay repsTopDisplay";
+            
+        transitionSecsTopDisplay.className = "numsTopDisplay transitionSecsTopDisplay";
+        
+        
+        getreadysecsTopDisplay.className="numsTopDisplay getreadysecsTopDisplay";
+        
+        
+        
+
+            minsTopDisplay.innerText = localStorage.getItem("mins");
+            secsTopDisplay.innerText = localStorage.getItem("secs");
+
+
+            //  reps = repsSelect.value;
+
+
+            // transitionSecs = transitionSecsSelect.value;
+
+
+            transitionSecsTopDisplay.innerText = localStorage.getItem("transitionsecs");
+            
+            
+            
+            getreadysecsTopDisplay.innerText= localStorage.getItem("getreadysecs");
+
+
+
+
+            repsTopDisplay.innerText = localStorage.getItem("reps");
+
+
+
+            acceptSetButt.innerText = "Accept";
+
+            let s = document.querySelector(".global");
+
+            s.appendChild(setWrap);
+            document.body.appendChild(backShadow);
+
+
+
+            setWrap.appendChild(navSet);
+            setWrap.appendChild(br);
+            setWrap.appendChild(numsRow);
+            setWrap.appendChild(numsRow2);
+            setWrap.appendChild(numsRow3);
+            setWrap.appendChild(numsRow4);
+            //   setWrap.appendChild(numsRow7);
+            //  setWrap.appendChild(numsRow8);
+            setWrap.appendChild(numsRow6);
+            setWrap.appendChild(numsRow5);
+
+            setWrap.appendChild(exitIcon);
+
+
+
+
+            console.log(numsRow6[0], " ma puta");
+
+
+            numsRow.appendChild(minsTopDisplay);
+            numsRow.appendChild(secsTopDisplay);
+
+
+
+
+            // navSet.appendChild(exitIcon);
+
+            numsRow2.appendChild(minsSelect);
+
+
+            numsRow2.appendChild(secsSelect);
+
+
+            numsRow2.appendChild(MINUTES);
+            numsRow2.appendChild(SECONDS);
+
+
+
+
+
+            numsRow3.appendChild(repsSelect);
+
+            numsRow3.appendChild(repsTopDisplay);
+
+
+
+            numsRow3.appendChild(REPETITIONS);
+            
+            
+     numsRow4.appendChild(wrapRow4);
+     numsRow4.appendChild(wrapRow4Right);
+
+     wrapRow4.appendChild(transitionSecsTopDisplay);
+     
+    wrapRow4.appendChild(transitionSecsSelect);
+    wrapRow4.appendChild(TRANSITIONSECONDS);
+    
+    
+    wrapRow4Right.appendChild(getreadysecsTopDisplay);
+    wrapRow4Right.appendChild(getReadySelect);
+    wrapRow4Right.appendChild(GETREADYSECONDS);
+
+
+
+
+            numsRow5.appendChild(acceptSetButt);
+
+
+            let myvar = "<option value=1>Seconds </option>`";
+
+
+
+            let myvar2 = "<option value=0>Minutes </option>`";
+
+            let myvar3 = "<option value=1>Repetitions </option>`";
+
+            let myvar4 = "<option value=3>Transition </option>`";
+            
+            let myvar5 = "<option value=1>Start-Delay</option>`";
+            
+            
+            
+            
+            repsTopDisplay.style.bottom = 0-(repsTopDisplay.getBoundingClientRect().height)+"px";
+
+            console.log("the height,k? ", numsRow3.getBoundingClientRect().height);
+
+
+            for (let i = 0; i < 61; i++) {
+
+
+                if (i > 0 && i < 60) {
+
+
+                    if (i === Number(localStorage.getItem("secs"))) {
+
+                        myvar += `<option value='${i}' selected>${i}</option>`;
+
+                    } else {
+
+                        myvar += `<option value='${i}'>${i}</option>`;
+
+                    }
+                }
+
+
+
+                if (i < 60) {
+
+                    if (i === Number (localStorage.getItem("mins"))) {
+
+                        myvar2 += `<option value='${i}' selected>${i}</option>`;
+
+                    } else {
+
+                        myvar2 += `<option value='${i}'>${i}</option>`;
+
+                    }
+
+
+
+                }
+
+
+                if (i > 0) {
+
+
+                    if (i === Number(localStorage.getItem("reps"))) {
+                        myvar3 += `<option value='${i}'selected>${i}</option>`;
+                    } else {
+
+
+                        myvar3 += `<option value='${i}' >${i}</option>`;
+                    }
+
+
+
+
+
+                    if ((i) === Number(localStorage.getItem("transitionsecs")) && i > 2) {
+
+              myvar4 += `<option value='${i}'selected>${i}</option>`;
+
+
+
+                    } else {
+
+
+                        if (i > 2) {
+                            myvar4 += `<option value='${i}'>${i}</option>`;
+
+                        }
+
+                    }
+                    
+                    
+                    
+  if(i===Number(localStorage.getItem("getreadysecs")) && i>0 && i<31){
+             
+             
+         myvar5 += `<option value='${i}'selected>${i}</option>`;  
+            
+            
+            
+               
+               
+               
+           } else{
+               if(i>0 && i<31){
+                   
+                   
+                 myvar5 += `<option value='${i}'>${i}</option>`;
+                 
+                   
+                   
+               }
+               
+           }
+                    
+                    
+                    
+                }
+
+
+
+                secsSelect.innerHTML = myvar;
+
+                minsSelect.innerHTML = myvar2;
+
+
+                repsSelect.innerHTML = myvar3;
+                transitionSecsSelect.innerHTML = myvar4;
+                
+         getReadySelect.innerHTML=myvar5;
+
+
+
+            }
+
+            console.log(localStorage.getItem("delay"));
+
+            if (!localStorage.getItem("delay")) {
+
+
+                localStorage.setItem("delay", "OFF");
+
+            }
+
+
+            if (localStorage.getItem("delay") === "ON") {
+                
+                
+if(parseInt(repsSelect.value)!=1){
+                delay = true;
+                //   switchDelay.value="ON";
+                switchDelay.innerText = "ON";
+                switchDelay.style.color = "#FFFFFF";
+                switchDelay.style.boxShadow = "0 0 9px 0px "+getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+                switchDelay.style.background = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+
+                transitionSecs = (transitionSecsSelect.value)*1000;
+                cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+}
+
+            } else if (localStorage.getItem("delay") === "OFF" || parseInt(repsSelect.value)===1) {
+
+                delay = false;
+                //  switchDelay.value="OFF";
+                switchDelay.innerText = "OFF";
+
+                switchDelay.style.color = "#000000";
+                switchDelay.style.boxShadow = "0 0 0 0px  black";
+
+                switchDelay.style.background = "grey";
+
+                transitionSecsSelect.style.display = "none";
+                transitionSecsTopDisplay.style.display = "none";
+
+                TRANSITIONSECONDS.style.display = "none";
+
+                transitionSecs = 1000;
+                cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+            }
+
+
+
+
+
+            switchDelay.addEventListener("click", (e)=> {
+
+
+
+                if (delay === true) {
+
+
+
+
+
+
+                    transitionSecsSelect.style.display = "none";
+                    transitionSecsTopDisplay.style.display = "none";
+                    TRANSITIONSECONDS.style.display = "none";
+
+
+
+
+
+
+                    switchDelay.innerText = "OFF";
+                    delay = false;
+
+
+                    switchDelay.style.color = "#000000";
+                    switchDelay.style.boxShadow = "0 0 0 0px  black";
+
+                    switchDelay.style.background = "grey";
+
+
+
+
+
+                    new Audio("selectSelection.mp3").play();
+                    console.log("delay= ", delay);
+
+                    transitionSecs = 1000;
+                    cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+
+                    localStorage.setItem("delay", "OFF");
+
+                } else  {
+if(parseInt(repsSelect.value) !=1){
+
+
+                    switchDelay.innerText = "ON";
+                    delay = true;
+                    console.log("delay= ", delay);
+
+
+
+
+                    transitionSecsSelect.style.display = "block";
+                    transitionSecsTopDisplay.style.display = "block";
+                    TRANSITIONSECONDS.style.display = "block";
+
+
+
+                    switchDelay.style.color = "#FFFFFF";
+                    switchDelay.style.boxShadow = "0 0 9px  0px "+getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+                    switchDelay.style.background = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+                    new Audio("selectSelection2.mp3").play();
+                    localStorage.setItem("delay", "ON");
+                    transitionSecs = (transitionSecsSelect.value)*1000;
+                    cssRoot.style.setProperty("--secs", ((transitionSecs/1000)+0.3)+"s");
+                  }else{
+                      
+                      
+           new Audio("laughEffect.mp3").play();
+                  }
+
+
+
+                }
+
+
+
+
+
+
+            }
+            );
+
+
+
+  secsSelect.addEventListener("change",
+                (e)=> {
+
+
+
+
+
+
+                    secsTopDisplay.innerText = secsSelect.value;
+
+                    localStorage.setItem("secs", e.target.value);
+
+
+
+
+
+
+
+
+
+
+
+                });
+
+
+            minsSelect.addEventListener("change",
+                (e)=> {
+
+
+                    minsTopDisplay.innerText = e.target.value;
+
+                    localStorage.setItem("mins", e.target.value);
+
+
+
+
+
+
+
+
+                });
+
+
+   repsSelect.addEventListener("change",
+                (e)=> {
+
+
+                    repsTopDisplay.innerText = e.target.value;
+
+                    localStorage.setItem("reps", e.target.value);
+
+
+                    reps = e.target.value;
+
+     if(parseInt(repsSelect.value)===1 && delay===true){
+                    transitionSecsSelect.style.display = "none";
+                    transitionSecsTopDisplay.style.display = "none";
+                    TRANSITIONSECONDS.style.display = "none";
+                    
+            switchDelay.innerText = "OFF";
+            
+                    delay = false;
+
+
+                    switchDelay.style.color = "#000000";
+                    switchDelay.style.boxShadow = "0 0 0 0px  black";
+
+                    switchDelay.style.background = "grey";
+                    
+                new Audio("selectSelection.mp3").play();
+                    console.log("delay= ", delay);
+
+                    transitionSecs = 1000;
+                    cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+
+                    localStorage.setItem("delay", "OFF");
+                
+    
+                  }
+
+
+
+                });
+
+
+         transitionSecsSelect.addEventListener("change",
+                (e)=> {
+
+            transitionSecs = Number(e.target.value)*1000;
+            
+           transitionSecsTopDisplay.innerText = Number(e.target.value);
+           
+           cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+
+           localStorage.setItem("transitionsecs", e.target.value);
+                   });
+                   
+                   
+                   
+      getReadySelect.addEventListener("change",
+                (e)=> {
+
+           getReadySecs = Number(e.target.value)*1000;
+            
+           getreadysecsTopDisplay.innerText = Number(e.target.value);
+           
+           cssRoot.style.setProperty("--secs2", ((getReadySecs/1000))+"s");
+
+
+
+           localStorage.setItem("getreadysecs", e.target.value);
+                   });
+                   
+                   
+                   
+                   
+                   
+
+            acceptSetButt.addEventListener("click",
+                ()=> {
+
+                    secs = parseFloat(secsSelect.value);
+                    
+                    mins = parseFloat (minsSelect.value);
+
+
+                    initialSecs = secsSelect.value;
+                    initialMins = minsSelect.value;
+                    
+                    
+                    initalReps= repsSelect.value;
+
+                    reps = repsSelect.value;
+
+                    zero = secs < 10 ? "0": "";
+                    zero2 = mins < 10 ? "0": "";
+
+
+                    secsHtml.innerText = zero+secs;
+                    minsHtml.innerText = zero2+mins;
+
+
+    let barLenRoot = ((60*mins) + (secs-1));
+     let barLenRoot2 = 60*mins + secs;
+
+             barLen = 100/barLenRoot;
+
+       barLen2 = (barLenRoot2 * reps);
+
+                    console.log("barLen= ", barLen, "   second ", "and BarLen2= ", barLen2);
+              console.log(barLenRoot2)
+                    
+                    countCircle=0;
+                    cointcirc=0;
+
+
+
+
+
+
+
+                    startButt.style.display = "block";
+
+                    setWrap.remove();
+                    backShadow.remove();
+
+
+
+                });
+
+
+
+
+
+
+
+
+            exitIcon.addEventListener("click",
+                ()=> {
+
+                    setWrap.remove();
+                    backShadow.remove();
+
+
+
+
+
+                })
+
+            setWrap.draggable = false;
+
+
+            navSet.addEventListener("touchstart",
+                (e)=> {
+
+                    console.log("start touch event");
+
+                    e.preventDefault();
+
+
+
+                    x = e.touches[0].pageX;
+                    y = e.touches[0].pageY;
+
+                });
+
+
+
+            navSet.addEventListener("touchmove",
+                (e)=> {
+
+
+                    newx = x- e.touches[0].pageX;
+                    newy = y- e.touches[0].pageY;
+
+                    console.log(x, " ", y);
+                    x = e.touches[0].pageX;
+                    y = e.touches[0].pageY;
+
+                    setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                    setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            navSet.addEventListener("mousedown",
+                (e)=> {
+
+
+
+
+                    x = e.clientX;
+                    y = e.clientY;
+
+                    navSet.addEventListener("mousemove", (e)=> {
+                        newx = (x- e.clientX);
+
+                        newy = (y - e.clientY);
+
+                        x = e.clientX;
+                        y = e.clientY;
+
+
+                        console.log(x, "  ", y);
+
+                        setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                        setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+                    });
+
+
+
+                    navSet.addEventListener("mouseup", (e)=> {
+
+
+                        navSet.removeEventListener("mousemove", (e)=> {
+
+
+
+
+                            newx = x- e.clientX;
+
+                            newy = y - e.clientY
+
+                            x = e.clientX;
+                            y = e.clientY;
+
+
+
+
+                            setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                            setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+
+
+
+                        })
+                    });
+
+
+                });
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+
+        function createTimeup(texttoDisplay) {
+
+
+
+            let backShadow = document.createElement("div");
+
+            backShadow.style.display = "block";
+
+            let content = document.createElement("div");
+            let topBar = document.createElement("div");
+
+
+            let subdiv = document.createElement("div");
+
+            let timeuptext = document.createElement("p");
+            let accept = document.createElement("buttom");
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                topBar.className = "topBartimeup topBartimeupGreen";
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                topBar.className = "topBartimeup topBartimeupWhite";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+
+                topBar.className = "topBartimeup topBartimeupBlue";
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+
+                topBar.className = "topBartimeup topBartimeupPink";
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+
+                topBar.className = "topBartimeup topBartimeupYellow";
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+
+                topBar.className = "topBartimeup topBartimeupRed";
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+
+                topBar.className = "topBartimeup topBartimeupSpace";
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+
+                topBar.className = "topBartimeup topBartimeupOrange";
+
+            }else if (localStorage.getItem("colortheme") === "brownish") {
+
+
+                topBar.className = "topBartimeup topBartimeupBrown";
+
+            }
+            
+
+
+
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                accept.className = "acceptButt acceptButtGreen";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+                accept.className = "acceptButt acceptButtBlue";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+                accept.className = "acceptButt acceptButtPink";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                accept.className = "acceptButt acceptButtWhite";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+                accept.className = "acceptButt acceptButtYellow";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+                accept.className = "acceptButt acceptButtRed";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+                accept.className = "acceptButt acceptButtSpace";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+                accept.className = "acceptButt acceptButtOrange";
+
+
+
+            }else if (localStorage.getItem("colortheme") === "brownish")  {
+
+                accept.className = "acceptButt acceptButtBrown";
+
+
+
+            }
+
+
+
+
+            subdiv.className = "subdivTimeup";
+
+            timeuptext.className = "timeuptext";
+
+            content.className = "timeup";
+
+            backShadow.className = "backShadow";
+
+
+            timeuptext.innerText = texttoDisplay;
+            accept.innerText = "Accept"
+
+
+
+            content.appendChild(topBar);
+
+
+
+
+
+
+            document.body.appendChild(backShadow);
+
+
+            document.body.appendChild(content);
+
+
+
+
+            if (texttoDisplay === TIMEUP) {
+
+
+                content.appendChild(subdiv);
+                subdiv.appendChild(timeuptext);
+
+                subdiv.appendChild(accept);
+
+                accept.addEventListener("click",
+                    (e)=> {
+
+
+
+                        barHtml.style.width = "0%";
+                        bar = 0;
+
+                        setButt.style.display = "block";
+
+                        c.style.display = "none";
+                        ctx.clearRect(0, 0, cw, cw);
+                        countCircle = 0;
+                        cointcirc = 0;
+
+                        content.remove();
+                        backShadow.remove();
+
+                    });
+            } else if (texttoDisplay === noNameDetected) {
+
+
+                let inputa = document.createElement("input");
+
+
+
+                let inputaS3x = document.createElement("select");
+
+
+                // inputaS3x.type="select";
+
+                const yoursexVariable = "Your Sex"
+
+                inputaS3x.innerHTML = `
+                <option>${yoursexVariable}</option>
+                <option value='male'>Man</option>
+                <option value='female'>Wo-man</option>`;
+                inputaS3x.className = "inputaS3x";
+
+
+
+
+
+
+
+                inputa.type = "text";
+
+
+                inputa.setAttribute("maxlength", "8");
+                inputa.className = "nameInput";
+
+                content.appendChild(subdiv);
+                subdiv.appendChild(timeuptext);
+
+                subdiv.appendChild(inputaS3x);
+
+
+
+                subdiv.appendChild(inputa);
+
+                subdiv.appendChild(accept);
+
+
+
+
+
+
+                accept.addEventListener("click",
+                    (e)=> {
+
+
+
+                        localStorage.setItem("NAME", inputa.value);
+                        username.innerText = localStorage.getItem("NAME");
+
+
+
+                        if (inputaS3x.value === "male") {
+
+                            profilepic.style.backgroundImage = "url('male.png')";;
+
+                            console.log(inputaS3x.value);
+
+
+                            localStorage.setItem("SEX", "male");
+
+
+
+
+                        } else if (inputaS3x.value === "female") {
+
+                            profilepic.style.backgroundImage = "url('female.png')";
+
+                            localStorage.setItem("SEX", "female");
+
+                            console.log(inputaS3x.value);
+
+                        }
+
+
+                        if (inputaS3x.value != yoursexVariable && inputa.value != "") {
+
+                            setButt.style.display = "block";
+
+                            content.remove();
+
+                            backShadow.remove();
+                        } else {
+
+
+                            alert("you have to input a name and select your sex")
+                        }
+
+
+                    });
+
+
+            } else if (texttoDisplay === editName) {
+
+
+
+
+                let inputa = document.createElement("input");
+
+                inputa.type = "text";
+
+
+                inputa.setAttribute("maxlength", "8");
+                inputa.className = "nameInput";
+
+
+
+                inputa.value = localStorage.getItem("NAME");
+                content.appendChild(subdiv);
+                subdiv.appendChild(timeuptext);
+
+
+
+
+                subdiv.appendChild(inputa);
+
+                subdiv.appendChild(accept);
+
+
+
+
+
+
+                accept.addEventListener("click",
+                    (e)=> {
+
+
+
+
+                        username.innerText = inputa.value;
+
+
+                        localStorage.setItem("NAME", inputa.value);
+
+
+
+
+                        if (inputa.value != "") {
+
+                            setButt.style.display = "block";
+
+                            content.remove();
+
+                            backShadow.remove();
+                        } else {
+
+
+                            alert("you can't have an empty name")
+                        }
+
+
+
+
+
+
+                    });
+
+
+
+
+
+            }
+
+
+
+
+            topBar.addEventListener("touchstart",
+                (e)=> {
+
+                    console.log("start touch event");
+
+                    e.preventDefault();
+
+
+
+                    x = e.touches[0].pageX;
+                    y = e.touches[0].pageY;
+
+                });
+
+
+
+            topBar.addEventListener("touchmove",
+                (e)=> {
+
+
+                    newx = x- e.touches[0].pageX;
+                    newy = y- e.touches[0].pageY;
+
+                    console.log(x, " ", y);
+                    x = e.touches[0].pageX;
+                    y = e.touches[0].pageY;
+
+
+                    if ((content.getBoundingClientRect().left + content.getBoundingClientRect().width) <= window.innerWidth) {
+                        content.style.top = (content.offsetTop - newy)+"px";
+
+                        content.style.left = (content.offsetLeft - newx)+"px";
+
+
+                    } else {
+
+
+                        content.style.left = (window.innerWidth -(window.innerWidth*0.9))+"px";
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function mouseMove(e) {
+                newx = (x- e.clientX);
+
+                newy = (y - e.clientY);
+
+                x = e.clientX;
+                y = e.clientY;
+
+
+                console.log(x,
+                    "  ",
+                    y);
+
+                content.style.top = (content.offsetTop - newy)+"px";
+
+                content.style.left = (content.offsetLeft - newx)+"px";
+
+
+
+
+
+
+            }
+
+            function mouseUp(e) {
+
+                topBar.removeEventListener("mousemove",
+                    mouseMove);
+
+            }
+
+
+            topBar.addEventListener("mousedown",
+                (e)=> {
+
+
+
+
+                    x = e.clientX;
+                    y = e.clientY;
+
+                    topBar.addEventListener("mousemove", e=> {
+
+                        mouseMove(e);
+                    });
+
+
+
+                    topBar.addEventListener("mouseup", e=> {
+                        mouseUp();
+                    });
+
+
+
+                });
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        let currentTheme = "";
+
+
+
+        console.log(barLen);
+     getReadySecs= Number (localStorage.getItem("getreadysecs"))*1000;
+
+
+
+
+        let pauseCount = 0;
+        
+        let loopCount=0;
+
+        function loop1() {
+
+            setButt.style.display = "none";
+
+            switch (localStorage.getItem("colortheme")) {
+
+
+
+                case "pinkish":
+                    currentTheme = "numsBlock numsBlockPinkish";
+                    break;
+                case "yellowish":
+                    currentTheme = "numsBlock numsBlockYellowish";
+                    break;
+
+                case "greenish":
+                    currentTheme = "numsBlock numsBlockGreenish";
+                    break;
+
+
+                case "blueish":
+                    currentTheme = "numsBlock numsBlockBlueish";
+                    break;
+
+                case "whitish":
+                    currentTheme = "numsBlock numsBlockWhitish";
+                    break;
+
+                case "reddish":
+                    currentTheme = "numsBlock numsBlockReddish";
+                    break;
+
+                case "space":
+                    currentTheme = "numsBlock numsBlockSpace";
+                    break;
+                case "orangeish":
+                    currentTheme = "numsBlock numsBlockOrangeish";
+                    break;
+                case "brownish":
+                    currentTheme = "numsBlock numsBlockBrownish";
+                    break;
+                    
+               case "blackish":
+                    currentTheme = "numsBlock numsBlockBlackish";
+                    break;
+
+
+
+
+
+
+            }
+
+
+
+
+            interval = setTimeout(loop1,
+                100);
+                
+                
+                
+                loopCount++;
+
+
+
+            secsHtml.className = "secs nums";
+            minsHtml.className = "mins nums";
+
+            if (running) {
+
+
+
+
+                secsHtml.className = "secs nums";
+                minsHtml.className = "mins nums";
+                startButt.style.display = "none";
+                secsHtml.innerHTML = secs;
+
+
+
+                
+            if(loopCount%10===0){    
+                
+          bar += barLen;
+
+                barHtml.style.width = bar+"%";  
+                
+                
+                
+                
+
+                secs--;
+
+                
+                
+            }
+            
+            
+            
+            if(initalReps >1){
+
+
+          fullCircleBar(c, barLen2, (cw), 6);
+  
+            }
+
+
+
+                if (secs < initialSecs-1) {
+                    GOOOcontainer.style.display = "none";
+
+
+
+
+
+                }
+
+
+
+
+
+                let zero = secs < 10 ? "0": "";
+                secsHtml.innerHTML = zero+secs;
+
+
+
+
+                if (secs < 1 && mins < 1) {
+
+
+
+
+                    if (reps < 2) {
+
+                        waitingrunningWrap.style.display = "none";
+
+
+                        setsLeftWrap.style.display = "none";
+
+
+                        running = false;
+                        running2 = false;
+                        fireAnimaWrap.style.display = "none";
+                        fireAnima2Wrap.style.display = "none";
+                        fireAnima2.style.display = "none";
+                        clearInterval(interval);
+                        musicTheme.pause();
+                        musicTheme.currentTime = 0;
+                        window.navigator.vibrate(3000);
+                        pauseStopWrap.style.display = "none";
+                        nowreadychick.pause();
+                        nowreadychick.currentTime = 0;
+                        countCircle = 0;
+                        cointcirc = 0;
+           //c.style.display="none";
+                        clearInterval(lefaInterval);
+                        
+                        
+            // ctx.clearRect(0,0,cw,cw);
+                 createTimeup(TIMEUP);
+                        timeupSound.play();
+                        
+                    loopCount=0;
+
+
+
+                    } else if (reps > 1) {
+                        reps--;
+                        setsLeft.innerText = reps;
+                        bar = 0;
+                        barHtml.style.width = bar;
+
+                        running = false;
+                        GOOOcontainer.style.display = "none";
+                        onlyTimeUp.play();
+                        musicTheme.pause();
+                        navigator.vibrate(1000);
+
+
+                        nowreadychick.play();
+                        nowreadychick.loop = true;
+                        nowReady.play();
+
+                        getreadyCountdown(transitionSecs, "50%", leftPercent+"px", 4, halfScreenWidth, halfScreenWidth, global, waitingColor, "");
+
+                        //getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent)
+
+
+                        waitingrunningWrap.style.display = "flex";
+                        waitingrunningWrap.style.top = 35+"%";
+
+                        waitingrunning.style.fontSize = 5+"em";
+
+                        secs = initialSecs;
+                        mins = initialMins;
+
+                        let zero = secs < 10 ? "0": "";
+                        let zero2 = mins < 10 ? "0": "";
+
+
+                        secsHtml.innerHTML = zero+secs;
+                        minsHtml.innerText = zero2+mins;
+
+                        waitingrunning.innerText = "WAITING";
+                        svgCircle.style.display = "block";
+                        fireAnimaWrap.style.display = "none";
+                        fireAnima2Wrap.style.display = "none";
+
+                        fireAnima2.style.display = "none";
+
+
+                        pauseStopWrap.style.display = "none";
+
+
+  setTimeout(()=> {
+              nowreadychick.pause();
+                            nowreadychick.currentTime = 0;
+                            running = true;
+
+                            pauseStopWrap.style.display = "flex";
+
+
+                            GOOOcontainer.style.display = "flex";
+
+                            numsBlock.className = "numsBlock numsBlockGo";
+                            secsHtml.className = "numsGo";
+                            minsHtml.className = "numsGo";
+                            GOOOsound.play();
+
+
+                            musicTheme.play();
+                            svgCircle.style.display = "none";
+
+
+                            waitingrunningWrap.style.top = 67+"%";
+
+                            waitingrunningWrap.style.display = "flex";
+
+
+
+
+
+                            waitingrunning.style.fontSize = 4+"em";
+
+                            waitingrunning.innerText = "R U N N I N G";
+
+                            fireAnimaWrap.style.display = "flex";
+                            fireAnima2Wrap.style.display = "flex";
+                            fireAnima2.style.display = "block";
+
+
+
+
+                        }, transitionSecs);
+
+                    }
+
+
+
+
+                } else if (secs < 1 && mins > 0) {
+                    secs = 59;
+                    mins--;
+                    let zero = secs < 10 ? "0": "";
+                    let zero2 = mins < 10 ? "0": "";
+
+
+                    secsHtml.innerHTML = zero+secs;
+                    minsHtml.innerText = zero2+mins;
+
+
+                }
+
+
+
+                numsBlock.className = currentTheme;
+
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        function startUp() {
+
+
+            pauseCount = 0;
+
+            if (reps < 2) {
+
+
+
+                setsLeftWrap.style.display = "flex";
+
+                setsLeft.innerText = reps;
+
+
+                running2 = true;
+
+                startButt.style.display = "none";
+                setButt.style.display = "none";
+
+                waitingrunningWrap.style.display = "flex";
+                waitingrunning.innerText = "GET READY !!!";
+                waitingrunning.style.fontSize = 3+"em";
+                nowreadychick.play();
+                nowreadychick.loop = true;
+                nowReady.play();
+
+
+                //   getreadyCountdown(transitionSecs);
+                getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "GO");
+
+
+
+                //getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent)
+
+
+
+                setTimeout(()=> {
+                    nowreadychick.pause();
+                    nowreadychick.currentTime = 0;
+
+
+                    GOOOsound.play();
+                    musicTheme.play();
+
+
+                    startButt.style.display = "none";
+                    waitingrunningWrap.style.display = "flex";
+                    waitingrunning.style.fontSize = 4+"em";
+                    waitingrunning.innerText = "R U N N I N G";
+                    fireAnimaWrap.style.display = "flex";
+
+                    fireAnima2.style.display = "block";
+                    fireAnima2Wrap.style.display = "flex";
+
+                    running = true;
+
+
+                    pauseStopWrap.style.display = "flex";
+
+
+                    loop1();
+                }, getReadySecs);
+
+
+
+            } else if (reps =>2) {
+                running2 = true;
+                setsLeftWrap.style.display = "flex";
+                setsLeft.innerText = reps;
+
+
+
+
+                startButt.style.display = "none";
+                setButt.style.display = "none";
+
+                waitingrunningWrap.style.display = "flex";
+                waitingrunning.innerText = "GET READY !!!";
+                waitingrunning.style.fontSize = 3+"em";
+                nowreadychick.play();
+                nowreadychick.loop = true;
+                nowReady.play();
+
+         getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "GO");
+
+
+
+
+
+
+
+                //   getreadyCountdown(transitionSecs,50,0,9, 100,8, global);
+
+
+                setTimeout(()=> {
+                    running = true;
+                    waitingrunning.style.fontSize = 4+"em";
+
+
+                    waitingrunning.innerText = "R U N N I N G";
+                    waitingrunningWrap.style.display
+                    nowreadychick.pause();
+                    nowreadychick.currentTime = 0;
+
+                    GOOOsound.play();
+                    musicTheme.play();
+
+
+                    startButt.style.display = "none";
+
+
+
+
+                    numsBlock.className = "numsBlock numsBlockGo";
+                    secsHtml.className = "numsGo";
+                    minsHtml.className = "numsGo";
+
+                    setTimeout(()=> {
+
+
+                        waitingrunning.style.fontSize = 4+"em";
+
+
+
+
+
+                        fireAnimaWrap.style.display = "flex";
+
+
+                        fireAnima2.style.display = "block";
+                        fireAnima2Wrap.style.display = "flex";
+
+                        pauseStopWrap.style.display = "flex";
+                        loop1();
+                    }, 1000);
+
+
+
+                }, getReadySecs);
+            }
+        }
+
+
+        pausebutt.addEventListener("click", (e)=> {
+            switch (pauseCount) {
+                case 0:
+                    running = false;
+                    new Audio("selectSelection.mp3").play();
+                    musicTheme.pause();
+                    e.target.innerText = "resume";
+                    pauseCount = 1;
+                    waitingrunning.innerText = "P A U S E D";
+
+
+                    fireAnima.src = "PolarBearSleep.gif";
+                    fireAnima.style.transform = "scale(0.4)translate(-30%,-50%)";
+                    fireAnima2.src = "SnowPause.gif";
+                    break;
+
+                case 1:
+                    running = true;
+                    fireAnima.src = "fireball.gif";
+                    fireAnima.style.transform = "rotate(25deg)";
+
+                    fireAnima2.src = "fyah.gif";
+                    musicTheme.play();
+                    e.target.innerText = "pause";
+                    new Audio("selectSelection.mp3").play();
+                    pauseCount = 0;
+                    waitingrunning.innerText = "R U N N I N G";
+
+            }
+        });
+
+
+
+
+        stopbutt.addEventListener("click", (e)=> {
+
+
+
+            numsBlock.style.color = "#000000";
+
+
+
+
+            c.style.display = "none";
+            ctx.clearRect(0, 0, cw, cw);
+            countCircle = 0;
+            cointcirc = 0;
+            pausebutt.innerText = "pause";
+            running2 = false;
+
+            bar = 0;
+            barHtml.style.width = 0+"%";
+            new Audio("selectSelection.mp3").play();
+            running = false;
+            GOOOcontainer.style.display = "none";
+            //numsBlock.className="numsBlock";
+
+            putinthecolorthemes(currentColorCap, currentColor2, waitingColor, waitingColor);
+
+            numsBlock.className = currentTheme;
+
+            console.log(numsBlock.style, " what color bitch?");
+
+            clearInterval(interval);
+            musicTheme.pause();
+            musicTheme.currentTime = 0;
+            waitingrunningWrap.style.display = "none";
+            fireAnimaWrap.style.display = "none";
+            fireAnima2Wrap.style.display = "none";
+            fireAnima2.style.display = "none";
+            fireAnima.src = "fireball.gif";
+            fireAnima.style.transform = "rotate(25deg)";
+            fireAnima2.src = "fyah.gif";
+            secs = 0;
+            mins = 0;
+            zero = secs < 10 ? "0": "";
+            minsHtml.innerText = zero2+mins;
+            secsHtml.innerText = zero+ secs;
+
+            pauseStopWrap.style.display = "none";
+            setButt.style.display = "block";
+
+
+        });
+        //console.log(currentColor.charAt(0).toUpperCase()+currentColor)
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

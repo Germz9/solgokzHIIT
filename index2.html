@@ -1,0 +1,5000 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>County-Downy</title>
+    
+    
+    
+    
+    <style type="text/css" media="all">
+        
+        
+        :root {
+  --waiting-color:red;
+  --gradient-theme:linear-gradient(to bottom, green,lime,yellowgreen);
+  --buttColorz:#FFFFFF;
+  --numsecs:5;
+  --secs:5.3s;
+  --buttShadow: 0 0 3px #000000;
+  --numReady: 4;
+  
+  
+  --screenWidth:0px
+  --screenHeight:0px;
+  
+  --halfScreenWidth:0px;
+  --circleCircunfirence:0;
+  
+  --circleCircunfirenceMinus:0;
+  --circleRadius:0px;
+  --circleRadiusSides:0px;
+  --leftPercent:0px;
+  --getreadyColor:white;
+  
+}
+
+
+
+@font-face {
+    font-family:'lefa';
+    src: url('14 Segment LED Regular.ttf');
+
+
+
+}
+
+@font-face {
+    font-family:'topNums';
+    src: url('Technology.ttf');
+
+
+
+}
+
+@font-face {
+    font-family:'regularText';
+    src: url('ByteBounce.ttf');
+
+
+
+}
+
+body{
+    
+ 
+
+
+    background: #000000;
+    
+    
+    overflow: hidden;
+}
+
+
+.global {
+    position: relative;
+
+
+    display: flex;
+    width: 100%;
+ 
+   
+    height: var(--screenHeight);
+
+    flex-direction: column;
+
+
+    justify-content: top;
+    align-items: center;
+    overflow: clip;
+
+
+
+}
+.nav {
+    
+    
+    width: 100%;
+   
+
+   
+
+    height:10%;
+
+
+
+
+    border-radius: 10px;
+
+    border: solid blue 0.5px;
+}
+
+
+
+.navGreen {
+
+    background: linear-gradient(to right, yellowgreen,lime);
+
+}
+.navRed{
+    
+    background: linear-gradient(to right, red,#D2042D);
+    
+}
+.navOrange{
+    
+    background: linear-gradient(to right, orange,darkorange,tomato);
+    
+}
+
+.navSpace{
+    
+    background: linear-gradient(to right, indigo,darkblue);
+}
+.navWhite {
+
+    background: linear-gradient(to right, white,lightblue);
+
+}
+
+
+
+.navPink {
+
+
+
+
+    background: linear-gradient(to right, pink,magenta);
+
+
+
+}
+
+.navBlue {
+
+
+
+
+    background: linear-gradient(to right, cyan,dodgerblue);
+
+
+
+}
+
+.navYellow {
+
+
+
+
+    background: linear-gradient(to right, yellowgreen,orange);
+
+
+
+}
+
+
+
+
+.barPreview{
+    
+    accent-color:var(--waiting-color);
+}
+
+.sampleYellow{
+    
+    background: linear-gradient(to right, yellowgreen,orange);
+    width: 50px;
+    height: 50px;
+}
+
+.samplePink{
+    
+    background: linear-gradient(to right, pink,magenta);
+    width: 50px;
+    height: 50px;
+}
+
+
+.sampleBlue{
+    
+    background: linear-gradient(to right, dodgerblue, blue);
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+.sampleWhite{
+    
+    background: linear-gradient(to right, white,grey);
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.sampleGreen{
+    
+    background: linear-gradient(to right, lime,green);
+    width: 50px;
+    height: 50px;
+}
+.topFunctions {
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border: solid 0.3px magenta;
+
+
+    width: 100%;
+    height: 30px;
+
+}
+
+.topselects {
+
+
+    background: black;
+    font-family: topNums;
+    font-size: 20px;
+
+    font-weight: bold;
+    border: none;
+    width: 80px;
+    color: var(--buttColorz);
+    border: solid white;
+    outline-color: var(--waiting-color) ;
+    
+    
+    
+}
+
+
+
+.topselects option:active,
+.topselects option:checked{
+     
+      
+       
+    }
+
+
+
+
+
+
+.mainBlock {
+
+
+
+
+
+
+
+
+
+
+    width: 100%;
+    height: 180px;
+    border: solid 1px #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.numsBlockGo{
+    
+    background: #000000;
+    
+    
+    
+}
+.numsBlock {
+
+
+    display: flex;
+
+
+    align-items: center;
+    justify-content: space-around;
+
+
+    height: 150px;
+
+    width: 100%;
+    max-width: 100%;
+
+
+    border-radius: 10px;
+}
+
+.numsBlockGreenish {
+
+
+    background: linear-gradient(to bottom,#004526 30%,lime,white,black);
+
+}
+
+.numsBlockSpace{
+    
+    background: linear-gradient(to bottom,indigo,darkblue,white,black);
+    
+    
+    
+}
+.numsBlockOrangeish{
+    
+      background: linear-gradient(to bottom, orangered,darkorange,white, black);
+}
+.numsBlockReddish{
+    background: linear-gradient(to bottom,#8B0000,red,white,black);
+    
+}
+.numsBlockWhitish {
+
+
+    background: linear-gradient(to bottom,grey,lightgrey,white,black);
+
+}
+
+.numsBlockPinkish {
+
+    background: linear-gradient(to bottom,purple,purple,pink,white,black);
+
+
+
+
+
+}
+
+
+
+.numsBlockBlueish {
+
+    background: linear-gradient(to bottom,darkblue,blue,lightblue,white,black);
+
+
+
+
+
+}
+
+
+.numsBlockYellowish {
+
+  background: linear-gradient(to bottom,orange,gold,yellowgreen,white,black);
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+.progressBar {
+
+
+    width: 0%;
+   
+
+    margin-top: 0px;
+    height: 30px;
+
+
+    
+
+
+
+    box-shadow: 0 0 20px 2px white;
+
+    transition: 1s width linear;
+
+}
+
+
+.progressBarGreen{
+    
+    background: linear-gradient(to right,lime,yellowgreen,white);
+    
+}
+
+.progressBarOrange{
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+}
+
+.progressBarSpace{
+    
+    background: linear-gradient(to right,violet,darkblue,white);}
+    
+    
+    
+.progressBarRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red,white);
+    
+    
+    
+}
+.progressBarBlue{
+    
+    
+    
+    background: linear-gradient(to right,dodgerblue,blue,white);
+    
+    
+}
+
+.progressBarPink{
+    
+    
+    
+    background: linear-gradient(to right,magenta,pink,white);
+    
+    
+}
+.progressBarYellow{
+    
+    
+    
+    background: linear-gradient(to right,yellowgreen,yellow,white);
+    
+    
+}
+
+.progressBarWhite{
+    
+    
+    
+    background: linear-gradient(to right,cyan,grey,white);
+    
+    box-shadow: 0 0 20px 2px black;
+    
+    
+}
+  .progressBarParent {
+
+
+    width: 100%;
+    margin-top: 5px;
+    height: 30px;
+
+    border: solid white 0.5px;
+    overflow: hidden;
+
+}
+.mins,.secs {
+
+    font-family: lefa;
+
+    color: black;
+    font-size: 9em;
+    font-weight: 2;
+    border-radius: 10px;
+
+
+
+}
+
+
+
+.numsGo{
+    
+    font-family:lefa;
+
+    color: var(--waiting-color);
+    font-size: 9em;
+    font-weight: 2;
+  
+    border-radius: 10px;
+    
+    animation: numsGoanima 0.5s forwards linear;
+}
+
+
+@keyframes numsGoanima{
+    
+    
+    
+    50%{
+        
+        transform: scale(1.3);
+        
+    }
+    
+    100%{
+        
+        transform: scale(1);
+        
+    }
+}
+.collen {
+
+
+
+    font-family: Times New Roman;
+    font-size: 4em;
+
+
+}
+
+
+.timeup {
+
+
+    position: absolute;
+    top: 28%;
+
+    left: 10%;
+    z-index: 5;
+
+    width: 80%;
+
+    height: 30%;
+
+
+    background: #222222;
+
+    border: solid 1px lime;
+    outline: solid;
+    outline-color: #FFFFFF;
+    
+    z-index: 10;
+    
+    transform: scale(0);
+    animation: popTimeup 0.3s forwards linear;
+    
+    opacity: 0.7;
+}
+
+
+@keyframes popTimeup{
+    
+    100%{
+        transform: scale(1);
+        
+        
+    }
+    
+    
+}
+
+.topBartimeup {
+
+
+
+
+
+    width: 100%;
+
+    height: 10%;
+    border-bottom: solid 1px #FFFFFF;:;
+
+
+    
+}
+
+.topBartimeupGreen{
+    
+    background: linear-gradient(to right, yellowgreen,lime, green);
+    
+}
+.topBartimeupSpace{
+    
+    background: linear-gradient(to right, darkblue,indigo,#452c63);
+    
+}
+
+.topBartimeupOrange{
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+}
+
+.topBartimeupRed{
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+    
+}
+.topBartimeupRed{
+    
+        background: linear-gradient(to right, darkred,#D2042D, red);
+    
+    
+    
+}
+
+.topBartimeupWhite{
+    
+    background: linear-gradient(to right, white,grey,cyan
+    );
+    
+}
+.topBartimeupBlue{
+    
+    background: linear-gradient(to right, lightblue,dodgerblue,blue
+    );
+    
+}
+
+.topBartimeupPink{
+    
+    background: linear-gradient(to right, pink, magenta,purple
+    );
+    
+}
+
+.topBartimeupYellow{
+    
+    background: linear-gradient(to right, yellow, yellowgreen,orange
+    );
+    
+}
+
+
+
+
+
+
+.subdivTimeup {
+
+
+
+    display: flex;
+
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 90%;
+}
+
+.timeuptext {
+
+
+
+    font-family: regularText;
+
+
+    font-size: 2em;
+    color: #FFFFFF;
+}
+
+.acceptButt {
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+    
+    text-shadow: var(--buttShadow);
+    
+
+    
+
+
+    border: solid #ffffff;
+
+    
+      padding-left: 25px;
+    padding-right: 25px;
+}
+.acceptButtGreen{
+    
+    background: linear-gradient(to right,green,lime,yellowgreen);
+    
+    
+    
+}
+
+
+.acceptButtSpace{
+    
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+    
+    
+    
+}
+
+.acceptButtOrange{
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+}
+
+
+
+.acceptButtRed{
+    
+    background: linear-gradient(to right, darkred, #D2042D,red);
+    
+    
+    
+}
+.acceptButtBlue{
+    
+    background: linear-gradient(to right,blue,dodgerblue,lightblue);
+    
+    
+    
+}
+.acceptButtPink{
+    
+    background: linear-gradient(to right, purple, magenta,pink);
+    
+    
+    
+}
+
+
+
+.acceptButtWhite{
+    
+    background: linear-gradient(to right,darkgrey,grey, white);
+    
+    
+    
+}
+
+
+
+.acceptButtYellow{
+    
+    background: linear-gradient(to right,orange,yellowgreen,yellow);
+    
+    
+    
+}
+
+
+
+
+    
+    
+    
+@keyframes waited{
+    
+    
+    0%{
+        
+       color:#FFFFFF;
+    }
+    100%{
+        
+        
+            color: var(--waiting-color);
+        
+    }
+}
+.setButt {
+
+    position: absolute;
+
+
+    top: 60vh;
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+    text-shadow:var(--buttShadow);
+
+
+
+
+    border: solid #ffffff;
+
+    padding-left: 25px;
+    padding-right: 25px;
+    
+
+
+}
+
+.setButtGreen{
+    background: linear-gradient(to right,green,lime,yellowgreen);
+
+
+}
+
+
+
+.setButtSpace{
+
+
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+
+
+}
+
+
+.setButtOrange{
+    
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange,white);
+    
+}
+.setButtRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+.setButtGreen {
+    background: linear-gradient(to right,green,lime,yellowgreen);
+
+
+}
+.setButtWhite{
+    background: linear-gradient(to right, darkgrey,grey,white);
+
+
+}
+
+.setButtPink {
+
+
+    background: linear-gradient(to right, purple,magenta,pink);
+}
+
+
+
+.setButtBlue {
+
+
+    background: linear-gradient(to right, blue,dodgerblue,lightblue);
+}
+
+.setButtYellow {
+
+
+    background: linear-gradient(to right, orange,yellowgreen,yellow);
+}
+
+
+
+
+.start {
+
+    position: absolute;
+
+    display: none;
+
+
+    top: 80vh;
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+   text-shadow: 0 0 2px #000000;
+
+
+
+    border: solid #ffffff;
+
+      padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+.startButtGreen {
+
+
+    background: linear-gradient(to right,green,lime,yellowgreen);
+
+
+}
+
+.startButtSpace {
+
+
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+
+
+}
+
+.startButtOrange{
+    
+    
+    background: linear-gradient(to right, orangered,tomato,darkorange, orange);
+    
+}
+
+.startButtRed{
+    
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+
+
+.startButtWhite {
+
+background: linear-gradient(to right, darkgrey,grey,white)
+    
+
+}
+.startButtPink {
+
+
+
+    background: linear-gradient(to right, purple,magenta,pink);
+
+}
+
+
+
+.startButtBlue {
+
+
+
+    background: linear-gradient(to right, blue,dodgerblue,lightblue);
+}
+.startButtYellow {
+
+
+
+   
+    background: linear-gradient(to right, orange,yellowgreen,yellow);
+}
+
+
+
+
+.setWrap {
+    display: block;
+    position: absolute;
+
+  
+
+    
+
+    opacity: 0.7;
+
+    width: 80%;
+    height: 70%;
+    left: 10%;
+    top: 15%;
+    border: solid 1px var(--waiting-color);
+    outline: solid;
+    outline-color: #FFFFFF;
+    background: linear-gradient(to right,darkgrey,#000000);
+    
+    transform: scale(1);
+    
+    
+    z-index: 10;
+    
+    animation: setPop 0.5s forwards linear;
+
+
+
+
+
+
+}
+
+
+@keyframes setPop{
+    0%{
+        
+        
+        transform: scale(1);
+    }
+    
+    50%{
+        
+      transform: scale(4);
+    }
+    
+    100{
+        transform: scale(1);
+        
+        
+    }
+    
+  
+}
+
+.navSet {
+
+
+
+
+    display: flex;
+        height: 8%;
+
+    justify-content: right;
+    align-items: center;
+
+
+
+    
+   
+    border-bottom: solid #FFFFFF 2px;
+    margin: 0;
+
+    
+}
+
+
+.navSetGreen{
+    
+    background: linear-gradient(to right, green, lime,yellowgreen);
+    
+    
+}
+
+
+.navsetSpace{
+    
+    background: linear-gradient(to right, darkblue,indigo, #452c63);
+    
+}
+
+
+
+.navSetOrange{
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato, darkorange,orange);
+}
+.navSetRed{
+    
+    
+    background: linear-gradient(to right, darkred, #D2042D,red);
+    
+    
+}
+.navSetBlue{
+    
+    background: linear-gradient(to right, blue, dodgerblue,lightblue);
+    
+    
+}
+
+
+.navSetPink{
+    
+    background: linear-gradient(to right, purple, magenta,pink);
+    
+    
+}
+
+
+.navSetWhite{
+    
+    background: linear-gradient(to right, cyan, grey,#FFFFFF);
+    
+    
+}
+
+
+.navSetYellow{
+    
+  background: linear-gradient(to right,orange,yellowgreen,yellow);
+    
+    
+}
+
+.exitIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 8%;
+    width: 15%;
+
+z-index: 40;
+
+}
+.numsRow {
+
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+height: 5%;
+    
+
+    
+    
+ margin: 0;  
+  
+
+
+
+}
+.numsRow2 {
+
+
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: start;
+
+   
+    width: 100%;
+        height: 16.6%;
+  
+
+
+margin: 0px;
+}
+
+
+.numsRow3 {
+    position: relative;
+
+    
+
+
+    
+   
+    width: 100%;
+    
+    
+    height: 16.6%;
+    
+    border: solid;
+    
+}
+
+
+
+.numsRow4 {
+
+
+    display: flex;
+       
+
+justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    
+    height: 16.6%;
+   
+   border: solid;
+   margin: 0;
+
+}
+
+
+
+.numsRow5 {
+
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    
+  height: 16.6%;
+   margin: 0;
+    
+   
+
+}
+
+
+.numsRow6{
+    
+        
+    
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    margin: 0;
+    gap: 5px;
+    width: 100%;
+    height: 16.6%;
+    
+}
+
+.numsRow7{
+    
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+   
+   
+    
+}
+
+.numsRow8{
+    
+    
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10%;
+   
+   
+    
+    
+}
+.switchText{
+    color: #FFFFFF;
+    font-size:0.7em;
+    font-weight: bold;
+   
+    text-shadow: 0 1px 0px black,0 1px 0px black, 0 0 1px black;
+    
+    
+}
+
+
+
+.switchDelay{
+    
+   
+    
+   border: solid 1px #FFFFFF;
+   
+   border-radius: 10px;
+   
+   font-weight: bold;
+   
+   width: 20%;
+  
+  
+    
+}
+.numsTopDisplay {
+    
+    
+        font-family: topNums;
+       
+
+
+
+    font-size: 5rem;
+
+    color: #FFFFFF;
+    padding: 0;
+}
+
+.minsSelect,.secsSelect,.repsSelect,.transitionSecsSelect {
+
+
+
+
+   
+    font-size: 1rem;
+    color: #000000;
+    background: #000000;
+   
+    font-family: topNums;
+    font-weight: bold;
+
+    border: none;
+    outline: none;
+    border-radius: 15px;
+}
+
+.repsSelect{
+    
+   
+    position: absolute;
+    left: 50%;
+    bottom:0%;
+   
+    transform: translateX(-50%);
+    
+}
+
+
+
+.repsTopDisplay{
+        
+    position: absolute;
+        left: 50%;
+        bottom:-100%;
+        
+   
+    transform: translateX(-50%);
+    
+    
+    
+  
+}
+
+.transitionSecsSelect{
+    
+    
+    padding-right:15px ;
+}
+.secsSelect:before {
+
+
+    content: "Seconds";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: blue;
+    width: 50px;
+    height: 20px;
+    font-size: 8px;
+    color: #FFFFFF;
+
+}
+.acceptSetButt {
+
+
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+    text-shadow: var(--buttShadow);
+
+    
+
+    border: solid #ffffff;
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+
+}
+
+
+.acceptSetButtGreen{
+    
+    
+    
+  background: linear-gradient(to right,green,lime,yellowgreen);
+  
+}
+
+
+
+.acceptSetButtSpace{
+    
+    
+   
+
+
+ 
+background: linear-gradient(to right,#452c63,indigo,darkblue);
+
+
+  
+}
+
+
+.acceptSetButtOrange{
+    
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato, darkorange,orange);
+}
+.acceptSetButtRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+
+.acceptSetButtBlue{
+    
+    
+    
+  background: linear-gradient(to right,blue,dodgerblue,lightblue);
+  
+}
+.acceptSetButtPink{
+    
+    
+    
+  background: linear-gradient(to right,purple,magenta,pink);
+  
+}
+
+
+
+.acceptSetButtWhite{
+    
+    
+    
+  background: linear-gradient(to right,darkgrey,grey,#FFFFFF);
+  
+}
+
+
+
+.acceptSetButtYellow{
+    
+    
+    
+  background: linear-gradient(to right,orange,yellowgreen,yellow);
+  
+}
+
+
+.backShadow {
+
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+   
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.9;
+    z-index: 6;
+
+
+
+}
+
+.svg{
+    
+    
+    
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: var(--leftPercent);
+    
+    background: transparent;
+   
+    
+    
+    rotate: -90deg;
+   
+    height: var(--halfScreenWidth);
+    width: var(--halfScreenWidth);
+    z-index: -5;
+ 
+}
+
+.circle{
+   
+    
+    r:var(--circleRadius);
+    stroke-dasharray: var(--circleCircunfirence);
+    stroke-dashoffset: var(--circleCircunfirence);
+    
+  
+    cx:var(--circleRadiusSides) ;
+    cy: var(--circleRadiusSides);
+    stroke-width: 5px;
+    stroke: var(--waiting-color);
+    fill: transparent;
+    stroke-linecap: round;
+    
+    filter: drop-shadow(0px 2px 8px #FFFFFF);
+    animation: circ var(--secs) forwards linear;
+}
+
+@keyframes circ{
+    
+    0%{
+        stroke-dashoffset: 0;
+       
+    }
+    100%{
+        
+        
+stroke-dashoffset:var(--circleCircunfirenceMinus);
+    }
+      
+    
+}
+
+
+.waitingrunning{
+    
+    
+   
+    
+  
+
+    font-family: regularText;
+    font-size: 6em;
+    
+    color: var(--waiting-color);
+    text-shadow: var(--buttShadow);
+    
+    animation: waited 0.2s infinite linear;
+    z-index: 2;
+}
+
+
+
+.waitingrunningWrap{
+    
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    
+    width:100%;
+    height: 15%;
+   
+    top:67%;
+    left: 0%;
+    z-index: 20;
+    
+    
+    
+}
+.fireAnima{
+  
+    
+    width:90%;
+    height: 100%;
+    transform:rotate(25deg) ;
+  
+   
+
+    z-index: 0;
+}
+.fireAnimaWrap{
+    
+    display: none;
+    position: absolute;
+    justify-content: left;
+    align-items: center;
+    
+    width:100%;
+    height: 46%;
+   
+    top:48%;
+    left: 0%;
+    z-index: 0;
+   
+    
+    
+}
+.fireAnima2{
+    display: none;
+   
+    width:100%;
+    height: 100%;
+    transform:rotate(0deg) ;
+    
+    z-index: 0;
+}
+
+.fireAnima2Wrap{
+    
+    
+    display: none;
+    position: absolute;
+    justify-content: right;
+    align-items: center;
+    
+    width:100%;
+    height: 80%;
+   
+    bottom:0%;
+    left: 50%;
+    z-index: 0;
+   
+}
+
+.GOOOcontainer{
+    
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top:15%;
+    font-family:Comic Sans MS;
+    left: 0%;
+    
+    width: 100%;
+    height: 30%;
+    
+    z-index: 20;
+    
+    
+    
+    
+}
+
+.GOOO{
+    
+    
+    color: #FFFFFF;
+    font-size: 1em;
+    animation: GOOOanima 0.2s forwards linear;
+    text-shadow:0px 0px 1px #000000, 0px 1px #000000,0px 0px 3px #FFFFFF;
+    z-index: 20;
+}
+
+@keyframes GOOOanima{
+    
+    0%{
+        
+        transform: scale(1);
+    }
+    
+    100%{
+        
+        transform: scale(10);
+               
+
+        
+    }
+ 
+    
+  
+}
+.pauseResumeContainer{
+    
+    position: absolute;
+    top: 45%;
+    left: 0%;
+   
+    display: none;
+    width: 100%;
+    height: 8%;
+    
+    justify-content: space-around;
+    align-items: center;
+    
+    z-index: 15;
+}
+
+.stopbutts{
+    font-family: regularText;
+
+    font-weight: bold;
+    color: var(--buttColorz);
+
+
+    font-size: 2em;
+
+
+    border-radius: 15px;
+    text-shadow:var(--buttShadow);
+
+   
+
+   border: solid 1px var(--buttColorz);
+
+    padding-left: 25px;
+    padding-right: 25px;
+
+
+    
+}
+
+
+.stopbuttsGreen{
+    
+    
+    
+  background: linear-gradient(to right,green,lime,yellowgreen);
+  
+}
+.stopbuttsOrange{
+    
+    
+    
+    background: linear-gradient(to right, orangered,tomato, darkorange,orange);
+}
+
+
+
+.stopbuttsSpace{
+    
+    
+    background: linear-gradient(to right,#452c63,indigo,darkblue);
+    
+    
+    
+}
+.stopbuttsRed{
+    
+    background: linear-gradient(to right,darkred,#D2042D,red);
+    
+}
+
+.stopbuttsBlue{
+    
+    
+    
+  background: linear-gradient(to right,blue,dodgerblue,lightblue);
+  
+}
+.stopbuttsPink{
+    
+    
+    
+  background: linear-gradient(to right,purple,magenta,pink);
+  
+}
+
+
+
+.stopbuttsWhite{
+    
+    
+    
+  background: linear-gradient(to right,darkgrey,grey,#FFFFFF);
+  
+}
+
+
+
+.stopbuttsYellow{
+    
+    
+    
+  background: linear-gradient(to right,orange,yellowgreen,yellow);
+  
+}
+
+.musicThemeHolder{
+    
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    
+    width: 98%;
+    height: 3%;
+    bottom: 1%;
+    left: 0%;
+    border-radius: 20px;
+    
+}
+.musicThemeDisplay{
+    
+    font-size: 0.7rem;
+    
+    ;
+}
+
+.musicThemeDisplayGreen{
+    
+    color: lime;
+    
+    ;
+}
+.musicThemeDisplaySpace{
+    
+    color: indigo;
+    background: #000000;
+    border-radius: 26px;
+    
+    ;
+}
+
+.musicThemeDisplayOrange{
+    
+    
+    
+    color: darkorange;
+}
+.musicThemeDisplayRed{
+    
+   color: red;
+}
+.musicThemeDisplayPink{
+    
+    color: magenta;
+    ;
+}
+.musicThemeDisplayBlue{
+    
+color: dodgerblue;
+    
+    ;
+}
+.musicThemeDisplayYellow{
+    
+    color: yellowgreen;
+    
+    ;
+}
+.musicThemeDisplayWhite{
+    
+    color: lightgrey;
+    
+    ;
+}
+.numReady{
+    
+    animation: ready 1s  infinite ease-out;
+}
+
+@keyframes ready {
+    
+    
+    
+    
+    0%{
+        
+        transform: scale(1);
+        color: var(--getreadyColor);
+        
+           text-shadow: 0 0 2px var(--getreadyColor);
+    }
+    
+    99%{
+        
+        
+        
+        
+        transform: scale(var(--numReady));
+        
+    }
+    
+    
+    
+    100%{
+        
+       text-shadow: 0 0 0 black;
+        
+        color: black;
+
+    }
+}
+
+
+.musicSelectPopText{
+    
+    position: absolute;
+    text-shadow: 0 0 5px #000000;
+    font-size: 2rem;
+    
+    color:#FFFFFF;
+    font-family: regularText;
+    animation: poptext 2s forwards ease-out;
+    
+    
+    
+}
+
+@keyframes poptext{
+    
+    
+    
+    
+    
+    0%{
+        right:-20%;
+        top: 2%;
+        
+        
+        
+        
+    }
+    
+    
+    20%{
+        
+        
+        right: 5%;
+        
+        top: 2%;
+    }
+    80%{
+        
+        
+        right: 5%;
+        
+        top: 2%;
+        
+        
+    }
+    
+    
+    100%{
+        
+        
+        right: 5%;
+        
+        top: 95%;
+    }
+}
+.labels{
+    
+    font-family: topNums;
+    
+    
+    color: #FFFFFF;
+    font-weight: bold;
+    
+}
+.SECONDS{
+    position: absolute;
+    font-size: 0.9rem;
+   top:17.5%;
+   left: 61%; 
+   
+   
+   
+   
+   
+   
+   
+  
+  
+    
+}
+    
+.MINUTES{
+    
+    position: absolute;
+    font-size: 0.9rem;
+    top: 17.5%;
+   left: 21.5%;
+}   
+    
+    
+ .REPETITIONS{
+     
+     position: absolute;
+  left: 50%;
+ transform: translateX(-50%);
+ bottom: 0px;
+ z-index: 10;
+font-size: 0.9rem;
+    
+ }  
+    
+.TRANSITIONSECONDS{
+    position: absolute;
+    font-size: 0.65rem;
+    
+    
+    top: 60%;
+    transform:translateY(-60%);
+    
+  
+       
+      
+     
+       
+   } 
+
+.setsLeftWrap{
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+    position: absolute;
+    
+    left: 35%;
+    top: 15%;
+    width:30% ;
+    height: 10%;
+   
+    
+}
+
+.setsLeftWrap:before{
+    content:"Sets";
+    position: absolute;
+    font-size: 0.7rem;
+    font-weight: bold;
+    transform: translateX(-50%);
+    left:50%;
+    top: 0%;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000 ,0 0 1px #000000, 0 0 1px #000000;
+    
+    
+    color: var(--waiting-color);
+}
+.setsLeft{
+    
+    font-family: regularText;
+    font-size: 3rem;
+    color: var(--waiting-color);
+    align-content: center;
+    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000 ,0 0 1px #000000, 0 0 1px #000000;
+    
+}
+.setsLeftundertext{
+    color: var(--waiting-color);
+    align-content: center;
+    
+    
+}    
+        
+        
+        
+    </style>
+
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="global">
+        <nav class="nav">
+
+        </nav>
+
+
+        <div class="topFunctions">
+
+
+
+
+
+
+            <select name="" id="" class="selectTheme topselects">
+
+
+                <option value="">
+                    COLORS
+                </option>
+
+
+
+                <option value="blueish">Blue theme
+                </option>
+
+                <option value="greenish">Green theme
+                </option>
+
+                <option value="orangeish">Orange theme
+                </option>
+
+
+
+
+
+                <option value="reddish">Red theme
+                </option>
+
+
+
+
+                <option value="pinkish">Pink theme
+                </option>
+
+
+                <option value="whitish">White theme
+                </option>
+
+
+
+                <option value="yellowish">Yellow theme</option>
+
+
+
+                <option value="space">Space 🌌 theme</option>
+
+
+
+
+
+
+
+            </select>
+
+            <select name="" id="" class="musicSelect topselects">
+
+
+                <option value="">MUSICS</option></option>
+            <option value="african">African War Drums</option>
+
+            <option value="tiger">Eye of the Tiger</option>
+            <option value="NTM">French Hip Hop-NTM</option>
+
+
+
+
+        </select>
+
+
+
+
+    </div>
+
+
+
+    <div class="mainBlock">
+
+        <div class="numsBlock">
+
+
+            <h1 class="mins nums">00</h1>
+
+
+            <p class="collen nums">
+                :
+            </p>
+
+            <h1 class="secs nums">00</h1>
+        </div>
+
+        <div class="progressBarParent">
+
+            <div class="progressBar">
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="GOOOcontainer">
+        <h1 class="GOOO">GO</h1>
+    </div>
+
+    <div class="pauseResumeContainer">
+        <button class="stopButt stopbutts">STOP</button>
+
+        <button class="pauseButt stopbutts">PAUSE</button>
+
+
+
+    </div>
+
+
+
+
+    <button class="SetButt" onclick="SET()">SET</button>
+
+
+
+    <button class="start" onclick="startUp()">Start</button>
+
+
+
+    <div class="waitingrunningWrap">
+        <p class="waitingrunning">
+            waiting
+        </p>
+    </div>
+
+    <div class="fireAnimaWrap">
+
+        <img class="fireAnima" src="fireball.gif" alt="" />
+
+    </div>
+
+
+    <div class="fireAnima2Wrap">
+
+
+
+        <img class="fireAnima2" src="fyah.gif" />
+
+    </div>
+
+    <div class="setsLeftWrap">
+        <h1 class="setsLeft">0</h1>
+
+
+    </div>
+
+
+    <svg class="svg">
+
+
+
+        <circle class="circle"></circle>
+    </svg>
+
+    <span class="musicThemeHolder"> <p class="musicThemeDisplay"></p>
+    </span>
+</div>
+
+<!–– <button onclick="navigator.vibrate(2000)">vib</button>-->
+
+
+
+
+console.log(navigator," lefa");
+
+
+
+
+
+
+
+
+    <script type="text/javascript" charset="utf-8">
+    
+    
+    try{
+    
+  console.log(navigator.geolocation()
+);} catch (e){
+    
+    
+    console.log(e);
+}
+        let cssRoot = document.querySelector(':root');
+
+
+
+
+
+
+
+
+
+
+        var Name = "Not known";
+        if (navigator.appVersion.indexOf("Win") != -1) Name =
+        "Windows OS";
+        if (navigator.appVersion.indexOf("Mac") != -1) Name =
+        "MacOS";
+        if (navigator.appVersion.indexOf("X11") != -1) Name =
+        "UNIX OS";
+        if (navigator.appVersion.indexOf("Linux") != -1) Name =
+        "Linux OS";
+        console.log(Name);
+
+
+        if ("vibrate" in navigator) {
+            console.log("Vibration API is supported");
+        } else {
+            console.log("Vibration API is not supported");
+        }
+
+        let nowreadychick = new Audio("chuckchuckchuck.mp3");
+        let nowReady = new Audio("NowRready.mp3");
+
+
+
+
+
+
+
+
+
+
+        let runMusic = new Audio("audiodrums.mp3");
+        let GOOOsound = new Audio("GOOO.mp3");
+
+
+
+        let onlyTimeUp = new Audio ("onlyTimeUp.mp3");
+
+
+
+        let selectSelection = new Audio("selectSelection.mp3");
+
+
+        let openselects = new Audio("openselects mp3");
+
+
+
+
+
+        let musicTheme = new Audio("audiodrums.mp3");
+
+
+
+        if (!localStorage.getItem("secs")) {
+            localStorage.setItem("secs", 1);
+
+
+
+        }
+
+        if (!localStorage.getItem("mins")) {
+            localStorage.setItem("mins", 1);
+
+
+
+        }
+
+
+        if (!localStorage.getItem("reps")) {
+            localStorage.setItem("reps", 1);
+
+
+
+        }
+
+        if (!localStorage.getItem("musictheme")) {
+            localStorage.setItem("musictheme", "african");
+
+
+
+        }
+
+        if (!localStorage.getItem("colortheme")) {
+
+            localStorage.setItem("colortheme", "greenish");
+
+
+        }
+
+
+
+
+        let timeupSound = new Audio("timeupvroom.mp3");
+
+        let running = false;
+        let running2 = false;
+
+
+        const global = document.querySelector(".global");
+
+
+
+        let secsHtml = document.querySelector(".secs");
+
+
+        let minsHtml = document.querySelector(".mins");
+
+
+
+
+        let barHtml = document.querySelector(".progressBar");
+
+        let startButt = document.querySelector(".start");
+        const setButt = document.querySelector(".SetButt");
+
+
+        let secsList = document.querySelector(".secsList");
+        let themeSelect = document.querySelector(".selectTheme");
+
+        let mainBlock = document.querySelector(".mainBlock");
+        let numsBlock = document.querySelector(".numsBlock");
+        let numz = document.querySelector(".nums");
+        let secz = document.querySelector(".secs");
+
+        let minz = document.querySelectorAll(".mins");
+
+
+
+
+
+        // const backShadow = document.querySelector(".backShadow");
+
+
+
+        const nav = document.querySelector(".nav");
+
+        let waitingrunning = document.querySelector(".waitingrunning");
+
+
+
+        let svgCircle = document.querySelector('.svg');
+
+
+        let fireAnima = document.querySelector('.fireAnima');
+
+        let fireAnimaWrap = document.querySelector('.fireAnimaWrap');
+
+        let fireAnima2 = document.querySelector('.fireAnima2');
+
+        let fireAnima2Wrap = document.querySelector('.fireAnima2Wrap');
+
+        let waitingrunningWrap = document.querySelector('.waitingrunningWrap');
+
+
+
+
+
+        let GOOO = document.querySelector('.GOOO');
+
+        let GOOOcontainer = document.querySelector('.GOOOcontainer');
+
+        let musicSelect = document.querySelector('.musicSelect');
+        let stopbutt = document.querySelector('.stopButt');
+        let pausebutt = document.querySelector('.pauseButt');
+        let pauseStopWrap = document.querySelector('.pauseResumeContainer');
+
+
+        let musicThemeDisplay = document.querySelector('.musicThemeDisplay');
+        
+        
+        let setsLeft=document.querySelector('.setsLeft');
+       let setsLeftWrap=document.querySelector('.setsLeftWrap');
+       
+       
+    
+     
+     
+       
+       
+ let halfScreenWidth=Number ((window.innerWidth))*0.9;
+ 
+ 
+ let circleRadius= ((halfScreenWidth/2))-10;
+ 
+ let circleRadiusSides= ((halfScreenWidth/2));
+ 
+ 
+ 
+ let  circleCircunfirence =(circleRadius)*2*(Math.PI);
+ 
+ 
+ 
+  let  circleCircunfirenceMinus =-1*(circleRadius)*2*(Math.PI);
+ 
+ 
+ 
+ 
+ let leftPercent=(( window.innerWidth)*0.05)-10;
+
+
+console.log(leftPercent," circum my fucki cock and lefa de trigo");
+
+
+
+        cssRoot.style.setProperty("--screenHeight", window.innerHeight+"px");
+        
+        cssRoot.style.setProperty("--screenWidth", window.innerWidth+"px");
+        
+        
+        
+        cssRoot.style.setProperty("--halfScreenWidth", halfScreenWidth+"px");
+        
+        
+        
+        cssRoot.style.setProperty("--circleCircunfirence",circleCircunfirence );
+        
+        
+        cssRoot.style.setProperty("--circleCircunfirenceMinus",circleCircunfirenceMinus );
+        
+        
+        cssRoot.style.setProperty("--circleRadius",circleRadius +"px");
+        
+        
+        cssRoot.style.setProperty("--circleRadiusSides",circleRadiusSides +"px");
+        
+        
+        cssRoot.style.setProperty("--leftPercent", leftPercent+"px");
+        
+        
+        
+
+
+        console.log(window.innerHeight);
+        let x = 0;
+        let y = 0;
+
+        let newx;
+        let newy;
+
+        let initialSecs = 0;
+        let initialMins = 0;
+        let secs = initialSecs;
+        let mins = initialMins;
+        let reps = 1;
+        let transitionSecs = 5000;
+        let interval;
+        let delay = false;
+        
+        let currentColor=localStorage.getItem("colortheme");
+        
+        
+        let currentColor2=String(localStorage.getItem("colortheme"))+"ish";
+        
+    let waitingColor= getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+        
+
+
+        let zero2 = mins < 10 ? "0": "";
+        minsHtml.innerHTML = zero2+ mins;
+
+
+        let zero = secs < 10 ? "0": "";
+        secsHtml.innerHTML = zero+ secs;
+
+
+
+
+        let bar = 0;
+
+
+        //   let barLen=(100/(((initialMins>0 ? initialMins :0) * (initialMins>0 ? 60:0))+ initialSecs-1));
+
+        let barLen = 0;
+
+
+
+        let intervalpreview;
+
+        function previewBar() {
+
+            let bartemp = document.createElement("input");
+
+            bartemp.type = "range";
+            bartemp.max = 30;
+            bartemp.value = 0;
+            bartemp.className = "barPreview"
+
+            bartemp.style.position = "absolute";
+            bartemp.style.bottom = "5%";
+            bartemp.style.right = "5%";
+            bartemp.style.background = "#000000";
+
+
+
+
+            bartemp.style.zIndex = "25";
+            document.body.appendChild(bartemp);
+
+            let count = 0;
+
+            intervalpreview = setInterval(()=> {
+
+
+                if (count < 31) {
+
+                    bartemp.value = count;
+
+
+
+                } else if (count > 31) {
+
+
+                    bartemp.remove();
+                    clearInterval(intervalpreview);
+                }
+
+
+                count++
+
+
+            },
+                100)
+
+        }
+
+
+
+        musicThemeDisplay.addEventListener("click", ()=> {
+
+            console.log("am I touching correctly????")
+
+
+
+            if (!running2) {
+                let preview = new Audio("");
+                if (localStorage.getItem("musictheme") === "african") {
+
+
+
+                    preview = new Audio ("audiodrums.mp3");
+
+                } else if (localStorage.getItem("musictheme") === "tiger") {
+
+
+                    preview = new Audio ("Tigeru.mp3");
+
+                } else if (localStorage.getItem("musictheme") === "NTM") {
+
+
+                    preview = new Audio ("NTMdeChezToi.mp3");
+
+                }
+
+
+                let backShadow = document.createElement("div");
+                backShadow.style.width = "100%";
+                backShadow.style.height = "100%";
+                backShadow.style.position = "absolute";
+                backShadow.style.top = "0%";
+                backShadow.style.left = "0%";
+                backShadow.style.background = "#000000";
+                backShadow.style.opacity = "0.6";
+                backShadow.style.display = "block";
+                backShadow.style.zIndex = "25";
+                document.body.appendChild(backShadow);
+
+
+
+                preview.currentTime = 3;
+
+
+
+                preview.play();
+                previewBar();
+
+                document.body.appendChild(backShadow);
+
+
+
+
+
+
+                setTimeout(()=> {
+
+                    preview.pause();
+                    preview.currentTime = 0;
+
+
+                    backShadow.remove();
+
+
+
+                }, 3000);
+
+            } else {
+
+
+                new Audio("laughEffect.mp3").play();
+            }
+
+        });
+
+
+
+
+
+        function getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent,getreadyColor,lastdigit) {
+            
+            
+            cssRoot.style.setProperty("--getreadyColor",getreadyColor);
+
+
+            let intervalTransition;
+
+            let trasitionCount = (transitionSecs/1000);
+            let parent = document.createElement("div");
+            
+             parent.style.zIndex=20; 
+             
+ parent.style.position = "absolute";
+            parent.style.top = top;
+            parent.style.left = left;
+            parent.style.width = width;
+            parent.style.height = height;
+            parent.style.display = "flex";
+            parent.style.justifyContent = "center";
+            parent.style.alignItems = "center";
+       //parent.style.border = "solid "+waitingColor;
+       
+       
+            
+
+
+
+            let numReady = document.createElement("h1");
+            
+            
+            
+       if(lastdigit===""){
+           
+           
+           numReady.style.fontFamily="regularText";
+           
+       }
+
+
+
+
+            numReady.style.color = "#FFFFFF";
+            numReady.style.fontSize =fontSize+ "rem";
+
+
+            //  numReady.style.transition="transform 1s ease"
+
+            numReady.style.zIndex = "25";
+            numReady.innerText = trasitionCount;
+
+
+            parent.appendChild(numReady)
+
+         realParent.appendChild(parent);;
+
+            intervalTransition = setInterval(()=> {
+                numReady.className = "numReady"
+                if (trasitionCount > 0) {
+
+
+                    trasitionCount--;
+
+
+
+                    if (trasitionCount < 1) {
+
+                  trasitionCount = lastdigit;
+
+                        cssRoot.style.setProperty("--numReady", 2)
+
+
+
+                    }
+
+
+
+                    numReady.innerText = trasitionCount;
+
+
+
+
+
+                    console.log(trasitionCount, "   pinga mia de lefa")
+
+
+
+                } else {
+
+                    numReady.remove();
+                    parent.remove();
+
+                    clearInterval(intervalTransition);
+                }
+            },
+                1000);
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+//function getreadyCountdown(transitionSecs,top,left,fontSize, width,height)
+
+
+//getreadyCountdown(transitionSecs,65,35,1,30,5);
+
+
+
+
+
+        //MUSICS FOR WHEN I LOAD APP
+
+        if (localStorage.getItem("musictheme") === "african") {
+
+            musicTheme = new Audio("audiodrums.mp3");
+
+
+
+        } else if (localStorage.getItem("musictheme") === "tiger") {
+
+            musicTheme = new Audio("Tigeru.mp3");
+
+        } else if (localStorage.getItem("musictheme") === "NTM") {
+
+            musicTheme = new Audio("NTMdeChezToi.mp3");
+
+        }
+
+
+
+
+        function putinthecolorthemes(color, color2, maincolor) {
+
+            numsBlock.className = "numsBlock numsBlock"+color2;
+            nav.className = "nav nav"+color;
+
+            startButt.className = "start startButt"+color;;
+            setButt.className = "setButt setButt"+color;
+
+            cssRoot.style.setProperty("--waiting-color", maincolor);
+
+
+            //  cssRoot.style.setProperty("--gradient-theme", "linear-gradient(to bottom, green,lime,yellowgreen)");
+
+
+            barHtml.className = " progressBar progressBar"+color;
+
+
+
+
+
+
+            stopbutt.className = "stopbutts stopbutts"+color;
+
+            pausebutt.className = "stopbutts stopbutts"+color;;
+
+
+            musicThemeDisplay.className = "musicThemeDisplay musicThemeDisplay"+color;
+
+
+
+
+            if (color === "space") {
+
+                document.body.style.backgroundImage = "url(space.jpg)";
+                document.body.style.backgroundRepeat = "no-repeat";
+
+                document.body.style.backgroundSize = "cover";
+                document.body.style.backgroundAttachment = "fixed";
+                document.body.style.location = "center";
+
+
+
+            }
+            
+            
+            
+            currentColor= color;
+            currentColor2= color2;
+            waitingColor= maincolor;
+            cssRoot.style.setProperty("--getreadyColor",maincolor);
+            
+
+
+        }
+
+
+        if (localStorage.getItem("colortheme") === "greenish") {
+
+
+
+            putinthecolorthemes("green", "greenish", "lime")
+
+
+
+
+        } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+            putinthecolorthemes("pink", "pinkish", "magenta");
+
+
+        } else if (localStorage.getItem("colortheme") === "blueish") {
+
+
+            putinthecolorthemes("blue", "blueish", "dodgerblue");
+
+        } else if (localStorage.getItem("colortheme") === "whitish") {
+
+            putinthecolorthemes("white", "whitish", "lightgrey");
+
+
+
+        } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+            putinthecolorthemes("yellow", "yellowish", "yellowgreen");
+
+
+
+
+        } else if (localStorage.getItem("colortheme") === "reddish") {
+
+
+            putinthecolorthemes("red", "reddish", "red");
+
+
+
+        } else if (localStorage.getItem("colortheme") === "space") {
+
+            putinthecolorthemes("space", "space", "darkviolet");
+
+
+
+
+
+
+
+
+
+
+
+
+        } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+            putinthecolorthemes("orange", "orangeish", "darkorange");
+
+        }
+
+        let musicThemeString = "";
+
+
+        switch (localStorage.getItem("musictheme")) {
+
+            case "african":
+                musicThemeString = "African War Drums";
+                break;
+            case "tiger":
+                musicThemeString = "Eye of the Tiger";
+                break;
+
+            case "NTM":
+                musicThemeString = "NTM d'Chez Toi";
+                break;
+
+
+        }
+
+
+
+        console.log(getComputedStyle(cssRoot).getPropertyValue("--waiting-color"));
+
+
+
+        musicThemeDisplay.innerText = "🔊 "+musicThemeString;
+
+        let currentsoundeffectpath = "";
+
+
+        function setMusicselectEffects(input) {
+
+
+            if (input === "tiger" || input === "african") {
+
+
+                currentsoundeffectpath = "selectSelection2.mp3";
+
+
+
+
+            }
+        }
+
+
+        function musicSelectPopText() {
+
+
+            let text = document.createElement("h2");
+
+            text.innerText = localStorage.getItem("musictheme")+" selected";
+
+
+            text.className = "musicSelectPopText";
+
+
+            global.appendChild(text);
+
+
+
+            setTimeout(()=> {
+
+
+
+                text.remove();
+
+
+
+            }, 2100);
+
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        function getmusicSelected() {
+
+            let variable = 0;
+
+            switch (localStorage.getItem("musictheme")) {
+
+
+                case "african":
+                    variable = 1;
+                    break;
+
+                case "tiger":
+                    variable = 2;
+                    break;
+
+
+                case "NTM":
+                    variable = 3;
+                    break;
+
+
+            }
+
+
+            return variable;
+        }
+
+
+
+
+
+
+
+
+        let musiccount = 0;
+
+
+        musicSelect.addEventListener("click", (e)=> {
+
+            new Audio("openselectsTrimmed.mp3").play();
+
+
+
+
+
+
+
+            e.target.selectedIndex = getmusicSelected();
+
+
+
+
+
+
+
+
+        });
+
+
+
+
+        musicSelect.addEventListener("change", (e)=> {
+
+
+
+
+
+            if (!running2) {
+
+
+
+                if (e.target.value === "african") {
+
+
+                    musicTheme = new Audio("audiodrums.mp3");
+
+
+                    localStorage.setItem("musictheme", "african");
+                    musicThemeDisplay.innerText = "🔊 African War Drums";
+
+
+
+                } else if (e.target.value === "NTM") {
+
+
+                    musicTheme = new Audio("NTMdeChezToi.mp3");
+
+                    localStorage.setItem("musictheme", "NTM");
+                    musicThemeDisplay.innerText = "🔊 NTM d'Prez Toi";
+
+
+
+                } else if (e.target.value === "tiger") {
+
+
+                    musicTheme = new Audio("Tigeru.mp3");
+
+                    localStorage.setItem("musictheme", "tiger");
+                    musicThemeDisplay.innerText = "🔊 Eye of the Tiger";
+
+
+                }
+
+                if (e.target.selectedIndex != 0) {
+                    new Audio("selectSelection2.mp3").play();
+
+
+                    musicSelectPopText()
+                }
+
+            } else {
+
+                new Audio("laughEffect.mp3").play();
+
+            }
+
+
+
+            e.target.selectedIndex = "0";
+
+        });
+
+
+
+
+        function getthemeSelected() {
+
+            let variab = 0;
+
+            switch (localStorage.getItem("colortheme")) {
+
+
+                case "blueish":
+                    variab = 1;
+                    break;
+
+                case "greenish":
+                    variab = 2;
+                    break;
+
+
+
+                case "orangeish":
+                    variab = 3;
+                    break;
+
+                case "reddish":
+                    variab = 4;
+                    break;
+
+                case "pinkish":
+                    variab = 5;
+                    break;
+
+                case "whitish":
+                    variab = 6;
+                    break;
+
+                case "yellowish":
+                    variab = 7;
+                    break;
+
+                case "space":
+                    variab = 8;
+                    break;
+
+
+
+
+
+            }
+
+            return variab;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        themeSelect.addEventListener("click", (e)=> {
+
+            new Audio("openselectsTrimmed.mp3").play();
+
+
+
+            e.target.selectedIndex = getthemeSelected();
+            console.log(getthemeSelected(), " mi chupa podia??? ");
+        });
+
+
+
+        themeSelect.addEventListener("change", (e)=> {
+
+            if (e.target.value === "whitish") {
+
+                putinthecolorthemes("white", "whitish", "lightgrey");
+
+
+
+                localStorage.setItem("colortheme", "whitish");
+
+
+                console.log("color white");
+
+
+
+
+
+
+
+
+
+            } else if (e.target.value === "blueish") {
+                putinthecolorthemes("blue", "blueish", "dodgerblue");
+
+                localStorage.setItem("colortheme", "blueish");
+
+                console.log("theme blueish");
+
+
+
+
+
+
+
+
+
+            } else if (e.target.value === "pinkish") {
+
+
+
+                putinthecolorthemes("pink", "pinkish", "magenta");
+
+
+                localStorage.setItem("colortheme", "pinkish");
+
+
+                console.log("theme pinkish");
+
+
+
+
+
+
+
+
+
+            } else if (e.target.value === "greenish") {
+
+                putinthecolorthemes("green", "greenish", "lime");
+
+                localStorage.setItem("colortheme", "greenish");
+
+                console.log("theme Greenish");
+
+
+
+
+
+
+
+            } else if (e.target.value === "yellowish") {
+
+
+
+                putinthecolorthemes("yellow", "yellowish", "yellowgreen");
+
+
+
+                localStorage.setItem("colortheme", "yellowish");
+
+
+                console.log("theme Yellowish");
+
+
+
+
+
+
+            } else if (e.target.value === "reddish") {
+
+                putinthecolorthemes("red", "reddish", "red")
+
+
+
+
+                localStorage.setItem("colortheme", "reddish");
+
+                console.log("theme Reddish");
+
+
+
+
+
+
+            } else if (e.target.value === "space") {
+
+
+                putinthecolorthemes("space", "space", "darkviolet")
+
+                localStorage.setItem("colortheme", "space");
+
+
+                console.log("Space theme");
+
+
+            } else if (e.target.value === "orangeish") {
+
+
+                putinthecolorthemes("orange", "orangeish", "darkorange")
+
+                localStorage.setItem("colortheme", "orangeish");
+
+
+                console.log("Orange theme");
+
+
+            }
+
+
+            if (e.target.value !== "space" && e.target.value !== "") {
+                document.body.style.background = "#000000";
+
+
+            }
+
+
+
+
+
+
+
+
+            selectSelection.play();
+
+
+            e.target.selectedIndex = "0";
+
+        });
+
+
+
+
+        let switchCount = 0;
+
+
+        function SET() {
+
+
+            new Audio("openselectsTrimmed.mp3").play();
+
+            let backShadow = document.createElement("div");
+
+            let setWrap = document.createElement("div");
+
+            setWrap.draggable = true;
+            setWrap.className = "setWrap";
+
+            backShadow.className = "backShadow";
+
+            backShadow.style.display = "block";
+
+
+            let secsSelect = document.createElement("select");
+
+
+            let repsSelect = document.createElement("select");
+
+
+            let transitionSecsSelect = document.createElement("select");
+
+
+
+
+            let minsSelect = document.createElement("select");
+
+            let exitIcon = document.createElement("img");
+
+
+            let navSet = document.createElement("div");
+
+
+            let br = document.createElement("br");
+
+
+
+
+
+            let numsRow = document.createElement("div");
+
+
+            let numsRow2 = document.createElement("div");
+
+            let numsRow3 = document.createElement("div");
+            let numsRow4 = document.createElement("div");
+            let numsRow5 = document.createElement("div");
+            let numsRow6 = document.createElement("div");
+            let numsRow7 = document.createElement("div");
+
+            let numsRow8 = document.createElement("div");
+
+
+            let minsTopDisplay = document.createElement("p");
+            let secsTopDisplay = document.createElement("p");
+            let repsTopDisplay = document.createElement("p");
+
+
+            let transitionSecsTopDisplay = document.createElement("p");
+
+            let acceptSetButt = document.createElement("p");
+
+            let switchText = document.createElement("p");
+
+            let switchDelay = document.createElement("button");
+
+
+            let SECONDS = document.createElement("h1");
+            let MINUTES = document.createElement("h1");
+            let REPETITIONS = document.createElement("h1");
+            let TRANSITIONSECONDS = document.createElement("h1");
+
+
+
+            SECONDS.innerText = "SECONDS";
+            MINUTES.innerText = "MINUTES";
+            REPETITIONS.innerText = "REPETITIONS";
+            TRANSITIONSECONDS.innerText = "TRANSITION SECONDS";
+
+            SECONDS.className = "SECONDS labels";
+            MINUTES.className = "MINUTES labels";
+            REPETITIONS.className = "REPETITIONS labels";
+            TRANSITIONSECONDS.className = "TRANSITIONSECONDS labels";
+
+
+
+
+
+
+            switchDelay.className = "switchDelay";
+
+
+
+            switchText.innerText = "Delayed Transition";
+            switchText.className = "switchText";
+
+
+
+
+
+            backShadow.className = "backShadow";
+            setWrap.className = "setWrap";
+            exitIcon.className = "exitIcon";
+
+            exitIcon.src = "exit-icon.png";
+
+
+
+
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                navSet.className = "navSet navsetGreen";
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+                navSet.className = "navSet navsetBlue";
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+                navSet.className = "navSet navsetPink";
+
+
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                navSet.className = "navSet navsetWhite";
+
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+                navSet.className = "navSet navsetYellow";
+
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+                navSet.className = "navSet navsetRed";
+
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+                navSet.className = "navSet navsetSpace";
+
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+                navSet.className = "navSet navsetOrange";
+
+
+            }
+            
+            
+            
+
+
+
+
+
+            numsRow.className = "numsRow";
+            numsRow2.className = "numsRow2";
+
+            numsRow3.className = "numsRow3";
+            numsRow4.className = "numsRow4";
+            numsRow5.className = "numsRow5";
+            numsRow6.className = "numsRow6";
+            numsRow6.appendChild(switchDelay);
+
+            numsRow6.appendChild(switchText);
+
+
+
+
+
+            minsSelect.className = "minsSelect";
+            secsSelect.className = "secsSelect";
+            repsSelect.className = "repsSelect";
+
+            transitionSecsSelect.className = "transitionSecsSelect";
+
+
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtBlue";
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtPink";
+
+
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtWhite";
+
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
+
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtRed";
+
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtSpace";
+
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
+
+
+            }
+
+
+
+
+            if (!localStorage.getItem("secs")) {
+
+                localStorage.setItem("secs", 5);
+            }
+            if (!localStorage.getItem("mins")) {
+
+                localStorage.setItem("mins", 1);
+            }
+            if (!localStorage.getItem("reps")) {
+                localStorage.setItem("reps", 1)
+
+            }
+            if (!localStorage.getItem("transitionsecs")) {
+
+
+                localStorage.setItem("transitionsecs", 5)
+
+            }
+
+
+
+
+
+
+            secsTopDisplay.className = "numsTopDisplay";
+
+            minsTopDisplay.className = "numsTopDisplay";
+            repsTopDisplay.className = "numsTopDisplay repsTopDisplay";
+            
+          
+
+
+            transitionSecsTopDisplay.className = "numsTopDisplay";
+
+            minsTopDisplay.innerText = localStorage.getItem("mins");
+            secsTopDisplay.innerText = localStorage.getItem("secs");
+
+
+            //  reps = repsSelect.value;
+
+
+            // transitionSecs = transitionSecsSelect.value;
+
+
+            transitionSecsTopDisplay.innerText = localStorage.getItem("transitionsecs");
+
+
+
+
+            repsTopDisplay.innerText = localStorage.getItem("reps");
+
+
+
+            acceptSetButt.innerText = "Accept";
+
+            let s = document.querySelector(".global");
+
+            s.appendChild(setWrap);
+            document.body.appendChild(backShadow);
+
+
+
+            setWrap.appendChild(navSet);
+            setWrap.appendChild(br);
+            setWrap.appendChild(numsRow);
+            setWrap.appendChild(numsRow2);
+            setWrap.appendChild(numsRow3);
+            setWrap.appendChild(numsRow4);
+            //   setWrap.appendChild(numsRow7);
+            //  setWrap.appendChild(numsRow8);
+            setWrap.appendChild(numsRow6);
+            setWrap.appendChild(numsRow5);
+
+            setWrap.appendChild(exitIcon);
+
+
+
+
+            console.log(numsRow6[0], " ma puta");
+
+
+            numsRow.appendChild(minsTopDisplay);
+            numsRow.appendChild(secsTopDisplay);
+
+
+
+
+            // navSet.appendChild(exitIcon);
+
+            numsRow2.appendChild(minsSelect);
+
+
+            numsRow2.appendChild(secsSelect);
+
+
+            numsRow2.appendChild(MINUTES);
+            numsRow2.appendChild(SECONDS);
+            
+            
+            
+            
+
+            numsRow3.appendChild(repsSelect);
+
+            numsRow3.appendChild(repsTopDisplay);
+
+            
+
+            numsRow3.appendChild(REPETITIONS);
+
+
+            numsRow4.appendChild(transitionSecsTopDisplay);
+            numsRow4.appendChild(transitionSecsSelect);
+            numsRow4.appendChild(TRANSITIONSECONDS);
+
+
+
+
+            numsRow5.appendChild(acceptSetButt);
+
+
+            let myvar = "<option value=1>Seconds </option>`";
+
+
+
+            let myvar2 = "<option value=0>Minutes </option>`";
+
+            let myvar3 = "<option value=1>Repetitions </option>`";
+
+            let myvar4 = "<option value=3>Transition </option>`";
+    repsTopDisplay.style.bottom=0-(repsTopDisplay.getBoundingClientRect().height)+"px";
+
+console.log( "the height,k? ", numsRow3.getBoundingClientRect().height);
+
+
+            for (let i = 0; i < 61; i++) {
+
+
+                if (i > 0 && i < 60) {
+
+
+                    if (i === Number(localStorage.getItem("secs"))) {
+
+                        myvar += `<option value='${i}' selected>${i}</option>`;
+
+                    } else {
+
+                        myvar += `<option value='${i}'>${i}</option>`;
+
+                    }
+                }
+
+
+
+                if (i < 60) {
+
+                    if (i === Number (localStorage.getItem("mins"))) {
+
+                        myvar2 += `<option value='${i}' selected>${i}</option>`;
+
+                    } else {
+
+                        myvar2 += `<option value='${i}'>${i}</option>`;
+
+                    }
+
+
+
+                }
+
+
+                if (i > 0) {
+
+
+                    if (i === Number(localStorage.getItem("reps"))) {
+                        myvar3 += `<option value='${i}'selected>${i}</option>`;
+                    } else {
+
+
+                        myvar3 += `<option value='${i}' >${i}</option>`;
+                    }
+
+
+
+
+
+                    if ((i) === Number(localStorage.getItem("transitionsecs")) && i > 2) {
+
+                        myvar4 += `<option value='${i}'selected>${i}</option>`;
+
+
+
+                    } else {
+
+
+                        if (i > 2) {
+                            myvar4 += `<option value='${i}'>${i}</option>`;
+
+                        }
+
+                    }
+                }
+
+
+
+                secsSelect.innerHTML = myvar;
+
+                minsSelect.innerHTML = myvar2;
+
+
+                repsSelect.innerHTML = myvar3;
+                transitionSecsSelect.innerHTML = myvar4;
+
+
+
+            }
+
+            console.log(localStorage.getItem("delay"));
+
+            if (!localStorage.getItem("delay")) {
+
+
+                localStorage.setItem("delay", "OFF");
+
+            }
+
+
+            if (localStorage.getItem("delay") === "ON") {
+
+                delay = true;
+                //   switchDelay.value="ON";
+                switchDelay.innerText = "ON";
+                switchDelay.style.color = "#FFFFFF";
+                switchDelay.style.boxShadow = "0 0 9px 0px "+getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+                switchDelay.style.background = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+
+                transitionSecs = (transitionSecsSelect.value)*1000;
+                cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+            } else if (localStorage.getItem("delay") === "OFF") {
+
+                delay = false;
+                //  switchDelay.value="OFF";
+                switchDelay.innerText = "OFF";
+
+                switchDelay.style.color = "#000000";
+                switchDelay.style.boxShadow = "0 0 0 0px  black";
+
+                switchDelay.style.background = "grey";
+
+                transitionSecsSelect.style.display = "none";
+                transitionSecsTopDisplay.style.display = "none";
+
+                TRANSITIONSECONDS.style.display = "none";
+
+                transitionSecs = 1000;
+                cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+            }
+
+
+
+
+
+            switchDelay.addEventListener("click", (e)=> {
+
+
+
+                if (delay === true) {
+
+
+
+
+
+
+                    transitionSecsSelect.style.display = "none";
+                    transitionSecsTopDisplay.style.display = "none";
+                    TRANSITIONSECONDS.style.display = "none";
+
+
+
+
+
+
+                    switchDelay.innerText = "OFF";
+                    delay = false;
+
+
+                    switchDelay.style.color = "#000000";
+                    switchDelay.style.boxShadow = "0 0 0 0px  black";
+
+                    switchDelay.style.background = "grey";
+
+
+
+
+
+                    new Audio("selectSelection.mp3").play();
+                    console.log("delay= ", delay);
+
+                    transitionSecs = 1000;
+                    cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+
+                    localStorage.setItem("delay", "OFF");
+
+                } else {
+
+
+
+                    switchDelay.innerText = "ON";
+                    delay = true;
+                    console.log("delay= ", delay);
+
+
+
+
+                    transitionSecsSelect.style.display = "block";
+                    transitionSecsTopDisplay.style.display = "block";
+                    TRANSITIONSECONDS.style.display = "block";
+
+
+
+                    switchDelay.style.color = "#FFFFFF";
+                    switchDelay.style.boxShadow = "0 0 9px  0px "+getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+                    switchDelay.style.background = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+                    new Audio("selectSelection2.mp3").play();
+                    localStorage.setItem("delay", "ON");
+                    transitionSecs = (transitionSecsSelect.value)*1000;
+                    cssRoot.style.setProperty("--secs", ((transitionSecs/1000)+0.3)+"s");
+
+
+
+                }
+
+
+
+
+
+
+            }
+            );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            secsSelect.addEventListener("change",
+                (e)=> {
+
+
+
+
+
+
+                    secsTopDisplay.innerText = secsSelect.value;
+
+                    localStorage.setItem("secs", e.target.value);
+
+
+
+
+
+
+
+
+
+
+
+                });
+
+
+            minsSelect.addEventListener("change",
+                (e)=> {
+
+
+                    minsTopDisplay.innerText = e.target.value;
+
+                    localStorage.setItem("mins", e.target.value);
+
+
+
+
+
+
+
+
+                });
+
+
+            repsSelect.addEventListener("change",
+                (e)=> {
+
+
+                    repsTopDisplay.innerText = e.target.value;
+
+                    localStorage.setItem("reps", e.target.value);
+
+
+                    reps = e.target.value;
+
+
+
+
+
+                });
+
+
+            transitionSecsSelect.addEventListener("change",
+                (e)=> {
+
+
+
+
+                    transitionSecs = Number(e.target.value)*1000;
+                    transitionSecsTopDisplay.innerText = Number(e.target.value);
+                    cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+
+                    localStorage.setItem("transitionsecs", e.target.value);
+
+
+
+
+
+
+                });
+
+            acceptSetButt.addEventListener("click",
+                ()=> {
+
+                    secs = secsSelect.value;
+                    mins = minsSelect.value;
+
+
+                    initialSecs = secsSelect.value;
+                    initialMins = minsSelect.value;
+
+                    reps = repsSelect.value;
+
+                    zero = secs < 10 ? "0": "";
+                    zero2 = mins < 10 ? "0": "";
+
+
+                    secsHtml.innerText = zero+secs;
+                    minsHtml.innerText = zero2+mins;
+
+
+
+                    barLen = 100/((60*mins) + (secs-1));
+
+                    console.log(barLen, "   second ");
+
+
+
+                    startButt.style.display = "block";
+
+                    setWrap.remove();
+                    backShadow.remove();
+
+
+
+                });
+
+
+
+
+
+
+
+
+            exitIcon.addEventListener("click",
+                ()=> {
+
+                    setWrap.remove();
+                    backShadow.remove();
+
+
+
+
+
+                })
+
+            setWrap.draggable = false;
+            
+            
+            navSet.addEventListener("touchstart",(e)=>{
+     
+     console.log("start touch event");
+     
+     e.preventDefault();
+     
+        
+  
+    x  = e.touches[0].pageX;
+     y = e.touches[0].pageY;   
+     
+  });     
+           
+                
+                
+       navSet.addEventListener("touchmove",(e)=>{
+    
+    
+    newx=x- e.touches[0].pageX;
+   newy=y- e.touches[0].pageY;
+         
+       console.log(x," ",y);
+       x  = e.touches[0].pageX;
+     y = e.touches[0].pageY;   
+   
+   setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+      setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+                            
+   
+   
+       
+  
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+      
+     });
+
+               
+                
+                
+                
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+           navSet.addEventListener("mousedown",
+                (e)=> {
+
+
+
+
+                    x = e.clientX;
+                    y = e.clientY;
+
+                    navSet.addEventListener("mousemove", (e)=> {
+                        newx = (x- e.clientX);
+
+                        newy = (y - e.clientY);
+
+                        x = e.clientX;
+                        y = e.clientY;
+
+
+                        console.log(x, "  ", y);
+
+                        setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                        setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+                    });
+
+
+
+                    navSet.addEventListener("mouseup", (e)=> {
+
+
+                        navSet.removeEventListener("mousemove", (e)=> {
+
+
+
+
+                            newx = x- e.clientX;
+
+                            newy = y - e.clientY
+
+                            x = e.clientX;
+                            y = e.clientY;
+
+
+
+
+                            setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                            setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+
+
+
+                        })
+                    });
+
+
+                });
+                
+                
+                
+                
+              
+            
+
+
+
+        }
+
+
+
+
+        function createTimeup() {
+
+
+
+            let backShadow = document.createElement("div");
+
+            backShadow.style.display = "block";
+
+            let content = document.createElement("div");
+            let topBar = document.createElement("div");
+
+
+            let subdiv = document.createElement("div");
+
+            let timeuptext = document.createElement("p");
+            let accept = document.createElement("buttom");
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                topBar.className = "topBartimeup topBartimeupGreen";
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                topBar.className = "topBartimeup topBartimeupWhite";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+
+                topBar.className = "topBartimeup topBartimeupBlue";
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+
+                topBar.className = "topBartimeup topBartimeupPink";
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+
+                topBar.className = "topBartimeup topBartimeupYellow";
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+
+                topBar.className = "topBartimeup topBartimeupRed";
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+
+                topBar.className = "topBartimeup topBartimeupSpace";
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+
+                topBar.className = "topBartimeup topBartimeupOrange";
+
+            }
+
+
+
+
+            if (localStorage.getItem("colortheme") === "greenish") {
+
+                accept.className = "acceptButt acceptButtGreen";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "blueish") {
+
+                accept.className = "acceptButt acceptButtBlue";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+                accept.className = "acceptButt acceptButtPink";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "whitish") {
+
+                accept.className = "acceptButt acceptButtWhite";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+                accept.className = "acceptButt acceptButtYellow";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "reddish") {
+
+                accept.className = "acceptButt acceptButtRed";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "space") {
+
+                accept.className = "acceptButt acceptButtSpace";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+                accept.className = "acceptButt acceptButtOrange";
+
+
+
+            }
+
+
+
+
+            subdiv.className = "subdivTimeup";
+
+            timeuptext.className = "timeuptext";
+
+            content.className = "timeup";
+
+            backShadow.className = "backShadow";
+
+
+            timeuptext.innerText = "TIME UP."
+            accept.innerText = "Accept"
+
+
+
+            content.appendChild(topBar);
+            content.appendChild(subdiv);
+            subdiv.appendChild(timeuptext);
+
+            subdiv.appendChild(accept);
+
+
+
+            document.body.appendChild(backShadow);
+
+
+            document.body.appendChild(content);
+
+            accept.addEventListener("click",
+                (e)=> {
+
+
+
+                    barHtml.style.width = "0%";
+                    bar = 0;
+
+                    setButt.style.display = "block";
+
+                    content.remove();
+                    backShadow.remove();
+
+                });
+
+
+            function mouseMove(e) {
+                newx = (x- e.clientX);
+
+                newy = (y - e.clientY);
+
+                x = e.clientX;
+                y = e.clientY;
+
+
+                console.log(x,
+                    "  ",
+                    y);
+
+                content.style.top = (content.offsetTop - newy)+"px";
+
+                content.style.left = (content.offsetLeft - newx)+"px";
+
+
+
+
+
+
+            }
+
+            function mouseUp(e) {
+
+                topBar.removeEventListener("mousemove",
+                    mouseMove);
+
+            }
+
+
+            topBar.addEventListener("mousedown",
+                (e)=> {
+
+
+
+
+                    x = e.clientX;
+                    y = e.clientY;
+
+                    topBar.addEventListener("mousemove", e=> {
+
+                        mouseMove(e);
+                    });
+
+
+
+                    topBar.addEventListener("mouseup", e=> {
+                        mouseUp();
+                    });
+
+
+
+                });
+
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+        let currentTheme = "";
+
+
+
+        console.log(barLen);
+
+
+
+
+        let pauseCount = 0;
+
+        function loop1() {
+
+            setButt.style.display = "none";
+
+            switch (localStorage.getItem("colortheme")) {
+
+
+
+                case "pinkish":
+                    currentTheme = "numsBlock numsBlockPinkish";
+                    break;
+                case "yellowish":
+                    currentTheme = "numsBlock numsBlockYellowish";
+                    break;
+
+                case "greenish":
+                    currentTheme = "numsBlock numsBlockGreenish";
+                    break;
+
+
+                case "blueish":
+                    currentTheme = "numsBlock numsBlockBlueish";
+                    break;
+
+                case "whitish":
+                    currentTheme = "numsBlock numsBlockWhitish";
+                    break;
+
+                case "reddish":
+                    currentTheme = "numsBlock numsBlockReddish";
+                    break;
+
+                case "space":
+                    currentTheme = "numsBlock numsBlockSpace";
+                    break;
+                case "orangeish":
+                    currentTheme = "numsBlock numsBlockOrangeish";
+                    break;
+
+
+
+
+            }
+
+
+
+
+            interval = setTimeout(loop1, 1000);
+
+
+
+            secsHtml.className = "secs nums";
+            minsHtml.className = "mins nums";
+
+            if (running) {
+
+
+
+
+                secsHtml.className = "secs nums";
+                minsHtml.className = "mins nums";
+                startButt.style.display = "none";
+                secsHtml.innerHTML = secs;
+
+
+                bar += barLen;
+
+                barHtml.style.width = bar+"%";
+
+                secs--;
+
+
+
+
+                if (secs < initialSecs-1) {
+                    GOOOcontainer.style.display = "none";
+
+
+
+
+
+                }
+
+
+
+
+
+                let zero = secs < 10 ? "0": "";
+                secsHtml.innerHTML = zero+secs;
+
+
+
+
+                if (secs < 1 && mins < 1) {
+
+
+
+
+                    if (reps < 2) {
+
+                        waitingrunningWrap.style.display = "none";
+                        
+                        
+                        setsLeftWrap.style.display = "none";
+
+
+                        running = false;
+                        running2 = false;
+                        fireAnimaWrap.style.display = "none";
+                        fireAnima2Wrap.style.display = "none";
+                        fireAnima2.style.display = "none";
+                        clearInterval(interval);
+                        musicTheme.pause();
+                        musicTheme.currentTime = 0;
+                        window.navigator.vibrate(3000);
+                        pauseStopWrap.style.display = "none";
+                        nowreadychick.pause();
+                        nowreadychick.currentTime = 0;
+                        createTimeup();
+                        timeupSound.play();
+
+
+
+                    } else if (reps > 1) {
+                        reps--;
+                        setsLeft.innerText= reps;
+                        bar = 0;
+                        barHtml.style.width = bar;
+
+                        running = false;
+                        GOOOcontainer.style.display = "none";
+                        onlyTimeUp.play();
+                        musicTheme.pause();
+                        navigator.vibrate(1000);
+
+
+                        nowreadychick.play();
+                        nowreadychick.loop = true;
+                        nowReady.play();
+                        
+                        getreadyCountdown(transitionSecs,"50%",leftPercent+"px",4,halfScreenWidth,halfScreenWidth,global,waitingColor,"");
+                        
+//getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent) 
+
+
+                        waitingrunningWrap.style.display = "flex";
+                        waitingrunningWrap.style.top = 35+"%";
+
+                        waitingrunning.style.fontSize = 5+"em";
+
+                        secs = initialSecs;
+                        mins = initialMins;
+
+                        let zero = secs < 10 ? "0": "";
+                        let zero2 = mins < 10 ? "0": "";
+
+
+                        secsHtml.innerHTML = zero+secs;
+                        minsHtml.innerText = zero2+mins;
+
+                        waitingrunning.innerText = "WAITING";
+                        svgCircle.style.display = "block";
+                        fireAnimaWrap.style.display = "none";
+                        fireAnima2Wrap.style.display = "none";
+
+                        fireAnima2.style.display = "none";
+
+
+                        pauseStopWrap.style.display = "none";
+
+
+
+                        setTimeout(()=> {
+                            nowreadychick.pause();
+                            nowreadychick.currentTime = 0;
+                            running = true;
+
+                            pauseStopWrap.style.display = "flex";
+
+
+                            GOOOcontainer.style.display = "flex";
+
+                            numsBlock.className = "numsBlock numsBlockGo";
+                            secsHtml.className = "numsGo";
+                            minsHtml.className = "numsGo";
+                            GOOOsound.play();
+
+
+                            musicTheme.play();
+                            svgCircle.style.display = "none";
+
+
+                            waitingrunningWrap.style.top = 67+"%";
+
+                            waitingrunningWrap.style.display = "flex";
+
+
+
+
+
+                            waitingrunning.style.fontSize = 4+"em";
+
+                            waitingrunning.innerText = "R U N N I N G";
+
+                            fireAnimaWrap.style.display = "flex";
+                            fireAnima2Wrap.style.display = "flex";
+                            fireAnima2.style.display = "block";
+
+
+
+
+                        }, transitionSecs);
+
+                    }
+
+
+
+
+                } else if (secs < 1 && mins > 0) {
+                    secs = 59;
+                    mins--;
+                    let zero = secs < 10 ? "0": "";
+                    let zero2 = mins < 10 ? "0": "";
+
+
+                    secsHtml.innerHTML = zero+secs;
+                    minsHtml.innerText = zero2+mins;
+
+
+                }
+
+
+
+                numsBlock.className = currentTheme;
+
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+        function startUp() {
+
+
+            pauseCount = 0;
+
+            if (reps < 2) {
+                
+                
+                
+                setsLeftWrap.style.display = "flex";
+                
+                setsLeft.innerText= reps;
+
+
+                running2 = true;
+
+                startButt.style.display = "none";
+                setButt.style.display = "none";
+
+                waitingrunningWrap.style.display = "flex";
+                waitingrunning.innerText = "GET READY !!!";
+                waitingrunning.style.fontSize = 3+"em";
+                nowreadychick.play();
+                nowreadychick.loop = true;
+                nowReady.play();
+
+
+             //   getreadyCountdown(transitionSecs);
+                getreadyCountdown(transitionSecs,"50%","0%",9, "100%","8%",global,"#FFFFFF","GO");
+
+
+
+//getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent) 
+
+
+
+                setTimeout(()=> {
+                    nowreadychick.pause();
+                    nowreadychick.currentTime = 0;
+
+
+                    GOOOsound.play();
+                    musicTheme.play();
+
+
+                    startButt.style.display = "none";
+                    waitingrunningWrap.style.display = "flex";
+                    waitingrunning.style.fontSize = 4+"em";
+                    waitingrunning.innerText = "R U N N I N G";
+                    fireAnimaWrap.style.display = "flex";
+
+                    fireAnima2.style.display = "block";
+                    fireAnima2Wrap.style.display = "flex";
+
+                    running = true;
+
+
+                    pauseStopWrap.style.display = "flex";
+
+
+                    loop1();
+                }, transitionSecs);
+
+
+
+            } else if (reps =>2) {
+                running2 = true;
+                setsLeftWrap.style.display = "flex";
+                setsLeft.innerText= reps;
+
+
+
+
+                startButt.style.display = "none";
+                setButt.style.display = "none";
+
+                waitingrunningWrap.style.display = "flex";
+                waitingrunning.innerText = "GET READY !!!";
+                waitingrunning.style.fontSize = 3+"em";
+                nowreadychick.play();
+                nowreadychick.loop = true;
+                nowReady.play();
+                
+                getreadyCountdown(transitionSecs,"50%","0%",9, "100%","8%",global,"#FFFFFF","GO");
+
+
+             
+                
+                
+                
+                
+                //   getreadyCountdown(transitionSecs,50,0,9, 100,8, global);
+                   
+
+                setTimeout(()=> {
+                    running = true;
+                    waitingrunning.style.fontSize = 4+"em";
+
+
+                    waitingrunning.innerText = "R U N N I N G";
+                    waitingrunningWrap.style.display
+                    nowreadychick.pause();
+                    nowreadychick.currentTime = 0;
+
+                    GOOOsound.play();
+                    musicTheme.play();
+
+
+                    startButt.style.display = "none";
+
+
+
+
+                    numsBlock.className = "numsBlock numsBlockGo";
+                    secsHtml.className = "numsGo";
+                    minsHtml.className = "numsGo";
+
+                    setTimeout(()=> {
+
+
+                        waitingrunning.style.fontSize = 4+"em";
+
+
+
+
+
+                        fireAnimaWrap.style.display = "flex";
+
+
+                        fireAnima2.style.display = "block";
+                        fireAnima2Wrap.style.display = "flex";
+
+                        pauseStopWrap.style.display = "flex";
+                        loop1();
+                    }, 1000);
+
+
+
+                }, transitionSecs);
+            }
+        }
+
+
+        pausebutt.addEventListener("click", (e)=> {
+            switch (pauseCount) {
+                case 0:
+                    running = false;
+                    new Audio("selectSelection.mp3").play();
+                    musicTheme.pause();
+                    e.target.innerText = "resume";
+                    pauseCount = 1;
+                    waitingrunning.innerText = "P A U S E D";
+
+
+                    fireAnima.src = "PolarBearSleep.gif";
+                    fireAnima.style.transform = "scale(0.4)translate(-30%,-50%)";
+                    fireAnima2.src = "SnowPause.gif";
+                    break;
+
+                case 1:
+                    running = true;
+                    fireAnima.src = "fireball.gif";
+                    fireAnima.style.transform = "rotate(25deg)";
+
+                    fireAnima2.src = "fyah.gif";
+                    musicTheme.play();
+                    e.target.innerText = "pause";
+                    new Audio("selectSelection.mp3").play();
+                    pauseCount = 0;
+                    waitingrunning.innerText = "R U N N I N G";
+
+            }
+        });
+
+
+
+
+        stopbutt.addEventListener("click", (e)=> {
+            
+            
+            
+            numsBlock.style.color="#000000";
+       
+
+
+            pausebutt.innerText = "pause";
+            running2 = false;
+
+            bar = 0;
+            barHtml.style.width = 0+"%";
+            new Audio("selectSelection.mp3").play();
+            running = false;
+       GOOOcontainer.style.display="none";
+       //numsBlock.className="numsBlock";
+       
+    putinthecolorthemes(currentColor,currentColor2,waitingColor);
+    
+       console.log(numsBlock.style," what color bitch?");
+       
+            clearInterval(interval);
+            musicTheme.pause();
+            musicTheme.currentTime = 0;
+            waitingrunningWrap.style.display = "none";
+            fireAnimaWrap.style.display = "none";
+            fireAnima2Wrap.style.display = "none";
+            fireAnima2.style.display = "none";
+            fireAnima.src = "fireball.gif";
+            fireAnima.style.transform = "rotate(25deg)";
+            fireAnima2.src = "fyah.gif";
+            secs = 0;
+            mins = 0;
+            zero = secs < 10 ? "0": "";
+            minsHtml.innerText = zero2+mins;
+            secsHtml.innerText = zero+ secs;
+
+            pauseStopWrap.style.display = "none";
+            setButt.style.display = "block";
+
+
+        });
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
