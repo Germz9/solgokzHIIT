@@ -47,12 +47,13 @@
 
 
         <div class="topFunctions">
-
-
-
-
-
-
+            
+            
+          <button class="volume"></button>
+          
+          
+          
+          
             <select name="" id="" class="selectTheme topselects">
 
 
@@ -301,6 +302,7 @@
    let profilepicBox = document.querySelector('.profilepicBox');
    let profilepic = document.querySelector('.profilepic');
    let username = document.querySelector('.username');
+   let volumeButt= document.querySelector(".volume");
    const c = document.querySelector(".myCanvas");
    const ctx = c.getContext("2d");
  //---------GLOBAL VARIABLES OF THE APP------------------------&&&
@@ -462,10 +464,226 @@
 
 
 
+// FUNCTION VOLUME POP UP
+
+let volx=0;
+let voly=0;
+let voluming=false;
+let vlevel=0;
+let vol=0;
+    function volumePop(){
+        
+        let volumeWrap = document.createElement("div");
+
+         
+         
+          volumeWrap.style.transform="rotate(180deg)";
+
+            volumeWrap.style.position = "relative";
+            volumeWrap.style.left = "40%";
+            volumeWrap.style.top = "-20%";
+            volumeWrap.style.background = "lightgrey";
+            volumeWrap.style.border = "solid white 1.5px";
+            
+          volumeWrap.style.borderRadius = "10px";
+          volumeWrap.style.width = "50px";
+          
+          volumeWrap.style.height = "250px"
+         volumeWrap.style.overflow ="hidden";
+      
+           volumeWrap.style.zIndex = "200";
+            global.appendChild(volumeWrap);
+            
+            
+            
+            
+            
+            
+            let volumeLevel = document.createElement("div");
+            
+            
+            volumeLevel.style.position = "absolute";
+            volumeLevel.style.left = "50%";
+            volumeLevel.style.top = "0%";
+            volumeLevel.style.background = waitingColor;
+            volumeLevel.style.border = "solid white 1.5px";
+            
+            
+          volumeLevel.style.transform = "translateX(-50%)";
+
+            
+          volumeLevel.style.borderRadius = "10px";
+          volumeLevel.style.width = "100%";
+          
+          volumeLevel.style.height = "50%"
+            
+           volumeLevel.style.zIndex = "200";
+            volumeWrap.appendChild(volumeLevel);
+            
+            
+   //    console.log( "yack ", volumeWrap.getBoundingClientRect().height);
+           let mosttop=Number (window.innerHeight*0.2);
+     
+     let mostbottom=Number ((window.innerHeight*0.2)+250);
+
+          volumeLevel.addEventListener("touchstart",e=>{
+              
+              
+              
+
+         
+       
+       
+              
+
+              
+
+          });    
+       
+       
+       setTimeout(()=>{
+                
+              
+     
+              
+                if(!voluming){
+              volumeWrap.remove();
+              volumeButt.style.display="block"}
+                
+            },2500);
+     
+            
+          volumeWrap.addEventListener("touchstart",e=>{
+              
+              
+        console.log("La Musica ",musicTheme.volume)
+              
+       let totalvolumeheight= mostbottom -mosttop;
+       
+         newvoly = voly- e.touches[0].pageY;
+
+       
+              voluming =false;
+              
+              
+              
+              
+     
+              
+              
+  console.log("top= ",window.innerHeight*0.2,"bottom= ",(window.innerHeight*0.2)+250)
+              
+
+                  
+                  
+                  
+        
+              
+              
+              
+              
+              
+           
+          });
+            
+            volumeWrap.addEventListener("touchmove",e=>{
+                
+                
+                
+                
+              voluming= true;
+                         
+                    newvoly = voly- e.touches[0].pageY;
+
+                  
+                 
+                    voly = e.touches[0].pageY;
+    
+  //   console.log("top:",volumeLevel.getBoundingClientRect().top,"newvolY: ",newvoly)
+    
+    vlevel=(volumeLevel.offsetTop )- newvoly;
+    let touchlocation=e.touches[0].pageY;
+              
+       //console.log("touch location= ",e.touches[0].pageY);         
+    
+   vol= (touchlocation/391)*100;
+   
+    console.log("vol=",vol);
+  
+    
+    
+       volumeLevel.style.height = (100-vol)+"%";
+       
+       
+     musicTheme.volume= 1-(vol/100);
+                
+                     
+        
+            //volumeLevel.style.top=0+"px";
+
+
+          // setTimeout(()=>{
+                
+              
+     
+              
+             //   if(voluming){
+                    
+                    
+                    
+                  //  voluming=false;
+        //    }
+                
+         //   },2500);
+         
+         voluming= false;
+        
+        
+            
+
+       
+                    
+
+          
+              
+              
+          });
+            
+            
+          
+         volumeWrap.addEventListener("touchend",()=>{
+          
+        
+           
+        
+              volumeWrap.remove();
+              volumeButt.style.display="block"
+              
+     
+              
+             /*   if(!voluming){
+              volumeWrap.remove();
+              volumeButt.style.display="block"}
+                
+          */
+       
+    });
+
+
+}
+
+     volumeButt.addEventListener("click",e=>{
+         
+         e.target.style.display="none";
+         volumePop();
+         
+         
+     });
+
 
 
  
-//FUNCION GLOBAL SPINNER 
+// FUNCION GLOBAL SPINNER 
 
     let cw = window.innerWidth/5;
     let countCircle = 0
@@ -481,7 +699,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
     let canvasWidth = cw
     let canvasHeight = cw;
-    console.log(canvasWidth, "and ", canvasHeight)
+//    console.log(canvasWidth, "and ", canvasHeight)
     c.width = canvasWidth;
     c.height = canvasHeight;
     //let lineWidth=6;
@@ -518,7 +736,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
                   
     countCircle += (10/((barLen2 -0.5)));
     
-    console.log("countCircle=  "+countCircle," cointcirc= ",cointcirc);    
+    //console.log("countCircle=  "+countCircle," cointcirc= ",cointcirc);    
     //(100/(barLen2))/10;
                 }
 
