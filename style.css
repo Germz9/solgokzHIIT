@@ -364,6 +364,15 @@ body{
     background: linear-gradient(to bottom,#8B0000,red,white,black);
     
 }
+
+
+
+
+
+.numsBlockTomatoeish{
+    background: linear-gradient(to bottom, green,red,white,black);
+    
+}
 .numsBlockWhitish {
 
 
@@ -2140,30 +2149,40 @@ stroke-dashoffset:var(--circleCircunfirenceMinus);
     align-items: center;
     justify-content: right;
     
-    width: 98%;
+   width: 98%;
     height: 3%;
     bottom: 1%;
     left: 0%;
     border-radius: 20px;
     
+    
 }
 .musicThemeDisplay{
     
     font-size: 0.7rem;
+      text-shadow: 0 0 1px black,
+      0 0 1px white,
+      0 0 1px black,
+      0 0 2px black,
+      0 0 2px black;
+      background: black;
+      border-radius: 26px;
     
-    ;
+    
+    
+    
 }
 
 .musicThemeDisplayGreen{
     
     color: lime;
     
-    ;
+    
 }
 .musicThemeDisplaySpace{
     
     color: indigo;
-    background: #000000;
+    
     border-radius: 26px;
     
     ;
@@ -2477,7 +2496,7 @@ background: transparent;
     
    background-image: url("volumeIcon.png");
    
-   background-size: 60%;
+   background-size: 100% 80%;
    background-position: center center;
    background-repeat: no-repeat;
    color: white;

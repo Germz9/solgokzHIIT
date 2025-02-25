@@ -104,6 +104,20 @@
 
 
                 <option value="space">Space 🌌 theme</option>
+                
+                
+        <option value="lemon">Lemon 🍋 theme</option>
+        
+                        
+        <option value="lime">Lime  theme</option>
+        
+         <option value="orange">Orange 🍊 theme</option>
+                 
+         <option value="tomato">Tomato 🍅 theme</option>
+         
+         
+         
+                
 
 
 
@@ -120,12 +134,19 @@
             <option value="african">African War Drums</option>
 
             <option value="tiger">Eye of the Tiger</option>
-            <option value="NTM">French Hip Hop-NTM</option>
-               <option value="NTM2">French Hip Hop-NTM 2</option>
-                  <option value="NTM3">French Hip Hop-NTM 3</option>
+        <option value="NTM">NTM Prez S'chez toi</option>
+        <option value="NTM2">NTM-2 -Saint Dennis Style</option>
+ <option value="NTM3">NTM-3 -pose ton gun</option>
                
                <option value="StreetFighter2">Street Fighter II theme medley</option>
-
+               
+               
+               
+     <option value="ghettopeople">Joey Starr -Ghetto People</option>
+     
+     <option value="fonkyfamily">Fonky Family  -l'amour du risque</option>
+     
+     
 
 
 
@@ -276,6 +297,8 @@
    const setButt = document.querySelector(".SetButt");
    let secsList = document.querySelector(".secsList");
    let themeSelect = document.querySelector(".selectTheme");
+   let navBar = document.querySelector(".nav");
+   
 
    let mainBlock = document.querySelector(".mainBlock");
    let numsBlock = document.querySelector(".numsBlock");
@@ -509,7 +532,7 @@ let vol=0;
           volumeWrap.style.borderRadius = "10px";
           volumeWrap.style.width = "50px";
           
-          volumeWrap.style.height = "250px"
+          volumeWrap.style.height = "150px"
          volumeWrap.style.overflow ="hidden";
       
            volumeWrap.style.zIndex = "200";
@@ -606,7 +629,7 @@ let vol=0;
      
               
               
-  console.log("top= ",window.innerHeight*0.2,"bottom= ",(window.innerHeight*0.2)+250)
+  console.log("top= ",window.innerHeight*0.2,"bottom= ",(window.innerHeight*0.2)+150)
               
 
                   
@@ -639,7 +662,7 @@ let vol=0;
               
        //console.log("touch location= ",e.touches[0].pageY);         
     
-   vol= (touchlocation/391)*100;
+   vol= (touchlocation/291)*100;
    
     console.log("vol=",vol);
   
@@ -785,9 +808,28 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
                   
     countCircle += (10/((barLen2 -0.5)));
     
+    }
+    if(secs <1 && mins<1 && reps<1){
+    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+        
+    ctx.beginPath();
+    
+   ctx.strokeStyle = "#FFFFFF";
+    ctx.shadowOffsetY = 0;
+    ctx.shadowBlur = lineWidth+2;
+    ctx.lineCap = "round";
+    ctx.shadowColor = `${getComputedStyle(cssRoot).getPropertyValue("--waiting-color")}`;
+    ctx.arc(radius, radius, radius- 2*lineWidth, 0, Math.PI*2, false);
+    ctx.stroke();
+    
+        
+        
+    }
+        
+    
     //console.log("countCircle=  "+countCircle," cointcirc= ",cointcirc);    
     //(100/(barLen2))/10;
-                }
+                
 
 //if (cointcirc%10 ===0) {
       //  clearInterval(lefaInterval);
@@ -990,6 +1032,14 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
                 
          preview = new Audio ("NTMPoseTonGun.mp3");
                 
+            }else if(localStorage.getItem("musictheme")==="ghettopeople"){
+                
+         preview = new Audio ("ghettoPeople.mp3");
+                
+            }else if(localStorage.getItem("musictheme")==="fonkyfamily"){
+                
+         preview = new Audio ("fonkyFamily.mp3");
+                
             }
 
 
@@ -1190,10 +1240,17 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 }else if (localStorage.getItem("musictheme") === "NTM3") {
 
             musicTheme = new Audio("NTMPoseTonGun.mp3");
+}else if (localStorage.getItem("musictheme") === "ghettopeople") {
+
+            musicTheme = new Audio("ghettoPeople.mp3");
+
+
+}else if (localStorage.getItem("musictheme") === "fonkyfamily") {
+
+            musicTheme = new Audio("fonkyFamily.mp3");
+
+
 }
-
-
-
 
     function putinthecolorthemes(color, color2, maincolor, colorlower) {
 
@@ -1337,7 +1394,115 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
                 putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
 
-            }
+   }else if (localStorage.getItem("colortheme") === "lemon") {
+
+          putinthecolorthemes("Yellow", "Yellowish", "yellow", "yellowgreen");
+          
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(lemonVertical.jpg)";
+     }else{
+         document.body.style.background="url(lemonLandscape.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+                
+                
+
+}else if (localStorage.getItem("colortheme") === "lime") {
+
+          putinthecolorthemes("Green", "Greenish", "limegreen", "lime");
+          
+          
+                 navBar.style.background="linear-gradient(to right, white,green,lime, white";
+            
+      barHtml.style.background="linear-gradient(to right, white,green,lime, white";
+          
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(limeVertical.jpg)";
+     }else{
+         document.body.style.background="url(limeLandscape.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+                
+                
+
+}else if (localStorage.getItem("colortheme") === "orange") {
+
+          putinthecolorthemes("Orange", "Orangeish", "orange", "orange");
+          
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(orangeVertical.jpg)";
+     }else{
+         document.body.style.background="url(orangeLandscape.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+                
+                
+
+   }else if(localStorage.getItem("colortheme") === "tomato"){
+       
+       
+   putinthecolorthemes("Red", "Tomatoeish", "red", "red");
+          
+          
+      barHtml.style.background="linear-gradient(to right,green,red,red,orange, white)"
+      
+      startButt.style.border="solid green";
+      
+      setButt.style.border="solid green";
+      navBar.style.background="linear-gradient(to right,green,#8B0000,red)";
+    //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(tomatoVertical.jpg)";
+     }else{
+         document.body.style.background="url(tomatoLandscape.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+              
+              
+                   
+     
+                  
+       
+       
+       
+       
+       
+       
+       
+     
+    
+    
+    
+    
+    
+   }
+            
+
+
 
 
         }
@@ -1375,6 +1540,20 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
            case "NTM3":
              musicThemeString = "NTM -Pose Ton Gun 'IV My people' Remix-";
                 break;
+                
+                
+                
+                
+                
+       case "ghettopeople":
+             musicThemeString = "Joey Starr - Ghetto People";
+                break;
+                
+                
+           case  "fonkyfamily":
+             musicThemeString = "Fonky Family- L'amour Du Risque";
+                break;             
+                
 
         }
 
@@ -1392,7 +1571,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
         function setMusicselectEffects(input) {
 
 
-       if (input === "tiger" || input === "african" || input==="NTM" || input==="NTM2"|| input===  "NTM3" || input==="StreetFighter2") {
+       if (input === "tiger" || input === "african" || input==="NTM" || input==="NTM2"|| input===  "NTM3" || input==="StreetFighter2" || input=== "ghettopeople"|| input==="fonkyfamily") {
 
 
                 currentsoundeffectpath = "selectSelection2.mp3";
@@ -1474,6 +1653,16 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
                 case "StreetFighter2":
                     variable = 6;
                     break;
+                    
+                    
+               case "ghettopeople":
+                    variable = 7;
+                    break;
+                    
+               case "fonkyfamily":
+                    variable = 8;
+                    break;
+                    
 
 
 
@@ -1597,6 +1786,28 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
                 
+      }else if (e.target.value === "ghettopeople") {
+
+
+            musicTheme = new Audio("ghettoPeople.mp3");
+
+           localStorage.setItem("musictheme", "ghettopeople");
+           
+        musicThemeDisplay.innerText = "🔊 Joey Starr - Ghetto People";
+
+
+                
+      }else if (e.target.value === "fonkyfamily") {
+
+
+            musicTheme = new Audio("fonkyFamily.mp3");
+
+           localStorage.setItem("musictheme", "fonkyfamily");
+           
+        musicThemeDisplay.innerText = "🔊 Fonky Family- L'amour Du Risque";
+
+
+                
       }
                 
                 
@@ -1710,11 +1921,20 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
             e.target.selectedIndex = getthemeSelected();
             console.log(getthemeSelected(), " mi chupa podia??? ");
+            
+            
+            
+            navBar.style.background="";
+            barHtml.style.background="";
+            navBar.style.border="";
+            
         });
 
 
 
         themeSelect.addEventListener("change", (e)=> {
+            
+            
 
 
             profilepicBox.style.border = "solid white";
@@ -1723,6 +1943,18 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
             username.style.color = "white";
+            
+            
+            
+               if (e.target.value !== "space" || e.target.value !== "lemon" && e.target.value !== "") {
+                document.body.style.background = "#000000";
+
+
+            }
+ 
+            
+            
+            
 
 
             if (e.target.value === "whitish") {
@@ -1803,7 +2035,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
 
-            } else if (e.target.value === "yellowish") {
+        } else if (e.target.value === "yellowish") {
 
 
 
@@ -1887,23 +2119,139 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
                 
                 
                 
-            }
+       }else if(e.target.value==="lemon"){
+            putinthecolorthemes("Yellow", "Yellowish", "yellow", "yellowgreen");
+          
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.backgroundImage="url('lemonVertical.jpg')";
+      
+      document.body.style.backgroundSize="cover";
+      
+      
+      
+     }else{
+      document.body.style.backgroundImage="url(lemonLandscape.jpg)";
+         document.body.style.backgroundSize="cover";
+         
+         
+         
+     }
+     
+  
+  
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+                
+     
+     
+           localStorage.setItem("colortheme", "lemon");
+         
+         console.log("lemon theme")
+     }    
+        else if(e.target.value==="lime"){
+            
+            
+            putinthecolorthemes("Green", "Greenish", "limegreen", "lime");
+            
+            
+       navBar.style.background="linear-gradient(to right, white,green,lime, white";
+            
+      barHtml.style.background="linear-gradient(to right, white,green,lime, white";
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(limeVertical.jpg)";
+     }else{
+         document.body.style.background="url(limeLandscape.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+                          
+            
+            localStorage.setItem("colortheme", "lime");
+         
+         console.log("lime theme")
+            
+            
+            
+            
+            
+            
+  }  else if(e.target.value==="orange"){
+      
+     putinthecolorthemes("Orange", "Orangeish", "orange", "orange");
+          
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(orangeVertical.jpg)";
+     }else{
+         document.body.style.background="url(orangeLandscape.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+              
+              
+                   
+      localStorage.setItem("colortheme", "orange");
+         
+         console.log("orange theme")
+            
+              
+                
+                
+                
+                
+                
 
-
-            if (e.target.value !== "space" && e.target.value !== "") {
-                document.body.style.background = "#000000";
-
-
-            }
-
-
-
-
-
-
-
-
-            selectSelection.play();
+  }else if(e.target.value==="tomato"){
+      
+     putinthecolorthemes("Red", "Tomatoeish", "red", "red");
+          
+          
+      barHtml.style.background="linear-gradient(to right,green,red,red,orange, white)"
+      
+      startButt.style.border="solid green";
+      
+      setButt.style.border="solid green";
+      
+      
+     navBar.style.background="linear-gradient(to right,green,#8B0000,red)";
+     
+     
+  //   musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(tomatoVertical.jpg)";
+     }else{
+         document.body.style.background="url(tomatoLandscape.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+              
+              
+                   
+      localStorage.setItem("colortheme", "tomato");
+         
+         console.log("tomato theme")
+            
+  }         
+                
+                
+                
+                
+         selectSelection.play();
 
 
             e.target.selectedIndex = "0";
@@ -3479,6 +3827,26 @@ if(parseInt(repsSelect.value) !=1){
                case "blackish":
                     currentTheme = "numsBlock numsBlockBlackish";
                     break;
+                    
+                    
+             case "lemon":
+                    currentTheme = "numsBlock numsBlockYellowish";
+                    break;
+                    
+                    
+               case "lime":
+                    currentTheme = "numsBlock numsBlockGreenish";
+                    break;
+ 
+               case "orange":
+                    currentTheme = "numsBlock numsBlockOrangeish";
+                    break;
+                    
+                    
+       case "tomato":
+                    currentTheme = "numsBlock numsBlockTomatoeish";
+                    break;
+ 
 
 
 
