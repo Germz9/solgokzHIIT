@@ -1891,6 +1891,33 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
                 case "space":
                     variab = 10;
                     break;
+                    
+                    
+               case "lemon":
+                    variab = 11;
+                    break;
+                    
+            
+            case "lime":
+                    variab = 12;
+                    break;
+
+
+            case "orange":
+                    variab = 13;
+                    break;
+                    
+                    
+                    
+           case "tomato":
+                    variab = 14;
+                    break;
+
+
+            
+            
+            
+            
 
 
 
@@ -1927,6 +1954,12 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
             navBar.style.background="";
             barHtml.style.background="";
             navBar.style.border="";
+            
+            startButt.style.border="";
+            startButt.style.background="";
+            setButt.style.border="";
+            setButt.style.background="";
+            
             
         });
 
@@ -2436,6 +2469,26 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
                 navSet.className = "navSet navSetBrown";
 
 
+            }else if (localStorage.getItem("colortheme") === "lemon") {
+
+                navSet.className = "navSet navSetYellow";
+
+
+            }else if (localStorage.getItem("colortheme") === "lime") {
+
+                navSet.className = "navSet navSetGreen";
+
+
+            }else if (localStorage.getItem("colortheme") === "orange") {
+
+                navSet.className = "navSet navSetOrange";
+
+
+            }else if (localStorage.getItem("colortheme") === "tomato") {
+
+                navSet.className = "navSet navSetRed";
+
+
             }
             
 
@@ -2514,7 +2567,21 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
             }else if (localStorage.getItem("colortheme") === "brownish") {
 
                 acceptSetButt.className = "acceptSetButt acceptSetButtBrown";
+            }else if (localStorage.getItem("colortheme") === "lemon") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
+            }else if (localStorage.getItem("colortheme") === "lime") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
+            }else if (localStorage.getItem("colortheme") === "orange") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
+            }else if (localStorage.getItem("colortheme") === "tomato") {
+
+                acceptSetButt.className = "acceptSetButt acceptSetButtRed";
             }
+
+
 
 
 
@@ -3335,7 +3402,31 @@ if(parseInt(repsSelect.value) !=1){
 
                 topBar.className = "topBartimeup topBartimeupBrown";
 
+            }else if (localStorage.getItem("colortheme") === "lemon") {
+
+
+                topBar.className = "topBartimeup topBartimeupYellow";
+
+            }else if (localStorage.getItem("colortheme") === "lime") {
+
+
+                topBar.className = "topBartimeup topBartimeupGreen";
+
+            }else if (localStorage.getItem("colortheme") === "orange") {
+
+
+                topBar.className = "topBartimeup topBartimeupOrange";
+
+            }else if (localStorage.getItem("colortheme") === "tomato") {
+
+
+                topBar.className = "topBartimeup topBartimeupRed";
+
             }
+            
+            
+            
+            
             
 
 
@@ -3392,6 +3483,30 @@ if(parseInt(repsSelect.value) !=1){
             }else if (localStorage.getItem("colortheme") === "brownish")  {
 
                 accept.className = "acceptButt acceptButtBrown";
+
+
+
+            }else if (localStorage.getItem("colortheme") === "lemon")  {
+
+                accept.className = "acceptButt acceptButtYellow";
+
+
+
+            }else if (localStorage.getItem("colortheme") === "lime")  {
+
+                accept.className = "acceptButt acceptButtGreen";
+
+
+
+            }else if (localStorage.getItem("colortheme") === "orange")  {
+
+                accept.className = "acceptButt acceptButtOrange";
+
+
+
+            }else if (localStorage.getItem("colortheme") === "tomato")  {
+
+                accept.className = "acceptButt acceptButtRed";
 
 
 
@@ -4249,7 +4364,7 @@ if(parseInt(repsSelect.value) !=1){
                     waitingrunning.innerText = "P A U S E D";
 
 
-                    fireAnima.src = "PolarBearSleep.gif";
+                    fireAnima.src = "sleepingbearPause.gif";
                     fireAnima.style.transform = "scale(0.4)translate(-30%,-50%)";
                     fireAnima2.src = "SnowPause.gif";
                     break;
