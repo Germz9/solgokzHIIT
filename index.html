@@ -1986,7 +1986,30 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
 
-
+     function clickThemeAnimation(path,width,topPercent){
+         
+       let animation = document.createElement("img");
+       
+     animation.src=path;;
+     animation.style.position="absolute";
+     animation.style.left="50%";
+     animation.style.bottom=topPercent;
+     animation.style.transform="translateX(-50%)";
+     animation.style.width=width;
+     animation.style.zIndex="250";
+    
+       
+     global.appendChild(animation);
+       
+       
+         setTimeout(()=>{
+             
+             
+             animation.remove();
+         },2000);
+         
+        
+     }
 
 
 
@@ -2339,7 +2362,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
   }else if(e.target.value==="street_fighter"){
       
       
-      
+ clickThemeAnimation("ken-sshinryuken.gif","400px","10%");    
        
  putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
           
@@ -2376,7 +2399,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
   }   
                 
                 
-                if(localStorage.getItem("colortheme")!="street_fighter"){
+    if(localStorage.getItem("colortheme")!="street_fighter"){
             progressBarParent.style.background="transparent";}
             
                 
