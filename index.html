@@ -103,17 +103,18 @@
 
 
 
-                <option value="space">Space 🌌 theme</option>
+                <option value="space">Space  theme</option>
                 
                 
-        <option value="lemon">Lemon 🍋 theme</option>
+        <option value="lemon">Lemon theme</option>
         
                         
         <option value="lime">Lime  theme</option>
         
-         <option value="orange">Orange 🍊 theme</option>
+         <option value="orange">Orange theme</option>
                  
-         <option value="tomato">Tomato 🍅 theme</option>
+         <option value="tomato">Tomato theme</option>
+           <option value="street_fighter">TLsreet Fighter II theme</option>
          
          
          
@@ -293,6 +294,9 @@
    let secsHtml = document.querySelector(".secs");
    let minsHtml = document.querySelector(".mins");
    let barHtml = document.querySelector(".progressBar");
+   
+  let  progressBarParent=document.querySelector(".progressBarParent");
+   
    let startButt = document.querySelector(".start");
    const setButt = document.querySelector(".SetButt");
    let secsList = document.querySelector(".secsList");
@@ -351,7 +355,7 @@
     let Select2Sound= new Audio("selectSelection2.mp3");
     Select2Sound.play();
     
-    let volumelevel= localStorage.getItem("volumelevel");
+    let volumelevel=parseFloat( localStorage.getItem("volumelevel"));
         
      musicTheme.volume=volumelevel;
    GOOOsound.volume= volumelevel;
@@ -363,8 +367,10 @@
    
    Select2Sound.volume= volumelevel;
    SelectSound.volume= volumelevel;
-    openselects.volume= volumelevel;   
-    
+    openselects.volume= volumelevel;  
+    timeupSound.volume=volumelevel;
+    onlyTimeUp.volume=volumelevel;
+   
     
     
 
@@ -523,9 +529,9 @@ let vol=0;
          
           volumeWrap.style.transform="rotate(180deg)";
 
-            volumeWrap.style.position = "relative";
-            volumeWrap.style.left = "40%";
-            volumeWrap.style.top = "-20%";
+            volumeWrap.style.position = "absolute";
+            volumeWrap.style.right = "10%";
+            volumeWrap.style.top = "20%";
             volumeWrap.style.background = "lightgrey";
             volumeWrap.style.border = "solid white 1.5px";
             
@@ -534,9 +540,10 @@ let vol=0;
           
           volumeWrap.style.height = "150px"
          volumeWrap.style.overflow ="hidden";
+         volumeWrap.style.zIndex ="200";
       
            volumeWrap.style.zIndex = "200";
-            global.appendChild(volumeWrap);
+            numsBlock.appendChild(volumeWrap);
             
             
             
@@ -682,6 +689,8 @@ let vol=0;
    Select2Sound.volume= volumelevel;
    SelectSound.volume= volumelevel;
     openselects.volume= volumelevel;
+    timeupSound.volume=volumelevel;
+    onlyTimeUp.volume=volumelevel;
                   
     localStorage.setItem("volumelevel",volumelevel) 
             //volumeLevel.style.top=0+"px";
@@ -809,7 +818,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
     countCircle += (10/((barLen2 -0.5)));
     
     }
-    if(secs <1 && mins<1 && reps<1){
+    if(secs <1 && mins<1 && reps===1){
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
         
     ctx.beginPath();
@@ -1482,7 +1491,44 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
         
         volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
               
-              
+   }  else if(localStorage.getItem("colortheme") === "street_fighter"){
+       
+       
+       
+       
+ putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
+ 
+     barHtml.style.background="red";
+     
+     progressBarParent.style.background="yellowgreen";
+
+      
+      startButt.style.border="solid orange";
+      
+      setButt.style.border="solid orange";
+      navBar.style.background="linear-gradient(to right,#8B0000,orange)";
+    //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(SF2bg.jpg)";
+     }else{
+         document.body.style.background="url(SF2bg.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="cover";
+        
+    //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+                    
+       
+       
+       
+       
+       
+       
+       
+   }
                    
      
                   
@@ -1499,7 +1545,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
     
     
     
-   }
+   
             
 
 
@@ -1912,6 +1958,14 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
            case "tomato":
                     variab = 14;
                     break;
+                    
+                    
+                    
+                                
+           case "street_fighter":
+                    variab = 15;
+                    break;
+
 
 
             
@@ -1960,6 +2014,9 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
             setButt.style.border="";
             setButt.style.background="";
             
+            
+            
+   
             
         });
 
@@ -2279,10 +2336,49 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
          
          console.log("tomato theme")
             
-  }         
+  }else if(e.target.value==="street_fighter"){
+      
+      
+      
+       
+ putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
+          
+          
+        barHtml.style.background="red";
+     
+     progressBarParent.style.background="yellow";
+      
+      startButt.style.border="solid orange";
+      
+      setButt.style.border="solid orange";
+      navBar.style.background="linear-gradient(to right,#8B0000,orange)";
+    //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+     if(window.innerHeight>window.innerWidth){
+         
+      document.body.style.background="url(SF2bg.jpg)";
+     }else{
+         document.body.style.background="url(SF2bg.jpg)";
+         
+         
+     }
+                
+        document.body.style.backgroundSize="100%";
+        document.body.style.backgroundPosition="center center";
+        document.body.style.backgroundRepeat="2";
+      
+            localStorage.setItem("colortheme", "street_fighter");
+         
+         console.log("street fighter color theme");
+      
+      
+      
+      
+  }   
                 
                 
-                
+                if(localStorage.getItem("colortheme")!="street_fighter"){
+            progressBarParent.style.background="transparent";}
+            
                 
          selectSelection.play();
 
@@ -3884,24 +3980,15 @@ if(parseInt(repsSelect.value) !=1){
 
 
         let currentTheme = "";
-
-
-
-        console.log(barLen);
-     getReadySecs= Number (localStorage.getItem("getreadysecs"))*1000;
-
-
-
-
-        let pauseCount = 0;
         
-        let loopCount=0;
-
-        function loop1() {
-
-            setButt.style.display = "none";
-
-            switch (localStorage.getItem("colortheme")) {
+        
+        
+        
+  function  currentThemeFunc(){
+      
+      
+      
+      switch (localStorage.getItem("colortheme")) {
 
 
 
@@ -3961,6 +4048,16 @@ if(parseInt(repsSelect.value) !=1){
        case "tomato":
                     currentTheme = "numsBlock numsBlockTomatoeish";
                     break;
+                    
+                                
+       case "street_fighter":
+                    currentTheme = "numsBlock numsBlockStreetfightish";
+                    break;
+                    
+                    
+                    
+                    
+                    
  
 
 
@@ -3969,8 +4066,35 @@ if(parseInt(repsSelect.value) !=1){
 
 
             }
+      
+      
+      
+  }     
+        
+        
+        
+        
+        let transGo= false;
 
 
+
+        console.log(barLen);
+     getReadySecs= Number (localStorage.getItem("getreadysecs"))*1000;
+
+
+
+
+        let pauseCount = 0;
+        
+        let loopCount=0;
+
+        function loop1() {
+
+            setButt.style.display = "none";
+
+            
+
+currentThemeFunc();
 
 
             interval = setTimeout(loop1,
@@ -3984,8 +4108,12 @@ if(parseInt(repsSelect.value) !=1){
 
             secsHtml.className = "secs nums";
             minsHtml.className = "mins nums";
+            
+          
 
             if (running) {
+                
+             //   transGo=false;
 
 
 
@@ -4009,10 +4137,16 @@ if(parseInt(repsSelect.value) !=1){
                 
 
                 secs--;
+           
+
+
 
                 
                 
             }
+            
+            
+  
             
             
             
@@ -4080,6 +4214,10 @@ if(parseInt(repsSelect.value) !=1){
                         timeupSound.play();
                         
                     loopCount=0;
+                    
+                    
+                   secsHtml.className = "secs";
+                    minsHtml.className = "mins";
 
 
 
@@ -4088,7 +4226,7 @@ if(parseInt(repsSelect.value) !=1){
                         setsLeft.innerText = reps;
                         bar = 0;
                         barHtml.style.width = bar;
-
+                       transGo=false;
                         running = false;
                         GOOOcontainer.style.display = "none";
                         onlyTimeUp.play();
@@ -4129,26 +4267,78 @@ if(parseInt(repsSelect.value) !=1){
 
 
                         pauseStopWrap.style.display = "none";
+                        
+                        
 
 
   setTimeout(()=> {
               nowreadychick.pause();
-                            nowreadychick.currentTime = 0;
-                            running = true;
+           nowreadychick.currentTime = 0;
 
-                            pauseStopWrap.style.display = "flex";
+              
+                       
+              
 
-
-                            GOOOcontainer.style.display = "flex";
-
-                            numsBlock.className = "numsBlock numsBlockGo";
-                            secsHtml.className = "numsGo";
-                            minsHtml.className = "numsGo";
-                            GOOOsound.play();
+              pauseStopWrap.style.display = "flex";
 
 
-                            musicTheme.play();
-                            svgCircle.style.display = "none";
+           GOOOcontainer.style.display = "flex";
+           
+           
+
+                
+  secsHtml.style.transition="transform 0.25s linear";
+     minsHtml.style.transition="transform 0.25s linear";
+           
+    secsHtml.style.transform="scale(1.3)";
+     minsHtml.style.transform="scale(1.3)";
+            
+       secsHtml.style.color=waitingColor;
+     minsHtml.style.color=waitingColor;
+
+           
+            
+           
+            GOOOsound.play();
+            
+            
+    
+          
+                         setTimeout(e=>{
+                             
+                             
+          secsHtml.style.color="#000000";
+     minsHtml.style.color="#000000";                   
+                             
+      secsHtml.style.transform="scale(1)";
+     minsHtml.style.transform="scale(1)";
+     secsHtml.style.transition="transform 0.25s linear";
+     minsHtml.style.transition="transform 0.25s linear";
+     
+     
+     
+     
+     
+                             
+          //  secsHtml.className = "secs";
+          //  minsHtml.className = "mins"
+             
+                     transGo=true;
+         },500);
+         
+         
+         
+                     
+            
+         
+ 
+            transGo=false;
+            
+
+
+
+            musicTheme.play();
+         svgCircle.style.display = "none";
 
 
                             waitingrunningWrap.style.top = 67+"%";
@@ -4168,7 +4358,9 @@ if(parseInt(repsSelect.value) !=1){
                             fireAnima2.style.display = "block";
 
 
-
+                      setTimeout(()=>{  
+                       running = true;
+                              },1000);
 
                         }, transitionSecs);
 
@@ -4190,11 +4382,11 @@ if(parseInt(repsSelect.value) !=1){
 
                 }
 
+if(transGo && loopCount%(2.5)===0){
+      numsBlock.className = currentTheme;
+          }         
 
-
-                numsBlock.className = currentTheme;
-
-
+                
 
             }
 
@@ -4214,6 +4406,14 @@ if(parseInt(repsSelect.value) !=1){
 
 
             pauseCount = 0;
+            
+            secsHtml.classList.remove("numsGo");
+            minsHtml.classList.remove("numsGo");
+            
+            
+            secsHtml.classList.add("secs");
+            minsHtml.classList.add("mins");
+                    
 
             if (reps < 2) {
 
@@ -4247,30 +4447,56 @@ if(parseInt(repsSelect.value) !=1){
 
 
                 setTimeout(()=> {
+                    running = true;
                     nowreadychick.pause();
                     nowreadychick.currentTime = 0;
 
 
                     GOOOsound.play();
                     musicTheme.play();
+                    musicTheme.loop=true;
+                    
+                    numsBlock.className = "numsBlock numsBlockGo";
+                    secsHtml.className = "numsGo";
+                    minsHtml.className = "numsGo";
 
 
                     startButt.style.display = "none";
-                    waitingrunningWrap.style.display = "flex";
-                    waitingrunning.style.fontSize = 4+"em";
-                    waitingrunning.innerText = "R U N N I N G";
-                    fireAnimaWrap.style.display = "flex";
+                    
+                    
+                    
+           waitingrunningWrap.style.display = "flex";
+           
+            waitingrunning.innerText = "R U N N I N G";
+             fireAnimaWrap.style.display = "flex";
 
-                    fireAnima2.style.display = "block";
-                    fireAnima2Wrap.style.display = "flex";
+             fireAnima2.style.display = "block";
+              fireAnima2Wrap.style.display = "flex";
 
-                    running = true;
-
-
-                    pauseStopWrap.style.display = "flex";
+                    
 
 
-                    loop1();
+             pauseStopWrap.style.display = "flex";
+
+setTimeout(()=> {
+
+
+                        waitingrunning.style.fontSize = 4+"em";
+
+
+
+
+
+                        fireAnimaWrap.style.display = "flex";
+
+
+                        fireAnima2.style.display = "block";
+                        fireAnima2Wrap.style.display = "flex";
+
+                        pauseStopWrap.style.display = "flex";
+                        loop1();
+                    }, 1000);
+                   
                 }, getReadySecs);
 
 
@@ -4315,19 +4541,60 @@ if(parseInt(repsSelect.value) !=1){
                     nowreadychick.currentTime = 0;
 
                     GOOOsound.play();
+                    musicTheme.volume= volumelevel;
+                    musicTheme.loop=true;
                     musicTheme.play();
+                    
+                    
+                    
+       secsHtml.style.transition="transform 0.25s linear";
+     minsHtml.style.transition="transform 0.25s linear";
+           
+    secsHtml.style.transform="scale(1.3)";
+     minsHtml.style.transform="scale(1.3)";
+            
+       secsHtml.style.color=waitingColor;
+     minsHtml.style.color=waitingColor;
+
 
 
                     startButt.style.display = "none";
-
-
-
-
+                    
+                    
+                    
+               currentThemeFunc();
+                    
                     numsBlock.className = "numsBlock numsBlockGo";
-                    secsHtml.className = "numsGo";
-                    minsHtml.className = "numsGo";
+
+     setTimeout(()=>{ 
+                       
+              numsBlock.className=currentTheme;
+              
+              
+              
+              
+              secsHtml.style.transform="scale(1)";
+     minsHtml.style.transform="scale(1)";
+     secsHtml.style.transition="transform 0.5s linear";
+     minsHtml.style.transition="transform 0.5s linear";           
+                       
+                       
+                        },250);
+
+
+                    
+                    
+                    
+         
+                    
 
                     setTimeout(()=> {
+                       
+                        
+                      
+         
+                       
+                        
 
 
                         waitingrunning.style.fontSize = 4+"em";
@@ -4343,7 +4610,15 @@ if(parseInt(repsSelect.value) !=1){
                         fireAnima2Wrap.style.display = "flex";
 
                         pauseStopWrap.style.display = "flex";
-                        loop1();
+                        
+   secsHtml.style.color="#000000";
+     minsHtml.style.color="#000000";                   
+                             
+                
+                        
+                 loop1();
+                 transGo= true;
+                        
                     }, 1000);
 
 

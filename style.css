@@ -329,7 +329,15 @@ body{
 
 }
 
-
+.numsBlockStreetfightish{
+    
+    background: linear-gradient(to bottom,#8B0000,yellow,white,black);
+    
+    
+    border:solid 2px #8B0000;
+    
+    
+}
 
 
 .numsBlockBlackish {
@@ -560,7 +568,7 @@ body{
   
     border-radius: 10px;
     
-    animation: numsGoanima 0.5s forwards linear;
+    animation: numsGoanima 0.5s  linear;
 }
 
 
