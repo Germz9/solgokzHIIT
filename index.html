@@ -27,6 +27,10 @@
 
     <div class="global">
         <nav class="nav">
+            <img class="solgokzLogo" src="" alt="" />
+            <h3 class="solgokz">Solgokz</h3>
+             <h4 class="systemz">Sport Timming Systems</h4>
+             <h3 class="hiit">HIIT Edition</h3>
 
             <div class="profilepicBox">
 
@@ -47,31 +51,31 @@
 
 
         <div class="topFunctions">
-            
-            
-          <button class="volume"></button>
-          
-          <div  style="height:100; width:10%" class="">
-              
-          </div>
-          
-          
+
+
+            <button class="volume"></button>
+
+            <div style="height:100; width:10%" class="">
+
+            </div>
+
+
             <select name="" id="" class="selectTheme topselects">
 
 
                 <option value="">
                     COLORS
                 </option>
-                
-                 <option value="blackish">Black theme
+
+                <option value="blackish">Black theme
                 </option>
 
 
 
                 <option value="blueish">Blue theme
                 </option>
-                
-                 <option value="brownish">Brown theme
+
+                <option value="brownish">Brown theme
                 </option>
 
                 <option value="greenish">Green theme
@@ -104,21 +108,25 @@
 
 
                 <option value="space">Space  theme</option>
-                
-                
-        <option value="lemon">Lemon theme</option>
-        
-                        
-        <option value="lime">Lime  theme</option>
-        
-         <option value="orange">Orange theme</option>
-                 
-         <option value="tomato">Tomato theme</option>
-           <option value="street_fighter">Street Fighter II theme</option>
-         
-         
-         
-                
+
+
+                <option value="lemon">Lemon theme</option>
+
+
+                <option value="lime">Lime  theme</option>
+
+                <option value="orange">Orange theme</option>
+
+                <option value="tomato">Tomato theme</option>
+                <option value="street_fighter">Street Fighter II theme</option>
+
+                <option value="dragonball_z">Dragon Ball Z theme</option>
+
+                <option value="dragonball_super">Dragon Ball Super theme</option>
+
+
+
+
 
 
 
@@ -135,19 +143,24 @@
             <option value="african">African War Drums</option>
 
             <option value="tiger">Eye of the Tiger</option>
-        <option value="NTM">NTM Prez S'chez toi</option>
-        <option value="NTM2">NTM-2 -Saint Dennis Style</option>
- <option value="NTM3">NTM-3 -pose ton gun</option>
-               
-               <option value="StreetFighter2">Street Fighter II theme medley</option>
-               
-               
-               
-     <option value="ghettopeople">Joey Starr -Ghetto People</option>
-     
-     <option value="fonkyfamily">Fonky Family  -l'amour du risque</option>
-     
-     
+            <option value="NTM">NTM Prez S'chez toi</option>
+            <option value="NTM2">NTM-2 -Saint Dennis Style</option>
+            <option value="NTM3">NTM-3 -pose ton gun</option>
+
+            <option value="StreetFighter2">Street Fighter II theme medley</option>
+
+
+
+            <option value="ghettopeople">Joey Starr -Ghetto People</option>
+
+            <option value="fonkyfamily">Fonky Family  -l'amour du risque</option>
+
+            <option value="DBZ">Dragon Ball Z -We gotta power </option>
+            
+            
+             <option value="DBZ2">Dragon Ball Super -Kachi Daze</option>
+
+
 
 
 
@@ -271,154 +284,158 @@
 
 
     <script type="text/javascript" charset="utf-8">
-    
-    
-    
-    
-    
-    const bearsleep= document.createElement("img");
-    
-    
-   // bearsleep.src
-    
-    
-    bearsleep.style=`position:absolute;top:10%; left:10%;z-index:150`;
-    
-    document.body.appendChild(bearsleep);
-    
+
+
+
+
+
+        const bearsleep = document.createElement("img");
+
+
+        // bearsleep.src
+
+
+        bearsleep.style = `position:absolute;top:10%; left:10%;z-index:150`;
+
+        document.body.appendChild(bearsleep);
+
 
 
         //ALL QUERY SELECTORS OF THE APP
 
-   const global = document.querySelector(".global");
-   let secsHtml = document.querySelector(".secs");
-   let minsHtml = document.querySelector(".mins");
-   let barHtml = document.querySelector(".progressBar");
-   
-  let  progressBarParent=document.querySelector(".progressBarParent");
-   
-   let startButt = document.querySelector(".start");
-   const setButt = document.querySelector(".SetButt");
-   let secsList = document.querySelector(".secsList");
-   let themeSelect = document.querySelector(".selectTheme");
-   let navBar = document.querySelector(".nav");
-   
+        const global = document.querySelector(".global");
+        let secsHtml = document.querySelector(".secs");
+        let minsHtml = document.querySelector(".mins");
+        let barHtml = document.querySelector(".progressBar");
 
-   let mainBlock = document.querySelector(".mainBlock");
-   let numsBlock = document.querySelector(".numsBlock");
-   let numz = document.querySelector(".nums");
-   let secz = document.querySelector(".secs");
-   let cssRoot= document.querySelector(":root");
-   let minz = document.querySelectorAll(".mins");
-   // const backShadow = document.querySelector(".backShadow");
-   const nav = document.querySelector(".nav");
-   let waitingrunning = document.querySelector(".waitingrunning");
-   let svgCircle = document.querySelector('.svg');
-   let fireAnima = document.querySelector('.fireAnima');
-   let fireAnimaWrap = document.querySelector('.fireAnimaWrap');
-   let fireAnima2 = document.querySelector('.fireAnima2');
-   let fireAnima2Wrap = document.querySelector('.fireAnima2Wrap');
-   let waitingrunningWrap = document.querySelector('.waitingrunningWrap');
-   let GOOO = document.querySelector('.GOOO');
-   let GOOOcontainer = document.querySelector('.GOOOcontainer');
-   let musicSelect = document.querySelector('.musicSelect');
-   let stopbutt = document.querySelector('.stopButt');
-   let pausebutt = document.querySelector('.pauseButt');
-   let pauseStopWrap = document.querySelector('.pauseResumeContainer');
-   let musicThemeDisplay = document.querySelector('.musicThemeDisplay');
-   let setsLeft = document.querySelector('.setsLeft');
-   let setsLeftWrap = document.querySelector('.setsLeftWrap');
-   let profilepicBox = document.querySelector('.profilepicBox');
-   let profilepic = document.querySelector('.profilepic');
-   let username = document.querySelector('.username');
-   let volumeButt= document.querySelector(".volume");
-   const c = document.querySelector(".myCanvas");
-   const ctx = c.getContext("2d");
- //---------GLOBAL VARIABLES OF THE APP------------------------&&&
+        let progressBarParent = document.querySelector(".progressBarParent");
+
+        let startButt = document.querySelector(".start");
+        const setButt = document.querySelector(".SetButt");
+        let secsList = document.querySelector(".secsList");
+        let themeSelect = document.querySelector(".selectTheme");
+        let navBar = document.querySelector(".nav");
+
+
+        let mainBlock = document.querySelector(".mainBlock");
+        let numsBlock = document.querySelector(".numsBlock");
+        let numz = document.querySelector(".nums");
+        let secz = document.querySelector(".secs");
+        let cssRoot = document.querySelector(":root");
+        let minz = document.querySelectorAll(".mins");
+        // const backShadow = document.querySelector(".backShadow");
+        const nav = document.querySelector(".nav");
+        let waitingrunning = document.querySelector(".waitingrunning");
+        let svgCircle = document.querySelector('.svg');
+        let fireAnima = document.querySelector('.fireAnima');
+        let fireAnimaWrap = document.querySelector('.fireAnimaWrap');
+        let fireAnima2 = document.querySelector('.fireAnima2');
+        let fireAnima2Wrap = document.querySelector('.fireAnima2Wrap');
+        let waitingrunningWrap = document.querySelector('.waitingrunningWrap');
+        let GOOO = document.querySelector('.GOOO');
+        let GOOOcontainer = document.querySelector('.GOOOcontainer');
+        let musicSelect = document.querySelector('.musicSelect');
+        let stopbutt = document.querySelector('.stopButt');
+        let pausebutt = document.querySelector('.pauseButt');
+        let pauseStopWrap = document.querySelector('.pauseResumeContainer');
+        let musicThemeDisplay = document.querySelector('.musicThemeDisplay');
+        let setsLeft = document.querySelector('.setsLeft');
+        let setsLeftWrap = document.querySelector('.setsLeftWrap');
+        let profilepicBox = document.querySelector('.profilepicBox');
+        let profilepic = document.querySelector('.profilepic');
+        let username = document.querySelector('.username');
+        let volumeButt = document.querySelector(".volume");
+        const c = document.querySelector(".myCanvas");
+        const ctx = c.getContext("2d");
+        //---------GLOBAL VARIABLES OF THE APP------------------------&&&
+
+
+        // MUSICS AND SOUNDS VARIABLES
+
+        let nowreadychick = new Audio("chuckchuckchuck.mp3");
+        let nowReady = new Audio("NowRready.mp3");
+        let runMusic = new Audio("audiodrums.mp3");
+        let GOOOsound = new Audio("GOOO.mp3");
+        let onlyTimeUp = new Audio ("onlyTimeUp.mp3");
+        let selectSelection = new Audio("selectSelection.mp3");
+        let openselects = new Audio("openselectsTrimmed.mp3");
+        let musicTheme = new Audio("audiodrums.mp3");
+        let timeupSound = new Audio("timeupvroom.mp3");
+
+
+        let SelectSound = new Audio("selectSelection.mp3");
+
+        let Select2Sound = new Audio("selectSelection2.mp3");
        
-       
-       // MUSICS AND SOUNDS VARIABLES 
-       
-    let nowreadychick = new Audio("chuckchuckchuck.mp3");
-    let nowReady = new Audio("NowRready.mp3");
-    let runMusic = new Audio("audiodrums.mp3");
-    let GOOOsound = new Audio("GOOO.mp3");
-    let onlyTimeUp = new Audio ("onlyTimeUp.mp3");
-    let selectSelection = new Audio("selectSelection.mp3");
-    let openselects = new Audio("openselectsTrimmed.mp3");
-    let musicTheme = new Audio("audiodrums.mp3");
-    let timeupSound = new Audio("timeupvroom.mp3");
-    
-    
-    let SelectSound= new Audio("selectSelection.mp3");
-    
-    let Select2Sound= new Audio("selectSelection2.mp3");
-    Select2Sound.play();
-    
-    let volumelevel=parseFloat( localStorage.getItem("volumelevel"));
+
+        let volumelevel = parseFloat(localStorage.getItem("volumelevel"));
         
-     musicTheme.volume=volumelevel;
-   GOOOsound.volume= volumelevel;
-   
-   
-   nowreadychick.volume= volumelevel;
-   
-   nowReady.volume= volumelevel;
-   
-   Select2Sound.volume= volumelevel;
-   SelectSound.volume= volumelevel;
-    openselects.volume= volumelevel;  
-    timeupSound.volume=volumelevel;
-    onlyTimeUp.volume=volumelevel;
-   
-    
-    
-
- // VARIABLES OF INTERFACES CONTROL 
- 
-   let running = false;
-   let running2 = false;
-   let x = 0;
-   let y = 0;
-
-   let newx;
-   let newy;
-   let initalReps=0;
-   let initialSecs = 0;
-   let initialMins = 0;
-   let secs = initialSecs;
-   let mins = initialMins;
-   let reps = 1;
-   let transitionSecs = 5000;
-   let getReadySecs = 5000;
-   let interval;
-   let delay = false;
-   
-   
-   let zero2 = mins < 10 ? "0": "";
-   let zero = secs < 10 ? "0": "";
-   secsHtml.innerHTML = zero+ secs;
-   minsHtml.innerHTML = zero2+ mins;
-   let bar = 0;
-   let barLen = 0;
-   let barLen2 = 0; 
-   //let barLen=(100/(((initialMins>0 ? initialMins :0) * (initialMins>0 ? 60:0))+ initialSecs-1));
-           
-   let currentColor = localStorage.getItem("colortheme");
-   let currentColorCap = localStorage.getItem("colortheme").charAt(0).toUpperCase() + localStorage.getItem("colortheme").slice(1, -3);
-   //console.log(currentColorCap, "chupame la lefa..ok????");
-   let currentColor2 = String(localStorage.getItem("colortheme")).charAt(0).toUpperCase()+localStorage.getItem("colortheme").slice(1);
-   //console.log(currentColor2, "fuguhugreuigfijg");
-   let waitingColor = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
-   
-   const TIMEUP = "TIME UP!!!";
-   const noNameDetected = "I detect you haven't given us a name, please type a name";
-   const editName = "Change your new name";
-
-
-
         
-      
+
+        musicTheme.volume = volumelevel;
+        GOOOsound.volume = volumelevel;
+
+
+        nowreadychick.volume = volumelevel;
+
+        nowReady.volume = volumelevel;
+
+        Select2Sound.volume = volumelevel;
+        SelectSound.volume = volumelevel;
+        openselects.volume = volumelevel;
+        timeupSound.volume = volumelevel;
+        onlyTimeUp.volume = volumelevel;
+
+
+
+
+        // VARIABLES OF INTERFACES CONTROL
+
+        let running = false;
+        let running2 = false;
+        let x = 0;
+        let y = 0;
+
+        let newx;
+        let newy;
+        let initalReps = 0;
+        let initialSecs = 0;
+        let initialMins = 0;
+        let secs = initialSecs;
+        let mins = initialMins;
+        let reps = 1;
+        let transitionSecs = 5000;
+        let getReadySecs = 5000;
+        let interval;
+        let delay = false;
+
+
+        let zero2 = mins < 10 ? "0": "";
+        let zero = secs < 10 ? "0": "";
+        secsHtml.innerHTML = zero+ secs;
+        minsHtml.innerHTML = zero2+ mins;
+        let bar = 0;
+        let barLen = 0;
+        let barLen2 = 0;
+        //let barLen=(100/(((initialMins>0 ? initialMins :0) * (initialMins>0 ? 60:0))+ initialSecs-1));
+
+        let currentColor = localStorage.getItem("colortheme");
+        let currentColorCap = localStorage.getItem("colortheme").charAt(0).toUpperCase() + localStorage.getItem("colortheme").slice(1, -3);
+        //console.log(currentColorCap, "chupame la lefa..ok????");
+        let currentColor2 = String(localStorage.getItem("colortheme")).charAt(0).toUpperCase()+localStorage.getItem("colortheme").slice(1);
+        
+     //   let currentPausedGif="";//localStorage.getItem("currentPausedGif");
+ //  let  currentFireGif="";
+        let waitingColor = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+
+        const TIMEUP = "TIME UP!!!";
+        const noNameDetected = "I detect you haven't given us a name, please type a name";
+        const editName = "Change your new name";
+
+
+
+
+
 
 
 
@@ -434,43 +451,43 @@
 
 
 
-     // CREATION OF LOCALSTORAGE PROPERTIES 
+        // CREATION OF LOCALSTORAGE PROPERTIES
 
 
-    if (!localStorage.getItem("secs")) {
+        if (!localStorage.getItem("secs")) {
             localStorage.setItem("secs", 1);
-    }
+        }
 
-    if (!localStorage.getItem("mins")) {
+        if (!localStorage.getItem("mins")) {
             localStorage.setItem("mins", 1);
-    }
+        }
 
 
-   if (!localStorage.getItem("reps")) {
-        localStorage.setItem("reps", 1);
-   }
+        if (!localStorage.getItem("reps")) {
+            localStorage.setItem("reps", 1);
+        }
 
-   if (!localStorage.getItem("musictheme")) {
-       localStorage.setItem("musictheme", "african");
-   }
-   
-   if (!localStorage.getItem("colortheme")) {
+        if (!localStorage.getItem("musictheme")) {
+            localStorage.setItem("musictheme", "african");
+        }
 
-      localStorage.setItem("colortheme", "greenish");
-    }
+        if (!localStorage.getItem("colortheme")) {
 
-
+            localStorage.setItem("colortheme", "greenish");
+        }
 
 
-   if (!localStorage.getItem("SEX")) {
+
+
+        if (!localStorage.getItem("SEX")) {
             profilepic.style.backgroundImage = "url('MarioQuestion.png')";
 
-       
-   } else if (localStorage.getItem("SEX") === "male"){
-   
-               profilepic.style.backgroundImage = `url("male.png")`;
-   
-   }else if (localStorage.getItem("SEX") === "female") {
+
+        } else if (localStorage.getItem("SEX") === "male") {
+
+            profilepic.style.backgroundImage = `url("male.png")`;
+
+        } else if (localStorage.getItem("SEX") === "female") {
 
 
             profilepic.style.backgroundImage = `url("female.png")`;
@@ -494,373 +511,391 @@
 
         } else {
 
-         
-         
-         username.innerText = localStorage.getItem("NAME");
+
+
+            username.innerText = localStorage.getItem("NAME");
         }
-        
+
         username.addEventListener("click", ()=> {
 
-       createTimeup(editName);
+            createTimeup(editName);
 
         });
-        
-        
-        
-    
-    if (!localStorage.getItem("getreadysecs")) {
+
+
+
+
+        if (!localStorage.getItem("getreadysecs")) {
             localStorage.setItem("getreadysecs", 9);
-    }
+        }
 
 
 
-// FUNCTION VOLUME POP UP
+        // FUNCTION VOLUME POP UP
 
-let volx=0;
-let voly=0;
-let voluming=false;
-let vlevel=0;
-let vol=0;
-    function volumePop(){
-        
-        let volumeWrap = document.createElement("div");
+        let volx = 0;
+        let voly = 0;
+        let voluming = false;
+        let vlevel = 0;
+        let vol = 0;
+        function volumePop() {
 
-         
-         
-          volumeWrap.style.transform="rotate(180deg)";
+            let volumeWrap = document.createElement("div");
+
+
+
+            volumeWrap.style.transform = "rotate(180deg)";
 
             volumeWrap.style.position = "absolute";
             volumeWrap.style.right = "10%";
             volumeWrap.style.top = "20%";
             volumeWrap.style.background = "lightgrey";
             volumeWrap.style.border = "solid white 1.5px";
-            
-          volumeWrap.style.borderRadius = "10px";
-          volumeWrap.style.width = "50px";
-          
-          volumeWrap.style.height = "150px"
-         volumeWrap.style.overflow ="hidden";
-         volumeWrap.style.zIndex ="200";
-      
-           volumeWrap.style.zIndex = "200";
+
+            volumeWrap.style.borderRadius = "10px";
+            volumeWrap.style.width = "50px";
+
+            volumeWrap.style.height = "150px"
+            volumeWrap.style.overflow = "hidden";
+            volumeWrap.style.zIndex = "200";
+
+            volumeWrap.style.zIndex = "200";
             numsBlock.appendChild(volumeWrap);
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
             let volumeLevel = document.createElement("div");
-            
-            
+
+
             volumeLevel.style.position = "absolute";
             volumeLevel.style.left = "50%";
             volumeLevel.style.top = "0%";
             volumeLevel.style.background = waitingColor;
             volumeLevel.style.border = "solid white 1.5px";
-            
-            
-          volumeLevel.style.transform = "translateX(-50%)";
 
-            
-          volumeLevel.style.borderRadius = "10px";
-          volumeLevel.style.width = "100%";
-          
-          volumeLevel.style.height = (volumelevel*100)+"%"
-            
-           volumeLevel.style.zIndex = "200";
+
+            volumeLevel.style.transform = "translateX(-50%)";
+
+
+            volumeLevel.style.borderRadius = "10px";
+            volumeLevel.style.width = "100%";
+
+            volumeLevel.style.height = (volumelevel*100)+"%"
+
+            volumeLevel.style.zIndex = "200";
             volumeWrap.appendChild(volumeLevel);
-            
-            
-   //    console.log( "yack ", volumeWrap.getBoundingClientRect().height);
-           let mosttop=Number (window.innerHeight*0.2);
-     
-     let mostbottom=Number ((window.innerHeight*0.2)+250);
-     
-                    setTimeout(()=>{
-                
-              
-     
-              
-                if(!voluming){
-              volumeWrap.remove();
-              volumeButt.style.display="block"}
-                
-            },2500);
-              
-              
-     
-     volumeLevel.addEventListener("dblclick",e=>{
-         
-         
-            e.preventDefault();
-         e.target.remove();
-         volumeButt.style.display="block";
-         voluming=false;
-         
-     });
 
-         // volumeLevel.addEventListener("touchstart",e=>{
-              
-              
-              
 
-         
-       
-       
-              
+            //    console.log( "yack ", volumeWrap.getBoundingClientRect().height);
+            let mosttop = Number (window.innerHeight*0.2);
 
-              
+            let mostbottom = Number ((window.innerHeight*0.2)+250);
 
-         // });    
-       
-       
+            setTimeout(()=> {
 
-     
-            
-          volumeWrap.addEventListener("touchstart",e=>{
-              
-              e.preventDefault();
-        console.log("La Musica ",musicTheme.volume)
-              
-       let totalvolumeheight= mostbottom -mosttop;
-       
-         newvoly = voly- e.touches[0].pageY;
 
-       
-              voluming =false;
-              
-              
-              
-              
-     
-              
-              
-  console.log("top= ",window.innerHeight*0.2,"bottom= ",(window.innerHeight*0.2)+150)
-              
 
-                  
-                  
-                  
 
-              
-              
-              
-           
-          });
-            
-            volumeWrap.addEventListener("touchmove",e=>{
-                
-              e.preventDefault();   
-                
-                
-              voluming= true;
-                         
+                if (!voluming) {
+                    volumeWrap.remove();
+                    volumeButt.style.display = "block"
+                }
+
+            },
+                2500);
+
+
+
+            volumeLevel.addEventListener("dblclick",
+                e=> {
+
+
+                    e.preventDefault();
+                    e.target.remove();
+                    volumeButt.style.display = "block";
+                    voluming = false;
+
+                });
+
+            // volumeLevel.addEventListener("touchstart",e=>{
+
+
+
+
+
+
+
+
+
+
+
+            // });
+
+
+
+
+
+            volumeWrap.addEventListener("touchstart",
+                e=> {
+
+                    e.preventDefault();
+                    console.log("La Musica ", musicTheme.volume)
+
+                    let totalvolumeheight = mostbottom -mosttop;
+
                     newvoly = voly- e.touches[0].pageY;
 
-                  
-                 
+
+                    voluming = false;
+
+
+
+
+
+
+
+                    console.log("top= ", window.innerHeight*0.2, "bottom= ", (window.innerHeight*0.2)+150)
+
+
+
+
+
+
+
+
+
+
+                });
+
+            volumeWrap.addEventListener("touchmove",
+                e=> {
+
+                    e.preventDefault();
+
+
+                    voluming = true;
+
+                    newvoly = voly- e.touches[0].pageY;
+
+
+
                     voly = e.touches[0].pageY;
-    
-  //   console.log("top:",volumeLevel.getBoundingClientRect().top,"newvolY: ",newvoly)
-    
-    vlevel=(volumeLevel.offsetTop )- newvoly;
-    let touchlocation=e.touches[0].pageY;
-              
-       //console.log("touch location= ",e.touches[0].pageY);         
-    
-   vol= (touchlocation/291)*100;
-   
-    console.log("vol=",vol);
-  
-     volumelevel=1-(vol/100);
-    
-       volumeLevel.style.height = (100-vol)+"%";
-       
-       
-     musicTheme.volume=volumelevel;
-   GOOOsound.volume= volumelevel;
-   
-   
-   nowreadychick.volume= volumelevel;
-   
-   nowReady.volume= volumelevel;
-   
-   Select2Sound.volume= volumelevel;
-   SelectSound.volume= volumelevel;
-    openselects.volume= volumelevel;
-    timeupSound.volume=volumelevel;
-    onlyTimeUp.volume=volumelevel;
-                  
-    localStorage.setItem("volumelevel",volumelevel) 
-            //volumeLevel.style.top=0+"px";
+
+                    //   console.log("top:",volumeLevel.getBoundingClientRect().top,"newvolY: ",newvoly)
+
+                    vlevel = (volumeLevel.offsetTop)- newvoly;
+                    let touchlocation = e.touches[0].pageY;
+
+                    //console.log("touch location= ",e.touches[0].pageY);
+
+                    vol = (touchlocation/291)*100;
+
+                    console.log("vol=", vol);
+
+                    volumelevel = 1-(vol/100);
+
+                    volumeLevel.style.height = (100-vol)+"%";
 
 
-          // setTimeout(()=>{
-                
-              
-     
-              
-             //   if(voluming){
-                    
-                    
-                    
-                  //  voluming=false;
-        //    }
-                
-         //   },2500);
-         
-         
-        
-            
+                    musicTheme.volume = volumelevel;
+                    GOOOsound.volume = volumelevel;
 
-       
-                    
 
-          
-              
-              
-          });
-            
-            
-          
-         volumeWrap.addEventListener("touchend",(e)=>{
-             
-             e.preventDefault();
-          
-        setTimeout(()=>{
-            
-            volumeWrap.remove();
-              volumeButt.style.display="block"
-              
-              voluming=false;
-            
-        },1500);
-           
-        
-              
-              
-     
-              
-             /*   if(!voluming){
+                    nowreadychick.volume = volumelevel;
+
+                    nowReady.volume = volumelevel;
+
+                    Select2Sound.volume = volumelevel;
+                    SelectSound.volume = volumelevel;
+                    openselects.volume = volumelevel;
+                    timeupSound.volume = volumelevel;
+                    onlyTimeUp.volume = volumelevel;
+
+                    localStorage.setItem("volumelevel", volumelevel)
+                    //volumeLevel.style.top=0+"px";
+
+
+                    // setTimeout(()=>{
+
+
+
+
+                    //   if(voluming){
+
+
+
+                    //  voluming=false;
+                    //    }
+
+                    //   },2500);
+
+
+
+
+
+
+
+
+
+
+
+                });
+
+
+
+            volumeWrap.addEventListener("touchend",
+                (e)=> {
+
+                    e.preventDefault();
+
+                    setTimeout(()=> {
+
+                        volumeWrap.remove();
+                        volumeButt.style.display = "block"
+
+                        voluming = false;
+
+                    }, 1500);
+
+
+
+
+
+
+                    /*   if(!voluming){
               volumeWrap.remove();
               volumeButt.style.display="block"}
-                
           */
-       
-    });
+
+                });
 
 
-}
+        }
 
-     volumeButt.addEventListener("click",e=>{
-         
-         e.target.style.display="none";
-         volumePop();
-         
-         
-     });
+        volumeButt.addEventListener("click", e=> {
+
+            e.target.style.display = "none";
+            volumePop();
 
 
-
- 
-// FUNCION GLOBAL SPINNER 
-
-    let cw = window.innerWidth/5;
-    let countCircle = 0
-    let circleFulltime;
-    let lefaInterval;
-    let putaInterval;
-    let cointcirc = 0;
-        
-function fullCircleBar(c, barLen2, cw, lineWidth) {
-
-    c.style.display = "block";
+        });
 
 
-    let canvasWidth = cw
-    let canvasHeight = cw;
-//    console.log(canvasWidth, "and ", canvasHeight)
-    c.width = canvasWidth;
-    c.height = canvasHeight;
-    //let lineWidth=6;
-    let radius = (canvasWidth/2);
-    //let countCircle=0;
-    let maxCircle = 100;
-    
-    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-    
-    ctx.beginPath();
-    
-    ctx.lineWidth = lineWidth;
-    
-    ctx.strokeStyle = "#000000";
-    
-    ctx.arc(radius, radius, radius- 2*lineWidth, 0,Math.PI*2, false);
-    ctx.stroke();
-    
-    
-    
-    ctx.beginPath();
-    
-    
-    ctx.strokeStyle = "#FFFFFF";
-    ctx.shadowOffsetY = 0;
-    ctx.shadowBlur = lineWidth+2;
-    ctx.lineCap = "round";
-    ctx.shadowColor = `${getComputedStyle(cssRoot).getPropertyValue("--waiting-color")}`;
-    ctx.arc(radius, radius, radius- 2*lineWidth, -(Math.PI/2), ((countCircle/100)*(Math.PI*2))-Math.PI/2, false);
-    ctx.stroke();
-
-    if (running) {
-
-                  
-    countCircle += (10/((barLen2 -0.5)));
-    
-    }
-    if(secs <1 && mins<1 && reps===1){
-    ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-        
-    ctx.beginPath();
-    
-   ctx.strokeStyle = "#FFFFFF";
-    ctx.shadowOffsetY = 0;
-    ctx.shadowBlur = lineWidth+2;
-    ctx.lineCap = "round";
-    ctx.shadowColor = `${getComputedStyle(cssRoot).getPropertyValue("--waiting-color")}`;
-    ctx.arc(radius, radius, radius- 2*lineWidth, 0, Math.PI*2, false);
-    ctx.stroke();
-    
-        
-        
-    }
-        
-    
-    //console.log("countCircle=  "+countCircle," cointcirc= ",cointcirc);    
-    //(100/(barLen2))/10;
-                
-
-//if (cointcirc%10 ===0) {
-      //  clearInterval(lefaInterval);
-        
-//}
- //if (countCircle >= maxCircle) {
-//ctx.arc(radius, radius, radius - 2*lineWidth, -(Math.PI/2), ((countCircle/100)*(Math.PI*2))-Math.PI/2, false);
- //  ctx.stroke();
- //countCircle = 0;
-//  cointcirc = 0;
-//  c.style.display = "none";
-  //  clearInterval(lefaInterval);
-                    //clearInterval(putaInterval);
- //  }
-// 2 4 5 6  25 64
-
-          }
 
 
-//function fullCircleBar(c,barLen2,cw,lineWidth)
- // fullCircleBar(c,100,cw,3);
- /* putaInterval=     setInterval(   ()=>{ fullCircleBar(c,10,(window.innerWidth/6),6)}
+        // FUNCION GLOBAL SPINNER
+
+        let cw = window.innerWidth/5;
+        let countCircle = 0
+        let circleFulltime;
+        let lefaInterval;
+        let putaInterval;
+        let cointcirc = 0;
+
+        function fullCircleBar(c, barLen2, cw, lineWidth) {
+
+            c.style.display = "block";
+
+
+            let canvasWidth = cw
+            let canvasHeight = cw;
+            //    console.log(canvasWidth, "and ", canvasHeight)
+            c.width = canvasWidth;
+            c.height = canvasHeight;
+            //let lineWidth=6;
+            let radius = (canvasWidth/2);
+            //let countCircle=0;
+            let maxCircle = 100;
+
+            ctx.clearRect(0,
+                0,
+                canvasWidth,
+                canvasHeight);
+
+            ctx.beginPath();
+
+            ctx.lineWidth = lineWidth;
+
+            ctx.strokeStyle = "#000000";
+
+            ctx.arc(radius,
+                radius,
+                radius- 2*lineWidth,
+                0,
+                Math.PI*2,
+                false);
+            ctx.stroke();
+
+
+
+            ctx.beginPath();
+
+
+            ctx.strokeStyle = "#FFFFFF";
+            ctx.shadowOffsetY = 0;
+            ctx.shadowBlur = lineWidth+2;
+            ctx.lineCap = "round";
+            ctx.shadowColor = `${getComputedStyle(cssRoot).getPropertyValue("--waiting-color")}`;
+            ctx.arc(radius,
+                radius,
+                radius- 2*lineWidth,
+                -(Math.PI/2),
+                ((countCircle/100)*(Math.PI*2))-Math.PI/2,
+                false);
+            ctx.stroke();
+
+            if (running) {
+
+
+                countCircle += (10/((barLen2 -0.5)));
+
+            }
+            if (secs < 1 && mins < 1 && reps === 1) {
+                ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+
+                ctx.beginPath();
+
+                ctx.strokeStyle = "#FFFFFF";
+                ctx.shadowOffsetY = 0;
+                ctx.shadowBlur = lineWidth+2;
+                ctx.lineCap = "round";
+                ctx.shadowColor = `${getComputedStyle(cssRoot).getPropertyValue("--waiting-color")}`;
+                ctx.arc(radius, radius, radius- 2*lineWidth, 0, Math.PI*2, false);
+                ctx.stroke();
+
+
+
+            }
+
+
+            //console.log("countCircle=  "+countCircle," cointcirc= ",cointcirc);
+            //(100/(barLen2))/10;
+
+
+            //if (cointcirc%10 ===0) {
+            //  clearInterval(lefaInterval);
+
+            //}
+            //if (countCircle >= maxCircle) {
+            //ctx.arc(radius, radius, radius - 2*lineWidth, -(Math.PI/2), ((countCircle/100)*(Math.PI*2))-Math.PI/2, false);
+            //  ctx.stroke();
+            //countCircle = 0;
+            //  cointcirc = 0;
+            //  c.style.display = "none";
+            //  clearInterval(lefaInterval);
+            //clearInterval(putaInterval);
+            //  }
+            // 2 4 5 6  25 64
+
+        }
+
+
+        //function fullCircleBar(c,barLen2,cw,lineWidth)
+        // fullCircleBar(c,100,cw,3);
+        /* putaInterval=     setInterval(   ()=>{ fullCircleBar(c,10,(window.innerWidth/6),6)}
   ,1000 );
  */
 
@@ -877,7 +912,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
         let leftDynamicPercent;
         let leftPercent;
 
- if (window.innerWidth < window.innerHeight) {
+        if (window.innerWidth < window.innerHeight) {
 
 
             perceofscreen = 50;
@@ -939,20 +974,20 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
 
-   // INSERTION CSS VARIABLES FOR SPINNER ANIMATION 
+        // INSERTION CSS VARIABLES FOR SPINNER ANIMATION
 
-    cssRoot.style.setProperty("--screenHeight", window.innerHeight+"px");
-    cssRoot.style.setProperty("--screenWidth", window.innerWidth+"px");
-    cssRoot.style.setProperty("--halfScreenWidth", halfScreenWidth+"px");
-    cssRoot.style.setProperty("--circleCircunfirence", circleCircunfirence);
-    cssRoot.style.setProperty("--circleCircunfirenceMinus", circleCircunfirenceMinus);
-    cssRoot.style.setProperty("--circleRadius", circleRadius +"px");
-    cssRoot.style.setProperty("--circleRadiusSides", circleRadiusSides +"px");
-    cssRoot.style.setProperty("--leftPercent", leftPercent+"px");
-    cssRoot.style.setProperty("--profilepicHeight", (Number(nav.getBoundingClientRect().height)*0.9)+"px");
-    //console.log(leftPercent, " circum my fucki cock and lefa de trigo");
-    
-    console.log("window innerHeight= ",window.innerHeight);
+        cssRoot.style.setProperty("--screenHeight", window.innerHeight+"px");
+        cssRoot.style.setProperty("--screenWidth", window.innerWidth+"px");
+        cssRoot.style.setProperty("--halfScreenWidth", halfScreenWidth+"px");
+        cssRoot.style.setProperty("--circleCircunfirence", circleCircunfirence);
+        cssRoot.style.setProperty("--circleCircunfirenceMinus", circleCircunfirenceMinus);
+        cssRoot.style.setProperty("--circleRadius", circleRadius +"px");
+        cssRoot.style.setProperty("--circleRadiusSides", circleRadiusSides +"px");
+        cssRoot.style.setProperty("--leftPercent", leftPercent+"px");
+        cssRoot.style.setProperty("--profilepicHeight", (Number(nav.getBoundingClientRect().height)*0.9)+"px");
+        //console.log(leftPercent, " circum my fucki cock and lefa de trigo");
+
+        console.log("window innerHeight= ", window.innerHeight);
 
 
 
@@ -1012,44 +1047,52 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
 
- musicThemeDisplay.addEventListener("click", ()=> {
+        musicThemeDisplay.addEventListener("click", ()=> {
 
- console.log("am I touching correctly????")
+            console.log("am I touching correctly????")
 
-    if (!running2) {
-         let preview = new Audio("");
-         if (localStorage.getItem("musictheme") === "african") {
-                preview = new Audio ("audiodrums.mp3");
+            if (!running2) {
+                let preview = new Audio("");
+                if (localStorage.getItem("musictheme") === "african") {
+                    preview = new Audio ("audiodrums.mp3");
 
-    } else if (localStorage.getItem("musictheme") === "tiger"){
-              preview = new Audio ("Tigeru.mp3");
+                } else if (localStorage.getItem("musictheme") === "tiger") {
+                    preview = new Audio ("Tigeru.mp3");
 
-          } else if (localStorage.getItem("musictheme") === "NTM") {
+                } else if (localStorage.getItem("musictheme") === "NTM") {
 
 
-               preview = new Audio ("NTMdeChezToi.mp3");
+                    preview = new Audio ("NTMdeChezToi.mp3");
 
-        }else if(localStorage.getItem("musictheme")==="StreetFighter2"){
-                
-         preview = new Audio ("streetFighter2Medley.mp3");
-                
-        }else if(localStorage.getItem("musictheme")==="NTM2"){
-                
-         preview = new Audio ("NtmSaintDennis.mp3");
-                
-      }else if(localStorage.getItem("musictheme")==="NTM3"){
-                
-         preview = new Audio ("NTMPoseTonGun.mp3");
-                
-            }else if(localStorage.getItem("musictheme")==="ghettopeople"){
-                
-         preview = new Audio ("ghettoPeople.mp3");
-                
-            }else if(localStorage.getItem("musictheme")==="fonkyfamily"){
-                
-         preview = new Audio ("fonkyFamily.mp3");
-                
-            }
+                } else if (localStorage.getItem("musictheme") === "StreetFighter2") {
+
+                    preview = new Audio ("streetFighter2Medley.mp3");
+
+                } else if (localStorage.getItem("musictheme") === "NTM2") {
+
+                    preview = new Audio ("NtmSaintDennis.mp3");
+
+                } else if (localStorage.getItem("musictheme") === "NTM3") {
+
+                    preview = new Audio ("NTMPoseTonGun.mp3");
+
+                } else if (localStorage.getItem("musictheme") === "ghettopeople") {
+
+                    preview = new Audio ("ghettoPeople.mp3");
+
+                } else if (localStorage.getItem("musictheme") === "fonkyfamily") {
+
+                    preview = new Audio ("fonkyFamily.mp3");
+
+                }else if (localStorage.getItem("musictheme") === "DBZ") {
+
+                    preview = new Audio ("wegottapower.mp3");
+
+                }else if (localStorage.getItem("musictheme") === "DBZ2") {
+
+                    preview = new Audio ("kachidaze.mp3");
+
+                }
 
 
                 let backShadow = document.createElement("div");
@@ -1104,10 +1147,10 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
 
- function getreadyCountdown(transitionSecs, top, left, fontSize, width, height, realParent, getreadyColor, lastdigit) {
+        function getreadyCountdown(transitionSecs, top, left, fontSize, width, height, realParent, getreadyColor, lastdigit) {
 
 
- cssRoot.style.setProperty("--getreadyColor",
+            cssRoot.style.setProperty("--getreadyColor",
                 getreadyColor);
 
 
@@ -1240,28 +1283,38 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
             musicTheme = new Audio("NTMdeChezToi.mp3");
 
-        }else if (localStorage.getItem("musictheme") === "StreetFighter2") {
+        } else if (localStorage.getItem("musictheme") === "StreetFighter2") {
 
             musicTheme = new Audio("streetFighter2Medley.mp3");
-}else if (localStorage.getItem("musictheme") === "NTM2") {
+        } else if (localStorage.getItem("musictheme") === "NTM2") {
 
             musicTheme = new Audio("NtmSaintDennis.mp3");
-}else if (localStorage.getItem("musictheme") === "NTM3") {
+        } else if (localStorage.getItem("musictheme") === "NTM3") {
 
             musicTheme = new Audio("NTMPoseTonGun.mp3");
-}else if (localStorage.getItem("musictheme") === "ghettopeople") {
+        } else if (localStorage.getItem("musictheme") === "ghettopeople") {
 
             musicTheme = new Audio("ghettoPeople.mp3");
 
 
-}else if (localStorage.getItem("musictheme") === "fonkyfamily") {
+        } else if (localStorage.getItem("musictheme") === "fonkyfamily") {
 
             musicTheme = new Audio("fonkyFamily.mp3");
 
 
-}
+        }else if (localStorage.getItem("musictheme") === "DBZ") {
 
-    function putinthecolorthemes(color, color2, maincolor, colorlower) {
+            musicTheme = new Audio("wegottapower.mp3");
+
+
+        }else if (localStorage.getItem("musictheme") === "DBZ2") {
+
+            musicTheme = new Audio("kachidaze.mp3");
+
+
+        }
+
+        function putinthecolorthemes(color, color2, maincolor, colorlower) {
 
             numsBlock.className = "numsBlock numsBlock"+color2;
             nav.className = "nav nav"+color;
@@ -1376,7 +1429,7 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
 
 
-      } else if (localStorage.getItem("colortheme") === "space") {
+            } else if (localStorage.getItem("colortheme") === "space") {
 
                 putinthecolorthemes("Space", "Space", "darkviolet", "darkviolet");
 
@@ -1395,160 +1448,265 @@ function fullCircleBar(c, barLen2, cw, lineWidth) {
 
                 putinthecolorthemes("Orange", "Orangeish", "darkorange", "darkorange");
 
-            }else if (localStorage.getItem("colortheme") === "brownish") {
+            } else if (localStorage.getItem("colortheme") === "brownish") {
 
                 putinthecolorthemes("Brown", "Brownish", "#4b3620", "#4b3620");
 
-            }else if (localStorage.getItem("colortheme") === "blackish") {
+            } else if (localStorage.getItem("colortheme") === "blackish") {
 
                 putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
 
-   }else if (localStorage.getItem("colortheme") === "lemon") {
+            } else if (localStorage.getItem("colortheme") === "lemon") {
 
-          putinthecolorthemes("Yellow", "Yellowish", "yellow", "yellowgreen");
-          
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(lemonVertical.jpg)";
-     }else{
-         document.body.style.background="url(lemonLandscape.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="cover";
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-                
-                
+                putinthecolorthemes("Yellow", "Yellowish", "yellow", "yellowgreen");
 
-}else if (localStorage.getItem("colortheme") === "lime") {
+                if (window.innerHeight > window.innerWidth) {
 
-          putinthecolorthemes("Green", "Greenish", "limegreen", "lime");
-          
-          
-                 navBar.style.background="linear-gradient(to right, white,green,lime, white";
+                    document.body.style.background = "url(lemonVertical.jpg)";
+                } else {
+                    document.body.style.background = "url(lemonLandscape.jpg)";
+
+
+                }
+
+                document.body.style.backgroundSize = "cover";
+
+                volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "lime") {
+
+                putinthecolorthemes("Green", "Greenish", "limegreen", "lime");
+
+
+                navBar.style.background = "linear-gradient(to right, white,green,lime, white";
+
+                barHtml.style.background = "linear-gradient(to right, white,green,lime, white";
+
+                if (window.innerHeight > window.innerWidth) {
+
+                    document.body.style.background = "url(limeVertical.jpg)";
+                } else {
+                    document.body.style.background = "url(limeLandscape.jpg)";
+
+
+                }
+
+                document.body.style.backgroundSize = "cover";
+
+                volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "orange") {
+
+                putinthecolorthemes("Orange", "Orangeish", "orange", "orange");
+
+                if (window.innerHeight > window.innerWidth) {
+
+                    document.body.style.background = "url(orangeVertical.jpg)";
+                } else {
+                    document.body.style.background = "url(orangeLandscape.jpg)";
+
+
+                }
+
+                document.body.style.backgroundSize = "cover";
+
+                volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+
+
+            } else if (localStorage.getItem("colortheme") === "tomato") {
+
+
+                putinthecolorthemes("Red", "Tomatoeish", "red", "red");
+
+
+                barHtml.style.background = "linear-gradient(to right,green,red,red,orange, white)"
+
+                startButt.style.border = "solid green";
+
+                setButt.style.border = "solid green";
+                navBar.style.background = "linear-gradient(to right,green,#8B0000,red)";
+                //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+                if (window.innerHeight > window.innerWidth) {
+
+                    document.body.style.background = "url(tomatoVertical.jpg)";
+                } else {
+                    document.body.style.background = "url(tomatoLandscape.jpg)";
+
+
+                }
+
+                document.body.style.backgroundSize = "cover";
+
+                volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+            } else if (localStorage.getItem("colortheme") === "street_fighter") {
+
+
+
+
+                putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
+
+                barHtml.style.background = "red";
+
+                progressBarParent.style.background = "yellowgreen";
+
+
+                startButt.style.border = "solid orange";
+
+                setButt.style.border = "solid orange";
+                navBar.style.background = "linear-gradient(to right,#8B0000,orange)";
+                //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+                if (window.innerHeight > window.innerWidth) {
+
+                    document.body.style.background = "url(SF2bg.jpg)";
+                } else {
+                    document.body.style.background = "url(SF2bg.jpg)";
+
+
+                }
+
+                document.body.style.backgroundSize = "100%";
+                document.body.style.backgroundPosition = "center center";
+                document.body.style.backgroundRepeat = "2";
+
+                //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+
+
+
+
+
+
+
+
+            } else if (localStorage.getItem("colortheme") === "dragonball_z") {
+
+
+putinthecolorthemes("Blue", "Dragonballzish", "blue", "darkblue");
+
+            barHtml.style.background = "linear-gradient(to right, darkblue,dodgerblue,orange)";
+
+          progressBarParent.style.background="";
+
+
+            startButt.style.border = "solid red";
+
+            setButt.style.border = "solid blue";
             
-      barHtml.style.background="linear-gradient(to right, white,green,lime, white";
-          
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(limeVertical.jpg)";
-     }else{
-         document.body.style.background="url(limeLandscape.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="cover";
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-                
-                
-
-}else if (localStorage.getItem("colortheme") === "orange") {
-
-          putinthecolorthemes("Orange", "Orangeish", "orange", "orange");
-          
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(orangeVertical.jpg)";
-     }else{
-         document.body.style.background="url(orangeLandscape.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="cover";
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-                
-                
-
-   }else if(localStorage.getItem("colortheme") === "tomato"){
-       
-       
-   putinthecolorthemes("Red", "Tomatoeish", "red", "red");
-          
-          
-      barHtml.style.background="linear-gradient(to right,green,red,red,orange, white)"
-      
-      startButt.style.border="solid green";
-      
-      setButt.style.border="solid green";
-      navBar.style.background="linear-gradient(to right,green,#8B0000,red)";
-    //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(tomatoVertical.jpg)";
-     }else{
-         document.body.style.background="url(tomatoLandscape.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="cover";
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-              
-   }  else if(localStorage.getItem("colortheme") === "street_fighter"){
-       
-       
-       
-       
- putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
- 
-     barHtml.style.background="red";
-     
-     progressBarParent.style.background="yellowgreen";
-
-      
-      startButt.style.border="solid orange";
-      
-      setButt.style.border="solid orange";
-      navBar.style.background="linear-gradient(to right,#8B0000,orange)";
-    //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(SF2bg.jpg)";
-     }else{
-         document.body.style.background="url(SF2bg.jpg)";
-         
-         
-     }
-                
-document.body.style.backgroundSize="100%";
-        document.body.style.backgroundPosition="center center";
-        document.body.style.backgroundRepeat="2";
-        
-    //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-                    
-       
-       
-       
-       
-       
-       
-       
-   }
-                   
-     
-                  
-       
-       
-       
-       
-       
-       
-       
-     
-    
-    
-    
-    
-    
-   
+            setButt.style.boxShadow = "0 0 10px 0 dodgerblue,0 0 10px dodgerblue,0 0 10px 0 dodgerblue, 0 0 10px 0 white,0 0 10px 0 white";
+            setButt.style.opacity="0.7";
             
+  setButt.style.backgroundImage = "url(4starball2.png)";
+            setButt.style.borderRadius="50%";           
+            
+            setButt.style.backgroundSize = "150%";
+            setButt.style.backgroundPosition = "center";
+            setButt.style.backgroundRepeat = "no-repeat";
+            
+            setButt.style.width="120px";
+            setButt.style.height="120px";
+            
+            
+            
+            navBar.style.background = "linear-gradient(to right,darkblue, dodgerblue,red,orange, yellow)";
+            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.background = "url(DbzBG.jpg)";
+            } else {
+                document.body.style.background = "url(DbzBG.jpg)";
+
+
+            }
+
+            document.body.style.backgroundSize = "100%";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "2";
+
+            //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+
+
+
+
+
+
+
+     }else if (localStorage.getItem("colortheme") === "dragonball_super") {
+
+
+putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "darkblue");
+
+            barHtml.style.background = "linear-gradient(to right, darkblue,dodgerblue,orange)";
+
+         // progressBarParent.style.background="";
+
+
+            startButt.style.border = "solid red";
+
+            setButt.style.border = "solid blue";
+            
+            setButt.style.boxShadow = "0 0 10px 0 dodgerblue,0 0 10px dodgerblue,0 0 10px 0 dodgerblue, 0 0 10px 0 white,0 0 10px 0 white";
+            setButt.style.opacity="0.7";
+            
+  setButt.style.backgroundImage = "url(4starball2.png)";
+            setButt.style.borderRadius="50%";           
+            
+            setButt.style.backgroundSize = "150%";
+            setButt.style.backgroundPosition = "center";
+            setButt.style.backgroundRepeat = "no-repeat";
+            
+            setButt.style.width="120px";
+            setButt.style.height="120px";
+            
+            
+            
+            navBar.style.background = "linear-gradient(to right,darkblue, dodgerblue, white,white,white,white,white)";
+            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.background = "url(dbsBG.jpg)";
+            } else {
+                document.body.style.background = "url(dbsBG.jpg)";
+
+
+            }
+
+            document.body.style.backgroundSize = "100%";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "2";
+
+            //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
+
+
+
+
+
+
+
+            }
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1574,33 +1732,43 @@ document.body.style.backgroundSize="100%";
             case "NTM":
                 musicThemeString = "NTM d'Chez Toi";
                 break;
+
+            case "StreetFighter2":
+                musicThemeString = "Street Fighter II SNES Medley";
+                break;
+
+
+            case "NTM2":
+                musicThemeString = "NTM -Saint Dennis Style-";
+                break;
+
+
+            case "NTM3":
+                musicThemeString = "NTM -Pose Ton Gun 'IV My people' Remix-";
+                break;
+
+
+
+
+
+            case "ghettopeople":
+                musicThemeString = "Joey Starr - Ghetto People";
+                break;
+
+
+            case "fonkyfamily":
+                musicThemeString = "Fonky Family- L'amour Du Risque";
+                break;
                 
-             case "StreetFighter2":
-             musicThemeString = "Street Fighter II SNES Medley";
+                    case "DBZ":
+                musicThemeString = "Dragon Ball Z theme  -We Gotta Power-";
                 break;
                 
                 
-           case "NTM2":
-             musicThemeString = "NTM -Saint Dennis Style-";
+                
+                case "DBZ2":
+                musicThemeString = "Dragon Ball Super  'Goku vs Jiren theme' -Kachi Daze-";
                 break;
-                
-                
-           case "NTM3":
-             musicThemeString = "NTM -Pose Ton Gun 'IV My people' Remix-";
-                break;
-                
-                
-                
-                
-                
-       case "ghettopeople":
-             musicThemeString = "Joey Starr - Ghetto People";
-                break;
-                
-                
-           case  "fonkyfamily":
-             musicThemeString = "Fonky Family- L'amour Du Risque";
-                break;             
                 
 
         }
@@ -1619,7 +1787,7 @@ document.body.style.backgroundSize="100%";
         function setMusicselectEffects(input) {
 
 
-       if (input === "tiger" || input === "african" || input==="NTM" || input==="NTM2"|| input===  "NTM3" || input==="StreetFighter2" || input=== "ghettopeople"|| input==="fonkyfamily") {
+            if (input === "tiger" || input === "african" || input === "NTM" || input === "NTM2" || input === "NTM3" || input === "StreetFighter2" || input === "ghettopeople" || input === "fonkyfamily") {
 
 
                 currentsoundeffectpath = "selectSelection2.mp3";
@@ -1636,7 +1804,7 @@ document.body.style.backgroundSize="100%";
 
             let text = document.createElement("h2");
 
-            text.innerText= localStorage.getItem("musictheme")+" selected";
+            text.innerText = localStorage.getItem("musictheme")+" selected";
 
 
             text.className = "musicSelectPopText";
@@ -1689,26 +1857,34 @@ document.body.style.backgroundSize="100%";
                 case "NTM":
                     variable = 3;
                     break;
-                    
+
                 case "NTM2":
                     variable = 4;
                     break;
                 case "NTM3":
                     variable = 5;
                     break;
-                    
-                    
+
+
                 case "StreetFighter2":
                     variable = 6;
                     break;
-                    
-                    
-               case "ghettopeople":
+
+
+                case "ghettopeople":
                     variable = 7;
                     break;
-                    
-               case "fonkyfamily":
+
+                case "fonkyfamily":
                     variable = 8;
+                    break;
+                    
+                    
+               case "DBZ":
+                    variable = 9;
+                    break;
+case "DBZ2":
+                    variable = 10;
                     break;
                     
 
@@ -1733,11 +1909,11 @@ document.body.style.backgroundSize="100%";
 
 
         musicSelect.addEventListener("click", (e)=> {
-        
-        
-        
-        
-            
+
+
+
+
+
             openselects.play();
 
 
@@ -1770,14 +1946,14 @@ document.body.style.backgroundSize="100%";
 
 
 
-            if (e.target.value === "african") {
+                if (e.target.value === "african") {
 
 
-         musicTheme = new Audio("audiodrums.mp3");
+                    musicTheme = new Audio("audiodrums.mp3");
 
 
-        localStorage.setItem("musictheme", "african");
-                    
+                    localStorage.setItem("musictheme", "african");
+
                     musicThemeDisplay.innerText = "🔊 African War Drums";
 
 
@@ -1801,73 +1977,97 @@ document.body.style.backgroundSize="100%";
                     musicThemeDisplay.innerText = "🔊 Eye of the Tiger";
 
 
-      }else if (e.target.value === "StreetFighter2") {
+                } else if (e.target.value === "StreetFighter2") {
 
 
-            musicTheme = new Audio("streetFighter2Medley.mp3");
+                    musicTheme = new Audio("streetFighter2Medley.mp3");
 
-           localStorage.setItem("musictheme", "StreetFighter2");
-           
-        musicThemeDisplay.innerText = "🔊 Street Fighter-II SNES ,Medley";
+                    localStorage.setItem("musictheme", "StreetFighter2");
 
-
-                
-      }else if (e.target.value === "NTM2") {
+                    musicThemeDisplay.innerText = "🔊 Street Fighter-II SNES ,Medley";
 
 
-            musicTheme = new Audio("NtmSaintDennis.mp3");
 
-           localStorage.setItem("musictheme", "NTM2");
-           
-        musicThemeDisplay.innerText = "🔊 NTM -Saint Dennis Style-";
+                } else if (e.target.value === "NTM2") {
 
 
-                
-      }else if (e.target.value === "NTM3") {
+                    musicTheme = new Audio("NtmSaintDennis.mp3");
+
+                    localStorage.setItem("musictheme", "NTM2");
+
+                    musicThemeDisplay.innerText = "🔊 NTM -Saint Dennis Style-";
 
 
-            musicTheme = new Audio("NTMPoseTonGun.mp3");
 
-           localStorage.setItem("musictheme", "NTM3");
-           
-        musicThemeDisplay.innerText = "🔊 NTM -Pose Ton Gun 'IV My people' Remix-";
+                } else if (e.target.value === "NTM3") {
 
 
-                
-      }else if (e.target.value === "ghettopeople") {
+                    musicTheme = new Audio("NTMPoseTonGun.mp3");
+
+                    localStorage.setItem("musictheme", "NTM3");
+
+                    musicThemeDisplay.innerText = "🔊 NTM -Pose Ton Gun 'IV My people' Remix-";
 
 
-            musicTheme = new Audio("ghettoPeople.mp3");
 
-           localStorage.setItem("musictheme", "ghettopeople");
-           
-        musicThemeDisplay.innerText = "🔊 Joey Starr - Ghetto People";
+                } else if (e.target.value === "ghettopeople") {
 
 
-                
-      }else if (e.target.value === "fonkyfamily") {
+                    musicTheme = new Audio("ghettoPeople.mp3");
+
+                    localStorage.setItem("musictheme", "ghettopeople");
+
+                    musicThemeDisplay.innerText = "🔊 Joey Starr - Ghetto People";
 
 
-            musicTheme = new Audio("fonkyFamily.mp3");
 
-           localStorage.setItem("musictheme", "fonkyfamily");
-           
-        musicThemeDisplay.innerText = "🔊 Fonky Family- L'amour Du Risque";
+                } else if (e.target.value === "fonkyfamily") {
 
 
-                
-      }
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                    musicTheme = new Audio("fonkyFamily.mp3");
 
-       if (e.target.selectedIndex != 0) {
+                    localStorage.setItem("musictheme", "fonkyfamily");
+
+                    musicThemeDisplay.innerText = "🔊 Fonky Family- L'amour Du Risque";
+
+
+
+     }else if (e.target.value === "DBZ") {
+
+
+                    musicTheme = new Audio("wegottapower.mp3");
+
+                    localStorage.setItem("musictheme", "DBZ");
+
+                    musicThemeDisplay.innerText = "🔊 Dragon Ball Z theme -We Gotta Power-";
+
+
+
+                }else if (e.target.value === "DBZ2") {
+
+
+                    musicTheme = new Audio("kachidaze.mp3");
+
+                    localStorage.setItem("musictheme", "DBZ2");
+
+                    musicThemeDisplay.innerText = "🔊 Dragon Ball Super  'Goku vs Jiren theme";
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+                if (e.target.selectedIndex != 0) {
                     Select2Sound.play();
 
 
@@ -1894,8 +2094,8 @@ document.body.style.backgroundSize="100%";
             let variab = 0;
 
             switch (localStorage.getItem("colortheme")) {
-                
-                
+
+
                 case "blackish":
                     variab = 1;
                     break;
@@ -1904,8 +2104,8 @@ document.body.style.backgroundSize="100%";
                 case "blueish":
                     variab = 2;
                     break;
-                    
-                    
+
+
                 case "brownish":
                     variab = 3;
                     break;
@@ -1939,41 +2139,44 @@ document.body.style.backgroundSize="100%";
                 case "space":
                     variab = 10;
                     break;
-                    
-                    
-               case "lemon":
+
+
+                case "lemon":
                     variab = 11;
                     break;
-                    
-            
-            case "lime":
+
+
+                case "lime":
                     variab = 12;
                     break;
 
 
-            case "orange":
+                case "orange":
                     variab = 13;
                     break;
-                    
-                    
-                    
-           case "tomato":
+
+
+
+                case "tomato":
                     variab = 14;
                     break;
-                    
-                    
-                    
-                                
-           case "street_fighter":
+
+
+
+
+                case "street_fighter":
                     variab = 15;
+                    break;
+                case "dragonball_z":
+                    variab = 16;
                     break;
 
 
 
-            
-            
-            
-            
+
+
+
+
 
 
 
@@ -1984,114 +2187,110 @@ document.body.style.backgroundSize="100%";
             return variab;
 
         }
-
-
-
-
-     function clickThemeAnimation(path,width,topPercent){
-         
-       let animation = document.createElement("img");
-       
-     animation.src=path;;
-     animation.style.position="absolute";
-     animation.style.left="50%";
-     animation.style.bottom=topPercent;
-     animation.style.transform="translateX(-50%)";
-     animation.style.width=width;
-     animation.style.zIndex="250";
-    
-       
-     global.appendChild(animation);
-       
-       
-         setTimeout(()=>{
-             
-             
-             animation.remove();
-         },2000);
-         
         
-     }
+        
+        
+        
+        function clickThemeAnimationBG(bgname,bgsize,seconds) {
+            global.style.display="none";
+            let animation = document.createElement("div");
+                        document.body.style.background="#000000";
+
+          global.style.display="none";
+           // animation.style.position ="relative";
+           // animation.style.left = "0%";
+           // animation.style.top = "0%";
+          animation.style.margin = "0px";
+          
+          animation.style.padding = "0px";
+          
+            animation.style.width = "100%";
+            animation.style.height ="100%";
+
+           animation.style.background = "#000000";
+           animation.style.backgroundPosition = "center";
 
 
-
-
-
-
-
-        themeSelect.addEventListener("click", (e)=> {
-
-            openselects.play();
-
-
-
-            e.target.selectedIndex = getthemeSelected();
-            console.log(getthemeSelected(), " mi chupa podia??? ");
+           
             
             
             
-            navBar.style.background="";
-            barHtml.style.background="";
-            navBar.style.border="";
+            animation.style.backgroundImage=`url(${bgname})`;
+            animation.style.backgroundSize=bgsize;
+            animation.style.backgroundRepeat="no-repeat";
             
-            startButt.style.border="";
-            startButt.style.background="";
-            setButt.style.border="";
-            setButt.style.background="";
+            document.body.appendChild(animation);
             
             
             
-   
+            console.log(document.body.style.backgroundImage);
+
+
+
+
+            setTimeout(()=> {
+              
+            global.style.display="block";
             
-        });
+            setStylesatRuntime();
+            animation.remove();
+
+
+                
+        },
+            seconds);
+
+
+    }
 
 
 
-        themeSelect.addEventListener("change", (e)=> {
+
+        function clickThemeAnimation(path, width, topPercent,seconds) {
+
+            let animation = document.createElement("img");
+
+            animation.src = path;;
+            animation.style.position ="absolute";
+            animation.style.left = "50%";
+            animation.style.bottom = topPercent;
+            animation.style.transform = "translateX(-50%)";
+            animation.style.width = width;
+            animation.style.zIndex = "250";
+
+
+            document.body.appendChild(animation);
+            
+     //       barHtml.style.display="none";
+            global.style.display="none";
+     //       numsBlock.style.display="none";
+           // mainBlock.style.display="none";
+      //      startButt.style.display="none";
+//progressBarParent.style.display="none";
             
             
+            console.log(document.body.style.backgroundImage);
 
 
-            profilepicBox.style.border = "solid white";
-
-            profilepic.style.border = "solid white 0.5px";
 
 
-            username.style.color = "white";
+            setTimeout(()=> {
+           //     barHtml.style.display="block";
+          //  navBar.style.display="block";
+        //    numsBlock.style.display="flex";
+         //   startButt.style.display="block";
+       //     progressBarParent.style.display="block";
             
-            
-            
-               if (e.target.value !== "space" || e.target.value !== "lemon" && e.target.value !== "") {
-                document.body.style.background = "#000000";
-
-
-            }
- 
-            
-            
+            global.style.display="flex";
             
 
 
-            if (e.target.value === "whitish") {
-
-                putinthecolorthemes("White", "Whitish", "lightgrey", "lightgrey");
-
-
-
-                localStorage.setItem("colortheme", "whitish");
+                animation.remove();
+        },
+            seconds);
 
 
-                console.log("color white");
-
-
-
-
-                profilepicBox.style.border = "solid black";
-
-                profilepic.style.border = "solid black 0.5px";
-
-
-                username.style.color = "black";
+    }
 
 
 
@@ -2099,50 +2298,132 @@ document.body.style.backgroundSize="100%";
 
 
 
+    themeSelect.addEventListener("click", (e)=> {
 
-
-            } else if (e.target.value === "blueish") {
-                putinthecolorthemes("Blue", "Blueish", "dodgerblue", "blue");
-
-                localStorage.setItem("colortheme", "blueish");
-
-                console.log("theme blueish");
+        openselects.play();
 
 
 
+        e.target.selectedIndex = getthemeSelected();
+        console.log(getthemeSelected(), " mi chupa podia??? ");
 
 
 
+        navBar.style.background = "";
+        barHtml.style.background = "";
+        navBar.style.border = "";
 
-
-
-            } else if (e.target.value === "pinkish") {
-
-
-
-                putinthecolorthemes("Pink", "Pinkish", "magenta", "pink");
-
-
-                localStorage.setItem("colortheme", "pinkish");
-
-
-                console.log("theme pinkish");
+        startButt.style.border = "";
+        startButt.style.background = "";
+        setButt.style.border = "";
+        setButt.style.background = "";
+        navBar.style.width="";
+            navBar.style.height="";
 
 
 
 
 
+    });
+
+
+
+    themeSelect.addEventListener("change", (e)=> {
 
 
 
 
-            } else if (e.target.value === "greenish") {
+        profilepicBox.style.border = "solid white";
 
-                putinthecolorthemes("Green", "Greenish", "lime", "green");
+        profilepic.style.border = "solid white 0.5px";
 
-                localStorage.setItem("colortheme", "greenish");
 
-                console.log("theme Greenish");
+        username.style.color = "white";
+
+
+
+        if (e.target.value !== "space" || e.target.value !== "lemon" && e.target.value !== "") {
+            document.body.style.background = "#000000";
+
+
+        }
+
+
+
+
+
+
+        if (e.target.value === "whitish") {
+
+            putinthecolorthemes("White", "Whitish", "lightgrey", "lightgrey");
+
+
+
+            localStorage.setItem("colortheme", "whitish");
+
+
+            console.log("color white");
+
+
+
+
+            profilepicBox.style.border = "solid black";
+
+            profilepic.style.border = "solid black 0.5px";
+
+
+            username.style.color = "black";
+
+
+
+
+
+
+
+
+
+        } else if (e.target.value === "blueish") {
+            putinthecolorthemes("Blue", "Blueish", "dodgerblue", "blue");
+
+            localStorage.setItem("colortheme", "blueish");
+
+            console.log("theme blueish");
+
+
+
+
+
+
+
+
+
+        } else if (e.target.value === "pinkish") {
+
+
+
+            putinthecolorthemes("Pink", "Pinkish", "magenta", "pink");
+
+
+            localStorage.setItem("colortheme", "pinkish");
+
+
+            console.log("theme pinkish");
+
+
+
+
+
+
+
+
+
+        } else if (e.target.value === "greenish") {
+
+            putinthecolorthemes("Green", "Greenish", "lime", "green");
+
+            localStorage.setItem("colortheme", "greenish");
+
+            console.log("theme Greenish");
 
 
 
@@ -2154,841 +2435,983 @@ document.body.style.backgroundSize="100%";
 
 
 
-                putinthecolorthemes("Yellow", "Yellowish", "yellowgreen", "yellow");
+            putinthecolorthemes("Yellow", "Yellowish", "yellowgreen", "yellow");
 
 
 
-                localStorage.setItem("colortheme", "yellowish");
+            localStorage.setItem("colortheme", "yellowish");
 
 
-                console.log("theme Yellowish");
-
-
-
-
-
-
-            } else if (e.target.value === "reddish") {
-
-                putinthecolorthemes("Red", "Reddish", "red", "red")
-
-
-
-
-                localStorage.setItem("colortheme", "reddish");
-
-                console.log("theme Reddish");
+            console.log("theme Yellowish");
 
 
 
 
 
 
-            } else if (e.target.value === "space") {
+        } else if (e.target.value === "reddish") {
+
+            putinthecolorthemes("Red", "Reddish", "red", "red")
 
 
-                putinthecolorthemes("Space", "Space", "darkviolet", "darkviolet")
-
-                localStorage.setItem("colortheme", "space");
 
 
-                console.log("Space theme");
+            localStorage.setItem("colortheme", "reddish");
+
+            console.log("theme Reddish");
 
 
-            } else if (e.target.value === "orangeish") {
 
 
-                putinthecolorthemes("Orange", "Orangeish", "darkorange", "orange")
-
-                localStorage.setItem("colortheme", "orangeish");
 
 
-                console.log("Orange theme");
+        } else if (e.target.value === "space") {
 
 
-            }else if(e.target.value==="brownish"){
-                
-                
-                putinthecolorthemes("Brown", "Brownish", "#4b3620", "#4b3620");
-                
-               localStorage.setItem("colortheme", "brownish");
-               
-                
-                
-              console.log("Brown theme");
-              
-                
-                
-                
-       }else if(e.target.value==="blackish"){
-                
-                
-                putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
-                
-               localStorage.setItem("colortheme", "blackish");
-               
-                
-                
-              console.log("Black theme");
-              
-                
-                
-                
-       }else if(e.target.value==="lemon"){
+            putinthecolorthemes("Space", "Space", "darkviolet", "darkviolet")
+
+            localStorage.setItem("colortheme", "space");
+
+
+            console.log("Space theme");
+
+
+        } else if (e.target.value === "orangeish") {
+
+
+            putinthecolorthemes("Orange", "Orangeish", "darkorange", "orange")
+
+            localStorage.setItem("colortheme", "orangeish");
+
+
+            console.log("Orange theme");
+
+
+        } else if (e.target.value === "brownish") {
+
+
+            putinthecolorthemes("Brown", "Brownish", "#4b3620", "#4b3620");
+
+            localStorage.setItem("colortheme", "brownish");
+
+
+
+            console.log("Brown theme");
+
+
+
+
+        } else if (e.target.value === "blackish") {
+
+
+            putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
+
+            localStorage.setItem("colortheme", "blackish");
+
+
+
+            console.log("Black theme");
+
+
+
+
+        } else if (e.target.value === "lemon") {
             putinthecolorthemes("Yellow", "Yellowish", "yellow", "yellowgreen");
-          
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.backgroundImage="url('lemonVertical.jpg')";
-      
-      document.body.style.backgroundSize="cover";
-      
-      
-      
-     }else{
-      document.body.style.backgroundImage="url(lemonLandscape.jpg)";
-         document.body.style.backgroundSize="cover";
-         
-         
-         
-     }
-     
-  
-  
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-                
-     
-     
-           localStorage.setItem("colortheme", "lemon");
-         
-         console.log("lemon theme")
-     }    
-        else if(e.target.value==="lime"){
-            
-            
+
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.backgroundImage = "url('lemonVertical.jpg')";
+
+                document.body.style.backgroundSize = "cover";
+
+
+
+            } else {
+                document.body.style.backgroundImage = "url(lemonLandscape.jpg)";
+                document.body.style.backgroundSize = "cover";
+
+
+
+            }
+
+
+
+
+            volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+
+
+            localStorage.setItem("colortheme", "lemon");
+
+            console.log("lemon theme")
+        } else if (e.target.value === "lime") {
+
+
             putinthecolorthemes("Green", "Greenish", "limegreen", "lime");
-            
-            
-       navBar.style.background="linear-gradient(to right, white,green,lime, white";
-            
-      barHtml.style.background="linear-gradient(to right, white,green,lime, white";
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(limeVertical.jpg)";
-     }else{
-         document.body.style.background="url(limeLandscape.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="cover";
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-                          
-            
+
+
+            navBar.style.background = "linear-gradient(to right, white,green,lime, white";
+
+            barHtml.style.background = "linear-gradient(to right, white,green,lime, white";
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.background = "url(limeVertical.jpg)";
+            } else {
+                document.body.style.background = "url(limeLandscape.jpg)";
+
+
+            }
+
+            document.body.style.backgroundSize = "cover";
+
+            volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+
             localStorage.setItem("colortheme", "lime");
-         
-         console.log("lime theme")
-            
-            
-            
-            
-            
-            
-  }  else if(e.target.value==="orange"){
-      
-     putinthecolorthemes("Orange", "Orangeish", "orange", "orange");
-          
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(orangeVertical.jpg)";
-     }else{
-         document.body.style.background="url(orangeLandscape.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="cover";
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-              
-              
-                   
-      localStorage.setItem("colortheme", "orange");
-         
-         console.log("orange theme")
-            
-              
-                
-                
-                
-                
-                
 
-  }else if(e.target.value==="tomato"){
-      
-     putinthecolorthemes("Red", "Tomatoeish", "red", "red");
-          
-          
-      barHtml.style.background="linear-gradient(to right,green,red,red,orange, white)"
-      
-      startButt.style.border="solid green";
-      
-      setButt.style.border="solid green";
-      
-      
-     navBar.style.background="linear-gradient(to right,green,#8B0000,red)";
-     
-     
-  //   musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(tomatoVertical.jpg)";
-     }else{
-         document.body.style.background="url(tomatoLandscape.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="cover";
-        
-        volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-              
-              
-                   
-      localStorage.setItem("colortheme", "tomato");
-         
-         console.log("tomato theme")
+            console.log("lime theme")
+
+
+
+
+
+
+        } else if (e.target.value === "orange") {
+
+            putinthecolorthemes("Orange", "Orangeish", "orange", "orange");
+
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.background = "url(orangeVertical.jpg)";
+            } else {
+                document.body.style.background = "url(orangeLandscape.jpg)";
+
+
+            }
+
+            document.body.style.backgroundSize = "cover";
+
+            volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+
+
+            localStorage.setItem("colortheme", "orange");
+
+            console.log("orange theme")
+
+
+
+
+
+
+
+
+        } else if (e.target.value === "tomato") {
+
+            putinthecolorthemes("Red", "Tomatoeish", "red", "red");
+
+
+            barHtml.style.background = "linear-gradient(to right,green,red,red,orange, white)"
+
+            startButt.style.border = "solid green";
+
+            setButt.style.border = "solid green";
+
+
+            navBar.style.background = "linear-gradient(to right,green,#8B0000,red)";
+
+
+            //   musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.background = "url(tomatoVertical.jpg)";
+            } else {
+                document.body.style.background = "url(tomatoLandscape.jpg)";
+
+
+            }
+
+            document.body.style.backgroundSize = "cover";
+
+            volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
+
+
+
+            localStorage.setItem("colortheme", "tomato");
+
+            console.log("tomato theme")
+
+        } else if (e.target.value === "street_fighter") {
             
-  }else if(e.target.value==="street_fighter"){
-      
-      
- clickThemeAnimation("ken-sshinryuken.gif","400px","10%");    
-       
- putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
-          
-          
-        barHtml.style.background="red";
-     
-     progressBarParent.style.background="yellow";
-      
-      startButt.style.border="solid orange";
-      
-      setButt.style.border="solid orange";
-      navBar.style.background="linear-gradient(to right,#8B0000,orange)";
-    //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-     if(window.innerHeight>window.innerWidth){
-         
-      document.body.style.background="url(SF2bg.jpg)";
-     }else{
-         document.body.style.background="url(SF2bg.jpg)";
-         
-         
-     }
-                
-        document.body.style.backgroundSize="100%";
-        document.body.style.backgroundPosition="center center";
-        document.body.style.backgroundRepeat="2";
-      
+            putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
+
+
+     clickThemeAnimation("Ken.gif", "300px", "0%",1200);
+
+
+
+
+            barHtml.style.background = "red";
+
+            progressBarParent.style.background = "yellow";
+
+            startButt.style.border = "solid orange";
+
+            setButt.style.border = "solid orange";
+            navBar.style.background = "linear-gradient(to right,#8B0000,orange)";
+            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.background = "url(SF2bg.jpg)";
+            } else {
+                document.body.style.background = "url(SF2bg.jpg)";
+
+
+            }
+
+            document.body.style.backgroundSize = "100%";
+            document.body.style.backgroundPosition = "center center";
+            document.body.style.backgroundRepeat = "2";
+
             localStorage.setItem("colortheme", "street_fighter");
-         
-         console.log("street fighter color theme");
-      
-      
-      
-      
-  }   
-                
-                
-    if(localStorage.getItem("colortheme")!="street_fighter"){
-            progressBarParent.style.background="transparent";}
-            
-                
-         selectSelection.play();
 
+            console.log("street fighter color theme");
 
-            e.target.selectedIndex = "0";
-
-        });
-
-
-        console.log(localStorage.getItem("mylefà"), " es lefa????");
-
-        let switchCount = 0;
-
-
-        function SET() {
-
-
-            openselects.play();
-
-            let backShadow = document.createElement("div");
-
-            let setWrap = document.createElement("div");
-
-            setWrap.draggable = true;
-            setWrap.className = "setWrap";
-
-            backShadow.className = "backShadow";
-
-            backShadow.style.display = "block";
-
-
-            let secsSelect = document.createElement("select");
-
-
-            let repsSelect = document.createElement("select");
-
-
-            let transitionSecsSelect = document.createElement("select");
-            
-            let minsSelect = document.createElement("select");
-
-            let getReadySelect = document.createElement("select");
-
-            let exitIcon = document.createElement("img");
-
-
-            let navSet = document.createElement("div");
-
-
-            let br = document.createElement("br");
-
-
-
-
-
-            let numsRow = document.createElement("div");
-
-
-            let numsRow2 = document.createElement("div");
-
-            let numsRow3 = document.createElement("div");
-            let numsRow4 = document.createElement("div");
-            let numsRow5 = document.createElement("div");
-            let numsRow6 = document.createElement("div");
-            let numsRow7 = document.createElement("div");
-
-            let numsRow8 = document.createElement("div");
-
-
-            let minsTopDisplay = document.createElement("p");
-            let secsTopDisplay = document.createElement("p");
-            let repsTopDisplay = document.createElement("p");
-
-
-            let transitionSecsTopDisplay = document.createElement("p");
-            let getreadysecsTopDisplay = document.createElement("p");
-            
+clickThemeAnimationBG("ken-sshinryuken.gif","cover",1200);
             
 
-            let acceptSetButt = document.createElement("p");
-
-            let switchText = document.createElement("p");
-
-            let switchDelay = document.createElement("button");
-
-
-            let SECONDS = document.createElement("h1");
-            let MINUTES = document.createElement("h1");
-            let REPETITIONS = document.createElement("h1");
-  let TRANSITIONSECONDS = document.createElement("h1");
-  
-  let GETREADYSECONDS = document.createElement("h1");
-  
-  
-  
-  let wrapRow4= document.createElement("div");
-  
-  let wrapRow4Right= document.createElement("div");
-       
-    wrapRow4.className="wrapRow4";
-    wrapRow4Right.className="wrapRow4Right";
-
-
-            SECONDS.innerText = "SECONDS";
-            MINUTES.innerText = "MINUTES";
-            REPETITIONS.innerText = "REPETITIONS";
-            TRANSITIONSECONDS.innerText = "TRANSITION SECONDS";
-            GETREADYSECONDS.innerText="START DELAY";
-
-            SECONDS.className = "SECONDS labels";
-            MINUTES.className = "MINUTES labels";
-            REPETITIONS.className = "REPETITIONS labels";
-            TRANSITIONSECONDS.className = "TRANSITIONSECONDS labels";
-            GETREADYSECONDS.className="GETREADYSECONDS labels";
-
-
-
-
-
-
-            switchDelay.className = "switchDelay";
-
-
-
-            switchText.innerText = "Delayed Transition";
-            switchText.className = "switchText";
-
-
-
-
-
-            backShadow.className = "backShadow";
-            setWrap.className = "setWrap";
-            exitIcon.className = "exitIcon";
-
-            exitIcon.src = "exit-icon.png";
-
-
-
-
-
-            if (localStorage.getItem("colortheme") === "greenish") {
-
-                navSet.className = "navSet navSetGreen";
-
-
-            } else if (localStorage.getItem("colortheme") === "blueish") {
-
-                navSet.className = "navSet navSetBlue";
-
-
-            } else if (localStorage.getItem("colortheme") === "pinkish") {
-
-                navSet.className = "navSet navSetPink";
-
-
-            } else if (localStorage.getItem("colortheme") === "whitish") {
-
-                navSet.className = "navSet navSetWhite";
-
-
-            } else if (localStorage.getItem("colortheme") === "yellowish") {
-
-                navSet.className = "navSet navSetYellow";
-
-
-            } else if (localStorage.getItem("colortheme") === "reddish") {
-
-                navSet.className = "navSet navSetRed";
-
-
-            } else if (localStorage.getItem("colortheme") === "space") {
-
-                navSet.className = "navSet navSetSpace";
-
-
-            } else if (localStorage.getItem("colortheme") === "orangeish") {
-
-                navSet.className = "navSet navSetOrange";
-
-
-            }else if (localStorage.getItem("colortheme") === "brownish") {
-
-                navSet.className = "navSet navSetBrown";
-
-
-            }else if (localStorage.getItem("colortheme") === "lemon") {
-
-                navSet.className = "navSet navSetYellow";
-
-
-            }else if (localStorage.getItem("colortheme") === "lime") {
-
-                navSet.className = "navSet navSetGreen";
-
-
-            }else if (localStorage.getItem("colortheme") === "orange") {
-
-                navSet.className = "navSet navSetOrange";
-
-
-            }else if (localStorage.getItem("colortheme") === "tomato") {
-
-                navSet.className = "navSet navSetRed";
+        } else if (e.target.value === "dragonball_z") {
+            
+ //  clickThemeAnimation("gokudbzselection.gif", "140%", "0%",1800);
+            
+putinthecolorthemes("Blue", "Dragonballzish", "blue", "darkblue");
+
+            barHtml.style.background = "linear-gradient(to right, darkblue,dodgerblue,orange)";
+
+          progressBarParent.style.background="transparent";
+
+
+            startButt.style.border = "solid red";
+
+            setButt.style.border = "solid blue";
+            
+            setButt.style.boxShadow = "0 0 10px 0 dodgerblue,0 0 10px dodgerblue,0 0 10px 0 dodgerblue, 0 0 10px 0 white,0 0 10px 0 white";
+            setButt.style.opacity="0.8";
+            
+  setButt.style.backgroundImage = "url(4starball2.png)";
+            setButt.style.borderRadius="50%";           
+            
+            setButt.style.backgroundSize = "150%";
+            setButt.style.backgroundPosition = "center";
+            setButt.style.backgroundRepeat = "no-repeat";
+            
+            setButt.style.width="120px";
+            setButt.style.height="120px";
+            
+            
+            
+            navBar.style.background = "linear-gradient(to right,darkblue, dodgerblue,red,orange, yellow)";
+            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+            if (window.innerHeight > window.innerWidth) {
+
+                document.body.style.background = "url(DbzBG.jpg)";
+            } else {
+                document.body.style.background = "url(DbzBG.jpg)";
 
 
             }
-            
 
+            document.body.style.backgroundSize = "100%";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "2";
 
+            //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
 
 
-
-
-
-
-            numsRow.className = "numsRow";
-            numsRow2.className = "numsRow2";
-
-            numsRow3.className = "numsRow3";
-            numsRow4.className = "numsRow4";
-            numsRow5.className = "numsRow5";
-            numsRow6.className = "numsRow6";
-            numsRow6.appendChild(switchDelay);
-
-            numsRow6.appendChild(switchText);
-
-
-
-
-
-            minsSelect.className = "minsSelect";
-            secsSelect.className = "secsSelect";
-            repsSelect.className = "repsSelect";
-
-            transitionSecsSelect.className = "transitionSecsSelect";
-            
-            getReadySelect.className="getReadySelect";
-
-
-
-            if (localStorage.getItem("colortheme") === "greenish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
-
-
-            } else if (localStorage.getItem("colortheme") === "blueish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtBlue";
-
-
-            } else if (localStorage.getItem("colortheme") === "pinkish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtPink";
-
-
-            } else if (localStorage.getItem("colortheme") === "whitish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtWhite";
-
-
-            } else if (localStorage.getItem("colortheme") === "yellowish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
-
-
-            } else if (localStorage.getItem("colortheme") === "reddish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtRed";
-
-
-            } else if (localStorage.getItem("colortheme") === "space") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtSpace";
-
-
-            } else if (localStorage.getItem("colortheme") === "orangeish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
-
-
-            }else if (localStorage.getItem("colortheme") === "brownish") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtBrown";
-            }else if (localStorage.getItem("colortheme") === "lemon") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
-            }else if (localStorage.getItem("colortheme") === "lime") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
-            }else if (localStorage.getItem("colortheme") === "orange") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
-            }else if (localStorage.getItem("colortheme") === "tomato") {
-
-                acceptSetButt.className = "acceptSetButt acceptSetButtRed";
-            }
-
-
-
-
-
-
-            if (!localStorage.getItem("secs")) {
-
-                localStorage.setItem("secs", 5);
-            }
-            if (!localStorage.getItem("mins")) {
-
-                localStorage.setItem("mins", 1);
-            }
-            if (!localStorage.getItem("reps")) {
-                localStorage.setItem("reps", 1)
-
-            }
-            if (!localStorage.getItem("transitionsecs")) {
-
-
-                localStorage.setItem("transitionsecs", 5)
-
-            }
-
-
-
-
-
-
-            secsTopDisplay.className = "numsTopDisplay";
-
-            minsTopDisplay.className = "numsTopDisplay";
-            repsTopDisplay.className = "numsTopDisplay repsTopDisplay";
-            
-        transitionSecsTopDisplay.className = "numsTopDisplay transitionSecsTopDisplay";
-        
-        
-        getreadysecsTopDisplay.className="numsTopDisplay getreadysecsTopDisplay";
-        
-        
-        
-
-            minsTopDisplay.innerText = localStorage.getItem("mins");
-            secsTopDisplay.innerText = localStorage.getItem("secs");
-
-
-            //  reps = repsSelect.value;
-
-
-            // transitionSecs = transitionSecsSelect.value;
-
-
-            transitionSecsTopDisplay.innerText = localStorage.getItem("transitionsecs");
-            
-            
-            
-            getreadysecsTopDisplay.innerText= localStorage.getItem("getreadysecs");
-
-
-
-
-            repsTopDisplay.innerText = localStorage.getItem("reps");
-
-
-
-            acceptSetButt.innerText = "Accept";
-
-            let s = document.querySelector(".global");
-
-            s.appendChild(setWrap);
-            document.body.appendChild(backShadow);
-
-
-
-            setWrap.appendChild(navSet);
-            setWrap.appendChild(br);
-            setWrap.appendChild(numsRow);
-            setWrap.appendChild(numsRow2);
-            setWrap.appendChild(numsRow3);
-            setWrap.appendChild(numsRow4);
-            //   setWrap.appendChild(numsRow7);
-            //  setWrap.appendChild(numsRow8);
-            setWrap.appendChild(numsRow6);
-            setWrap.appendChild(numsRow5);
-
-            setWrap.appendChild(exitIcon);
-
-
-
-
-            console.log(numsRow6[0], " ma puta");
-
-
-            numsRow.appendChild(minsTopDisplay);
-            numsRow.appendChild(secsTopDisplay);
-
-
-
-
-            // navSet.appendChild(exitIcon);
-
-            numsRow2.appendChild(minsSelect);
-
-
-            numsRow2.appendChild(secsSelect);
-
-
-            numsRow2.appendChild(MINUTES);
-            numsRow2.appendChild(SECONDS);
-
-
-
-
-
-            numsRow3.appendChild(repsSelect);
-
-            numsRow3.appendChild(repsTopDisplay);
-
-
-
-            numsRow3.appendChild(REPETITIONS);
-            
-            
-     numsRow4.appendChild(wrapRow4);
-     numsRow4.appendChild(wrapRow4Right);
-
-     wrapRow4.appendChild(transitionSecsTopDisplay);
      
-    wrapRow4.appendChild(transitionSecsSelect);
-    wrapRow4.appendChild(TRANSITIONSECONDS);
-    
-    
-    wrapRow4Right.appendChild(getreadysecsTopDisplay);
-    wrapRow4Right.appendChild(getReadySelect);
-    wrapRow4Right.appendChild(GETREADYSECONDS);
+
+localStorage.setItem("colortheme", "dragonball_z");
+
+            console.log("Dragon Ball Z color theme");
+
+
+
+clickThemeAnimationBG("gokudbzselection.gif","100%",1800);
 
 
 
 
-            numsRow5.appendChild(acceptSetButt);
-
-
-            let myvar = "<option value=1>Seconds </option>`";
 
 
 
-            let myvar2 = "<option value=0>Minutes </option>`";
 
-            let myvar3 = "<option value=1>Repetitions </option>`";
 
-            let myvar4 = "<option value=3>Transition </option>`";
+    }else if (e.target.value === "dragonball_super") {
             
-            let myvar5 = "<option value=1>Start-Delay</option>`";
+  // clickThemeAnimation("gokudbzselection.gif", "140%", "0%",1800);
+            
+putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "dodgerblue");
+
+            barHtml.style.background = "linear-gradient(to right, darkblue,dodgerblue,orange)";
+
+       //   progressBarParent.style.background="";
+
+
+            startButt.style.border = "solid red";
+
+            setButt.style.border = "solid blue";
+            
+            setButt.style.boxShadow = "0 0 10px 0 dodgerblue,0 0 10px dodgerblue,0 0 10px 0 dodgerblue, 0 0 10px 0 white,0 0 10px 0 white";
+            setButt.style.opacity="0.8";
+            
+  setButt.style.backgroundImage = "url(4starball2.png)";
+            setButt.style.borderRadius="50%";           
+            
+            setButt.style.backgroundSize = "150%";
+            setButt.style.backgroundPosition = "center";
+            setButt.style.backgroundRepeat = "no-repeat";
+            
+            setButt.style.width="120px";
+            setButt.style.height="120px";
             
             
             
-            
-            repsTopDisplay.style.bottom = 0-(repsTopDisplay.getBoundingClientRect().height)+"px";
+            navBar.style.background = "linear-gradient(to right,darkblue, dodgerblue, white,white,white)";
+            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
+            if (window.innerHeight > window.innerWidth) {
 
-            console.log("the height,k? ", numsRow3.getBoundingClientRect().height);
-
-
-            for (let i = 0; i < 61; i++) {
-
-
-                if (i > 0 && i < 60) {
+                document.body.style.background = "url(dbsBG.jpg)";
+            } else {
+                document.body.style.background = "url(dbsBG.jpg)";
 
 
-                    if (i === Number(localStorage.getItem("secs"))) {
+            }
 
-                        myvar += `<option value='${i}' selected>${i}</option>`;
+            document.body.style.backgroundSize = "100%";
+            document.body.style.backgroundPosition = "center";
+            document.body.style.backgroundRepeat = "2";
 
-                    } else {
+            //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
 
-                        myvar += `<option value='${i}'>${i}</option>`;
 
-                    }
+     
+
+localStorage.setItem("colortheme", "dragonball_super");
+
+            console.log("Dragon Ball suoeper color theme");
+
+
+
+
+clickThemeAnimationBG("ssb.gif","160%",1800);
+
+
+
+
+
+
+
+
+    }
+
+
+        if (localStorage.getItem("colortheme") != "street_fighter") {
+            progressBarParent.style.background = "transparent";
+        }
+
+
+        selectSelection.play();
+
+
+        e.target.selectedIndex = "0";
+        
+        
+        
+        
+        
+        
+        
+        
+
+    });
+
+
+    console.log(localStorage.getItem("mylefà"), " es lefa????");
+
+    let switchCount = 0;
+
+
+    function SET() {
+
+
+        openselects.play();
+
+        let backShadow = document.createElement("div");
+
+        let setWrap = document.createElement("div");
+
+        setWrap.draggable = true;
+        setWrap.className = "setWrap";
+
+        backShadow.className = "backShadow";
+
+        backShadow.style.display = "block";
+
+
+        let secsSelect = document.createElement("select");
+
+
+        let repsSelect = document.createElement("select");
+
+
+        let transitionSecsSelect = document.createElement("select");
+
+        let minsSelect = document.createElement("select");
+
+        let getReadySelect = document.createElement("select");
+
+        let exitIcon = document.createElement("img");
+
+
+        let navSet = document.createElement("div");
+
+
+        let br = document.createElement("br");
+
+
+
+
+
+        let numsRow = document.createElement("div");
+
+
+        let numsRow2 = document.createElement("div");
+
+        let numsRow3 = document.createElement("div");
+        let numsRow4 = document.createElement("div");
+        let numsRow5 = document.createElement("div");
+        let numsRow6 = document.createElement("div");
+        let numsRow7 = document.createElement("div");
+
+        let numsRow8 = document.createElement("div");
+
+
+        let minsTopDisplay = document.createElement("p");
+        let secsTopDisplay = document.createElement("p");
+        let repsTopDisplay = document.createElement("p");
+
+
+        let transitionSecsTopDisplay = document.createElement("p");
+        let getreadysecsTopDisplay = document.createElement("p");
+
+
+
+        let acceptSetButt = document.createElement("p");
+
+        let switchText = document.createElement("p");
+
+        let switchDelay = document.createElement("button");
+
+
+        let SECONDS = document.createElement("h1");
+        let MINUTES = document.createElement("h1");
+        let REPETITIONS = document.createElement("h1");
+        let TRANSITIONSECONDS = document.createElement("h1");
+
+        let GETREADYSECONDS = document.createElement("h1");
+
+
+
+        let wrapRow4 = document.createElement("div");
+
+        let wrapRow4Right = document.createElement("div");
+
+        wrapRow4.className = "wrapRow4";
+        wrapRow4Right.className = "wrapRow4Right";
+
+
+        SECONDS.innerText = "SECONDS";
+        MINUTES.innerText = "MINUTES";
+        REPETITIONS.innerText = "REPETITIONS";
+        TRANSITIONSECONDS.innerText = "TRANSITION SECONDS";
+        GETREADYSECONDS.innerText = "START DELAY";
+
+        SECONDS.className = "SECONDS labels";
+        MINUTES.className = "MINUTES labels";
+        REPETITIONS.className = "REPETITIONS labels";
+        TRANSITIONSECONDS.className = "TRANSITIONSECONDS labels";
+        GETREADYSECONDS.className = "GETREADYSECONDS labels";
+
+
+
+
+
+
+        switchDelay.className = "switchDelay";
+
+
+
+        switchText.innerText = "Delayed Transition";
+        switchText.className = "switchText";
+
+
+
+
+
+        backShadow.className = "backShadow";
+        setWrap.className = "setWrap";
+        exitIcon.className = "exitIcon";
+
+        exitIcon.src = "exit-icon.png";
+
+
+
+
+
+        if (localStorage.getItem("colortheme") === "greenish") {
+
+            navSet.className = "navSet navSetGreen";
+
+
+        } else if (localStorage.getItem("colortheme") === "blueish") {
+
+            navSet.className = "navSet navSetBlue";
+
+
+        } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+            navSet.className = "navSet navSetPink";
+
+
+        } else if (localStorage.getItem("colortheme") === "whitish") {
+
+            navSet.className = "navSet navSetWhite";
+
+
+        } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+            navSet.className = "navSet navSetYellow";
+
+
+        } else if (localStorage.getItem("colortheme") === "reddish") {
+
+            navSet.className = "navSet navSetRed";
+
+
+        } else if (localStorage.getItem("colortheme") === "space") {
+
+            navSet.className = "navSet navSetSpace";
+
+
+        } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+            navSet.className = "navSet navSetOrange";
+
+
+        } else if (localStorage.getItem("colortheme") === "brownish") {
+
+            navSet.className = "navSet navSetBrown";
+
+
+        } else if (localStorage.getItem("colortheme") === "lemon") {
+
+            navSet.className = "navSet navSetYellow";
+
+
+        } else if (localStorage.getItem("colortheme") === "lime") {
+
+            navSet.className = "navSet navSetGreen";
+
+
+        } else if (localStorage.getItem("colortheme") === "orange") {
+
+            navSet.className = "navSet navSetOrange";
+
+
+        } else if (localStorage.getItem("colortheme") === "tomato") {
+
+            navSet.className = "navSet navSetRed";
+
+
+        }
+
+
+
+
+
+
+
+
+
+        numsRow.className = "numsRow";
+        numsRow2.className = "numsRow2";
+
+        numsRow3.className = "numsRow3";
+        numsRow4.className = "numsRow4";
+        numsRow5.className = "numsRow5";
+        numsRow6.className = "numsRow6";
+        numsRow6.appendChild(switchDelay);
+
+        numsRow6.appendChild(switchText);
+
+
+
+
+
+        minsSelect.className = "minsSelect";
+        secsSelect.className = "secsSelect";
+        repsSelect.className = "repsSelect";
+
+        transitionSecsSelect.className = "transitionSecsSelect";
+
+        getReadySelect.className = "getReadySelect";
+
+
+
+        if (localStorage.getItem("colortheme") === "greenish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
+
+
+        } else if (localStorage.getItem("colortheme") === "blueish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtBlue";
+
+
+        } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtPink";
+
+
+        } else if (localStorage.getItem("colortheme") === "whitish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtWhite";
+
+
+        } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
+
+
+        } else if (localStorage.getItem("colortheme") === "reddish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtRed";
+
+
+        } else if (localStorage.getItem("colortheme") === "space") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtSpace";
+
+
+        } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
+
+
+        } else if (localStorage.getItem("colortheme") === "brownish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtBrown";
+        } else if (localStorage.getItem("colortheme") === "lemon") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
+        } else if (localStorage.getItem("colortheme") === "lime") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
+        } else if (localStorage.getItem("colortheme") === "orange") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
+        } else if (localStorage.getItem("colortheme") === "tomato") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtRed";
+        }
+
+
+
+
+
+
+        if (!localStorage.getItem("secs")) {
+
+            localStorage.setItem("secs", 5);
+        }
+        if (!localStorage.getItem("mins")) {
+
+            localStorage.setItem("mins", 1);
+        }
+        if (!localStorage.getItem("reps")) {
+            localStorage.setItem("reps", 1)
+
+        }
+        if (!localStorage.getItem("transitionsecs")) {
+
+
+            localStorage.setItem("transitionsecs", 5)
+
+        }
+
+
+
+
+
+
+        secsTopDisplay.className = "numsTopDisplay";
+
+        minsTopDisplay.className = "numsTopDisplay";
+        repsTopDisplay.className = "numsTopDisplay repsTopDisplay";
+
+        transitionSecsTopDisplay.className = "numsTopDisplay transitionSecsTopDisplay";
+
+
+        getreadysecsTopDisplay.className = "numsTopDisplay getreadysecsTopDisplay";
+
+
+
+
+        minsTopDisplay.innerText = localStorage.getItem("mins");
+        secsTopDisplay.innerText = localStorage.getItem("secs");
+
+
+        //  reps = repsSelect.value;
+
+
+        // transitionSecs = transitionSecsSelect.value;
+
+
+        transitionSecsTopDisplay.innerText = localStorage.getItem("transitionsecs");
+
+
+
+        getreadysecsTopDisplay.innerText = localStorage.getItem("getreadysecs");
+
+
+
+
+        repsTopDisplay.innerText = localStorage.getItem("reps");
+
+
+
+        acceptSetButt.innerText = "Accept";
+
+        let s = document.querySelector(".global");
+
+        s.appendChild(setWrap);
+        document.body.appendChild(backShadow);
+
+
+
+        setWrap.appendChild(navSet);
+        setWrap.appendChild(br);
+        setWrap.appendChild(numsRow);
+        setWrap.appendChild(numsRow2);
+        setWrap.appendChild(numsRow3);
+        setWrap.appendChild(numsRow4);
+        //   setWrap.appendChild(numsRow7);
+        //  setWrap.appendChild(numsRow8);
+        setWrap.appendChild(numsRow6);
+        setWrap.appendChild(numsRow5);
+
+        setWrap.appendChild(exitIcon);
+
+
+
+
+        console.log(numsRow6[0], " ma puta");
+
+
+        numsRow.appendChild(minsTopDisplay);
+        numsRow.appendChild(secsTopDisplay);
+
+
+
+
+        // navSet.appendChild(exitIcon);
+
+        numsRow2.appendChild(minsSelect);
+
+
+        numsRow2.appendChild(secsSelect);
+
+
+        numsRow2.appendChild(MINUTES);
+        numsRow2.appendChild(SECONDS);
+
+
+
+
+
+        numsRow3.appendChild(repsSelect);
+
+        numsRow3.appendChild(repsTopDisplay);
+
+
+
+        numsRow3.appendChild(REPETITIONS);
+
+
+        numsRow4.appendChild(wrapRow4);
+        numsRow4.appendChild(wrapRow4Right);
+
+        wrapRow4.appendChild(transitionSecsTopDisplay);
+
+        wrapRow4.appendChild(transitionSecsSelect);
+        wrapRow4.appendChild(TRANSITIONSECONDS);
+
+
+        wrapRow4Right.appendChild(getreadysecsTopDisplay);
+        wrapRow4Right.appendChild(getReadySelect);
+        wrapRow4Right.appendChild(GETREADYSECONDS);
+
+
+
+
+        numsRow5.appendChild(acceptSetButt);
+
+
+        let myvar = "<option value=1>Seconds </option>`";
+
+
+
+        let myvar2 = "<option value=0>Minutes </option>`";
+
+        let myvar3 = "<option value=1>Repetitions </option>`";
+
+        let myvar4 = "<option value=3>Transition </option>`";
+
+        let myvar5 = "<option value=1>Start-Delay</option>`";
+
+
+
+
+        repsTopDisplay.style.bottom = 0-(repsTopDisplay.getBoundingClientRect().height)+"px";
+
+        console.log("the height,k? ", numsRow3.getBoundingClientRect().height);
+
+
+        for (let i = 0; i < 61; i++) {
+
+
+            if (i > 0 && i < 60) {
+
+
+                if (i === Number(localStorage.getItem("secs"))) {
+
+                    myvar += `<option value='${i}' selected>${i}</option>`;
+
+                } else {
+
+                    myvar += `<option value='${i}'>${i}</option>`;
+
                 }
+            }
 
 
 
-                if (i < 60) {
+            if (i < 60) {
 
-                    if (i === Number (localStorage.getItem("mins"))) {
+                if (i === Number (localStorage.getItem("mins"))) {
 
-                        myvar2 += `<option value='${i}' selected>${i}</option>`;
+                    myvar2 += `<option value='${i}' selected>${i}</option>`;
 
-                    } else {
+                } else {
 
-                        myvar2 += `<option value='${i}'>${i}</option>`;
-
-                    }
-
-
+                    myvar2 += `<option value='${i}'>${i}</option>`;
 
                 }
-
-
-                if (i > 0) {
-
-
-                    if (i === Number(localStorage.getItem("reps"))) {
-                        myvar3 += `<option value='${i}'selected>${i}</option>`;
-                    } else {
-
-
-                        myvar3 += `<option value='${i}' >${i}</option>`;
-                    }
-
-
-
-
-
-                    if ((i) === Number(localStorage.getItem("transitionsecs")) && i > 2) {
-
-              myvar4 += `<option value='${i}'selected>${i}</option>`;
-
-
-
-                    } else {
-
-
-                        if (i > 2) {
-                            myvar4 += `<option value='${i}'>${i}</option>`;
-
-                        }
-
-                    }
-                    
-                    
-                    
-  if(i===Number(localStorage.getItem("getreadysecs")) && i>0 && i<31){
-             
-             
-         myvar5 += `<option value='${i}'selected>${i}</option>`;  
-            
-            
-            
-               
-               
-               
-           } else{
-               if(i>0 && i<31){
-                   
-                   
-                 myvar5 += `<option value='${i}'>${i}</option>`;
-                 
-                   
-                   
-               }
-               
-           }
-                    
-                    
-                    
-                }
-
-
-
-                secsSelect.innerHTML = myvar;
-
-                minsSelect.innerHTML = myvar2;
-
-
-                repsSelect.innerHTML = myvar3;
-                transitionSecsSelect.innerHTML = myvar4;
-                
-         getReadySelect.innerHTML=myvar5;
 
 
 
             }
 
-            console.log(localStorage.getItem("delay"));
 
-            if (!localStorage.getItem("delay")) {
+            if (i > 0) {
 
 
-                localStorage.setItem("delay", "OFF");
+                if (i === Number(localStorage.getItem("reps"))) {
+                    myvar3 += `<option value='${i}'selected>${i}</option>`;
+                } else {
+
+
+                    myvar3 += `<option value='${i}' >${i}</option>`;
+                }
+
+
+
+
+
+                if ((i) === Number(localStorage.getItem("transitionsecs")) && i > 2) {
+
+                    myvar4 += `<option value='${i}'selected>${i}</option>`;
+
+
+
+                } else {
+
+
+                    if (i > 2) {
+                        myvar4 += `<option value='${i}'>${i}</option>`;
+
+                    }
+
+                }
+
+
+
+                if (i === Number(localStorage.getItem("getreadysecs")) && i > 0 && i < 31) {
+
+
+                    myvar5 += `<option value='${i}'selected>${i}</option>`;
+
+
+
+
+
+
+                } else {
+                    if (i > 0 && i < 31) {
+
+
+                        myvar5 += `<option value='${i}'>${i}</option>`;
+
+
+
+                    }
+
+                }
+
+
 
             }
 
 
-            if (localStorage.getItem("delay") === "ON") {
-                
-                
-if(parseInt(repsSelect.value)!=1){
+
+            secsSelect.innerHTML = myvar;
+
+            minsSelect.innerHTML = myvar2;
+
+
+            repsSelect.innerHTML = myvar3;
+            transitionSecsSelect.innerHTML = myvar4;
+
+            getReadySelect.innerHTML = myvar5;
+
+
+
+        }
+
+        console.log(localStorage.getItem("delay"));
+
+        if (!localStorage.getItem("delay")) {
+
+
+            localStorage.setItem("delay", "OFF");
+
+        }
+
+
+        if (localStorage.getItem("delay") === "ON") {
+
+
+            if (parseInt(repsSelect.value) != 1) {
                 delay = true;
                 //   switchDelay.value="ON";
                 switchDelay.innerText = "ON";
@@ -3000,79 +3423,79 @@ if(parseInt(repsSelect.value)!=1){
 
                 transitionSecs = (transitionSecsSelect.value)*1000;
                 cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
-}
+            }
 
-            } else if (localStorage.getItem("delay") === "OFF" || parseInt(repsSelect.value)===1) {
+        } else if (localStorage.getItem("delay") === "OFF" || parseInt(repsSelect.value) === 1) {
 
-                delay = false;
-                //  switchDelay.value="OFF";
+            delay = false;
+            //  switchDelay.value="OFF";
+            switchDelay.innerText = "OFF";
+
+            switchDelay.style.color = "#000000";
+            switchDelay.style.boxShadow = "0 0 0 0px  black";
+
+            switchDelay.style.background = "grey";
+
+            transitionSecsSelect.style.display = "none";
+            transitionSecsTopDisplay.style.display = "none";
+
+            TRANSITIONSECONDS.style.display = "none";
+
+            transitionSecs = 1000;
+            cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
+
+
+        }
+
+
+
+
+
+        switchDelay.addEventListener("click", (e)=> {
+
+
+
+            if (delay === true) {
+
+
+
+
+
+
+                transitionSecsSelect.style.display = "none";
+                transitionSecsTopDisplay.style.display = "none";
+                TRANSITIONSECONDS.style.display = "none";
+
+
+
+
+
+
                 switchDelay.innerText = "OFF";
+                delay = false;
+
 
                 switchDelay.style.color = "#000000";
                 switchDelay.style.boxShadow = "0 0 0 0px  black";
 
                 switchDelay.style.background = "grey";
 
-                transitionSecsSelect.style.display = "none";
-                transitionSecsTopDisplay.style.display = "none";
 
-                TRANSITIONSECONDS.style.display = "none";
+
+
+
+                new Audio("selectSelection.mp3").play();
+                console.log("delay= ", delay);
 
                 transitionSecs = 1000;
                 cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
 
 
-            }
 
+                localStorage.setItem("delay", "OFF");
 
-
-
-
-            switchDelay.addEventListener("click", (e)=> {
-
-
-
-                if (delay === true) {
-
-
-
-
-
-
-                    transitionSecsSelect.style.display = "none";
-                    transitionSecsTopDisplay.style.display = "none";
-                    TRANSITIONSECONDS.style.display = "none";
-
-
-
-
-
-
-                    switchDelay.innerText = "OFF";
-                    delay = false;
-
-
-                    switchDelay.style.color = "#000000";
-                    switchDelay.style.boxShadow = "0 0 0 0px  black";
-
-                    switchDelay.style.background = "grey";
-
-
-
-
-
-                    new Audio("selectSelection.mp3").play();
-                    console.log("delay= ", delay);
-
-                    transitionSecs = 1000;
-                    cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
-
-
-
-                    localStorage.setItem("delay", "OFF");
-
-                } else  {
-if(parseInt(repsSelect.value) !=1){
+            } else {
+                if (parseInt(repsSelect.value) != 1) {
 
 
                     switchDelay.innerText = "ON";
@@ -3097,58 +3520,37 @@ if(parseInt(repsSelect.value) !=1){
                     localStorage.setItem("delay", "ON");
                     transitionSecs = (transitionSecsSelect.value)*1000;
                     cssRoot.style.setProperty("--secs", ((transitionSecs/1000)+0.3)+"s");
-                  }else{
-                      
-                      
-           new Audio("laughEffect.mp3").play();
-                  }
+                } else {
 
 
-
+                    new Audio("laughEffect.mp3").play();
                 }
 
 
 
-
-
-
             }
-            );
-
-
-
-  secsSelect.addEventListener("change",
-                (e)=> {
 
 
 
 
 
 
-                    secsTopDisplay.innerText = secsSelect.value;
-
-                    localStorage.setItem("secs", e.target.value);
-
+        }
+        );
 
 
 
-
-
+        secsSelect.addEventListener("change",
+            (e)=> {
 
 
 
 
 
-                });
 
+                secsTopDisplay.innerText = secsSelect.value;
 
-            minsSelect.addEventListener("change",
-                (e)=> {
-
-
-                    minsTopDisplay.innerText = e.target.value;
-
-                    localStorage.setItem("mins", e.target.value);
+                localStorage.setItem("secs", e.target.value);
 
 
 
@@ -3157,27 +3559,48 @@ if(parseInt(repsSelect.value) !=1){
 
 
 
-                });
 
 
-   repsSelect.addEventListener("change",
-                (e)=> {
+
+            });
 
 
-                    repsTopDisplay.innerText = e.target.value;
+        minsSelect.addEventListener("change",
+            (e)=> {
 
-                    localStorage.setItem("reps", e.target.value);
+
+                minsTopDisplay.innerText = e.target.value;
+
+                localStorage.setItem("mins", e.target.value);
 
 
-                    reps = e.target.value;
 
-     if(parseInt(repsSelect.value)===1 && delay===true){
+
+
+
+
+
+            });
+
+
+        repsSelect.addEventListener("change",
+            (e)=> {
+
+
+                repsTopDisplay.innerText = e.target.value;
+
+                localStorage.setItem("reps", e.target.value);
+
+
+                reps = e.target.value;
+
+                if (parseInt(repsSelect.value) === 1 && delay === true) {
                     transitionSecsSelect.style.display = "none";
                     transitionSecsTopDisplay.style.display = "none";
                     TRANSITIONSECONDS.style.display = "none";
-                    
-            switchDelay.innerText = "OFF";
-            
+
+                    switchDelay.innerText = "OFF";
+
                     delay = false;
 
 
@@ -3185,8 +3608,8 @@ if(parseInt(repsSelect.value) !=1){
                     switchDelay.style.boxShadow = "0 0 0 0px  black";
 
                     switchDelay.style.background = "grey";
-                    
-                new Audio("selectSelection.mp3").play();
+
+                    new Audio("selectSelection.mp3").play();
                     console.log("delay= ", delay);
 
                     transitionSecs = 1000;
@@ -3195,1208 +3618,1133 @@ if(parseInt(repsSelect.value) !=1){
 
 
                     localStorage.setItem("delay", "OFF");
-                
-    
-                  }
-
-
-
-                });
-
-
-         transitionSecsSelect.addEventListener("change",
-                (e)=> {
-
-            transitionSecs = Number(e.target.value)*1000;
-            
-           transitionSecsTopDisplay.innerText = Number(e.target.value);
-           
-           cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
-
-
-
-           localStorage.setItem("transitionsecs", e.target.value);
-                   });
-                   
-                   
-                   
-      getReadySelect.addEventListener("change",
-                (e)=> {
-
-           getReadySecs = Number(e.target.value)*1000;
-            
-           getreadysecsTopDisplay.innerText = Number(e.target.value);
-           
-           cssRoot.style.setProperty("--secs2", ((getReadySecs/1000))+"s");
-
-
-
-           localStorage.setItem("getreadysecs", e.target.value);
-                   });
-                   
-                   
-                   
-                   
-                   
-
-            acceptSetButt.addEventListener("click",
-                ()=> {
-
-                    secs = parseFloat(secsSelect.value);
-                    
-                    mins = parseFloat (minsSelect.value);
-
-
-                    initialSecs = secsSelect.value;
-                    initialMins = minsSelect.value;
-                    
-                    
-                    initalReps= repsSelect.value;
-
-                    reps = repsSelect.value;
-
-                    zero = secs < 10 ? "0": "";
-                    zero2 = mins < 10 ? "0": "";
-
-
-                    secsHtml.innerText = zero+secs;
-                    minsHtml.innerText = zero2+mins;
-
-
-    let barLenRoot = ((60*mins) + (secs-1));
-     let barLenRoot2 = 60*mins + secs;
-
-             barLen = 100/barLenRoot;
-
-       barLen2 = (barLenRoot2 * reps);
-
-                    console.log("barLen= ", barLen, "   second ", "and BarLen2= ", barLen2);
-              console.log(barLenRoot2)
-                    
-                    countCircle=0;
-                    cointcirc=0;
-
-
-
-
-
-
-
-                    startButt.style.display = "block";
-
-                    setWrap.remove();
-                    backShadow.remove();
-
-
-
-                });
-
-
-
-
-
-
-
-
-            exitIcon.addEventListener("click",
-                ()=> {
-
-                    setWrap.remove();
-                    backShadow.remove();
-
-
-
-
-
-                })
-
-            setWrap.draggable = false;
-
-
-            navSet.addEventListener("touchstart",
-                (e)=> {
-
-                    console.log("start touch event");
-
-                    e.preventDefault();
-
-
-
-                    x = e.touches[0].pageX;
-                    y = e.touches[0].pageY;
-
-                });
-
-
-
-            navSet.addEventListener("touchmove",
-                (e)=> {
-
-
-                    newx = x- e.touches[0].pageX;
-                    newy = y- e.touches[0].pageY;
-
-                    console.log(x, " ", y);
-                    x = e.touches[0].pageX;
-                    y = e.touches[0].pageY;
-
-                    setWrap.style.top = (setWrap.offsetTop - newy)+"px";
-
-                    setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            navSet.addEventListener("mousedown",
-                (e)=> {
-
-
-
-
-                    x = e.clientX;
-                    y = e.clientY;
-
-                    navSet.addEventListener("mousemove", (e)=> {
-                        newx = (x- e.clientX);
-
-                        newy = (y - e.clientY);
-
-                        x = e.clientX;
-                        y = e.clientY;
-
-
-                        console.log(x, "  ", y);
-
-                        setWrap.style.top = (setWrap.offsetTop - newy)+"px";
-
-                        setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
-
-
-                    });
-
-
-
-                    navSet.addEventListener("mouseup", (e)=> {
-
-
-                        navSet.removeEventListener("mousemove", (e)=> {
-
-
-
-
-                            newx = x- e.clientX;
-
-                            newy = y - e.clientY
-
-                            x = e.clientX;
-                            y = e.clientY;
-
-
-
-
-                            setWrap.style.top = (setWrap.offsetTop - newy)+"px";
-
-                            setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
-
-
-
-
-
-                        })
-                    });
-
-
-                });
-
-
-
-
-
-
-
-
-
-        }
-
-
-
-
-        function createTimeup(texttoDisplay) {
-
-
-
-            let backShadow = document.createElement("div");
-
-            backShadow.style.display = "block";
-
-            let content = document.createElement("div");
-            let topBar = document.createElement("div");
-
-
-            let subdiv = document.createElement("div");
-
-            let timeuptext = document.createElement("p");
-            let accept = document.createElement("buttom");
-
-            if (localStorage.getItem("colortheme") === "greenish") {
-
-                topBar.className = "topBartimeup topBartimeupGreen";
-            } else if (localStorage.getItem("colortheme") === "whitish") {
-
-                topBar.className = "topBartimeup topBartimeupWhite";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "blueish") {
-
-
-                topBar.className = "topBartimeup topBartimeupBlue";
-
-
-            } else if (localStorage.getItem("colortheme") === "pinkish") {
-
-
-                topBar.className = "topBartimeup topBartimeupPink";
-
-            } else if (localStorage.getItem("colortheme") === "yellowish") {
-
-
-                topBar.className = "topBartimeup topBartimeupYellow";
-
-            } else if (localStorage.getItem("colortheme") === "reddish") {
-
-
-                topBar.className = "topBartimeup topBartimeupRed";
-
-            } else if (localStorage.getItem("colortheme") === "space") {
-
-
-                topBar.className = "topBartimeup topBartimeupSpace";
-
-            } else if (localStorage.getItem("colortheme") === "orangeish") {
-
-
-                topBar.className = "topBartimeup topBartimeupOrange";
-
-            }else if (localStorage.getItem("colortheme") === "brownish") {
-
-
-                topBar.className = "topBartimeup topBartimeupBrown";
-
-            }else if (localStorage.getItem("colortheme") === "lemon") {
-
-
-                topBar.className = "topBartimeup topBartimeupYellow";
-
-            }else if (localStorage.getItem("colortheme") === "lime") {
-
-
-                topBar.className = "topBartimeup topBartimeupGreen";
-
-            }else if (localStorage.getItem("colortheme") === "orange") {
-
-
-                topBar.className = "topBartimeup topBartimeupOrange";
-
-            }else if (localStorage.getItem("colortheme") === "tomato") {
-
-
-                topBar.className = "topBartimeup topBartimeupRed";
-
-            }
-            
-            
-            
-            
-            
-
-
-
-
-            if (localStorage.getItem("colortheme") === "greenish") {
-
-                accept.className = "acceptButt acceptButtGreen";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "blueish") {
-
-                accept.className = "acceptButt acceptButtBlue";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "pinkish") {
-
-                accept.className = "acceptButt acceptButtPink";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "whitish") {
-
-                accept.className = "acceptButt acceptButtWhite";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "yellowish") {
-
-                accept.className = "acceptButt acceptButtYellow";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "reddish") {
-
-                accept.className = "acceptButt acceptButtRed";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "space") {
-
-                accept.className = "acceptButt acceptButtSpace";
-
-
-
-            } else if (localStorage.getItem("colortheme") === "orangeish") {
-
-                accept.className = "acceptButt acceptButtOrange";
-
-
-
-            }else if (localStorage.getItem("colortheme") === "brownish")  {
-
-                accept.className = "acceptButt acceptButtBrown";
-
-
-
-            }else if (localStorage.getItem("colortheme") === "lemon")  {
-
-                accept.className = "acceptButt acceptButtYellow";
-
-
-
-            }else if (localStorage.getItem("colortheme") === "lime")  {
-
-                accept.className = "acceptButt acceptButtGreen";
-
-
-
-            }else if (localStorage.getItem("colortheme") === "orange")  {
-
-                accept.className = "acceptButt acceptButtOrange";
-
-
-
-            }else if (localStorage.getItem("colortheme") === "tomato")  {
-
-                accept.className = "acceptButt acceptButtRed";
-
-
-
-            }
-
-
-
-
-            subdiv.className = "subdivTimeup";
-
-            timeuptext.className = "timeuptext";
-
-            content.className = "timeup";
-
-            backShadow.className = "backShadow";
-
-
-            timeuptext.innerText = texttoDisplay;
-            accept.innerText = "Accept"
-
-
-
-            content.appendChild(topBar);
-
-
-
-
-
-
-            document.body.appendChild(backShadow);
-
-
-            document.body.appendChild(content);
-
-
-
-
-            if (texttoDisplay === TIMEUP) {
-
-
-                content.appendChild(subdiv);
-                subdiv.appendChild(timeuptext);
-
-                subdiv.appendChild(accept);
-
-                accept.addEventListener("click",
-                    (e)=> {
-
-
-
-                        barHtml.style.width = "0%";
-                        bar = 0;
-
-                        setButt.style.display = "block";
-
-                        c.style.display = "none";
-                        ctx.clearRect(0, 0, cw, cw);
-                        countCircle = 0;
-                        cointcirc = 0;
-
-                        content.remove();
-                        backShadow.remove();
-
-                    });
-            } else if (texttoDisplay === noNameDetected) {
-
-
-                let inputa = document.createElement("input");
-
-
-
-                let inputaS3x = document.createElement("select");
-
-
-                // inputaS3x.type="select";
-
-                const yoursexVariable = "Your Sex"
-
-                inputaS3x.innerHTML = `
-                <option>${yoursexVariable}</option>
-                <option value='male'>Man</option>
-                <option value='female'>Wo-man</option>`;
-                inputaS3x.className = "inputaS3x";
-
-
-
-
-
-
-
-                inputa.type = "text";
-
-
-                inputa.setAttribute("maxlength", "8");
-                inputa.className = "nameInput";
-
-                content.appendChild(subdiv);
-                subdiv.appendChild(timeuptext);
-
-                subdiv.appendChild(inputaS3x);
-
-
-
-                subdiv.appendChild(inputa);
-
-                subdiv.appendChild(accept);
-
-
-
-
-
-
-                accept.addEventListener("click",
-                    (e)=> {
-
-
-
-                        localStorage.setItem("NAME", inputa.value);
-                        username.innerText = localStorage.getItem("NAME");
-
-
-
-                        if (inputaS3x.value === "male") {
-
-                            profilepic.style.backgroundImage = "url('male.png')";;
-
-                            console.log(inputaS3x.value);
-
-
-                            localStorage.setItem("SEX", "male");
-
-
-
-
-                        } else if (inputaS3x.value === "female") {
-
-                            profilepic.style.backgroundImage = "url('female.png')";
-
-                            localStorage.setItem("SEX", "female");
-
-                            console.log(inputaS3x.value);
-
-                        }
-
-
-                        if (inputaS3x.value != yoursexVariable && inputa.value != "") {
-
-                            setButt.style.display = "block";
-
-                            content.remove();
-
-                            backShadow.remove();
-                        } else {
-
-
-                            alert("you have to input a name and select your sex")
-                        }
-
-
-                    });
-
-
-            } else if (texttoDisplay === editName) {
-
-
-
-
-                let inputa = document.createElement("input");
-
-                inputa.type = "text";
-
-
-                inputa.setAttribute("maxlength", "8");
-                inputa.className = "nameInput";
-
-
-
-                inputa.value = localStorage.getItem("NAME");
-                content.appendChild(subdiv);
-                subdiv.appendChild(timeuptext);
-
-
-
-
-                subdiv.appendChild(inputa);
-
-                subdiv.appendChild(accept);
-
-
-
-
-
-
-                accept.addEventListener("click",
-                    (e)=> {
-
-
-
-
-                        username.innerText = inputa.value;
-
-
-                        localStorage.setItem("NAME", inputa.value);
-
-
-
-
-                        if (inputa.value != "") {
-
-                            setButt.style.display = "block";
-
-                            content.remove();
-
-                            backShadow.remove();
-                        } else {
-
-
-                            alert("you can't have an empty name")
-                        }
-
-
-
-
-
-
-                    });
-
-
-
-
-
-            }
-
-
-
-
-            topBar.addEventListener("touchstart",
-                (e)=> {
-
-                    console.log("start touch event");
-
-                    e.preventDefault();
-
-
-
-                    x = e.touches[0].pageX;
-                    y = e.touches[0].pageY;
-
-                });
-
-
-
-            topBar.addEventListener("touchmove",
-                (e)=> {
-
-
-                    newx = x- e.touches[0].pageX;
-                    newy = y- e.touches[0].pageY;
-
-                    console.log(x, " ", y);
-                    x = e.touches[0].pageX;
-                    y = e.touches[0].pageY;
-
-
-                    if ((content.getBoundingClientRect().left + content.getBoundingClientRect().width) <= window.innerWidth) {
-                        content.style.top = (content.offsetTop - newy)+"px";
-
-                        content.style.left = (content.offsetLeft - newx)+"px";
-
-
-                    } else {
-
-
-                        content.style.left = (window.innerWidth -(window.innerWidth*0.9))+"px";
-                    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-                });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            function mouseMove(e) {
-                newx = (x- e.clientX);
-
-                newy = (y - e.clientY);
-
-                x = e.clientX;
-                y = e.clientY;
-
-
-                console.log(x,
-                    "  ",
-                    y);
-
-                content.style.top = (content.offsetTop - newy)+"px";
-
-                content.style.left = (content.offsetLeft - newx)+"px";
-
-
-
-
-
-
-            }
-
-            function mouseUp(e) {
-
-                topBar.removeEventListener("mousemove",
-                    mouseMove);
-
-            }
-
-
-            topBar.addEventListener("mousedown",
-                (e)=> {
-
-
-
-
-                    x = e.clientX;
-                    y = e.clientY;
-
-                    topBar.addEventListener("mousemove", e=> {
-
-                        mouseMove(e);
-                    });
-
-
-
-                    topBar.addEventListener("mouseup", e=> {
-                        mouseUp();
-                    });
-
-
-
-                });
-
-
-
-
-
-
-        }
-
-
-
-
-
-
-
-        let currentTheme = "";
-        
-        
-        
-        
-  function  currentThemeFunc(){
-      
-      
-      
-      switch (localStorage.getItem("colortheme")) {
-
-
-
-                case "pinkish":
-                    currentTheme = "numsBlock numsBlockPinkish";
-                    break;
-                case "yellowish":
-                    currentTheme = "numsBlock numsBlockYellowish";
-                    break;
-
-                case "greenish":
-                    currentTheme = "numsBlock numsBlockGreenish";
-                    break;
-
-
-                case "blueish":
-                    currentTheme = "numsBlock numsBlockBlueish";
-                    break;
-
-                case "whitish":
-                    currentTheme = "numsBlock numsBlockWhitish";
-                    break;
-
-                case "reddish":
-                    currentTheme = "numsBlock numsBlockReddish";
-                    break;
-
-                case "space":
-                    currentTheme = "numsBlock numsBlockSpace";
-                    break;
-                case "orangeish":
-                    currentTheme = "numsBlock numsBlockOrangeish";
-                    break;
-                case "brownish":
-                    currentTheme = "numsBlock numsBlockBrownish";
-                    break;
-                    
-               case "blackish":
-                    currentTheme = "numsBlock numsBlockBlackish";
-                    break;
-                    
-                    
-             case "lemon":
-                    currentTheme = "numsBlock numsBlockYellowish";
-                    break;
-                    
-                    
-               case "lime":
-                    currentTheme = "numsBlock numsBlockGreenish";
-                    break;
- 
-               case "orange":
-                    currentTheme = "numsBlock numsBlockOrangeish";
-                    break;
-                    
-                    
-       case "tomato":
-                    currentTheme = "numsBlock numsBlockTomatoeish";
-                    break;
-                    
-                                
-       case "street_fighter":
-                    currentTheme = "numsBlock numsBlockStreetfightish";
-                    break;
-                    
-                    
-                    
-                    
-                    
- 
-
-
-
-
-
-
-            }
-      
-      
-      
-  }     
-        
-        
-        
-        
-        let transGo= false;
-
-
-
-        console.log(barLen);
-     getReadySecs= Number (localStorage.getItem("getreadysecs"))*1000;
-
-
-
-
-        let pauseCount = 0;
-        
-        let loopCount=0;
-
-        function loop1() {
-
-            setButt.style.display = "none";
-
-            
-
-currentThemeFunc();
-
-
-            interval = setTimeout(loop1,
-                100);
-                
-                
-                
-                loopCount++;
-
-
-
-            secsHtml.className = "secs nums";
-            minsHtml.className = "mins nums";
-            
-          
-
-            if (running) {
-                
-             //   transGo=false;
-
-
-
-
-                secsHtml.className = "secs nums";
-                minsHtml.className = "mins nums";
-                startButt.style.display = "none";
-                secsHtml.innerHTML = secs;
-
-
-
-                
-            if(loopCount%10===0){    
-                
-          bar += barLen;
-
-                barHtml.style.width = bar+"%";  
-                
-                
-                
-                
-
-                secs--;
-           
-
-
-
-                
-                
-            }
-            
-            
-  
-            
-            
-            
-            if(initalReps >1){
-
-
-          fullCircleBar(c, barLen2, (cw), 6);
-  
-            }
-
-
-
-                if (secs < initialSecs-1) {
-                    GOOOcontainer.style.display = "none";
-
-
-
 
 
                 }
 
 
 
+            });
 
 
-                let zero = secs < 10 ? "0": "";
-                secsHtml.innerHTML = zero+secs;
+        transitionSecsSelect.addEventListener("change",
+            (e)=> {
 
+                transitionSecs = Number(e.target.value)*1000;
 
+                transitionSecsTopDisplay.innerText = Number(e.target.value);
 
-
-                if (secs < 1 && mins < 1) {
-
-
-
-
-                    if (reps < 2) {
-
-                        waitingrunningWrap.style.display = "none";
-
-
-                        setsLeftWrap.style.display = "none";
-
-
-                        running = false;
-                        running2 = false;
-                        fireAnimaWrap.style.display = "none";
-                        fireAnima2Wrap.style.display = "none";
-                        fireAnima2.style.display = "none";
-                        clearInterval(interval);
-                        musicTheme.pause();
-                        musicTheme.currentTime = 0;
-                        window.navigator.vibrate(3000);
-                        pauseStopWrap.style.display = "none";
-                        nowreadychick.pause();
-                        nowreadychick.currentTime = 0;
-                        countCircle = 0;
-                        cointcirc = 0;
-           //c.style.display="none";
-                        clearInterval(lefaInterval);
-                        
-           setsLeftWrap.style.display="none";   
-            // ctx.clearRect(0,0,cw,cw);
-                 createTimeup(TIMEUP);
-                        timeupSound.play();
-                        
-                    loopCount=0;
-                    
-                    
-                   secsHtml.className = "secs";
-                    minsHtml.className = "mins";
+                cssRoot.style.setProperty("--secs", ((transitionSecs/1000))+"s");
 
 
 
-                    } else if (reps > 1) {
-                        reps--;
-                        setsLeft.innerText = reps;
-                        bar = 0;
-                        barHtml.style.width = bar;
-                       transGo=false;
-                        running = false;
-                        GOOOcontainer.style.display = "none";
-                        onlyTimeUp.play();
-                        musicTheme.pause();
-                        navigator.vibrate(1000);
+                localStorage.setItem("transitionsecs", e.target.value);
+            });
 
 
-                        nowreadychick.play();
-                        nowreadychick.loop = true;
-                        nowReady.play();
 
-                        getreadyCountdown(transitionSecs, "50%", leftPercent+"px", 4, halfScreenWidth, halfScreenWidth, global, waitingColor, "");
+        getReadySelect.addEventListener("change",
+            (e)=> {
 
-                        //getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent)
+                getReadySecs = Number(e.target.value)*1000;
 
+                getreadysecsTopDisplay.innerText = Number(e.target.value);
 
-                        waitingrunningWrap.style.display = "flex";
-                        waitingrunningWrap.style.top = 35+"%";
-
-                        waitingrunning.style.fontSize = 5+"em";
-
-                        secs = initialSecs;
-                        mins = initialMins;
-
-                        let zero = secs < 10 ? "0": "";
-                        let zero2 = mins < 10 ? "0": "";
+                cssRoot.style.setProperty("--secs2", ((getReadySecs/1000))+"s");
 
 
-                        secsHtml.innerHTML = zero+secs;
-                        minsHtml.innerText = zero2+mins;
 
-                        waitingrunning.innerText = "WAITING";
-                        svgCircle.style.display = "block";
-                        fireAnimaWrap.style.display = "none";
-                        fireAnima2Wrap.style.display = "none";
-
-                        fireAnima2.style.display = "none";
+                localStorage.setItem("getreadysecs", e.target.value);
+            });
 
 
-                        pauseStopWrap.style.display = "none";
-                        
-                        
 
 
-  setTimeout(()=> {
-              nowreadychick.pause();
-           nowreadychick.currentTime = 0;
-
-              
-                       
-              
-
-              pauseStopWrap.style.display = "flex";
 
 
-           GOOOcontainer.style.display = "flex";
-           
-           
+        acceptSetButt.addEventListener("click",
+            ()=> {
 
-                
-  secsHtml.style.transition="transform 0.25s linear";
-     minsHtml.style.transition="transform 0.25s linear";
-           
-    secsHtml.style.transform="scale(1.3)";
-     minsHtml.style.transform="scale(1.3)";
+                secs = parseFloat(secsSelect.value);
+
+                mins = parseFloat (minsSelect.value);
+
+
+                initialSecs = secsSelect.value;
+                initialMins = minsSelect.value;
+
+
+                initalReps = repsSelect.value;
+
+                reps = repsSelect.value;
+
+                zero = secs < 10 ? "0": "";
+                zero2 = mins < 10 ? "0": "";
+
+
+                secsHtml.innerText = zero+secs;
+                minsHtml.innerText = zero2+mins;
+
+
+                let barLenRoot = ((60*mins) + (secs-1));
+                let barLenRoot2 = 60*mins + secs;
+
+                barLen = 100/barLenRoot;
+
+                barLen2 = (barLenRoot2 * reps);
+
+                console.log("barLen= ", barLen, "   second ", "and BarLen2= ", barLen2);
+                console.log(barLenRoot2)
+
+                countCircle = 0;
+                cointcirc = 0;
+
+
+
+
+
+
+
+                startButt.style.display = "block";
+
+                setWrap.remove();
+                backShadow.remove();
+
+
+
+            });
+
+
+
+
+
+
+
+
+        exitIcon.addEventListener("click",
+            ()=> {
+
+                setWrap.remove();
+                backShadow.remove();
+
+
+
+
+
+            })
+
+        setWrap.draggable = false;
+
+
+        navSet.addEventListener("touchstart",
+            (e)=> {
+
+                console.log("start touch event");
+
+                e.preventDefault();
+
+
+
+                x = e.touches[0].pageX;
+                y = e.touches[0].pageY;
+
+            });
+
+
+
+        navSet.addEventListener("touchmove",
+            (e)=> {
+
+
+                newx = x- e.touches[0].pageX;
+                newy = y- e.touches[0].pageY;
+
+                console.log(x, " ", y);
+                x = e.touches[0].pageX;
+                y = e.touches[0].pageY;
+
+                setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        navSet.addEventListener("mousedown",
+            (e)=> {
+
+
+
+
+                x = e.clientX;
+                y = e.clientY;
+
+                navSet.addEventListener("mousemove", (e)=> {
+                    newx = (x- e.clientX);
+
+                    newy = (y - e.clientY);
+
+                    x = e.clientX;
+                    y = e.clientY;
+
+
+                    console.log(x, "  ", y);
+
+                    setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                    setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+                });
+
+
+
+                navSet.addEventListener("mouseup", (e)=> {
+
+
+                    navSet.removeEventListener("mousemove", (e)=> {
+
+
+
+
+                        newx = x- e.clientX;
+
+                        newy = y - e.clientY
+
+                        x = e.clientX;
+                        y = e.clientY;
+
+
+
+
+                        setWrap.style.top = (setWrap.offsetTop - newy)+"px";
+
+                        setWrap.style.left = (setWrap.offsetLeft - newx)+"px";
+
+
+
+
+
+                    })
+                });
+
+
+            });
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
+    function createTimeup(texttoDisplay) {
+
+
+
+        let backShadow = document.createElement("div");
+
+        backShadow.style.display = "block";
+
+        let content = document.createElement("div");
+        let topBar = document.createElement("div");
+
+
+        let subdiv = document.createElement("div");
+
+        let timeuptext = document.createElement("p");
+        let accept = document.createElement("buttom");
+
+        if (localStorage.getItem("colortheme") === "greenish") {
+
+            topBar.className = "topBartimeup topBartimeupGreen";
+        } else if (localStorage.getItem("colortheme") === "whitish") {
+
+            topBar.className = "topBartimeup topBartimeupWhite";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "blueish") {
+
+
+            topBar.className = "topBartimeup topBartimeupBlue";
+
+
+        } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+
+            topBar.className = "topBartimeup topBartimeupPink";
+
+        } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+
+            topBar.className = "topBartimeup topBartimeupYellow";
+
+        } else if (localStorage.getItem("colortheme") === "reddish") {
+
+
+            topBar.className = "topBartimeup topBartimeupRed";
+
+        } else if (localStorage.getItem("colortheme") === "space") {
+
+
+            topBar.className = "topBartimeup topBartimeupSpace";
+
+        } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+
+            topBar.className = "topBartimeup topBartimeupOrange";
+
+        } else if (localStorage.getItem("colortheme") === "brownish") {
+
+
+            topBar.className = "topBartimeup topBartimeupBrown";
+
+        } else if (localStorage.getItem("colortheme") === "lemon") {
+
+
+            topBar.className = "topBartimeup topBartimeupYellow";
+
+        } else if (localStorage.getItem("colortheme") === "lime") {
+
+
+            topBar.className = "topBartimeup topBartimeupGreen";
+
+        } else if (localStorage.getItem("colortheme") === "orange") {
+
+
+            topBar.className = "topBartimeup topBartimeupOrange";
+
+        } else if (localStorage.getItem("colortheme") === "tomato") {
+
+
+            topBar.className = "topBartimeup topBartimeupRed";
+
+        }
+
+
+
+
+
+
+
+
+
+        if (localStorage.getItem("colortheme") === "greenish") {
+
+            accept.className = "acceptButt acceptButtGreen";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "blueish") {
+
+            accept.className = "acceptButt acceptButtBlue";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "pinkish") {
+
+            accept.className = "acceptButt acceptButtPink";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "whitish") {
+
+            accept.className = "acceptButt acceptButtWhite";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "yellowish") {
+
+            accept.className = "acceptButt acceptButtYellow";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "reddish") {
+
+            accept.className = "acceptButt acceptButtRed";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "space") {
+
+            accept.className = "acceptButt acceptButtSpace";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "orangeish") {
+
+            accept.className = "acceptButt acceptButtOrange";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "brownish") {
+
+            accept.className = "acceptButt acceptButtBrown";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "lemon") {
+
+            accept.className = "acceptButt acceptButtYellow";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "lime") {
+
+            accept.className = "acceptButt acceptButtGreen";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "orange") {
+
+            accept.className = "acceptButt acceptButtOrange";
+
+
+
+        } else if (localStorage.getItem("colortheme") === "tomato") {
+
+            accept.className = "acceptButt acceptButtRed";
+
+
+
+        }
+
+
+
+
+        subdiv.className = "subdivTimeup";
+
+        timeuptext.className = "timeuptext";
+
+        content.className = "timeup";
+
+        backShadow.className = "backShadow";
+
+
+        timeuptext.innerText = texttoDisplay;
+        accept.innerText = "Accept"
+        
+        
+        
+        
+        if (!running2){
+
+
+
+        content.appendChild(topBar);
+
+
+
+
+
+
+        document.body.appendChild(backShadow);
+
+
+        document.body.appendChild(content);
+
+
+
+
+        if (texttoDisplay === TIMEUP) {
+
+
+            content.appendChild(subdiv);
+            subdiv.appendChild(timeuptext);
+
+            subdiv.appendChild(accept);
+
+            accept.addEventListener("click",
+                (e)=> {
+
+
+
+                    barHtml.style.width = "0%";
+                    bar = 0;
+
+                    setButt.style.display = "block";
+
+                    c.style.display = "none";
+                    ctx.clearRect(0, 0, cw, cw);
+                    countCircle = 0;
+                    cointcirc = 0;
+
+                    content.remove();
+                    backShadow.remove();
+
+                });
+        } else if (texttoDisplay === noNameDetected) {
+
+
+            let inputa = document.createElement("input");
+
+
+
+            let inputaS3x = document.createElement("select");
+
+
+            // inputaS3x.type="select";
+
+            const yoursexVariable = "Your Sex"
+
+            inputaS3x.innerHTML = `
+            <option>${yoursexVariable}</option>
+            <option value='male'>Man</option>
+            <option value='female'>Wo-man</option>`;
+            inputaS3x.className = "inputaS3x";
+
+
+
+
+
+
+
+            inputa.type = "text";
+
+
+            inputa.setAttribute("maxlength", "8");
+            inputa.className = "nameInput";
+
+            content.appendChild(subdiv);
+            subdiv.appendChild(timeuptext);
+
+            subdiv.appendChild(inputaS3x);
+
+
+
+            subdiv.appendChild(inputa);
+
+            subdiv.appendChild(accept);
+
+
+
+
+
+
+            accept.addEventListener("click",
+                (e)=> {
+
+
+
+                    localStorage.setItem("NAME", inputa.value);
+                    username.innerText = localStorage.getItem("NAME");
+
+
+
+                    if (inputaS3x.value === "male") {
+
+                        profilepic.style.backgroundImage = "url('male.png')";;
+
+                        console.log(inputaS3x.value);
+
+
+                        localStorage.setItem("SEX", "male");
+
+
+
+
+                    } else if (inputaS3x.value === "female") {
+
+                        profilepic.style.backgroundImage = "url('female.png')";
+
+                        localStorage.setItem("SEX", "female");
+
+                        console.log(inputaS3x.value);
+
+                    }
+
+
+                    if (inputaS3x.value != yoursexVariable && inputa.value != "") {
+
+                        setButt.style.display = "block";
+
+                        content.remove();
+
+                        backShadow.remove();
+                    } else {
+
+
+                        alert("you have to input a name and select your sex")
+                    }
+
+
+                });
+
+
+        } else if (texttoDisplay === editName) {
             
-       secsHtml.style.color=waitingColor;
-     minsHtml.style.color=waitingColor;
-
-           
-            
-           
-            GOOOsound.play();
             
             
-    
-          
-                         setTimeout(e=>{
-                             
-                             
-          secsHtml.style.color="#000000";
-     minsHtml.style.color="#000000";                   
-                             
-      secsHtml.style.transform="scale(1)";
-     minsHtml.style.transform="scale(1)";
-     secsHtml.style.transition="transform 0.25s linear";
-     minsHtml.style.transition="transform 0.25s linear";
-     
-     
-     
-     
-     
-                             
-          //  secsHtml.className = "secs";
-          //  minsHtml.className = "mins"
-             
-                     transGo=true;
-         },500);
-         
-         
-         
-                     
-            
-         
- 
-            transGo=false;
-            
 
 
 
-            musicTheme.play();
-         svgCircle.style.display = "none";
+
+            let inputa = document.createElement("input");
+
+            inputa.type = "text";
 
 
-                            waitingrunningWrap.style.top = 67+"%";
+            inputa.setAttribute("maxlength", "8");
+            inputa.className = "nameInput";
 
-                            waitingrunningWrap.style.display = "flex";
+
+
+            inputa.value = localStorage.getItem("NAME");
+            content.appendChild(subdiv);
+            subdiv.appendChild(timeuptext);
+
+
+
+
+            subdiv.appendChild(inputa);
+
+            subdiv.appendChild(accept);
 
 
 
 
 
-                            waitingrunning.style.fontSize = 4+"em";
 
-                            waitingrunning.innerText = "R U N N I N G";
-
-                            fireAnimaWrap.style.display = "flex";
-                            fireAnima2Wrap.style.display = "flex";
-                            fireAnima2.style.display = "block";
+            accept.addEventListener("click",
+                (e)=> {
 
 
-                      setTimeout(()=>{  
-                       running = true;
-                              },1000);
 
-                        }, transitionSecs);
 
+                    username.innerText = inputa.value;
+
+
+                    localStorage.setItem("NAME", inputa.value);
+
+
+
+
+                    if (inputa.value != "") {
+
+                        setButt.style.display = "block";
+
+                        content.remove();
+
+                        backShadow.remove();
+                    } else {
+
+
+                        alert("you can't have an empty name")
                     }
 
 
 
 
-                } else if (secs < 1 && mins > 0) {
-                    secs = 59;
-                    mins--;
+
+
+                });
+
+
+
+
+
+        }
+
+
+
+
+        topBar.addEventListener("touchstart",
+            (e)=> {
+
+                console.log("start touch event");
+
+                e.preventDefault();
+
+
+
+                x = e.touches[0].pageX;
+                y = e.touches[0].pageY;
+
+            });
+
+
+
+        topBar.addEventListener("touchmove",
+            (e)=> {
+
+
+                newx = x- e.touches[0].pageX;
+                newy = y- e.touches[0].pageY;
+
+                console.log(x, " ", y);
+                x = e.touches[0].pageX;
+                y = e.touches[0].pageY;
+
+
+                if ((content.getBoundingClientRect().left + content.getBoundingClientRect().width) <= window.innerWidth) {
+                    content.style.top = (content.offsetTop - newy)+"px";
+
+                    content.style.left = (content.offsetLeft - newx)+"px";
+
+
+                } else {
+
+
+                    content.style.left = (window.innerWidth -(window.innerWidth*0.9))+"px";
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function mouseMove(e) {
+            newx = (x- e.clientX);
+
+            newy = (y - e.clientY);
+
+            x = e.clientX;
+            y = e.clientY;
+
+
+            console.log(x,
+                "  ",
+                y);
+
+            content.style.top = (content.offsetTop - newy)+"px";
+
+            content.style.left = (content.offsetLeft - newx)+"px";
+
+
+
+
+
+
+        }
+
+        function mouseUp(e) {
+
+            topBar.removeEventListener("mousemove",
+                mouseMove);
+
+        }
+
+
+        topBar.addEventListener("mousedown",
+            (e)=> {
+
+
+
+
+                x = e.clientX;
+                y = e.clientY;
+
+                topBar.addEventListener("mousemove", e=> {
+
+                    mouseMove(e);
+                });
+
+
+
+                topBar.addEventListener("mouseup", e=> {
+                    mouseUp();
+                });
+
+
+
+            });
+
+
+
+}else{
+    
+    
+    new Audio("laughEffect.mp3");
+}
+
+
+    }
+
+
+
+
+
+
+
+    let currentTheme = "";
+
+
+
+
+    function currentThemeFunc() {
+
+
+
+        switch (localStorage.getItem("colortheme")) {
+
+
+
+            case "pinkish":
+                currentTheme = "numsBlock numsBlockPinkish";
+                break;
+            case "yellowish":
+                currentTheme = "numsBlock numsBlockYellowish";
+                break;
+
+            case "greenish":
+                currentTheme = "numsBlock numsBlockGreenish";
+                break;
+
+
+            case "blueish":
+                currentTheme = "numsBlock numsBlockBlueish";
+                break;
+
+            case "whitish":
+                currentTheme = "numsBlock numsBlockWhitish";
+                break;
+
+            case "reddish":
+                currentTheme = "numsBlock numsBlockReddish";
+                break;
+
+            case "space":
+                currentTheme = "numsBlock numsBlockSpace";
+                break;
+            case "orangeish":
+                currentTheme = "numsBlock numsBlockOrangeish";
+                break;
+            case "brownish":
+                currentTheme = "numsBlock numsBlockBrownish";
+                break;
+
+            case "blackish":
+                currentTheme = "numsBlock numsBlockBlackish";
+                break;
+
+
+            case "lemon":
+                currentTheme = "numsBlock numsBlockYellowish";
+                break;
+
+
+            case "lime":
+                currentTheme = "numsBlock numsBlockGreenish";
+                break;
+
+            case "orange":
+                currentTheme = "numsBlock numsBlockOrangeish";
+                break;
+
+
+            case "tomato":
+                currentTheme = "numsBlock numsBlockTomatoeish";
+                break;
+
+
+            case "street_fighter":
+                currentTheme = "numsBlock numsBlockStreetfightish";
+                break;
+                
+            case "dragonball_z":
+             currentTheme = "numsBlock numsBlockDragonballzish";
+                break;
+    
+    case "dragonball_super":
+             currentTheme = "numsBlock numsBlockDragonballsuperish";
+                break;
+                
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+    }
+
+
+function setFireAnimations(){
+    
+    
+    
+              if(localStorage.getItem("colortheme")==="dragonball_z"){
+                       
+                fireAnima2.src="gokussj.gif"; 
+                      fireAnima2Wrap.style.left="30%";
+                      
+                      
+                      
+                      
+                      fireAnima2Wrap.style.height="60%";
+                      
+                       
+                   }else{
+                       
+                      fireAnima2.src="fyah.gif"; 
+                        
+                       fireAnima2Wrap.style.left="50%";
+                      
+                      
+                      
+                      
+                      fireAnima2Wrap.style.height="80%";
+                   }     
+}
+
+    let transGo = false;
+
+
+
+    console.log(barLen);
+    getReadySecs = Number (localStorage.getItem("getreadysecs"))*1000;
+
+
+
+
+    let pauseCount = 0;
+
+    let loopCount = 0;
+
+    function loop1() {
+
+        setButt.style.display = "none";
+
+
+
+        currentThemeFunc();
+
+
+        interval = setTimeout(loop1,
+            100);
+
+
+
+        loopCount++;
+
+
+
+        secsHtml.className = "secs nums";
+        minsHtml.className = "mins nums";
+
+
+
+        if (running) {
+
+            //   transGo=false;
+
+
+
+
+            secsHtml.className = "secs nums";
+            minsHtml.className = "mins nums";
+            startButt.style.display = "none";
+            secsHtml.innerHTML = secs;
+
+
+
+
+            if (loopCount%10 === 0) {
+
+                bar += barLen;
+
+                barHtml.style.width = bar+"%";
+
+
+
+
+
+                secs--;
+
+
+
+
+
+
+            }
+
+
+
+
+
+
+            if (initalReps > 1) {
+
+
+                fullCircleBar(c, barLen2, (cw), 6);
+
+            }
+
+
+
+            if (secs < initialSecs-1) {
+                GOOOcontainer.style.display = "none";
+
+
+
+
+
+            }
+
+
+
+
+
+            let zero = secs < 10 ? "0": "";
+            secsHtml.innerHTML = zero+secs;
+
+
+
+
+            if (secs < 1 && mins < 1) {
+
+
+
+
+                if (reps < 2) {
+
+                    waitingrunningWrap.style.display = "none";
+
+
+                    setsLeftWrap.style.display = "none";
+
+
+                    running = false;
+                    running2 = false;
+                    fireAnimaWrap.style.display = "none";
+                    fireAnima2Wrap.style.display = "none";
+                    fireAnima2.style.display = "none";
+                    clearInterval(interval);
+                    musicTheme.pause();
+                    musicTheme.currentTime = 0;
+                    window.navigator.vibrate(3000);
+                    pauseStopWrap.style.display = "none";
+                    nowreadychick.pause();
+                    nowreadychick.currentTime = 0;
+                    countCircle = 0;
+                    cointcirc = 0;
+                    //c.style.display="none";
+                    clearInterval(lefaInterval);
+
+                    setsLeftWrap.style.display = "none";
+                    // ctx.clearRect(0,0,cw,cw);
+                    createTimeup(TIMEUP);
+                    timeupSound.play();
+
+                    loopCount = 0;
+
+
+                    secsHtml.className = "secs";
+                    minsHtml.className = "mins";
+
+
+
+                } else if (reps > 1) {
+                    reps--;
+                    setsLeft.innerText = reps;
+                    bar = 0;
+                    barHtml.style.width = bar;
+                    transGo = false;
+                    running = false;
+                    GOOOcontainer.style.display = "none";
+                    onlyTimeUp.play();
+                    musicTheme.pause();
+                    navigator.vibrate(1000);
+
+
+                    nowreadychick.play();
+                    nowreadychick.loop = true;
+                    nowReady.play();
+
+                    getreadyCountdown(transitionSecs, "50%", leftPercent+"px", 4, halfScreenWidth, halfScreenWidth, global, waitingColor, "");
+
+                    //getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent)
+
+
+                    waitingrunningWrap.style.display = "flex";
+                    waitingrunningWrap.style.top = 35+"%";
+
+                    waitingrunning.style.fontSize = 5+"em";
+
+                    secs = initialSecs;
+                    mins = initialMins;
+
                     let zero = secs < 10 ? "0": "";
                     let zero2 = mins < 10 ? "0": "";
 
@@ -4404,19 +4752,144 @@ currentThemeFunc();
                     secsHtml.innerHTML = zero+secs;
                     minsHtml.innerText = zero2+mins;
 
+                    waitingrunning.innerText = "WAITING";
+                    svgCircle.style.display = "block";
+                    fireAnimaWrap.style.display = "none";
+                    fireAnima2Wrap.style.display = "none";
+
+                    fireAnima2.style.display = "none";
+
+
+                    pauseStopWrap.style.display = "none";
+
+
+
+
+                    setTimeout(()=> {
+                        nowreadychick.pause();
+                        nowreadychick.currentTime = 0;
+
+
+
+
+
+                        pauseStopWrap.style.display = "flex";
+
+
+                        GOOOcontainer.style.display = "flex";
+
+
+
+
+                        secsHtml.style.transition = "transform 0.25s linear";
+                        minsHtml.style.transition = "transform 0.25s linear";
+
+                        secsHtml.style.transform = "scale(1.3)";
+                        minsHtml.style.transform = "scale(1.3)";
+
+                        secsHtml.style.color = waitingColor;
+                        minsHtml.style.color = waitingColor;
+
+
+
+
+                        GOOOsound.play();
+
+
+
+
+                        setTimeout(e=> {
+
+
+                            secsHtml.style.color = "#000000";
+                            minsHtml.style.color = "#000000";
+
+                            secsHtml.style.transform = "scale(1)";
+                            minsHtml.style.transform = "scale(1)";
+                            secsHtml.style.transition = "transform 0.25s linear";
+                            minsHtml.style.transition = "transform 0.25s linear";
+
+
+
+
+
+
+                            //  secsHtml.className = "secs";
+                            //  minsHtml.className = "mins"
+
+                            transGo = true;
+                        }, 500);
+
+
+
+
+
+
+
+                        transGo = false;
+
+
+
+
+                        musicTheme.play();
+                        svgCircle.style.display = "none";
+
+
+                        waitingrunningWrap.style.top = 67+"%";
+
+                        waitingrunningWrap.style.display = "flex";
+
+
+
+
+
+                        waitingrunning.style.fontSize = 4+"em";
+
+                        waitingrunning.innerText = "R U N N I N G";
+
+                        fireAnimaWrap.style.display = "flex";
+                        fireAnima2Wrap.style.display = "flex";
+                        
+                setFireAnimations();        
+          
+                      
+                        
+                        fireAnima2.style.display = "block";
+
+
+                        setTimeout(()=> {
+                            running = true;
+                        }, 1000);
+
+                    }, transitionSecs);
 
                 }
 
-if(transGo && loopCount%(2.5)===0){
-      numsBlock.className = currentTheme;
-          }         
 
-                
+
+
+            } else if (secs < 1 && mins > 0) {
+                secs = 59;
+                mins--;
+                let zero = secs < 10 ? "0": "";
+                let zero2 = mins < 10 ? "0": "";
+
+
+                secsHtml.innerHTML = zero+secs;
+                minsHtml.innerText = zero2+mins;
+
 
             }
 
+            if (transGo && loopCount%(2.5) === 0) {
+                numsBlock.className = currentTheme;
+            }
+
+
+
         }
 
+    }
 
 
 
@@ -4427,327 +4900,387 @@ if(transGo && loopCount%(2.5)===0){
 
 
 
-        function startUp() {
+
+    function startUp() {
 
 
-            pauseCount = 0;
-            
-            secsHtml.classList.remove("numsGo");
-            minsHtml.classList.remove("numsGo");
-            
-            
-            secsHtml.classList.add("secs");
-            minsHtml.classList.add("mins");
-                    
+        pauseCount = 0;
 
-            if (reps < 2) {
+        secsHtml.classList.remove("numsGo");
+        minsHtml.classList.remove("numsGo");
 
 
-
-                setsLeftWrap.style.display = "flex";
-
-                setsLeft.innerText = reps;
+        secsHtml.classList.add("secs");
+        minsHtml.classList.add("mins");
 
 
-                running2 = true;
+        if (reps < 2) {
+
+
+
+            setsLeftWrap.style.display = "flex";
+
+            setsLeft.innerText = reps;
+
+
+            running2 = true;
+
+            startButt.style.display = "none";
+            setButt.style.display = "none";
+
+            waitingrunningWrap.style.display = "flex";
+            waitingrunning.innerText = "GET READY !!!";
+            waitingrunning.style.fontSize = 3+"em";
+            nowreadychick.play();
+            nowreadychick.loop = true;
+            nowReady.play();
+
+
+            //   getreadyCountdown(transitionSecs);
+            getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "GO");
+
+
+
+            //getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent)
+
+
+
+            setTimeout(()=> {
+                running = true;
+                nowreadychick.pause();
+                nowreadychick.currentTime = 0;
+
+
+                GOOOsound.play();
+                musicTheme.play();
+                musicTheme.loop = true;
+                currentThemeFunc();
+
+                numsBlock.className = "numsBlock numsBlockGo";
+                secsHtml.className = "numsGo";
+                minsHtml.className = "numsGo";
+
 
                 startButt.style.display = "none";
-                setButt.style.display = "none";
+
+
 
                 waitingrunningWrap.style.display = "flex";
-                waitingrunning.innerText = "GET READY !!!";
-                waitingrunning.style.fontSize = 3+"em";
-                nowreadychick.play();
-                nowreadychick.loop = true;
-                nowReady.play();
 
+                waitingrunning.innerText = "R U N N I N G";
+                fireAnimaWrap.style.display = "flex";
 
-                //   getreadyCountdown(transitionSecs);
-                getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "GO");
+                fireAnima2.style.display = "block";
+                fireAnima2Wrap.style.display = "flex";
 
 
 
-                //getreadyCountdown(transitionSecs,top,left,fontSize, width,height,realParent)
+
+                pauseStopWrap.style.display = "flex";
+                
+                
+                
+                
+                
+                
+                secsHtml.style.transition = "transform 0.25s linear";
+                minsHtml.style.transition = "transform 0.25s linear";
+
+                secsHtml.style.transform = "scale(1.3)";
+                minsHtml.style.transform = "scale(1.3)";
+
+                secsHtml.style.color = waitingColor;
+                minsHtml.style.color = waitingColor;
 
 
 
-                setTimeout(()=> {
-                    running = true;
-                    nowreadychick.pause();
-                    nowreadychick.currentTime = 0;
 
-
-                    GOOOsound.play();
-                    musicTheme.play();
-                    musicTheme.loop=true;
-                    
-                    numsBlock.className = "numsBlock numsBlockGo";
-                    secsHtml.className = "numsGo";
-                    minsHtml.className = "numsGo";
-
-
-                    startButt.style.display = "none";
-                    
-                    
-                    
-           waitingrunningWrap.style.display = "flex";
-           
-            waitingrunning.innerText = "R U N N I N G";
-             fireAnimaWrap.style.display = "flex";
-
-             fireAnima2.style.display = "block";
-              fireAnima2Wrap.style.display = "flex";
-
-                    
-
-
-             pauseStopWrap.style.display = "flex";
 
 setTimeout(()=> {
 
+                    numsBlock.className = currentTheme;
 
-                        waitingrunning.style.fontSize = 4+"em";
-
-
-
+                   currentThemeFunc();
 
 
-                        fireAnimaWrap.style.display = "flex";
+                    secsHtml.style.transform = "scale(1)";
+                    minsHtml.style.transform = "scale(1)";
+                    secsHtml.style.transition = "transform 0.5s linear";
+                    minsHtml.style.transition = "transform 0.5s linear";
 
 
-                        fireAnima2.style.display = "block";
-                        fireAnima2Wrap.style.display = "flex";
-
-                        pauseStopWrap.style.display = "flex";
-                        loop1();
-                    }, 1000);
-                   
-                }, getReadySecs);
+                }, 250);
 
 
 
-            } else if (reps =>2) {
-                running2 = true;
-                setsLeftWrap.style.display = "flex";
-                setsLeft.innerText = reps;
 
+
+
+                setTimeout(()=> {
+
+
+                    waitingrunning.style.fontSize = 4+"em";
+                    
+                    
+                    
+                    setFireAnimations();
+
+
+
+
+
+                    fireAnimaWrap.style.display = "flex";
+
+
+                    fireAnima2.style.display = "block";
+                    fireAnima2Wrap.style.display = "flex";
+
+                    pauseStopWrap.style.display = "flex";
+                    loop1();
+                }, 1000);
+
+            }, getReadySecs);
+
+
+
+        } else if (reps =>2) {
+            running2 = true;
+            setsLeftWrap.style.display = "flex";
+            setsLeft.innerText = reps;
+
+
+
+
+            startButt.style.display = "none";
+            setButt.style.display = "none";
+
+            waitingrunningWrap.style.display = "flex";
+            waitingrunning.innerText = "GET READY !!!";
+            waitingrunning.style.fontSize = 3+"em";
+            nowreadychick.play();
+            nowreadychick.loop = true;
+            nowReady.play();
+
+            getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "GO");
+
+
+
+
+
+
+
+            //   getreadyCountdown(transitionSecs,50,0,9, 100,8, global);
+
+
+            setTimeout(()=> {
+                running = true;
+                waitingrunning.style.fontSize = 4+"em";
+
+
+                waitingrunning.innerText = "R U N N I N G";
+                waitingrunningWrap.style.display
+                nowreadychick.pause();
+                nowreadychick.currentTime = 0;
+
+                GOOOsound.play();
+                musicTheme.volume = volumelevel;
+                musicTheme.loop = true;
+                musicTheme.play();
+
+
+
+                secsHtml.style.transition = "transform 0.25s linear";
+                minsHtml.style.transition = "transform 0.25s linear";
+
+                secsHtml.style.transform = "scale(1.3)";
+                minsHtml.style.transform = "scale(1.3)";
+
+                secsHtml.style.color = waitingColor;
+                minsHtml.style.color = waitingColor;
 
 
 
                 startButt.style.display = "none";
-                setButt.style.display = "none";
-
-                waitingrunningWrap.style.display = "flex";
-                waitingrunning.innerText = "GET READY !!!";
-                waitingrunning.style.fontSize = 3+"em";
-                nowreadychick.play();
-                nowreadychick.loop = true;
-                nowReady.play();
-
-         getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "GO");
 
 
+
+                currentThemeFunc();
+
+           //     numsBlock.className = "numsBlock numsBlockGo";
+
+                setTimeout(()=> {
+
+                    numsBlock.className = currentTheme;
 
 
 
 
+                    secsHtml.style.transform = "scale(1)";
+                    minsHtml.style.transform = "scale(1)";
+                    secsHtml.style.transition = "transform 0.5s linear";
+                    minsHtml.style.transition = "transform 0.5s linear";
 
-                //   getreadyCountdown(transitionSecs,50,0,9, 100,8, global);
+
+                }, 250);
+
+
+
+
+
+
 
 
                 setTimeout(()=> {
-                    running = true;
+
+
+
+
+
+
+
+
                     waitingrunning.style.fontSize = 4+"em";
 
 
-                    waitingrunning.innerText = "R U N N I N G";
-                    waitingrunningWrap.style.display
-                    nowreadychick.pause();
-                    nowreadychick.currentTime = 0;
 
-                    GOOOsound.play();
-                    musicTheme.volume= volumelevel;
-                    musicTheme.loop=true;
-                    musicTheme.play();
+
+
+                    fireAnimaWrap.style.display = "flex";
                     
                     
                     
-       secsHtml.style.transition="transform 0.25s linear";
-     minsHtml.style.transition="transform 0.25s linear";
-           
-    secsHtml.style.transform="scale(1.3)";
-     minsHtml.style.transform="scale(1.3)";
-            
-       secsHtml.style.color=waitingColor;
-     minsHtml.style.color=waitingColor;
-
-
-
-                    startButt.style.display = "none";
                     
-                    
-                    
-               currentThemeFunc();
-                    
-                    numsBlock.className = "numsBlock numsBlockGo";
+          setFireAnimations();
+                    fireAnima2.style.display = "block";
+                    fireAnima2Wrap.style.display = "flex";
 
-     setTimeout(()=>{ 
-                       
-              numsBlock.className=currentTheme;
-              
-              
-              
-              
-              secsHtml.style.transform="scale(1)";
-     minsHtml.style.transform="scale(1)";
-     secsHtml.style.transition="transform 0.5s linear";
-     minsHtml.style.transition="transform 0.5s linear";           
-                       
-                       
-                        },250);
+                    pauseStopWrap.style.display = "flex";
 
-
-                    
-                    
-                    
-         
-                    
-
-                    setTimeout(()=> {
-                       
-                        
-                      
-         
-                       
-                        
-
-
-                        waitingrunning.style.fontSize = 4+"em";
+                    secsHtml.style.color = "#000000";
+                    minsHtml.style.color = "#000000";
 
 
 
+                    loop1();
+                    transGo = true;
 
-
-                        fireAnimaWrap.style.display = "flex";
-
-
-                        fireAnima2.style.display = "block";
-                        fireAnima2Wrap.style.display = "flex";
-
-                        pauseStopWrap.style.display = "flex";
-                        
-   secsHtml.style.color="#000000";
-     minsHtml.style.color="#000000";                   
-                             
-                
-                        
-                 loop1();
-                 transGo= true;
-                        
-                    }, 1000);
+                }, 1000);
 
 
 
-                }, getReadySecs);
-            }
+            }, getReadySecs);
         }
+    }
 
 
-        pausebutt.addEventListener("click", (e)=> {
-            switch (pauseCount) {
-                case 0:
-                    running = false;
-                    new Audio("selectSelection.mp3").play();
-                    musicTheme.pause();
-                    e.target.innerText = "resume";
-                    pauseCount = 1;
-                    waitingrunning.innerText = "P A U S E D";
+    pausebutt.addEventListener("click", (e)=> {
+        switch (pauseCount) {
+            case 0:
+                running = false;
+                new Audio("selectSelection.mp3").play();
+                musicTheme.pause();
+                e.target.innerText = "resume";
+                pauseCount = 1;
+                waitingrunning.innerText = "P A U S E D";
+                
+                
+                
+                if(localStorage.getItem("colortheme")==="dragonball_z"){
 
 
+                fireAnima.src = "gokusleepn.gif";
+                    
+                }else{
                     fireAnima.src = "sleepingbearPause.gif";
-                    fireAnima.style.transform = "scale(0.4)translate(-30%,-50%)";
-                    fireAnima2.src = "SnowPause.gif";
-                    break;
+                    
+                }
+                fireAnima.style.transform = "scale(0.4)translate(-30%,-50%)";
+                fireAnima2.src = "SnowPause.gif";
+                break;
 
-                case 1:
-                    running = true;
-                    fireAnima.src = "fireball.gif";
-                    fireAnima.style.transform = "rotate(25deg)";
+            case 1:
+                running = true;
+                fireAnima.src = "fireball.gif";
+                fireAnima.style.transform = "rotate(25deg)";
+                
+                
+                
+                
+                          setFireAnimations();
+             
+                musicTheme.play();
+                e.target.innerText = "pause";
+                new Audio("selectSelection.mp3").play();
+                pauseCount = 0;
+                waitingrunning.innerText = "R U N N I N G";
 
-                    fireAnima2.src = "fyah.gif";
-                    musicTheme.play();
-                    e.target.innerText = "pause";
-                    new Audio("selectSelection.mp3").play();
-                    pauseCount = 0;
-                    waitingrunning.innerText = "R U N N I N G";
-
-            }
-        });
-
-
-
-
-        stopbutt.addEventListener("click", (e)=> {
-
-
-
-            numsBlock.style.color = "#000000";
-            
-            
-            setsLeftWrap.style.display="none";
+        }
+    });
 
 
 
 
-            c.style.display = "none";
-            ctx.clearRect(0, 0, cw, cw);
-            countCircle = 0;
-            cointcirc = 0;
-            pausebutt.innerText = "pause";
-            running2 = false;
-
-            bar = 0;
-            barHtml.style.width = 0+"%";
-            new Audio("selectSelection.mp3").play();
-            running = false;
-            GOOOcontainer.style.display = "none";
-            //numsBlock.className="numsBlock";
-
-            putinthecolorthemes(currentColorCap, currentColor2, waitingColor, waitingColor);
-
-            numsBlock.className = currentTheme;
-
-            console.log(numsBlock.style, " what color bitch?");
-
-            clearInterval(interval);
-            musicTheme.pause();
-            musicTheme.currentTime = 0;
-            waitingrunningWrap.style.display = "none";
-            fireAnimaWrap.style.display = "none";
-            fireAnima2Wrap.style.display = "none";
-            fireAnima2.style.display = "none";
-            fireAnima.src = "fireball.gif";
-            fireAnima.style.transform = "rotate(25deg)";
-            fireAnima2.src = "fyah.gif";
-            secs = 0;
-            mins = 0;
-            zero = secs < 10 ? "0": "";
-            minsHtml.innerText = zero2+mins;
-            secsHtml.innerText = zero+ secs;
-
-            pauseStopWrap.style.display = "none";
-            setButt.style.display = "block";
+    stopbutt.addEventListener("click", (e)=> {
 
 
-        });
-        //console.log(currentColor.charAt(0).toUpperCase()+currentColor)
+
+        numsBlock.style.color = "#000000";
+
+
+        setsLeftWrap.style.display = "none";
 
 
 
 
+        c.style.display = "none";
+        ctx.clearRect(0, 0, cw, cw);
+        countCircle = 0;
+        cointcirc = 0;
+        pausebutt.innerText = "pause";
+        running2 = false;
+
+        bar = 0;
+        barHtml.style.width = 0+"%";
+        new Audio("selectSelection.mp3").play();
+        running = false;
+        GOOOcontainer.style.display = "none";
+        //numsBlock.className="numsBlock";
+
+        putinthecolorthemes(currentColorCap, currentColor2, waitingColor, waitingColor);
+
+        numsBlock.className = currentTheme;
+
+        console.log(numsBlock.style, " what color bitch?");
+
+        clearInterval(interval);
+        musicTheme.pause();
+        musicTheme.currentTime = 0;
+        waitingrunningWrap.style.display = "none";
+        fireAnimaWrap.style.display = "none";
+        fireAnima2Wrap.style.display = "none";
+        fireAnima2.style.display = "none";
+        fireAnima.src = "fireball.gif";
+        fireAnima.style.transform = "rotate(25deg)";
+        fireAnima2.src = "fyah.gif";
+        secs = 0;
+        mins = 0;
+        zero = secs < 10 ? "0": "";
+        minsHtml.innerText = zero2+mins;
+        secsHtml.innerText = zero+ secs;
+
+        pauseStopWrap.style.display = "none";
+        setButt.style.display = "block";
+
+
+    });
+    //console.log(currentColor.charAt(0).toUpperCase()+currentColor)
 
 
 
-    </script>
+
+
+
+
+</script>
 </body>
 </html>

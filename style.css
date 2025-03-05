@@ -59,6 +59,8 @@ body{
     
     
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -82,6 +84,54 @@ body{
 
 
 }
+
+
+
+
+.solgokzLogo{
+    
+    
+    
+    position: absolute;
+    left: 5px;
+    width: 50px;
+    
+}
+.solgokz{
+    
+    position: absolute;
+    left: 0px;
+    bottom: -20px;
+    font-family: regularText;
+    color: #FFFFFF;
+    text-shadow: 0 0 2px #000000,0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;
+    
+}
+.systemz{
+    
+    position: absolute;
+    left: 85px;
+    bottom: -20px;
+    color: #FFFFFF;
+    font-family: regularText;
+    text-shadow: 0 0 2px #000000,0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;
+    
+    
+}
+.hiit{
+    
+        
+    position: absolute;
+    left: 85px;
+    color: #FFFFFF;
+    font-family: topNums;
+    text-shadow: 0 0 2px #000000,0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;
+    bottom: -25px;
+    
+    transform: rotate(-3deg);
+    font-weight: bold;
+    font-size: 2em;
+}
 .nav {
     position: relative;
     
@@ -91,7 +141,7 @@ body{
 
    
 
-    height:60px;
+    height:70px;
 
 
 
@@ -238,7 +288,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: end;
-    border: solid 0.3px magenta;
+    
 
 
     width: 100%;
@@ -337,8 +387,37 @@ body{
     border:solid 2px #8B0000;
     
     
+}.numsBlockDragonballzish{
+    
+    background: linear-gradient(to bottom, darkblue,blue, white,darkorange,red);
+    
+    opacity: 0.4;
+    
+    
+    border:solid 2px red;
+    
+    
+    
 }
 
+
+
+.numsBlockDragonballsuperish{
+    
+    background: linear-gradient(to bottom, white,white,white, white,transparent);
+    
+    opacity: 0.4;
+    
+    
+    border:solid 2px white;
+    
+    
+    
+    
+    
+    
+    
+}
 
 .numsBlockBlackish {
 
@@ -893,8 +972,10 @@ body{
     position: absolute;
     
     
-   
-
+   width: 120px;
+   height: 120px;
+   left: 50%;
+   transform: translateX(-50%);
 
     top: 50%;
 
@@ -909,6 +990,7 @@ body{
 
     border-radius: 100%;
     text-shadow:var(--buttShadow);
+    
 
 
 
@@ -1011,7 +1093,8 @@ body{
 
 
     top: 55%;
-
+    left: 50%;
+   transform: translateX(-50%);
     font-family: regularText;
 
     font-weight: bold;
@@ -2420,7 +2503,7 @@ color: dodgerblue;
     border: solid white;
     border-radius: 10px;
     
-    height: 100%;
+    height: 95%;
     
     width: var(--profilepicHeight);
     
@@ -2512,3 +2595,4 @@ background: transparent;
     
     
 }
+
