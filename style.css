@@ -56,11 +56,12 @@ body{
 
 
     background: #000000;
-    
+    background-size: cover;
     
     overflow: hidden;
     margin: 0;
     padding: 0;
+    
 }
 
 
