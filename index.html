@@ -269,12 +269,11 @@
     </canvas>
 </div>
 
-<!–– <button onclick="navigator.vibrate(2000)">vib</button>-->
 
 
 
 
-    console.log(navigator," lefa");
+    
 
 
 
@@ -286,7 +285,8 @@
     <script type="text/javascript" charset="utf-8">
 
 
-
+//<!–– <button onclick="navigator.vibrate(2000)">vib</button>-->
+//console.log(navigator," lefa");
 
 
         const bearsleep = document.createElement("img");
@@ -2193,8 +2193,9 @@ case "DBZ2":
         
         function clickThemeAnimationBG(bgname,bgsize,seconds) {
             global.style.display="none";
-            let animation = document.createElement("div");
-                        document.body.style.background="#000000";
+            let animation = document.createElement("img");
+            
+              //document.body.style.background="#000000";
 
           global.style.display="none";
            // animation.style.position ="relative";
@@ -2207,15 +2208,15 @@ case "DBZ2":
             animation.style.width = "100%";
             animation.style.height ="100%";
 
-           animation.style.background = "#000000";
+       //    animation.style.background = "#000000";
            animation.style.backgroundPosition = "center";
 
 
-           
+           animation.src=`${bgname}`;
             
             
             
-            animation.style.backgroundImage=`url(${bgname})`;
+          //  animation.style.backgroundImage=`url(${bgname})`;
             animation.style.backgroundSize=bgsize;
             animation.style.backgroundRepeat="no-repeat";
             
@@ -2671,7 +2672,7 @@ case "DBZ2":
 
             document.body.style.backgroundSize = "100%";
             document.body.style.backgroundPosition = "center center";
-            document.body.style.backgroundRepeat = "2";
+            document.body.style.backgroundRepeat = "no-repeat";
 
             localStorage.setItem("colortheme", "street_fighter");
 
@@ -2723,7 +2724,7 @@ putinthecolorthemes("Blue", "Dragonballzish", "blue", "darkblue");
 
             document.body.style.backgroundSize = "100%";
             document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "2";
+            document.body.style.backgroundRepeat = "no-repeat";
 
             //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
 
@@ -2789,7 +2790,7 @@ putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "dodgerblue");
 
             document.body.style.backgroundSize = "100%";
             document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "2";
+            document.body.style.backgroundRepeat = "no-repeat";
 
             //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
 
