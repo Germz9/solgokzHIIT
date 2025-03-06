@@ -2715,16 +2715,16 @@ putinthecolorthemes("Blue", "Dragonballzish", "blue", "darkblue");
             //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
             if (window.innerHeight > window.innerWidth) {
 
-                document.body.style.background = "url(DbzBG.jpg)";
+                global.style.background = "url(DbzBG.jpg)";
             } else {
-                document.body.style.background = "url(DbzBG.jpg)";
+                global.style.background = "url(DbzBG.jpg)";
 
 
             }
 
-            document.body.style.backgroundSize = "100%";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "no-repeat";
+            global.style.backgroundSize = "100%";
+            global.style.backgroundPosition = "center";
+            global.style.backgroundRepeat = "no-repeat";
 
             //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
 
@@ -2818,6 +2818,17 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
 
         if (localStorage.getItem("colortheme") != "street_fighter") {
             progressBarParent.style.background = "transparent";
+            
+            
+            
+            if(localStorage.getItem("colortheme")!= "dragonball_z"){
+                
+           global.style.background="transparent";
+                
+                
+                
+            }
+            
         }
 
 
