@@ -2663,16 +2663,16 @@ case "DBZ2":
             //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
             if (window.innerHeight > window.innerWidth) {
 
-                document.body.style.background = "url(SF2bg.jpg)";
+                global.style.background = "url(SF2bg.jpg)";
             } else {
-                document.body.style.background = "url(SF2bg.jpg)";
+                global.style.background = "url(SF2bg.jpg)";
 
 
             }
 
-            document.body.style.backgroundSize = "100%";
-            document.body.style.backgroundPosition = "center center";
-            document.body.style.backgroundRepeat = "no-repeat";
+            global.style.backgroundSize = "100%";
+            global.style.backgroundPosition = "center center";
+            global.style.backgroundRepeat = "no-repeat";
 
             localStorage.setItem("colortheme", "street_fighter");
 
@@ -2781,16 +2781,16 @@ putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "dodgerblue");
             //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
             if (window.innerHeight > window.innerWidth) {
 
-                document.body.style.background = "url(dbsBG.jpg)";
+                global.style.background = "url(dbsBG.jpg)";
             } else {
-                document.body.style.background = "url(dbsBG.jpg)";
+                global.style.background = "url(dbsBG.jpg)";
 
 
             }
 
-            document.body.style.backgroundSize = "100%";
-            document.body.style.backgroundPosition = "center";
-            document.body.style.backgroundRepeat = "no-repeat";
+            global.style.backgroundSize = "100%";
+            global.style.backgroundPosition = "center";
+            global.style.backgroundRepeat = "no-repeat";
 
             //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
 
@@ -2821,7 +2821,7 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
             
             
             
-            if(localStorage.getItem("colortheme")!= "dragonball_z"){
+            if(localStorage.getItem("colortheme")!= "dragonball_z" || localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "street_fighter"   ){
                 
            global.style.background="transparent";
                 
