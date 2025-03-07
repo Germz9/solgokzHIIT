@@ -29,8 +29,8 @@
         <nav class="nav">
             <img class="solgokzLogo" src="" alt="" />
             <h3 class="solgokz">Solgokz</h3>
-             <h4 class="systemz">Sport Timming Systems</h4>
-             <h3 class="hiit">HIIT Edition</h3>
+             <p class="systemz">Sport Timming Systems</p>
+             <p class="hiit">HIIT Edition</p>
 
             <div class="profilepicBox">
 
@@ -96,9 +96,11 @@
 
                 <option value="pinkish">Pink theme
                 </option>
+                
+            <option value="whitish">White theme
+                </option>
 
-
-                <option value="whitish">White theme
+                <option value="fullywhitish">Full White theme
                 </option>
 
 
@@ -346,6 +348,7 @@
         let username = document.querySelector('.username');
         let volumeButt = document.querySelector(".volume");
         const c = document.querySelector(".myCanvas");
+        const hiit= document.querySelector(".hiit");
         const ctx = c.getContext("2d");
         //---------GLOBAL VARIABLES OF THE APP------------------------&&&
 
@@ -587,7 +590,6 @@
 
             volumeLevel.style.zIndex = "200";
             volumeWrap.appendChild(volumeLevel);
-
 
             //    console.log( "yack ", volumeWrap.getBoundingClientRect().height);
             let mosttop = Number (window.innerHeight*0.2);
@@ -1415,6 +1417,37 @@
 
 
 
+            }else if (localStorage.getItem("colortheme") === "fullywhitish") {
+
+
+                profilepicBox.style.border = "solid black";
+
+                profilepic.style.border = "solid black 0.5px";
+
+
+                username.style.color = "black";
+                
+           musicSelect.style.border="solid black";
+           
+           themeSelect.style.border="solid black";
+                
+            global.style.background="linear-gradient(to top, lightblue,,white)";
+            
+            document.body.style.background="linear-gradient(to top, lightblue, white,white)";
+
+            
+            
+            minsHtml.style.color="lightblue";
+            secsHtml.style.color="lightblue";
+
+
+
+
+
+                putinthecolorthemes("White", "Whitish", "lightgrey", "white");
+
+
+
             } else if (localStorage.getItem("colortheme") === "yellowish") {
 
                 putinthecolorthemes("Yellow", "Yellowish", "yellowgreen", "yellow");
@@ -1453,6 +1486,7 @@
                 putinthecolorthemes("Brown", "Brownish", "#4b3620", "#4b3620");
 
             } else if (localStorage.getItem("colortheme") === "blackish") {
+                hiit.style.color="white";
 
                 putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
 
@@ -2137,44 +2171,55 @@ case "DBZ2":
                 case "whitish":
                     variab = 8;
                     break;
+                    
+                    
+               case "fullywhitish":
+                    variab = 9;
+                    break;     
+                    
+                    
 
                 case "yellowish":
-                    variab = 9;
-                    break;
-
-                case "space":
                     variab = 10;
                     break;
 
-
-                case "lemon":
+                case "space":
                     variab = 11;
                     break;
 
 
-                case "lime":
+                case "lemon":
                     variab = 12;
                     break;
 
 
-                case "orange":
+                case "lime":
                     variab = 13;
+                    break;
+
+
+                case "orange":
+                    variab = 14;
                     break;
 
 
 
                 case "tomato":
-                    variab = 14;
+                    variab = 15;
                     break;
 
 
 
 
                 case "street_fighter":
-                    variab = 15;
+                    variab = 16;
                     break;
                 case "dragonball_z":
-                    variab = 16;
+                    variab = 17;
+                    break;
+                    
+               case "dragonball_super":
+                    variab = 18;
                     break;
 
 
@@ -2379,7 +2424,7 @@ case "DBZ2":
             profilepic.style.border = "solid black 0.5px";
 
 
-            username.style.color = "black";
+            username.style.color = "white";
 
 
 
@@ -2389,7 +2434,36 @@ case "DBZ2":
 
 
 
-        } else if (e.target.value === "blueish") {
+        }else if(e.target.value === "fullywhitish"){
+                            putinthecolorthemes("White", "Whitish", "lightgrey", "white");
+                
+            
+            profilepicBox.style.border = "solid black";
+
+                profilepic.style.border = "solid black 0.5px";
+
+
+                username.style.color = "white";
+                
+
+                
+          global.style.background="linear-gradient(to top, grey, white,white)";
+
+          document.body.style.background="linear-gradient(to top, lightblue, white,white)";
+
+            minsHtml.style.color="lightblue";
+            secsHtml.style.color="lightblue";
+
+
+
+            localStorage.setItem("colortheme", "fullywhitish");
+
+
+            console.log("color full white");
+            
+            
+            
+        }else if (e.target.value === "blueish") {
             putinthecolorthemes("Blue", "Blueish", "dodgerblue", "blue");
 
             localStorage.setItem("colortheme", "blueish");
@@ -2514,6 +2588,7 @@ case "DBZ2":
             putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
 
             localStorage.setItem("colortheme", "blackish");
+            hiit.style.color="white";
 
 
 
@@ -2823,11 +2898,11 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
 
 
         if (localStorage.getItem("colortheme") != "street_fighter") {
-            progressBarParent.style.background = "transparent";
+            progressBarParent.style.background = "transparent";}
             
+        
             
-            
-            if(localStorage.getItem("colortheme")!= "dragonball_z" || localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "street_fighter"   ){
+            if(localStorage.getItem("colortheme")!= "dragonball_z" || localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "street_fighter" ||localStorage.getItem("colortheme")!= "fullywhitish" ){
                 
            global.style.background="transparent";
                 
@@ -2835,7 +2910,33 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
                 
             }
             
-        }
+            
+            if(localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "dragonball_z"){
+                
+                
+             setButt.style.boxShadow="0 0 5px 2px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5px 0px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5pc 0px var(--waiting-color), 0 0 5px 0px var(--waiting-color)";
+            }
+            
+            
+            console.log(currentColor," lefa  color ");
+            
+            if(localStorage.getItem("colortheme")!= "fullywhitish" ){
+                
+                
+             minsHtml.style.color="black";
+            secsHtml.style.color="black";
+            }
+             
+            
+            
+            if(localStorage.getItem("colortheme")!= "blackish"){
+                
+                
+                hiit.style.color="black";
+            }
+            
+            
+        
 
 
         selectSelection.play();
@@ -3051,7 +3152,28 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
             navSet.className = "navSet navSetRed";
 
 
+        }else if (localStorage.getItem("colortheme") === "fullywhitish") {
+
+            navSet.className = "navSet navSetWhite";
+
+
+        }else if (localStorage.getItem("colortheme") === "dragonball_super") {
+
+            navSet.className = "navSet navSetBlue";
+
+
+        }else if (localStorage.getItem("colortheme") === "dragonball_z") {
+
+            navSet.className = "navSet navSetBlue";
+
+
+        }else if (localStorage.getItem("colortheme") === "street_fighter") {
+
+            navSet.className = "navSet navSetOrange";
+
+
         }
+        
 
 
 
@@ -3141,7 +3263,23 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
         } else if (localStorage.getItem("colortheme") === "tomato") {
 
             acceptSetButt.className = "acceptSetButt acceptSetButtRed";
+        }else if (localStorage.getItem("colortheme") === "dragonball_super") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtBlue";
+        }else if (localStorage.getItem("colortheme") === "dragonball_z") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtBlue";
+        }else if (localStorage.getItem("colortheme") === "street_fighter") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtOrange";
+        }else if (localStorage.getItem("colortheme") === "fullywhitish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtWhite";
         }
+
+
+
+        
 
 
 
@@ -3984,6 +4122,26 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
 
             topBar.className = "topBartimeup topBartimeupRed";
 
+        }else if (localStorage.getItem("colortheme") === "street_fighter") {
+
+
+            topBar.className = "topBartimeup topBartimeupRed";
+
+        }else if (localStorage.getItem("colortheme") === "dragonball_z") {
+
+
+            topBar.className = "topBartimeup topBartimeupBlue";
+
+        }else if (localStorage.getItem("colortheme") === "dragonball_super") {
+
+
+            topBar.className = "topBartimeup topBartimeupBlue";
+
+        }else if (localStorage.getItem("colortheme") === "fullywhitish") {
+
+
+            topBar.className = "topBartimeup topBartimeupWhite";
+
         }
 
 
@@ -4069,6 +4227,30 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
         } else if (localStorage.getItem("colortheme") === "tomato") {
 
             accept.className = "acceptButt acceptButtRed";
+
+
+
+        }else if (localStorage.getItem("colortheme") === "street_fighter") {
+
+            accept.className = "acceptButt acceptSetButtOrange";
+
+
+
+        }else if (localStorage.getItem("colortheme") === "dragonball_z") {
+
+            accept.className = "acceptButt acceptButtBlue";
+
+
+
+        }else if (localStorage.getItem("colortheme") === "dragonball_super") {
+
+            accept.className = "acceptButt acceptButtBlue";
+
+
+
+        }else if (localStorage.getItem("colortheme") === "fullywhitish") {
+
+            accept.className = "acceptButt acceptButtWhite";
 
 
 
@@ -4488,6 +4670,16 @@ clickThemeAnimationBG("ssb.gif","160%",1800);
 
             case "whitish":
                 currentTheme = "numsBlock numsBlockWhitish";
+                break;
+                
+                
+            case "fullywhitish":
+                currentTheme = "numsBlock numsBlockWhitish";
+                
+                
+                
+            minsHtml.style.color="lightblue";
+            secsHtml.style.color="lightblue";
                 break;
 
             case "reddish":
