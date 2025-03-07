@@ -49,6 +49,25 @@
 
 
 }
+@font-face {
+    font-family:'hiitEdition';
+    src: url('Bangers-Regular.ttf');
+
+
+
+}
+
+
+@font-face {
+    font-family:'hiitEditionFade';
+    src: url('UnityDances.ttf');
+
+
+}
+
+
+
+
 
 body{
     
@@ -95,13 +114,13 @@ body{
     
     position: absolute;
     left: 5px;
-    width: 50px;
+    width: 60px;
     
 }
 .solgokz{
     
     position: absolute;
-    left: 0px;
+    left: 10px;
     bottom: -20px;
     font-family: regularText;
     color: #FFFFFF;
@@ -109,29 +128,42 @@ body{
     
 }
 .systemz{
-    
+    font-size:0.1em;
     position: absolute;
-    left: 85px;
-    bottom: -20px;
-    color: #FFFFFF;
-    font-family: regularText;
-    text-shadow: 0 0 2px #000000,0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;
     
+    transform: rotate(-3deg);
+   
+    left: 85px;
+    bottom:0px;
+    color: #FFFFFF;
+    font-family: "Comic Sans MS";
+    text-shadow: 0 0 2px #000000,0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;.
+    
+
     
 }
 .hiit{
     
         
     position: absolute;
-    left: 85px;
-    color: #FFFFFF;
-    font-family: topNums;
-    text-shadow: 0 0 2px #000000,0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000, 0 0 2px #000000;
-    bottom: -25px;
+    left: 65px;
+   
+    font-family:hiitEditionFade;
+    bottom: -15px;
     
+        text-shadow: 0 0 1px black, 0 0 1px black;
+    
+
+
+    background-image: linear-gradient(to bottom,#FFFFFF,var(--waiting-color),#000000);
+    background-position: center;
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip: text;
+     color: black;
     transform: rotate(-3deg);
-    font-weight: bold;
-    font-size: 2em;
+   
+    font-size: 1.5em;
 }
 .nav {
     position: relative;
@@ -464,7 +496,9 @@ body{
 .numsBlockWhitish {
 
 
-    background: linear-gradient(to bottom,grey,lightgrey,white,black);
+    background: linear-gradient(to bottom,white,white);
+    
+
 
 }
 
@@ -600,7 +634,7 @@ body{
     
     
     
-    background: linear-gradient(to right,cyan,grey,white);
+    background: linear-gradient(to right,lightblue,lightgrey);
     
     box-shadow: 0 0 20px 2px black;
     
@@ -627,7 +661,7 @@ body{
 
     font-family: lefa;
 
-    color: black;
+    color: var(--waiting-color);
     font-size: 9em;
     font-weight: 2;
     border-radius: 10px;
@@ -932,7 +966,7 @@ body{
 
 .acceptButtWhite{
     
-    background: linear-gradient(to right,darkgrey,grey, white);
+    background: linear-gradient(to right,lightblue, white);
     
     
     
@@ -977,6 +1011,12 @@ body{
    height: 120px;
    left: 50%;
    transform: translateX(-50%);
+   box-shadow:  0 0 5px 2px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5px 0px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5pc 0px var(--waiting-color), 0 0 5px 0px var(--waiting-color);
+
+
+
+
+   
 
     top: 50%;
 
@@ -1056,7 +1096,7 @@ body{
 
 }
 .setButtWhite{
-    background: linear-gradient(to right, darkgrey,grey,white);
+    background: linear-gradient(to right, lightblue,white);
 
 
 }
@@ -1159,7 +1199,7 @@ body{
 
 .startButtWhite {
 
-background: linear-gradient(to right, darkgrey,grey,white)
+background: linear-gradient(to right, lightblue,white)
     
 
 }
@@ -1319,7 +1359,7 @@ background: linear-gradient(to right, darkgrey,grey,white)
 
 .navSetWhite{
     
-    background: linear-gradient(to right, cyan, grey,#FFFFFF);
+    background: linear-gradient(to right, lightblue,#FFFFFF);
     
     
 }
@@ -1883,7 +1923,7 @@ background: linear-gradient(to right,#452c63,indigo,darkblue);
     
     
     
-  background: linear-gradient(to right,darkgrey,grey,#FFFFFF);
+  background: linear-gradient(to right,lightblue,#FFFFFF);
   
 }
 
@@ -1935,7 +1975,7 @@ background: linear-gradient(to right,#452c63,indigo,darkblue);
    
     height: var(--halfScreenWidth);
     width: var(--halfScreenWidth);
-    z-index: -5;
+    z-index: 300;
  
 }
 
@@ -1949,7 +1989,7 @@ background: linear-gradient(to right,#452c63,indigo,darkblue);
   
     cx:var(--circleRadiusSides) ;
     cy: var(--circleRadiusSides);
-    stroke-width: 5px;
+    stroke-width: 3px;
     stroke: var(--waiting-color);
     fill: transparent;
     stroke-linecap: round;
