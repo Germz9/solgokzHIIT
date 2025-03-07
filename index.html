@@ -2242,7 +2242,7 @@ case "DBZ2":
         
         
         
-        function clickThemeAnimationBG(bgname,bgsize,seconds,width,height) {
+        function clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height) {
             global.style.display="none";
             let animation = document.createElement("img");
             
@@ -2250,8 +2250,8 @@ case "DBZ2":
 
           global.style.display="none";
            animation.style.position ="relative";
-           animation.style.left = "0%";
-           animation.style.bottom = "0%";
+           animation.style.left = left;
+           animation.style.bottom = top;
           animation.style.margin = "0px";
           
           animation.style.padding = "0px";
@@ -2759,7 +2759,7 @@ case "DBZ2":
 
             console.log("street fighter color theme");
 
-clickThemeAnimationBG("ken-sshinryuken.gif","cover",1200,"100%","100%");
+clickThemeAnimationBG("ken-sshinryuken.gif","cover",1200,"0%","0%","100%","100%");
             
 
         } else if (e.target.value === "dragonball_z") {
@@ -2818,7 +2818,7 @@ localStorage.setItem("colortheme", "dragonball_z");
 
 
 
-clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"110%","135%");
+clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","15%","110%","135%");
 
 
 
@@ -2885,7 +2885,7 @@ localStorage.setItem("colortheme", "dragonball_super");
 
 
 
-clickThemeAnimationBG("ssb.gif","160%",1800,"120%","160%");
+clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","120%","160%");
 
 
 
