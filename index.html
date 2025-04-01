@@ -24,7 +24,6 @@
 
 
 
-
     <div class="global">
         <nav class="nav">
             <img class="solgokzLogo" src="" alt="" />
@@ -52,7 +51,7 @@
 
         <div class="topFunctions">
 
-
+  <button onclick="playListToggle(this)" class="playlistButt">playlist OFF</button>
             <button class="volume"></button>
 
             <div style="height:100; width:10%" class="">
@@ -137,31 +136,11 @@
 
 
             </select>
-
+  <button  class="playlistSelect">PLAYLIST</button>
             <select name="" id="" class="musicSelect topselects">
 
 
                 <option value="">MUSICS</option></option>
-            <option value="african">African War Drums</option>
-
-            <option value="tiger">Eye of the Tiger</option>
-            <option value="NTM">NTM Prez S'chez toi</option>
-            <option value="NTM2">NTM-2 -Saint Dennis Style</option>
-            <option value="NTM3">NTM-3 -pose ton gun</option>
-
-            <option value="StreetFighter2">Street Fighter II theme medley</option>
-
-
-
-            <option value="ghettopeople">Joey Starr -Ghetto People</option>
-
-            <option value="fonkyfamily">Fonky Family  -l'amour du risque</option>
-
-            <option value="DBZ">Dragon Ball Z -We gotta power </option>
-            
-            
-             <option value="DBZ2">Dragon Ball Super -Kachi Daze</option>
-
 
 
 
@@ -286,7 +265,17 @@
 
     <script type="text/javascript" charset="utf-8">
 
-
+function locals(item){
+    
+    
+    if(item==="lastplaylist"){
+        
+   return    JSON.parse(localStorage.getItem(item));
+        
+    }
+    
+    return localStorage.getItem(item);
+}
 //<!–– <button onclick="navigator.vibrate(2000)">vib</button>-->
 //console.log(navigator," lefa");
 
@@ -349,6 +338,10 @@
         let volumeButt = document.querySelector(".volume");
         const c = document.querySelector(".myCanvas");
         const hiit= document.querySelector(".hiit");
+        
+        const playlistButt=document.querySelector(".playlistButt");
+        
+   let playlistSelect=document.querySelector(".playlistSelect");
         const ctx = c.getContext("2d");
         //---------GLOBAL VARIABLES OF THE APP------------------------&&&
 
@@ -411,6 +404,7 @@
         let getReadySecs = 5000;
         let interval;
         let delay = false;
+         let playlist=false;
 
 
         let zero2 = mins < 10 ? "0": "";
@@ -424,12 +418,16 @@
 
         let currentColor = localStorage.getItem("colortheme");
         let currentColorCap = localStorage.getItem("colortheme").charAt(0).toUpperCase() + localStorage.getItem("colortheme").slice(1, -3);
+        
+        
+        
+        let currentColorLow="";
         //console.log(currentColorCap, "chupame la lefa..ok????");
         let currentColor2 = String(localStorage.getItem("colortheme")).charAt(0).toUpperCase()+localStorage.getItem("colortheme").slice(1);
         
      //   let currentPausedGif="";//localStorage.getItem("currentPausedGif");
  //  let  currentFireGif="";
-        let waitingColor = getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
+        let waitingColor= getComputedStyle(cssRoot).getPropertyValue("--waiting-color");
 
         const TIMEUP = "TIME UP!!!";
         const noNameDetected = "I detect you haven't given us a name, please type a name";
@@ -442,7 +440,7 @@
 
 
 
-        window.addEventListener("load", ()=> {
+      //  window.addEventListener("load", ()=> {
 
             setStylesatRuntime();
 
@@ -450,7 +448,7 @@
 
 
 
-        });
+     //   });
 
 
 
@@ -899,7 +897,424 @@
         // fullCircleBar(c,100,cw,3);
         /* putaInterval=     setInterval(   ()=>{ fullCircleBar(c,10,(window.innerWidth/6),6)}
   ,1000 );
- */
+  
+  
+              <option value="african">African War Drums</option>
+
+            <option value="tiger">Eye of the Tiger</option>
+            <option value="NTM">NTM Prez S'chez toi</option>
+            <option value="NTM2">NTM-2 -Saint Dennis Style</option>
+            <option value="NTM3">NTM-3 -pose ton gun</option>
+
+            <option value="StreetFighter2">Street Fighter II theme medley</option>
+
+
+
+            <option value="ghettopeople">Joey Starr -Ghetto People</option>
+
+            <option value="fonkyfamily">Fonky Family  -l'amour du risque</option>
+
+            <option value="DBZ">Dragon Ball Z -We gotta power </option>
+            
+            
+             <option value="DBZ2">Dragon Ball Super -Kachi Daze</option>
+
+
+
+
+
+
+            <option value="african">African War Drums</option>
+
+            <option value="tiger">Eye of the Tiger</option>
+            <option value="NTM">NTM Prez S'chez toi</option>
+            <option value="NTM2">NTM-2 -Saint Dennis Style</option>
+            <option value="NTM3">NTM-3 -pose ton gun</option>
+
+            <option value="StreetFighter2">Street Fighter II theme medley</option>
+
+
+
+            <option value="ghettopeople">Joey Starr -Ghetto People</option>
+
+            <option value="fonkyfamily">Fonky Family  -l'amour du risque</option>
+
+            <option value="DBZ">Dragon Ball Z -We gotta power </option>
+            
+            
+             <option value="DBZ2">Dragon Ball Super -Kachi Daze</option>
+
+
+
+
+  
+ */    
+ 
+ 
+ 
+ 
+ 
+
+const musicTitlesArr=[
+["African Drums","audiodrums.mp3","african"],
+["Eye of the Tiger", "Tigeru.mp3","tiger"],
+["NTM press s'Chex Toi", "NTMdeChezToi.mp3","NTM"],
+["NTM Saint Dennis Style","NtmSaintDennis.mp3","NTM2"],
+["NTM Pose Ton Gun","NTMPoseTonGun.mp3","NTM3"],
+["Street Fighter II medley","streetFighter2Medley.mp3","StreetFighter2"],
+["Joey Star Ghetto People","ghettoPeople.mp3","ghettopeople"],
+["Fonky Family -L'amore Du Risque","fonkyFamily.mp3","fonkyfamily"],
+["Dragon Ball Z we gotta power","wegottapower.mp3","DBZ"],
+["Dragon Ball Super -Kache Daze","kachidaze.mp3","DBZ2"],
+];
+
+
+
+function sethtmlmysicselect(){
+    let data=`<option value="">MUSICS</option>`;
+    
+    musicTitlesArr.forEach((song,index)=>{
+        
+     data+=`<option value="${song[2]}">${song[0]}</option>`;
+        
+    });
+    
+    musicSelect.innerHTML=data;
+    
+    
+    
+}
+
+
+
+
+sethtmlmysicselect();
+
+
+
+
+function getSpecificsongdisplay(index){
+     
+// let data=   JSON.parse(locals("lastplaylist"));
+ 
+ let data="";
+ musicTitlesArr.forEach((item)=>{
+   if( item[2]=== locals("musictheme")){
+     data= item[index];}
+ })
+     return data;
+     
+ }
+ 
+
+
+
+console.log( "current audio value ",getSpecificsongdisplay(2));
+
+
+if(!localStorage.getItem("lastplaylist")){
+    
+    
+localStorage.setItem("lastplaylist",JSON.stringify([["African Drums","audiodrums.mp3"],
+["Eye of the Tiger", "Tigeru.mp3"]]));
+
+}
+//let musicsmp3filesArr=[
+ //   "audiodrums.mp3",
+ //   "Tigeru.mp3",
+ //   "NTMdeChezToi.mp3",
+  //  "streetFighter2Medley.mp3",
+  //  "NtmSaintDennis.mp3",
+  //  "NTMPoseTonGun.mp3",
+ //   "ghettoPeople.mp3",
+ //   "fonkyFamily.mp3",
+ //   "wegottapower.mp3",
+  //  "kachidaze.mp3"]
+ 
+let selectionSet=new Set();
+let selectionArray=[];
+ 
+
+ 
+ function createPlaylistPanel(){
+     
+     
+     
+ let wrap = document.createElement("div");
+  wrap.style.width="200px";
+//  wrap.style.height="80%";
+  wrap.style.position="relative";
+  wrap.style.left="17%";
+  wrap.style.background=`linear-gradient(to top,white,white,${waitingColor})`;
+  wrap.style.border="solid black";
+  wrap.style.borderRadius="5px";
+  wrap.style.opacity="0.8";
+  wrap.style.bottom="160px";
+  wrap.className="wrapplaylist";
+  wrap.style.zIndex="1000";
+  wrap.style.overflow="scroll";
+  
+//  wrap.style.transform="scale(1.2)";
+//  wrap.style.transition="transform 1s";
+  global.appendChild(wrap);
+  
+  
+  let paneltop=document.createElement("div");
+  paneltop.style.width="100%";
+  paneltop.style.height="80px";
+  paneltop.style.position="relative";
+  paneltop.style.top="20px"
+  paneltop.style.borderBottom="solid black";
+  wrap.appendChild(paneltop);
+  
+  let songsinorder=document.createElement("p");
+  songsinorder.style.width="100%";
+  songsinorder.style.height="80px";
+ songsinorder.style.position="relative";
+  songsinorder.style.top="-10px";
+  songsinorder.style.left="1px";
+  songsinorder.style.overflow="scroll";
+  songsinorder.style.fontSize="8px";
+  songsinorder.style.fontWeight="bold";
+  paneltop.appendChild(songsinorder);
+  const backShadow=document.createElement("div");
+  
+let  lastplaylist=JSON.parse( localStorage.getItem("lastplaylist"));
+ 
+ lastplaylist.forEach((a,b)=>{
+     
+     songsinorder.innerHTML+=a[0]+"<br>";
+     
+ });
+ 
+  let thing=[];
+  
+  
+  backShadow.style.position="absolute";
+  backShadow.style.top="0";
+  backShadow.style.left="0";
+  backShadow.style.width="100%"
+  backShadow.style.height="100%";
+  backShadow.style.zIndex="500";
+  backShadow.style.opacity="0.6";
+  backShadow.style.background="#000";
+  document.body.appendChild(backShadow);
+  
+  let exit= document.createElement("h6");
+  exit.innerText="×";
+  exit.style.position="absolute";
+  exit.style.fontSize="20px";
+  exit.style.right="5px";
+  exit.style.top="-50px";
+  
+  wrap.appendChild(exit);
+  wrap.appendChild(document.createElement("br"));
+  wrap.appendChild(document.createElement("br"));
+  
+  
+ let playlistCount=1;
+  
+  
+  exit.addEventListener("click",()=>{
+      
+      selectionSet.clear();
+      wrap.remove();
+      backShadow.remove();
+  });
+  
+  musicTitlesArr.forEach((song,index)=>{
+     let el= document.createElement("p");
+      
+    el.href="#";
+      el.innerText=song[0];
+      el.style.fontWeight="bold";
+      el.value=index +1;
+      el.style.borderRadius="20px";
+      el.style.fontWeight="bold";
+      el.className="songs";
+      el.style.background=`linear-gradient(to right,${waitingColor},white, white)`;
+      
+      
+      wrap.appendChild(el);
+      el.addEventListener("click",(e)=>{
+          
+          
+          e.target.style.background=waitingColor;
+            e.target.style.color="#FFF";
+            
+            songsinorder.innerText="";
+            
+                playlistCount++;
+                
+     musicTitlesArr.forEach((filename,index)=>{
+         
+         
+         switch (e.target.value){
+        
+        case index +1:
+          //  songsinorder.innerHTML+=String()+"<br>
+            thing.push(filename);
+        selectionSet.add(filename);
+        break;
+        
+        
+        
+        
+        
+    }
+         
+     });
+           
+                
+   
+              //  selectionArray.add(e.target.innerText);
+                    
+               
+   selectionSet.forEach((a,b,c)=>{
+       selectionArray.push(a);
+   
+       songsinorder.innerHTML+=a[0]+"<br>";
+        
+        
+        console.log(thing," ",typeof thing);
+       
+       
+   //   console.log(a,"-->",playlistCount);
+       
+       
+       
+   });         
+           
+      localStorage.setItem("lastplaylist",JSON.stringify(thing));         
+   musicTheme= new Audio(locals("lastplaylist")[0][1]); 
+   
+   musicThemeDisplay.innerText="🔊 "+locals("lastplaylist")[0][0];
+   
+   
+     
+                   
+    
+              
+                    
+
+      });
+      
+      
+      
+      
+  });
+  
+  
+  
+ }
+ 
+ 
+ playlistSelect.addEventListener("click",createPlaylistPanel);
+ 
+ function setInitialPlaylistmode(){
+     
+     if(!localStorage.getItem("playlist")){
+         
+         playlist=false;
+         
+     }
+     
+     if(localStorage.getItem("playlist")==="off"){
+         playlist=false;
+         musicThemeDisplay.innerText="🔊 "+getSpecificsongdisplay(0);
+                 
+                 playlistButt.innerText="playlist OFF";
+                 SelectSound.play();
+                 playlistButt.style.fontWeight="5";
+        playlistButt.style.textShadow="0 0 0px grey";
+                 playlistButt.innerText="playlist OFF";
+       playlistButt.style.color="grey";
+                                 
+        playlistButt.style.border="solid grey";
+         musicSelect.style.display="block";
+       playlistSelect.style.display="none";
+             
+         playlistButt.style.fontSize="10px";
+                
+      
+         
+         
+     }else{
+         
+         playlist=true;
+     musicThemeDisplay.innerText="🔊 "+locals("lastplaylist")[0][0];
+         Select2Sound.play();
+       playlistButt.innerText="playlist ON";
+       playlistButt.style.color="#000000";
+         playlistButt.style.textShadow=`0 0 1px ${waitingColor},0 0 5px ${waitingColor},0 0 5px ${waitingColor},0 0 5px ${waitingColor}`;
+        playlistButt.style.fontWeight="bold";
+        playlistButt.style.border="solid "+waitingColor;
+        playlistButt.style.fontSize="11px";
+        
+         musicSelect.style.display="none";
+    playlistSelect.style.display="block";
+    
+    
+         
+         
+     }
+ }
+ setInitialPlaylistmode();
+         function playListToggle(e){
+             
+             if(playlist){
+                 
+                 playlist=false;
+                 
+                 
+                 
+   musicThemeDisplay.innerText="🔊 "+getSpecificsongdisplay(0);
+                 
+                 e.innerText="playlist OFF";
+                 SelectSound.play();
+                 e.style.fontWeight="5";
+        e.style.textShadow="0 0 0px grey";
+                 e.innerText="playlist OFF";
+       e.style.color="grey";
+         e                        
+        e.style.border="solid grey";
+         musicSelect.style.display="block";
+       playlistSelect.style.display="none";
+             
+         e.style.fontSize="10px";
+                
+         localStorage.setItem("playlist","off");       
+             }else{
+                 
+         playlist=true;
+         
+         
+         
+         
+   musicThemeDisplay.innerText="🔊 "+locals("lastplaylist")[0][0];
+                 
+         Select2Sound.play();
+       e.innerText="playlist ON";
+       e.style.color="#000000";
+         e.style.textShadow=`0 0 1px ${waitingColor},0 0 5px ${waitingColor},0 0 5px ${waitingColor},0 0 5px ${waitingColor}`;
+        e.style.fontWeight="bold";
+        e.style.border="solid "+waitingColor;
+        e.style.fontSize="11px";
+        
+         musicSelect.style.display="none";
+    playlistSelect.style.display="block";
+    
+    
+    
+    localStorage.setItem("playlist","on");
+             }
+             
+             
+         }
+ 
+ 
+ 
+ 
 
 
         let perceofscreen;
@@ -1047,7 +1462,7 @@
 
         }
 
-
+//["audiodrums.mp3","Tigeru.mp3","NTMdeChezToi.mp3","streetFighter2Medley.mp3","NtmSaintDennis.mp3","  ","NTMPoseTonGun.mp3","ghettoPeople.mp3","fonkyFamily.mp3","wegottapower.mp3”,"kachidaze.mp3"]
 
         musicThemeDisplay.addEventListener("click", ()=> {
 
@@ -1055,6 +1470,9 @@
 
             if (!running2) {
                 let preview = new Audio("");
+                
+                
+               /*
                 if (localStorage.getItem("musictheme") === "african") {
                     preview = new Audio ("audiodrums.mp3");
 
@@ -1068,11 +1486,11 @@
 
                 } else if (localStorage.getItem("musictheme") === "StreetFighter2") {
 
-                    preview = new Audio ("streetFighter2Medley.mp3");
+          preview = new Audio ("streetFighter2Medley.mp3");
 
                 } else if (localStorage.getItem("musictheme") === "NTM2") {
 
-                    preview = new Audio ("NtmSaintDennis.mp3");
+          preview = new Audio ("NtmSaintDennis.mp3");
 
                 } else if (localStorage.getItem("musictheme") === "NTM3") {
 
@@ -1095,9 +1513,48 @@
                     preview = new Audio ("kachidaze.mp3");
 
                 }
+                */
+           
+           musicTitlesArr.forEach((song,index)=>{
+               
+               
+               if(!playlist){
+               
+           if(locals("musictheme")===song[2]){
+               
+               preview = new Audio (song[1]);
+               
+               
+           }
+               
+               }else{
+                   
+                   
+       
+             if(locals("lastplaylist")[0][0]===song[0]){
+                 
+                 
+                 preview = new Audio (song[1]);
+               
+                 
+                 
+             }
+                   
+                   
+                   
+               
+               }
+               
+           
+               
+               
+               
+           });
 
 
-                let backShadow = document.createElement("div");
+            
+            
+            let backShadow = document.createElement("div");
                 backShadow.style.width = "100%";
                 backShadow.style.height = "100%";
                 backShadow.style.position = "absolute";
@@ -1270,7 +1727,7 @@
 
 
         //MUSICS FOR WHEN I LOAD APP
-
+    function setinitialMusic(){
         if (localStorage.getItem("musictheme") === "african") {
 
             musicTheme = new Audio("audiodrums.mp3");
@@ -1315,6 +1772,24 @@
 
 
         }
+        
+        
+    }  
+    
+    
+    if(!playlist){
+        
+        
+        setinitialMusic();
+    }else{
+        
+        
+        
+    // lastplaylist= JSON.parse(localStorage.getItem("lastplaylist"));
+     
+     
+     musicTheme= new Audio(locals("lastplaylist")[0][1]);
+    }
 
         function putinthecolorthemes(color, color2, maincolor, colorlower) {
 
@@ -1343,10 +1818,12 @@
 
 
             musicThemeDisplay.className = "musicThemeDisplay musicThemeDisplay"+color;
+if(playlist){
+            playlistButt.style.color=maincolor;
+            playlistButt.style.border="solid "+maincolor;
+           playlistButt.style.textShadow=`0 0 5px ${maincolor},0 0 5px ${maincolor}, 0 0 5px ${maincolor}`;
 
-
-
-
+}
             if (color === "Space") {
 
                 document.body.style.backgroundImage = "url(space.jpg)";
@@ -1817,25 +2294,42 @@ putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "darkblue");
 
         console.log(getComputedStyle(cssRoot).getPropertyValue("--waiting-color"));
 
-
+if(!playlist){
 
         musicThemeDisplay.innerText = "🔊 "+musicThemeString;
-
+}else{
+    
+    
+            musicThemeDisplay.innerText = "🔊 "+locals("lastplaylist")[0][0];
+    
+}
         let currentsoundeffectpath = "";
 
 
         function setMusicselectEffects(input) {
 
 
-            if (input === "tiger" || input === "african" || input === "NTM" || input === "NTM2" || input === "NTM3" || input === "StreetFighter2" || input === "ghettopeople" || input === "fonkyfamily") {
-
-
-                currentsoundeffectpath = "selectSelection2.mp3";
+          /*  if (input === "tiger" || input === "african" || input === "NTM" || input === "NTM2" || input === "NTM3" || input === "StreetFighter2" || input === "ghettopeople" || input === "fonkyfamily") {
 
 
 
 
-            }
+
+
+
+            }*/
+            
+            
+            
+          musicTitlesArr.forEach((theme, index)=>{
+              
+              if(input===theme[2]){
+                  
+           currentsoundeffectpath = "selectSelection2.mp3";
+                  
+              }
+              
+          });
         }
 
 
@@ -1882,7 +2376,7 @@ putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "darkblue");
 
             let variable = 0;
 
-            switch (localStorage.getItem("musictheme")) {
+      /*      switch (localStorage.getItem("musictheme")) {
 
 
                 case "african":
@@ -1927,12 +2421,20 @@ case "DBZ2":
                     variable = 10;
                     break;
                     
+}
+*/
 
+musicTitlesArr.forEach((theme, index)=>{
+    
+    
+   if(locals("musictheme")===theme[2]){
+       variable=index+1;
+       
+       
+   }
+});
 
-
-
-
-            }
+            
 
 
             return variable;
@@ -1985,7 +2487,7 @@ case "DBZ2":
             if (!running2) {
 
 
-
+/*
                 if (e.target.value === "african") {
 
 
@@ -2096,6 +2598,21 @@ case "DBZ2":
 
                 }
 
+
+*/                    musicTitlesArr.forEach((theme, index)=>{
+    
+    if(e.target.value===theme[2]){
+        
+        musicTheme = new Audio(theme[1]);
+
+     localStorage.setItem("musictheme", theme[2]);
+
+          musicThemeDisplay.innerText = "🔊 "+theme[0];
+        
+        
+    }
+    
+});
 
 
 
@@ -2953,7 +3470,7 @@ clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
         
 
     });
-
+  let tempaudio= new Audio("kachidaze.mp3");
 
     console.log(localStorage.getItem("mylefà"), " es lefa????");
 
@@ -3552,6 +4069,34 @@ clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
 
 
 
+        }
+        let thetotal=0;
+        let themins=0;
+          let thesecs= 0;
+
+        
+          console.log("first Temp ppp? ",tempaudio.duration)
+        if(playlist){
+            
+       locals("lastplaylist").forEach((song,index)=>{
+           setTimeout(()=>{
+           
+        tempaudio= new Audio("kachidaze.mp3");
+           
+    thetotal+=(parseFloat(new Audio(song[1]).duration));
+    console.log("temps? ",tempaudio.duration);;
+      //  console.log(tempaudio);
+           },100); 
+       });
+       
+       console.log(thetotal," thetotal yes");
+       themins=parseInt((thetotal/60));
+       thesecs=thetotal-(themins*60);
+      //  secsSelect.selectedIndex=thesecs;
+      //  minsSelect.selectedIndex=themins+1;
+      //    minsTopDisplay.innerText =themins
+      //  secsTopDisplay.innerText = thesecs;
+        
         }
 
         console.log(localStorage.getItem("delay"));
@@ -4268,7 +4813,7 @@ clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
         backShadow.className = "backShadow";
 
 
-        timeuptext.innerText = texttoDisplay;
+        timeuptext.innerHTML = texttoDisplay +"<br>"+locals("NAME");
         accept.innerText = "Accept"
         
         
@@ -4791,6 +5336,8 @@ function setFireAnimations(){
     let pauseCount = 0;
 
     let loopCount = 0;
+    
+    let playlistCount2=0;
 
     function loop1() {
 
@@ -4812,7 +5359,16 @@ function setFireAnimations(){
 
         secsHtml.className = "secs nums";
         minsHtml.className = "mins nums";
-
+if(playlist){
+    
+    musicTheme.loop=false;
+    
+}else{
+    
+    
+    musicTheme.loop=true;
+    
+}
 
 
         if (running) {
@@ -4841,6 +5397,8 @@ function setFireAnimations(){
 
 
                 secs--;
+                       console.log(musicTheme.duration," ",musicTheme," " ,playlistCount2," ",musicTheme.currentTime,"-",locals("lastplaylist").length)
+                
 
 
 
@@ -4850,7 +5408,29 @@ function setFireAnimations(){
             }
 
 
+    if(playlist && (musicTheme.currentTime>=(musicTheme.duration -2))){
+musicTheme.pause();
+             playlistCount2++;
+             
+             
+ musicTheme= new Audio (locals("lastplaylist")[playlistCount2][1]);
+                   
+     musicTheme.play();
 
+            musicTheme.currentTime=0;
+      
+       
+
+     //  console.log(playlistCount2," ",musicTheme," " ,locals("lastplaylist")[playlistCount2][1]);
+                    
+                    
+
+                    
+                    
+                    
+
+                }
+                
 
 
 
@@ -4911,6 +5491,14 @@ function setFireAnimations(){
                     cointcirc = 0;
                     //c.style.display="none";
                     clearInterval(lefaInterval);
+                    
+                    if(playlist){
+                        
+                        
+                       musicTheme= new Audio (locals("lastplaylist")[0][1]); 
+                    }
+                    
+                    playlistCount2=0;
 
                     setsLeftWrap.style.display = "none";
                     // ctx.clearRect(0,0,cw,cw);
@@ -4933,8 +5521,15 @@ function setFireAnimations(){
                     transGo = false;
                     running = false;
                     GOOOcontainer.style.display = "none";
+                    
+                    
+           if(!playlist){
+                                           musicTheme.pause();
+                                                
+                                                
+                 }
                     onlyTimeUp.play();
-                    musicTheme.pause();
+                    
                     navigator.vibrate(1000);
 
 
@@ -5037,11 +5632,15 @@ function setFireAnimations(){
 
 
                         transGo = false;
+                        
+                        
+                        
+                        if(!playlist){
 
 
 
 
-                        musicTheme.play();
+                        musicTheme.play();}
                         svgCircle.style.display = "none";
 
 
@@ -5417,8 +6016,13 @@ setTimeout(()=> {
                 
                 
                           setFireAnimations();
-             
+          
                 musicTheme.play();
+                    
+                    
+                 
+                    
+                
                 e.target.innerText = "pause";
                 new Audio("selectSelection.mp3").play();
                 pauseCount = 0;
@@ -5438,6 +6042,8 @@ setTimeout(()=> {
 
 
         setsLeftWrap.style.display = "none";
+         
+        playlistCount2=0;
 
 
 

@@ -115,6 +115,7 @@ body{
     position: absolute;
     left: 5px;
     width: 60px;
+    background: #E2B8B4;
     
 }
 .solgokz{
@@ -2637,3 +2638,70 @@ background: transparent;
     
 }
 
+.playlistButt{
+    position: absolute;
+    left: 5px;
+    color: grey;
+    border: solid white;
+    height: 20px;
+    width: 20%;
+    background-color: transparent;
+    font-size: 10px;
+    font-weight: 5;
+    font-family: topNums;
+   
+
+   
+   color: white;
+    
+}
+
+.playlistSelect{
+    display: none;
+    border: solid white;
+    height: 85%;
+    width: 80px;
+    background-color: transparent;
+    font-family: topNums;
+    font-weight: bold;
+    font-size: 20px;
+   color: white;
+   background: black;
+  
+    
+}
+.songs{
+    
+    
+    font-size: 5px;
+    
+    margin-bottom: 10px;
+    
+}
+
+.songs:active {
+    
+    
+    
+    background: darkgrey;
+    color:white;
+    
+}
+.wrapplaylist{
+    
+    
+    animation: playlistPop 0.2s forwards linear;
+    height: 0%;
+    
+}
+
+@keyframes playlistPop{
+    
+    
+    
+    100%{
+        height: 80%;
+        
+        
+    }
+}
