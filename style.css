@@ -1,5 +1,5 @@
 :root {
-  --waiting-color:red;
+  --waiting-color:green;
   --gradient-theme:linear-gradient(to bottom, green,lime,yellowgreen);
   --buttColorz:#FFFFFF;
   --numsecs:5;

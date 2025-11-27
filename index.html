@@ -461,7 +461,7 @@ function locals(item){
         }
 
         if (!localStorage.getItem("mins")) {
-            localStorage.setItem("mins", 1);
+            localStorage.setItem("mins", 0);
         }
 
 
@@ -528,7 +528,7 @@ function locals(item){
 
 
         if (!localStorage.getItem("getreadysecs")) {
-            localStorage.setItem("getreadysecs", 9);
+            localStorage.setItem("getreadysecs", 5);
         }
 
 
@@ -1235,6 +1235,10 @@ let  lastplaylist=JSON.parse( localStorage.getItem("lastplaylist"));
          
          playlist=false;
          
+         localStorage.setItem("playlist","off");
+         
+         
+         
      }
      
      if(localStorage.getItem("playlist")==="off"){
@@ -1865,6 +1869,13 @@ if(playlist){
 
 
         }
+
+if(!localStorage.getItem("colortheme")){
+    
+    putinthecolorthemes("Green", "Greenish", "lime", "green")
+    
+}
+
 
 
 
