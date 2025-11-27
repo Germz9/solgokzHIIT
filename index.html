@@ -5214,11 +5214,13 @@ clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
 
 
     let currentTheme = "";
+    
+    let currentColorCapp="";
 
 
 
 
-    function currentThemeFunc() {
+    function currentThemeFunc(mode) {
 
 
 
@@ -5227,23 +5229,49 @@ clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
 
 
             case "pinkish":
-                currentTheme = "numsBlock numsBlockPinkish";
+                
+                if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockPinkish";}
+                else{currentColorCapp= "Pink"}
                 break;
+                
             case "yellowish":
-                currentTheme = "numsBlock numsBlockYellowish";
+                
+               if(mode=="currentTheme"){
+                
+                currentTheme = "numsBlock numsBlockYellowish";}
+                
+                
+                else{currentColorCapp="Yellow"}
                 break;
 
             case "greenish":
-                currentTheme = "numsBlock numsBlockGreenish";
+                
+            if(mode=="currentTheme" ){  
+                currentTheme = "numsBlock numsBlockGreenish";}
+                
+                
+    else{currentColorCapp="Green"}
                 break;
 
 
             case "blueish":
-                currentTheme = "numsBlock numsBlockBlueish";
+                
+     if(mode=="currentTheme"){          
+                currentTheme = "numsBlock numsBlockBlueish";}
+                
+                
+        else{currentColorCapp="Blue";}
                 break;
 
             case "whitish":
-                currentTheme = "numsBlock numsBlockWhitish";
+                
+                
+    if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockWhitish";}
+                
+                
+    else{currentColorCapp="White";}
                 break;
                 
                 
@@ -5257,45 +5285,105 @@ clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
                 break;
 
             case "reddish":
-                currentTheme = "numsBlock numsBlockReddish";
+                
+                
+                if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockReddish";}
+                else{currentColorCapp="Red";}
                 break;
 
             case "space":
-                currentTheme = "numsBlock numsBlockSpace";
+                
+                
+                    if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockSpace";}
+                
+                                
+            else{currentColorCapp="Space";}
                 break;
             case "orangeish":
-                currentTheme = "numsBlock numsBlockOrangeish";
+                
+                
+                
+    if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockOrangeish";}
+                
+                
+                else{currentColorCapp="Orange";}
                 break;
+                
+                
             case "brownish":
-                currentTheme = "numsBlock numsBlockBrownish";
+                
+                
+        if(mode=="currentTheme"){          
+                
+                currentTheme = "numsBlock numsBlockBrownish";}
+                
+                
+       else{currentColorCapp="Brown";}
                 break;
 
             case "blackish":
-                currentTheme = "numsBlock numsBlockBlackish";
+                
+                
+       if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockBlackish";}
+                
+                
+      else{currentColorCapp="Black";}
                 break;
 
 
             case "lemon":
-                currentTheme = "numsBlock numsBlockYellowish";
+                
+                
+              if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockYellowish";}
+                
+                
+            else{currentColorCapp="Yellow";}
                 break;
 
 
             case "lime":
-                currentTheme = "numsBlock numsBlockGreenish";
+                
+              if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockGreenish";}
+                
+                
+            else{currentColorCapp="Lime";}
                 break;
 
             case "orange":
-                currentTheme = "numsBlock numsBlockOrangeish";
+                
+                
+                
+          if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockOrangeish";}
+                
+                
+    else{currentColorCapp="Orange";}
                 break;
 
 
             case "tomato":
-                currentTheme = "numsBlock numsBlockTomatoeish";
+                
+                
+              if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockTomatoeish";}
+                
+                
+              else{currentColorCapp="Tomato";}
                 break;
 
 
             case "street_fighter":
                 currentTheme = "numsBlock numsBlockStreetfightish";
+                
+                putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
+              //  setButt.style.border = "solid orange";
+                
                 break;
                 
             case "dragonball_z":
@@ -5374,7 +5462,7 @@ function setFireAnimations(){
 
 
 
-        currentThemeFunc();
+        currentThemeFunc("currentTheme");
 
 
         interval = setTimeout(loop1,
@@ -6090,8 +6178,16 @@ setTimeout(()=> {
         running = false;
         GOOOcontainer.style.display = "none";
         //numsBlock.className="numsBlock";
+        
+        
+        currentThemeFunc("");
 
-        putinthecolorthemes(currentColorCap, currentColor2, waitingColor, waitingColor);
+
+        putinthecolorthemes(currentColorCapp, currentColor2, waitingColor, waitingColor);
+        
+        console.log(currentColorCap,"lefi hihi huhuhu Suro biebu");
+        currentThemeFunc("currentTheme");
+
 
         numsBlock.className = currentTheme;
 
