@@ -402,6 +402,7 @@ body{
 
     width: 100%;
     max-width: 100%;
+    background: linear-gradient(to bottom,#004526 30%,lime,white,black);
 
 
     border-radius: 10px;
