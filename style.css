@@ -183,6 +183,7 @@ body{
     border-radius: 10px;
 
     border: solid blue 0.5px;
+    background: linear-gradient(to right, yellowgreen,lime);
 }
 
 
@@ -1032,7 +1033,8 @@ body{
 
     border-radius: 100%;
     text-shadow:var(--buttShadow);
-    
+    background: linear-gradient(to right,green,lime,yellowgreen);
+
 
 
 
