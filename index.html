@@ -162,7 +162,7 @@
             <h1 class="mins nums">00</h1>
 
 
-            <p class="collen nums">
+            <p style="color:transparent" class="collen nums">
                 :
             </p>
 
@@ -837,7 +837,7 @@ function locals(item){
 
             ctx.lineWidth = lineWidth;
 
-            ctx.strokeStyle = "#000000";
+            ctx.strokeStyle = "#696969";
 
             ctx.arc(radius,
                 radius,
@@ -2139,7 +2139,7 @@ putinthecolorthemes("Blue", "Dragonballzish", "blue", "darkblue");
             setButt.style.border = "solid blue";
             
             setButt.style.boxShadow = "0 0 10px 0 dodgerblue,0 0 10px dodgerblue,0 0 10px 0 dodgerblue, 0 0 10px 0 white,0 0 10px 0 white";
-            setButt.style.opacity="0.7";
+            setButt.style.opacity="0.8";
             
   setButt.style.backgroundImage = "url(4starball2.png)";
             setButt.style.borderRadius="50%";           
@@ -3368,7 +3368,7 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
 
 
 
-
+//clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height) {
 
 
 
@@ -3431,7 +3431,7 @@ localStorage.setItem("colortheme", "dragonball_super");
 
 
 
-clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
+clickThemeAnimationBG("dbsmode.gif","100%",2600,"0%","-5%","100%","100%");
 
 
 
@@ -5276,8 +5276,11 @@ clickThemeAnimationBG("ssb.gif","160%",1800,"0%","20%","160%","220%");
                 
                 
             case "fullywhitish":
-                currentTheme = "numsBlock numsBlockWhitish";
+                    if(mode=="currentTheme"){
+                currentTheme = "numsBlock numsBlockWhitish";}
                 
+                
+    else{currentColorCapp="White";}
                 
                 
             minsHtml.style.color="lightblue";
@@ -5421,19 +5424,39 @@ function setFireAnimations(){
                 fireAnima2.src="gokussj.gif"; 
                       fireAnima2Wrap.style.left="30%";
                       
+                    fireAnima2Wrap.style.bottom="2%";
                       
+                      fireAnima2Wrap.style.opacity="0.9";
                       
+                      fireAnima2Wrap.style.height="55%";
+                      
+                     
+                       
+     }else if(localStorage.getItem("colortheme")==="dragonball_super"){
+                       
+                    
+                                fireAnima2.src="GokuUi (1).gif"; 
+                      fireAnima2Wrap.style.left="30%";
+                      
+                    fireAnima2Wrap.style.bottom="0%";
+                      
+                      fireAnima2Wrap.style.opacity="0.7";
                       
                       fireAnima2Wrap.style.height="60%";
-                      
+                          
+                       fireAnima2Wrap.style.left="0%";
                        
-                   }else{
+                   }
+                   
+                   else{
                        
                       fireAnima2.src="fyah.gif"; 
                         
                        fireAnima2Wrap.style.left="50%";
                       
+                      fireAnima2Wrap.style.bottom="0%";
                       
+                      fireAnima2Wrap.style.opacity="1";
                       
                       
                       fireAnima2Wrap.style.height="80%";
@@ -6132,7 +6155,7 @@ setTimeout(()=> {
                 
                 
                 
-                          setFireAnimations();
+               setFireAnimations();
           
                 musicTheme.play();
                     

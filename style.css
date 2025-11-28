@@ -427,7 +427,7 @@ body{
     
     background: linear-gradient(to bottom, darkblue,blue, white,darkorange,red);
     
-    opacity: 0.4;
+    opacity: 0.6;
     
     
     border:solid 2px red;
@@ -1993,7 +1993,7 @@ background: linear-gradient(to right,#452c63,indigo,darkblue);
   
     cx:var(--circleRadiusSides) ;
     cy: var(--circleRadiusSides);
-    stroke-width: 3px;
+    stroke-width: 6px;
     stroke: var(--waiting-color);
     fill: transparent;
     stroke-linecap: round;
@@ -2488,45 +2488,76 @@ color: dodgerblue;
     
     position: absolute;
     
-    left: 50%;
+    left: 49%;
     transform: translateX(-50%);
-    top: calc( 10% + 10px);
+    top: calc( 10% + 82px);
     width:9% ;
     height: 45px;
-    border-bottom: solid var(--waiting-color);
+    border-bottom: solid transparent;//var(--waiting-color);
    
     
 }
 
 .setsLeftWrap:before{
-    content:"Sets";
+    content:"SETS";
     font-family: regularText;
     position: absolute;
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: bold;
     transform: translateX(-50%);
     left:50%;
-    bottom: 0px;
-    text-shadow: 0 0 1px #000000, 0 0 1px #000000, 0 0 1px #000000 ,0 0 1px #000000, 0 0 1px #000000;
+    bottom: -3px;
+    
+    text-shadow: 0 0 3px #FFFFFF, 0 0 1px #FFFFFF, 0 0 2px #FFFFFF ,0 0 1px #FFFFFF, 0 0 2px #FFFFFF;
     
     
-    color: var(--waiting-color);
+    color:#000000;// var(--waiting-color);
 }
 .setsLeft{
     
     font-family: topNums;
     font-size: 2rem;
     color: var(--waiting-color);
+    text-shadow: 0 0 2px #000000,0 0 2px #FFFFFF,0 0 2px #000000,0 0 2px #FFFFFF,0 0 2px #000000;
+    align-content: center;
+
+}
+
+
+
+.setsLeftifblack{
+    
+    font-family: topNums;
+    font-size: 2.2rem;
+    color: var(--waiting-color);
     text-shadow: 0 0 2px #FFFFFF,0 0 2px #FFFFFF,0 0 2px #FFFFFF,0 0 2px #FFFFFF,0 0 2px #FFFFFF;
     align-content: center;
 
 }
+
 .setsLeftundertext{
-    color: var(--waiting-color);
+    color:transparent;
     align-content: center;
+    background: transparent;
     
     
 }
+
+
+.myCanvas{
+    display: none;
+    position: absolute;
+    top: calc( 10% + 70px);
+    left: 49%;
+    transform: translateX(-50%);
+    z-index: 100;
+    
+}
+
+
+
+
+
 
 
 .nameInput{
@@ -2613,15 +2644,7 @@ background: transparent;
     font-size: auto;
     outline-color: var(--waiting-color);
 }
-.myCanvas{
-    display: none;
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    
-}
+
 
 .volume {
     
