@@ -2477,6 +2477,8 @@ musicTitlesArr.forEach((theme, index)=>{
 
 
         let musiccount = 0;
+        
+        let musicselectjingle= new Audio("");
 
 
         musicSelect.addEventListener("click", (e)=> {
@@ -2635,6 +2637,25 @@ musicTitlesArr.forEach((theme, index)=>{
         musicTheme = new Audio(theme[1]);
 
      localStorage.setItem("musictheme", theme[2]);
+     
+     
+     console.log(theme,"index: ",index);
+     
+     if(index===5){
+         
+         new Audio("hadouken.mp3").play();
+         
+     }else if(index===8){
+         
+         
+         new Audio("shunkenido.mp3").play();
+         
+     }else if(index===9){
+         
+         
+         new Audio("kaiokenssb.mp3").play();
+         
+     }
 
           musicThemeDisplay.innerText = "🔊 "+theme[0];
         
@@ -2844,7 +2865,7 @@ musicTitlesArr.forEach((theme, index)=>{
 
 
 
-        function clickThemeAnimation(path, width, topPercent,seconds) {
+        function clickThemeAnimation(path, width, topPercent,seconds,zindex="250") {
 
             let animation = document.createElement("img");
 
@@ -2854,7 +2875,8 @@ musicTitlesArr.forEach((theme, index)=>{
             animation.style.bottom = topPercent;
             animation.style.transform = "translateX(-50%)";
             animation.style.width = width;
-            animation.style.zIndex = "250";
+            animation.style.zIndex = zindex;
+            
 
 
             document.body.appendChild(animation);
@@ -3271,12 +3293,23 @@ musicTitlesArr.forEach((theme, index)=>{
 
         } else if (e.target.value === "street_fighter") {
             
+        new Audio("soryuken.mp3").play();
+        
+        
+        setTimeout(()=>{
+            
+            new Audio("tatsumakisenpukyaku.mp3").play();
+            
+        },500);
+            
+          
+            
             putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
 
 
-     clickThemeAnimation("Ken.gif", "300px", "0%",1200);
+     clickThemeAnimation("Ken.gif", "300px", "0%",1500);
 
-
+clickThemeAnimation("Kens_kick_combo.webp","600px","0%",2000);
 
 
             barHtml.style.background = "red";
@@ -3304,8 +3337,16 @@ musicTitlesArr.forEach((theme, index)=>{
             localStorage.setItem("colortheme", "street_fighter");
 
             console.log("street fighter color theme");
+            
+   
+            
+            
+//clickThemeAnimationBG("Kens_kick_combo.webp","60%",1800,"0%","-10%","100%","100%","60");
+                        
+    clickThemeAnimationBG("ken-sshinryuken.gif","cover",2500,"0","0","100%","100%");     
 
-clickThemeAnimationBG("ken-sshinryuken.gif","cover",1800,"0%","0%","100%","100%");
+            
+            
             
 
         } else if (e.target.value === "dragonball_z") {
@@ -3362,7 +3403,7 @@ localStorage.setItem("colortheme", "dragonball_z");
 
             console.log("Dragon Ball Z color theme");
 
-
+    new Audio("dbzthemeclici.mp3").play();
 
 clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%");
 
@@ -3378,6 +3419,8 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
             
   // clickThemeAnimation("gokudbzselection.gif", "140%", "0%",1800);
             
+            
+     new Audio("dbsthemeclick.mp3").play();
 putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "dodgerblue");
 
             barHtml.style.background = "linear-gradient(to right, darkblue,dodgerblue,orange)";
