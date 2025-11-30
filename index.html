@@ -2809,7 +2809,7 @@ musicTitlesArr.forEach((theme, index)=>{
         
         
         
-        function clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height) {
+        function clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height,opacity,zIndex="250") {
             global.style.display="none";
             let animation = document.createElement("img");
             
@@ -2825,6 +2825,8 @@ musicTitlesArr.forEach((theme, index)=>{
           
             animation.style.width = width;
             animation.style.height = height;
+            animation.style.zIndex = zIndex;
+            animation.style.opacity=opacity;
 
        //    animation.style.background = "#000000";
            animation.style.backgroundPosition = "center";
@@ -2865,17 +2867,26 @@ musicTitlesArr.forEach((theme, index)=>{
 
 
 
-        function clickThemeAnimation(path, width, topPercent,seconds,zindex="250") {
+        function clickThemeAnimation(path, width, topPercent,leftPercent,seconds,opacity,turnaround,zindex="250") {
 
             let animation = document.createElement("img");
 
             animation.src = path;;
             animation.style.position ="absolute";
-            animation.style.left = "50%";
+            animation.style.left = leftPercent;
             animation.style.bottom = topPercent;
             animation.style.transform = "translateX(-50%)";
             animation.style.width = width;
             animation.style.zIndex = zindex;
+            animation.style.opacity = opacity;
+            if(turnaround){
+                
+animation.style.transform = "translateX(-50%) rotateY(180deg) ";
+                
+            }else{
+                
+                animation.style.transform = "rotateY(0deg) translateX(-50%)";
+            }
             
 
 
@@ -2939,6 +2950,8 @@ musicTitlesArr.forEach((theme, index)=>{
         setButt.style.background = "";
         navBar.style.width="";
             navBar.style.height="";
+            currentThemeFunc("currentTheme");
+            setFireAnimations();
 
 
 
@@ -3307,9 +3320,14 @@ musicTitlesArr.forEach((theme, index)=>{
             putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
 
 
-     clickThemeAnimation("Ken.gif", "300px", "0%",1500);
+ //    clickThemeAnimation("Ken.gif", "300px", "0%","40%",1500,"0.9");
+clickThemeAnimation("Ken_shoryuken.webp", "800px", "0%","25%",1400,"1",false,"300");
 
-clickThemeAnimation("Kens_kick_combo.webp","600px","0%",2000);
+
+
+clickThemeAnimation("Ryu_hadouken.gif","600px","0%","75%",2000,"1",true,"300");
+
+clickThemeAnimation("Kens_kick_combo.webp","600px","0%","30%",2500,"1",false,"305");
 
 
             barHtml.style.background = "red";
@@ -3343,7 +3361,7 @@ clickThemeAnimation("Kens_kick_combo.webp","600px","0%",2000);
             
 //clickThemeAnimationBG("Kens_kick_combo.webp","60%",1800,"0%","-10%","100%","100%","60");
                         
-    clickThemeAnimationBG("ken-sshinryuken.gif","cover",2500,"0","0","100%","100%");     
+   clickThemeAnimationBG("Ryuguard.gif","cover",2500,"-10%","0","125%","115%","0.8");     
 
             
             
@@ -5417,13 +5435,18 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
                 
                 
               if(mode=="currentTheme"){
-                currentTheme = "numsBlock numsBlockTomatoeish";}
+                currentTheme = "numsBlock numsBlockTomatoeish";
+                  
+                  putinthecolorthemes("Red", "Tomatoeish", "red", "red");
+                  
+                  
+              }
                 
                 
-              else{currentColorCapp="Tomato";}
+              else{currentColorCapp="Red";}
                 break;
 
-
+//putinthecolorthemes("Red", "Tomatoeish", "red", "red");
             case "street_fighter":
                 currentTheme = "numsBlock numsBlockStreetfightish";
                 
@@ -5458,9 +5481,16 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
     }
 
 
+
+let isReversedNeeded=false;
 function setFireAnimations(){
     
-    
+    if(isReversedNeeded===true) {
+       fireAnima2Wrap.style.transform="rotateY(0deg)";
+        
+        isReversedNeeded=false;
+        
+   }
     
               if(localStorage.getItem("colortheme")==="dragonball_z"){
                        
@@ -5473,22 +5503,55 @@ function setFireAnimations(){
                       
                       fireAnima2Wrap.style.height="55%";
                       
-                     
+                     fireAnima.src = "fireball.gif";
+                fireAnima.style.transform = "rotate(25deg)";
                        
      }else if(localStorage.getItem("colortheme")==="dragonball_super"){
                        
                     
-                                fireAnima2.src="GokuUi (1).gif"; 
-                      fireAnima2Wrap.style.left="30%";
+      fireAnima2.src="GokuUi (1).gif"; 
+       fireAnima2Wrap.style.left="30%";
                       
-                    fireAnima2Wrap.style.bottom="0%";
+      fireAnima2Wrap.style.bottom="-1%";
                       
-                      fireAnima2Wrap.style.opacity="0.7";
+      fireAnima2Wrap.style.opacity="0.7";
                       
-                      fireAnima2Wrap.style.height="59%";
+      fireAnima2Wrap.style.height="59%";
                           
-                       fireAnima2Wrap.style.left="0%";
+     fireAnima2Wrap.style.left="0%";
                        
+       fireAnima.src = "fireball.gif";
+                fireAnima.style.transform = "rotate(25deg)";                
+                       
+                       
+                   }else if(localStorage.getItem("colortheme")==="street_fighter"){
+                       
+                       
+                       
+                       fireAnima2.src="chunli_lightning_kick.gif"; 
+       fireAnima2Wrap.style.left="10%";
+                      
+      fireAnima2Wrap.style.bottom="0%";
+      fireAnima2Wrap.style.transform="rotateY(180deg)";
+      
+      isReversedNeeded=true;
+      
+      
+        fireAnima.src = "Ryu_tatsumakisenpukyaku.webp";
+                    
+                
+                    
+               fireAnima.style.transform = "rotate(0deg) scale(2.5) translateX(-15%) translateY(-10%)"; 
+                      
+      fireAnima2Wrap.style.opacity="0.9";
+                      
+      fireAnima2Wrap.style.height="59%";
+                          
+    // fireAnima2Wrap.style.left="0%";
+                       
+                       
+                       
+
                    }
                    
                    else{
@@ -5501,7 +5564,10 @@ function setFireAnimations(){
                       
                       fireAnima2Wrap.style.opacity="1";
                       
-                      
+        
+         
+    fireAnima.src = "fireball.gif";
+                fireAnima.style.transform = "rotate(25deg)";
                       fireAnima2Wrap.style.height="80%";
                    }     
 }
@@ -5521,6 +5587,11 @@ function setFireAnimations(){
     let loopCount = 0;
     
     let playlistCount2=0;
+
+
+
+
+//LOOP FUNCTION
 
     function loop1() {
 
@@ -5946,7 +6017,7 @@ musicTheme.pause();
                 GOOOsound.play();
                 musicTheme.play();
                 musicTheme.loop = true;
-                currentThemeFunc();
+                currentThemeFunc("currentTheme");
 
                 numsBlock.className = "numsBlock numsBlockGo";
                 secsHtml.className = "numsGo";
@@ -5992,7 +6063,7 @@ setTimeout(()=> {
 
                     numsBlock.className = currentTheme;
 
-                   currentThemeFunc();
+                   currentThemeFunc("currentTheme");
 
 
                     secsHtml.style.transform = "scale(1)";

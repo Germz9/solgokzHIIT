@@ -328,6 +328,7 @@ body{
 
     width: 100%;
     height: 30px;
+    z-index: 500;
 
 }
 
@@ -345,7 +346,7 @@ body{
     border: solid white;
     outline-color: var(--waiting-color) ;
     
-    
+    z-index: 900;
     
 }
 
@@ -2659,7 +2660,7 @@ background: transparent;
    background-position: center center;
    background-repeat: no-repeat;
    color: white;
-    
+    z-index: 1000;
     
     
 }
