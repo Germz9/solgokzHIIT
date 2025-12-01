@@ -416,6 +416,21 @@ body{
 
 }
 
+.numsBlockBruceleeish{
+    
+    
+    
+ //   background: linear-gradient(to bottom//,orange,yellow,#CCFF00,orange,black//,#CCFF00,yellow,orange);
+    background: transparent;
+    
+    border:solid 2px transparent;
+    opacity: 0.4;
+}
+
+
+
+
+
 .numsBlockStreetfightish{
     
     background: linear-gradient(to bottom,#8B0000,yellow,white,black);
@@ -479,7 +494,7 @@ body{
     
     
     
-}
+} 
 .numsBlockOrangeish{
     
       background: linear-gradient(to bottom, orangered,darkorange,white, black);
@@ -2110,54 +2125,7 @@ stroke-dashoffset:var(--circleCircunfirenceMinus);
    
 }
 
-.GOOOcontainer{
-    
-    display: none;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top:15%;
-    font-family:Comic Sans MS;
-    left: 0%;
-    
-    width: 100%;
-    height: 30%;
-    
-    z-index: 130;
-    
-    
-    
-    
-}
 
-.GOOO{
-    
-    
-    color: #FFFFFF;
-    font-size: 1em;
-    animation: GOOOanima 0.2s forwards linear;
-    text-shadow:0px 0px 1px #000000, 0px 1px #000000,0px 0px 3px #FFFFFF;
-    z-index: 20;
-}
-
-@keyframes GOOOanima{
-    
-    0%{
-        
-        transform: scale(1);
-    }
-    
-    100%{
-        
-        transform: scale(10);
-               
-
-        
-    }
- 
-    
-  
-}
 .pauseResumeContainer{
     
     position: absolute;
@@ -2374,6 +2342,63 @@ color: dodgerblue;
     
     color: #4b3620;
 }
+
+
+.GOOOcontainer{
+    
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top:35%;
+    font-family:Comic Sans MS;
+    left: 0%;
+    
+    width: 100%;
+    height: 30%;
+    
+    z-index: 130;
+    
+    
+    
+    
+}
+
+.GOOO{
+    
+    
+    color: #FFFFFF;
+    font-family: Times New Roman;
+    font-size: 1em;
+    animation: GOOOanima 0.2s forwards linear;
+    text-shadow:0px 0px 1px #000000, 0px 1px #000000,0px 0px 3px #FFFFFF;
+    z-index: 20;
+}
+
+@keyframes GOOOanima{
+    
+    0%{
+        
+        transform: scale(1);
+    }
+    
+    100%{
+        
+        transform: scale(13);
+               
+
+        
+    }
+ 
+    
+  
+}
+
+
+
+
+
+
 .numReady{
     
     animation: ready 1s  infinite ease-out;
@@ -2397,15 +2422,15 @@ color: dodgerblue;
         
         
         
-        transform: scale(var(--numReady));
-        
+     //   transform: scale(var(--numReady));
+        transform: scale(4);
     }
     
     
     
     100%{
         
-       text-shadow: 0 0 0 black;
+       text-shadow: 0 0 0 white,0 0 0 white,0 0 0 white,0 0 0 white,0 0 0 white,0 0 0 white,0 0 0 white,0 0 0 white;
         
         color: black;
 

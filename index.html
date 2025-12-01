@@ -126,6 +126,7 @@
                 <option value="dragonball_super">Dragon Ball Super theme</option>
 
 
+     <option value="Bruce_Lee">Bruce Lee theme</option>
 
 
 
@@ -1886,7 +1887,7 @@ if(!localStorage.getItem("colortheme")){
 
 
 
-            if (localStorage.getItem("colortheme") === "greenish") {
+            if (localStorage.getItem("colortheme") === "greenish" ) {
 
 
 
@@ -1905,7 +1906,7 @@ if(!localStorage.getItem("colortheme")){
 
                 putinthecolorthemes("Blue", "Blueish", "dodgerblue", "blue");
 
-            } else if (localStorage.getItem("colortheme") === "whitish") {
+            } else if (localStorage.getItem("colortheme") === "blackish") {
 
 
                 profilepicBox.style.border = "solid black";
@@ -2233,8 +2234,64 @@ putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "darkblue");
 
 
 
+            }else if(localStorage.getItem("colortheme") === "Bruce_Lee"){
+                
+               // Bruceleeish
+                
+                putinthecolorthemes("Yellow", "Bruceleeish", "yellow", "gray");
+
+            barHtml.style.background = "linear-gradient(to right, #FFE900,#000000)";
+
+         // progressBarParent.style.background="";
+
+
+            startButt.style.border = "solid yellow";
+
+            setButt.style.border = "solid yellow";
+            
+            setButt.style.boxShadow = "0 0 10px 0 yellow,0 0 10px yellow,0 0 10px 0 white, 0 0 10px 0 white,0 0 10px 0 white";
+            setButt.style.opacity="0.7";
+            
+  //setButt.style.backgroundImage = "url(4starball2.png)";
+            setButt.style.borderRadius="50%";           
+            
+            setButt.style.backgroundSize = "150%";
+            setButt.style.backgroundPosition = "center";
+            setButt.style.backgroundRepeat = "no-repeat";
+            
+            setButt.style.width="120px";
+            setButt.style.height="120px";
+            numz.style.color="#FFE900"
+            secz.style.color="#FFE900"
+            barHtml.style.opacity="0.8";
+            barHtml.style.border="none";
+            
+           // #CCFF00 y #FFE900
+            navBar.style.background = "linear-gradient(to right,#CCFF00,yellow, black)";
+             musicThemeDisplay.style.textShadow="0 0 2px black,0 0 2px yellow,0 0 2px yellow";
+         if (window.innerHeight > window.innerWidth) {
+
+            global.style.background = "url(Brucelee_bg_top2.jpeg)";
+         } else {
+             global.style.background = "url(Brucelee_bg.jpeg),url(Brucelee_bg_Top.jpeg)";
+
+
+            }
+
+            global.style.backgroundSize = "100%";
+            global.style.backgroundPosition = "bottom";
+            global.style.backgroundRepeat = "no-repeat";
+            
+            document.body.style.background= "black";
+                
+                
+                
+                
+                
+                
             }
             
+}
 
 
 
@@ -2256,8 +2313,7 @@ putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "darkblue");
 
 
 
-
-        }
+        
 
 
 
@@ -2788,6 +2844,12 @@ musicTitlesArr.forEach((theme, index)=>{
                case "dragonball_super":
                     variab = 18;
                     break;
+                    
+                case "Bruce_Lee":
+                    variab = 19;
+                    break;
+                    
+              
 
 
 
@@ -3501,6 +3563,22 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
 
 
 
+    }else if (e.target.value==="Bruce_Lee"){
+        
+        localStorage.setItem("colortheme","Bruce_Lee");
+        
+        setTimeout(()=>{
+            
+            setStylesatRuntime();
+            
+            
+        },250);
+        
+        
+        
+        console.log(e.target.value,"Chupa Lefa");
+        
+        
     }
 
 
@@ -3525,7 +3603,7 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
             }
             
             
-            console.log(currentColor," lefa  color ");
+         //   console.log(currentColor," lefa  color ");
             
             if(localStorage.getItem("colortheme")!= "fullywhitish" ){
                 
@@ -3543,7 +3621,16 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
             }
             
             
-        
+        if(!localStorage(getItem)==="Bruce_Lee"){
+            
+            minz.style.color="#000000";
+            secz.style.color="#000000";
+            barHtml.style.opacity="1";
+            barHtml.style.border="solid 1px #FFFFFF";
+            
+        }
+            
+
 
 
         selectSelection.play();
@@ -5463,6 +5550,13 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
              currentTheme = "numsBlock numsBlockDragonballsuperish";
                 break;
                 
+                
+     case "Bruce_Lee":
+         
+             currentTheme = "numsBlock numsBlockBruceleeish";
+             setStylesatRuntime();
+                break;
+                
 
 
 
@@ -5697,7 +5791,7 @@ musicTheme.pause();
 
 
 
-            if (secs < initialSecs-1) {
+            if (secs < initialSecs) {
                 GOOOcontainer.style.display = "none";
 
 
@@ -6000,7 +6094,7 @@ musicTheme.pause();
 
 
             //   getreadyCountdown(transitionSecs);
-            getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "GO");
+          //  getreadyCountdown(getReadySecs, "50%", "0%", 9, "100%", "8%", global, "#FFFFFF", "hey");
 
 
 
