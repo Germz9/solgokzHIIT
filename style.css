@@ -416,6 +416,19 @@ body{
 
 }
 
+.numsBlockMiketysonish{
+    
+    
+    
+   background: linear-gradient(to bottom,darkblue,white,red,white,white,red);
+  
+    
+    border:solid 2px transparent;
+    
+}
+
+
+
 .numsBlockBruceleeish{
     
     
@@ -2075,7 +2088,7 @@ stroke-dashoffset:var(--circleCircunfirenceMinus);
     
     width:90%;
     height: 100%;
-    transform:rotate(25deg) ;
+    transform:rotate(0deg) ;
   
    
 

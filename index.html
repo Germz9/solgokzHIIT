@@ -119,6 +119,7 @@
                 <option value="orange">Orange theme</option>
 
                 <option value="tomato">Tomato theme</option>
+                
                 <option value="street_fighter">Street Fighter II theme</option>
 
                 <option value="dragonball_z">Dragon Ball Z theme</option>
@@ -126,7 +127,10 @@
                 <option value="dragonball_super">Dragon Ball Super theme</option>
 
 
-     <option value="Bruce_Lee">Bruce Lee theme</option>
+                <option value="Bruce_Lee">Bruce Lee theme</option>
+                 
+                 
+             <option value="Mike_Tyson">Mike Tyson theme</option>
 
 
 
@@ -1627,7 +1631,7 @@ let  lastplaylist=JSON.parse( localStorage.getItem("lastplaylist"));
 
 
 
-alert(`width=${window.innerWidth} leftPercent=  ${leftPercent}`);
+//alert(`width=${window.innerWidth} leftPercent=  ${leftPercent}`);
 
 
         function getreadyCountdown(transitionSecs, top, left, fontSize, width, height, realParent, getreadyColor, lastdigit) {
@@ -1940,7 +1944,6 @@ if(!localStorage.getItem("colortheme")){
            themeSelect.style.border="solid black";
                 
             global.style.background="linear-gradient(to top, lightblue,,white)";
-            
             document.body.style.background="linear-gradient(to top, lightblue, white,white)";
 
             
@@ -1953,6 +1956,11 @@ if(!localStorage.getItem("colortheme")){
 
 
                 putinthecolorthemes("White", "Whitish", "lightgrey", "white");
+                
+                
+                
+                
+            
 
 
 
@@ -2284,6 +2292,74 @@ putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "darkblue");
             global.style.backgroundRepeat = "no-repeat";
             
             document.body.style.background= "black";
+                
+                
+                
+                
+                
+                
+            }else if(localStorage.getItem("colortheme")==="Mike_Tyson"){
+                
+                
+                
+                 putinthecolorthemes("Red", "Miketysonish", "darkblue", "white");
+
+            barHtml.style.background = "linear-gradient(to right, darkred)";
+
+         // progressBarParent.style.background="";
+         progressBarParent.style.background = "white";
+         numsBlock.style.border="none";
+
+
+            startButt.style.border = "solid red";
+
+            setButt.style.border = "solid red";
+            
+            setButt.style.boxShadow = "0 0 10px 0 red,0 0 10px blue,0 0 10px 0 blue, 0 0 10px 0 white,0 0 10px 0 white";
+            setButt.style.opacity="0.7";
+            
+  //setButt.style.backgroundImage = "url(4starball2.png)";
+            setButt.style.borderRadius="50%";           
+            
+            setButt.style.backgroundSize = "150%";
+            setButt.style.backgroundPosition = "center";
+            setButt.style.backgroundRepeat = "no-repeat";
+            
+            setButt.style.background="transparent";
+            
+            setButt.style.width="120px";
+            setButt.style.height="120px";
+          numz.style.color="darkblue"
+          secz.style.color="darkblue"
+            barHtml.style.opacity="0.8";
+        //    barHtml.style.border="none";
+            
+           // #CCFF00 y #FFE900
+           
+            navBar.style.background = "linear-gradient(to bottom,white,red, black)";
+             musicThemeDisplay.style.textShadow="0 0 2px blue,0 0 2px dodgerblue,0 0 2px white";
+         if (window.innerHeight > window.innerWidth) {
+//Brucelee_bg_Top2.jpg
+ global.style.background = "url(Mike_Tyson.jpg)";
+         } else {
+             global.style.background = "url(Mike_Tyson.jpg)";
+
+
+            }
+
+            global.style.backgroundSize = "100%";
+            global.style.backgroundPosition = "bottom";
+            global.style.backgroundRepeat = "no-repeat";
+            
+            document.body.style.background= "black";
+                
+                
+                
+                               
+                
+                
+                
+                
                 
                 
                 
@@ -2842,13 +2918,18 @@ musicTitlesArr.forEach((theme, index)=>{
                     variab = 17;
                     break;
                     
-               case "dragonball_super":
+              case "dragonball_super":
                     variab = 18;
-                    break;
+                  break;
                     
                 case "Bruce_Lee":
                     variab = 19;
                     break;
+                    
+                    
+                 case "Mike_Tyson":
+                    variab = 20;
+                    break; 
                     
               
 
@@ -2988,7 +3069,13 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
 
 
 
-
+    function putindexback(){
+        
+        
+        themeSelect.selectedIndex=0;
+        
+        
+    }
 
 
 
@@ -2998,24 +3085,25 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
 
 
 
-        e.target.selectedIndex = getthemeSelected();
+       e.target.selectedIndex =getthemeSelected();
         console.log(getthemeSelected(), " mi chupa podia??? ");
+        setStylesatRuntime();
+        
+        
+        
 
 
 
-        navBar.style.background = "";
-        barHtml.style.background = "";
-        navBar.style.border = "";
 
-        startButt.style.border = "";
-        startButt.style.background = "";
-        setButt.style.border = "";
-        setButt.style.background = "";
-        navBar.style.width="";
-            navBar.style.height="";
+
             currentThemeFunc("currentTheme");
+            
+    if(running){
             setFireAnimations();
-
+    }else{
+        
+        setPauseAnimations();
+    }
 
 
 
@@ -3025,6 +3113,8 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
 
 
     themeSelect.addEventListener("change", (e)=> {
+        
+
 
 
 
@@ -3301,29 +3391,17 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
 
 
 
+    } else if (e.target.value === "orange") {
 
-        } else if (e.target.value === "orange") {
+          localStorage.setItem("colortheme", "orange");
+          
+          
+          
+          setTimeout(()=>{setStylesatRuntime();
+        
+    },100);
 
-            putinthecolorthemes("Orange", "Orangeish", "orange", "orange");
-
-            if (window.innerHeight > window.innerWidth) {
-
-                document.body.style.background = "url(orangeVertical.jpg)";
-            } else {
-                document.body.style.background = "url(orangeLandscape.jpg)";
-
-
-            }
-
-            document.body.style.backgroundSize = "cover";
-
-            volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
-
-
-
-            localStorage.setItem("colortheme", "orange");
-
-            console.log("orange theme")
+        
 
 
 
@@ -3333,240 +3411,106 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
 
 
         } else if (e.target.value === "tomato") {
-
-            putinthecolorthemes("Red", "Tomatoeish", "red", "red");
-
-
-            barHtml.style.background = "linear-gradient(to right,green,red,red,orange, white)"
-
-            startButt.style.border = "solid green";
-
-            setButt.style.border = "solid green";
-
-
-            navBar.style.background = "linear-gradient(to right,green,#8B0000,red)";
-
-
-            //   musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-            if (window.innerHeight > window.innerWidth) {
-
-                document.body.style.background = "url(tomatoVertical.jpg)";
-            } else {
-                document.body.style.background = "url(tomatoLandscape.jpg)";
-
-
-            }
-
-            document.body.style.backgroundSize = "cover";
-
-            volumeButt.style.backgroundImage = "url(volumeIconBlack.jpg)";
-
-
-
-            localStorage.setItem("colortheme", "tomato");
-
-            console.log("tomato theme")
-
-        } else if (e.target.value === "street_fighter") {
             
-        new Audio("soryuken.mp3").play();
-        
-        
-        setTimeout(()=>{
             
-            new Audio("tatsumakisenpukyaku.mp3").play();
+        localStorage.setItem("colortheme", "tomato");
+
+    setTimeout(()=>{setStylesatRuntime();
+        
+    },100);
+            
+            
+            
+            
+
+ } else if (e.target.value === "street_fighter") {
+            
+ new Audio("soryuken.mp3").play();
+
+setTimeout(()=>{
+            
+  new Audio("tatsumakisenpukyaku.mp3").play();
             
         },500);
             
           
             
-            putinthecolorthemes("Yellow", "Streetfightish", "red", "red");
+//  clickThemeAnimation("gokudbzselection.gif", "140%", "0%",1800);  
 
 
- //    clickThemeAnimation("Ken.gif", "300px", "0%","40%",1500,"0.9");
+//    clickThemeAnimation("Ken.gif", "300px", "0%","40%",1500,"0.9");
+
 clickThemeAnimation("Ken_shoryuken.webp", "800px", "0%","25%",1400,"1",false,"300");
-
-
 
 clickThemeAnimation("Ryu_hadouken.gif","600px","0%","75%",2000,"1",true,"300");
 
+localStorage.setItem("colortheme", "street_fighter");
+
 clickThemeAnimation("Kens_kick_combo.webp","600px","0%","30%",2500,"1",false,"305");
+    
+clickThemeAnimationBG("Ryuguard.gif","cover",2500,"-10%","0","125%","115%","0.8");     
 
-
-            barHtml.style.background = "red";
-
-            progressBarParent.style.background = "yellow";
-
-            startButt.style.border = "solid orange";
-
-            setButt.style.border = "solid orange";
-            navBar.style.background = "linear-gradient(to right,#8B0000,orange)";
-            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-            if (window.innerHeight > window.innerWidth) {
-
-                global.style.background = "url(SF2bg.jpg)";
-            } else {
-                global.style.background = "url(SF2bg.jpg)";
-
-
-            }
-
-            global.style.backgroundSize = "100%";
-            global.style.backgroundPosition = "center center";
-            global.style.backgroundRepeat = "no-repeat";
-
-            localStorage.setItem("colortheme", "street_fighter");
-
-            console.log("street fighter color theme");
-            
-   
-            
-            
-//clickThemeAnimationBG("Kens_kick_combo.webp","60%",1800,"0%","-10%","100%","100%","60");
-                        
-   clickThemeAnimationBG("Ryuguard.gif","cover",2500,"-10%","0","125%","115%","0.8");     
-
-            
+ setTimeout(()=>{setStylesatRuntime();},100);
             
             
 
+       
+       
+       
         } else if (e.target.value === "dragonball_z") {
             
- //  clickThemeAnimation("gokudbzselection.gif", "140%", "0%",1800);
-            
-putinthecolorthemes("Blue", "Dragonballzish", "blue", "darkblue");
+ //clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height) {   
 
-            barHtml.style.background = "linear-gradient(to right, darkblue,dodgerblue,orange)";
-
-          progressBarParent.style.background="transparent";
-
-
-            startButt.style.border = "solid red";
-
-            setButt.style.border = "solid blue";
-            
-            setButt.style.boxShadow = "0 0 10px 0 dodgerblue,0 0 10px dodgerblue,0 0 10px 0 dodgerblue, 0 0 10px 0 white,0 0 10px 0 white";
-            setButt.style.opacity="0.8";
-            
-  setButt.style.backgroundImage = "url(4starball2.png)";
-            setButt.style.borderRadius="50%";           
-            
-            setButt.style.backgroundSize = "150%";
-            setButt.style.backgroundPosition = "center";
-            setButt.style.backgroundRepeat = "no-repeat";
-            
-            setButt.style.width="120px";
-            setButt.style.height="120px";
-            
-            
-            
-            navBar.style.background = "linear-gradient(to right,darkblue, dodgerblue,red,orange, yellow)";
-            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-            if (window.innerHeight > window.innerWidth) {
-
-                global.style.background = "url(DbzBG.jpg)";
-            } else {
-                global.style.background = "url(DbzBG.jpg)";
-
-
-            }
-
-            global.style.backgroundSize = "100%";
-            global.style.backgroundPosition = "center";
-            global.style.backgroundRepeat = "no-repeat";
-
-            //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-
-
-     
-
-localStorage.setItem("colortheme", "dragonball_z");
-
-            console.log("Dragon Ball Z color theme");
-
-    new Audio("dbzthemeclici.mp3").play();
+  new Audio("dbzthemeclici.mp3").play();
 
 clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%");
+     
 
+    localStorage.setItem("colortheme","dragonball_z");
+    
+    setTimeout(()=>{setStylesatRuntime();
+        
+    },100);
 
+        
 
-//clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height) {
+    
 
-
-
-
-
-    }else if (e.target.value === "dragonball_super") {
+   }else if (e.target.value === "dragonball_super") {
             
   // clickThemeAnimation("gokudbzselection.gif", "140%", "0%",1800);
             
-            
-     new Audio("dbsthemeclick.mp3").play();
-putinthecolorthemes("Blue", "Dragonballsuperish", "blue", "dodgerblue");
+  //  clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height) {   
 
-            barHtml.style.background = "linear-gradient(to right, darkblue,dodgerblue,orange)";
-
-       //   progressBarParent.style.background="";
+         new Audio("dbsthemeclick.mp3").play();
 
 
-            startButt.style.border = "solid red";
-
-            setButt.style.border = "solid blue";
-            
-            setButt.style.boxShadow = "0 0 10px 0 dodgerblue,0 0 10px dodgerblue,0 0 10px 0 dodgerblue, 0 0 10px 0 white,0 0 10px 0 white";
-            setButt.style.opacity="0.8";
-            
-  setButt.style.backgroundImage = "url(4starball2.png)";
-            setButt.style.borderRadius="50%";           
-            
-            setButt.style.backgroundSize = "150%";
-            setButt.style.backgroundPosition = "center";
-            setButt.style.backgroundRepeat = "no-repeat";
-            
-            setButt.style.width="120px";
-            setButt.style.height="120px";
-            
-            
-            
-            navBar.style.background = "linear-gradient(to right,darkblue, dodgerblue, white,white,white)";
-            //  musicThemeDisplay.style.textShadow="0 0 2px orange,0 0 2px yellow,0 0 2px yellow";
-            if (window.innerHeight > window.innerWidth) {
-
-                global.style.background = "url(dbsBG.jpg)";
-            } else {
-                global.style.background = "url(dbsBG.jpg)";
-
-
-            }
-
-            global.style.backgroundSize = "cover";
-            global.style.backgroundPosition = "center";
-            global.style.backgroundRepeat = "no-repeat";
-
-            //    volumeButt.style.backgroundImage="url(volumeIconBlack.jpg)";
-
-
-     
-
-localStorage.setItem("colortheme", "dragonball_super");
-
-            console.log("Dragon Ball suoeper color theme");
+     clickThemeAnimationBG("dbsmode.gif","100%",2000,"0%","-55%","145%","125%");
+    
+     localStorage.setItem("colortheme", "dragonball_super");
 
 
 
 
-clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
-
-
-
-
-
-
-
-
-    }else if (e.target.value==="Bruce_Lee"){
+  }else if (e.target.value==="Bruce_Lee"){
         
         localStorage.setItem("colortheme","Bruce_Lee");
+        
+        setTimeout(()=>{
+            
+            setStylesatRuntime();
+            
+            
+        },250);
+        
+        
+        
+    
+        
+        
+    }else if(e.target.value==="Mike_Tyson"){
+        
+        localStorage.setItem("colortheme","Mike_Tyson");
         
         setTimeout(()=>{
             
@@ -3581,6 +3525,7 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
         
         
     }
+    navBar.style.background="";
 
 
         if (localStorage.getItem("colortheme") != "street_fighter") {
@@ -3588,7 +3533,7 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
             
         
             
-            if(localStorage.getItem("colortheme")!= "dragonball_z" || localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "street_fighter" ||localStorage.getItem("colortheme")!= "fullywhitish" ){
+     if(localStorage.getItem("colortheme")!= "dragonball_z" || localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "street_fighter" ||localStorage.getItem("colortheme")!= "fullywhitish" || localStorage.getItem("colortheme")!= "Bruce_Lee"|| localStorage.getItem("colortheme")!="Mike_Tyson"){
                 
            global.style.background="transparent";
                 
@@ -3597,14 +3542,25 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
             }
             
             
-            if(localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "dragonball_z"){
+            if(localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "dragonball_z" ||
+            localStorage.getItem("colortheme")!= "Bruce_Lee" ||
+            localStorage.getItem("colortheme")!= "Mike_Tyson" )
+            
+            {
                 
                 
              setButt.style.boxShadow="0 0 5px 2px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5px 0px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5pc 0px var(--waiting-color), 0 0 5px 0px var(--waiting-color)";
+             setButt.style.background="";
+             barHtml.style.background="";
+           //  setButt.className=""
+             
+             
+             
+             
             }
             
             
-         //   console.log(currentColor," lefa  color ");
+         
             
             if(localStorage.getItem("colortheme")!= "fullywhitish" ){
                 
@@ -3622,12 +3578,21 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
             }
             
             
-        if(!localStorage(getItem)==="Bruce_Lee"){
+        if(!localStorage.getItem("colortheme")==="Bruce_Lee"){
             
             minz.style.color="#000000";
             secz.style.color="#000000";
             barHtml.style.opacity="1";
             barHtml.style.border="solid 1px #FFFFFF";
+            
+        }else if(!localStorage.getItem("colortheme")==="Mike_Tyson"){
+            
+                        minz.style.color="#000000";
+            secz.style.color="#000000";
+    
+            
+                     progressBarParent.style.background = "transparent";
+         numsBlock.style.border="solid 1px white";
             
         }
             
@@ -3635,9 +3600,18 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
 
 
         selectSelection.play();
+         e.target.selectedIndex =0;
+        
+        setTimeout(()=>{
+            
+      //    e.target.selectedIndex = 0;
+          putindexback();
+            
+            
+        },100);
 
 
-        e.target.selectedIndex = "0";
+
         
         
         
@@ -3648,6 +3622,9 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
         
 
     });
+    
+    
+    
   let tempaudio= new Audio("kachidaze.mp3");
 
     console.log(localStorage.getItem("mylefà"), " es lefa????");
@@ -5558,6 +5535,15 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
              setStylesatRuntime();
                 break;
                 
+ 
+ case "Mike_Tyson":
+         
+             currentTheme = "numsBlock numsBlockMiketysonish";
+             setStylesatRuntime();
+                break;               
+                
+                
+                
 
 
 
@@ -5577,95 +5563,14 @@ clickThemeAnimationBG("dbsmode.gif","100%",2900,"0%","-65%","145%","125%");
 
 
 
-let isReversedNeeded=false;
-function setFireAnimations(){
-    
-    if(isReversedNeeded===true) {
-       fireAnima2Wrap.style.transform="rotateY(0deg)";
-        
-        isReversedNeeded=false;
-        
-   }
-    
-              if(localStorage.getItem("colortheme")==="dragonball_z"){
-                       
-                fireAnima2.src="gokussj.gif"; 
-                      fireAnima2Wrap.style.left="30%";
-                      
-                    fireAnima2Wrap.style.bottom="2%";
-                      
-                      fireAnima2Wrap.style.opacity="0.9";
-                      
-                      fireAnima2Wrap.style.height="55%";
-                      
-                     fireAnima.src = "fireball.gif";
-                fireAnima.style.transform = "rotate(25deg)";
-                       
-     }else if(localStorage.getItem("colortheme")==="dragonball_super"){
-                       
-                    
-      fireAnima2.src="GokuUi (1).gif"; 
-       fireAnima2Wrap.style.left="30%";
-                      
-      fireAnima2Wrap.style.bottom="-1%";
-                      
-      fireAnima2Wrap.style.opacity="0.7";
-                      
-      fireAnima2Wrap.style.height="59%";
-                          
-     fireAnima2Wrap.style.left="0%";
-                       
-       fireAnima.src = "fireball.gif";
-                fireAnima.style.transform = "rotate(25deg)";                
-                       
-                       
-                   }else if(localStorage.getItem("colortheme")==="street_fighter"){
-                       
-                       
-                       
-                       fireAnima2.src="chunli_lightning_kick.gif"; 
-       fireAnima2Wrap.style.left="10%";
-                      
-      fireAnima2Wrap.style.bottom="0%";
-      fireAnima2Wrap.style.transform="rotateY(180deg)";
-      
-      isReversedNeeded=true;
-      
-      
-        fireAnima.src = "Ryu_tatsumakisenpukyaku.webp";
-                    
-                
-                    
-               fireAnima.style.transform = "rotate(0deg) scale(2.5) translateX(-15%) translateY(-10%)"; 
-                      
-      fireAnima2Wrap.style.opacity="0.9";
-                      
-      fireAnima2Wrap.style.height="59%";
-                          
-    // fireAnima2Wrap.style.left="0%";
-                       
-                       
-                       
 
-                   }
-                   
-                   else{
-                       
-                      fireAnima2.src="fyah.gif"; 
-                        
-                       fireAnima2Wrap.style.left="50%";
-                      
-                      fireAnima2Wrap.style.bottom="0%";
-                      
-                      fireAnima2Wrap.style.opacity="1";
-                      
-        
-         
-    fireAnima.src = "fireball.gif";
-                fireAnima.style.transform = "rotate(25deg)";
-                      fireAnima2Wrap.style.height="80%";
-                   }     
-}
+
+
+
+
+
+
+
 
     let transGo = false;
 
@@ -6348,25 +6253,14 @@ setTimeout(()=> {
                 waitingrunning.innerText = "P A U S E D";
                 
                 
-                
-                if(localStorage.getItem("colortheme")==="dragonball_z"){
+                setPauseAnimations();
 
-
-                fireAnima.src = "gokusleepn.gif";
-                    
-                }else{
-                    fireAnima.src = "sleepingbearPause.gif";
-                    
-                }
-                fireAnima.style.transform = "scale(0.4)translate(-30%,-50%)";
-                fireAnima2.src = "SnowPause.gif";
                 break;
 
             case 1:
                 running = true;
-                fireAnima.src = "fireball.gif";
-                fireAnima.style.transform = "rotate(25deg)";
-                
+        //   fireAnima.src = "fireball.gif";
+
                 
                 
                 
@@ -6457,7 +6351,176 @@ setTimeout(()=> {
 
 
 
+let isReversedNeeded=false;
 
+function setFireAnimations(){
+    
+    if(isReversedNeeded===true) {
+       fireAnima2Wrap.style.transform="rotateY(0deg)";
+        
+        isReversedNeeded=false;
+        
+   }
+    
+              if(localStorage.getItem("colortheme")==="dragonball_z"){
+                       
+                fireAnima2.src="gokussj.gif"; 
+                      fireAnima2Wrap.style.left="30%";
+                      
+                    fireAnima2Wrap.style.bottom="2%";
+                      
+                      fireAnima2Wrap.style.opacity="0.9";
+                      
+                      fireAnima2Wrap.style.height="55%";
+                      
+                     fireAnima.src = "fireball.gif";
+                fireAnimaWrap.style.transform = "rotate(25deg)";
+                       
+                       
+        fireAnima2Wrap.style.transform = "scale(1)";
+        
+        
+     }else if(localStorage.getItem("colortheme")==="dragonball_super"){
+                
+                
+    fireAnima2Wrap.style.transform = "scale(1)";       
+                    
+      fireAnima2.src="GokuUi (1).gif"; 
+       fireAnima2Wrap.style.left="30%";
+                      
+      fireAnima2Wrap.style.bottom="-1%";
+                      
+      fireAnima2Wrap.style.opacity="0.7";
+                      
+      fireAnima2Wrap.style.height="59%";
+                          
+     fireAnima2Wrap.style.left="0%";
+                       
+       fireAnima.src = "fireball.gif";
+                fireAnimaWrap.style.transform = "rotate(25deg)";                
+                       
+                       
+                   }else if(localStorage.getItem("colortheme")==="street_fighter"){
+                       
+                       
+                       
+                       fireAnima2.src="chunli_lightning_kick.gif"; 
+       fireAnima2Wrap.style.left="10%";
+                      
+      fireAnima2Wrap.style.bottom="0%";
+      fireAnima2Wrap.style.transform="rotateY(180deg)";
+      
+      isReversedNeeded=true;
+      
+      
+        fireAnima.src = "Ryu_tatsumakisenpukyaku.webp";
+                    
+                
+                    
+               fireAnimaw.style.transform = "rotate(0deg) scale(2.5) translateX(-15%) translateY(-10%)"; 
+                      
+      fireAnima2Wrap.style.opacity="0.9";
+                      
+      fireAnima2Wrap.style.height="59%";
+                          
+    // fireAnima2Wrap.style.left="0%";
+                       
+                   }         
+                       
+    else if(localStorage.getItem("colortheme")==="Mike_Tyson"){
+    
+    
+                        
+      fireAnima.src="Mike_Tyson.gif"; 
+      fireAnimaWrap.style.opacity="0.7";
+      fireAnimaWrap.style.transform="scale(1.3) translateX(5%) translateY(1%) rotate(0deg)";      
+      fireAnima2Wrap.style.transform="scale(0.01)";
+     
+
+                       
+     //  fireAnima.src = "fireball.gif";
+             //   fireAnima.style.transform = "rotate(0deg)";                
+    
+    
+    
+
+
+    }  
+                   else{
+                       
+             fireAnima2.src="fyah.gif"; 
+                        
+          fireAnima2Wrap.style.left="50%";
+                      
+         fireAnima2Wrap.style.bottom="0%";
+               
+            fireAnima2Wrap.style.height="80%";
+                      
+             fireAnima2Wrap.style.opacity="1";
+         fireAnima2Wrap.style.transform="scale(1)";
+         
+         
+        fireAnimaWrap.style.opacity="1";
+         
+    fireAnima.src = "fireball.gif";
+                fireAnimaWrap.style.transform = "rotate(25deg)";
+                      
+                   }     
+}
+
+
+
+
+
+ function setPauseAnimations(){
+      
+      
+                      if(localStorage.getItem("colortheme")==="dragonball_z"){
+
+
+                fireAnima.src = "gokusleepn.gif";
+                
+          fireAnima2.src = "SnowPause.gif";
+    fireAnimaWrap.style.transform="scale(0.4) translate(-30%,-50%) rotate(0deg)"; 
+                          
+          fireAnimaWrap.style.opacity="1";   
+                      
+      
+                    
+             }else if(localStorage.getItem("colortheme")==="Mike_Tyson"){
+                 
+                 fireAnima2Wrap.style.left="50%";
+                 
+                 fireAnima2Wrap.style.bottom="0%";
+                 
+                 
+                 fireAnima2Wrap.style.height="80%";
+                 
+    fireAnima2.src="gomike.gif";
+    fireAnima2Wrap.style.zIndex="0";
+     fireAnima2Wrap.style.transform="scaleY(0.7) translateX(-50%) translateY(18%)";
+         fireAnima2Wrap.style.opacity="0.8";
+                    
+                                        
+    fireAnima.src = "sleepingbearPause.gif";
+                                        
+     fireAnimaWrap.style.transform="scale(0.4) translate(-30%,-210%) rotate(0deg)";
+     
+     fireAnimaWrap.style.opacity="1";
+                    
+       fireAnimaWrap.style.zIndex="10";
+                    
+                    }else{
+                    fireAnima.src = "sleepingbearPause.gif";
+            fireAnima2Wrap.style.transform="scale(1) translateX(0%) translateY(0%)";
+                                    
+      
+                    
+                    
+                fireAnimaWrap.style.transform = "scale(0.4) translate(-30%,-50%) rotate(0deg)";
+                fireAnima2.src = "SnowPause.gif";}
+      
+  }
 
 
 </script>
