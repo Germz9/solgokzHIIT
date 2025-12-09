@@ -160,8 +160,20 @@
 
 
     <div class="mainBlock">
+        
+                    <div class="setsLeftWrap">
+        <h1 class="setsLeft">0</h1>
+
+
+    </div>
+    
+    
+        <canvas class="myCanvas">
+
+    </canvas>
 
         <div class="numsBlock">
+
 
 
             <h1 class="mins nums">00</h1>
@@ -231,11 +243,7 @@
 
     </div>
 
-    <div class="setsLeftWrap">
-        <h1 class="setsLeft">0</h1>
 
-
-    </div>
 
 
     <svg class="svg">
@@ -250,9 +258,7 @@
 
 
 
-    <canvas class="myCanvas">
 
-    </canvas>
 </div>
 
 
@@ -1919,13 +1925,15 @@ if(!localStorage.getItem("colortheme")){
                 profilepic.style.border = "solid black 0.5px";
 
 
-                username.style.color = "black";
+                username.style.color = "white";
+                
+                hiit.style.color="white";
 
 
 
 
 
-                putinthecolorthemes("White", "Whitish", "lightgrey", "white");
+                putinthecolorthemes("Black", "blackish", "darkgrey", "black");
 
 
 
@@ -1937,7 +1945,7 @@ if(!localStorage.getItem("colortheme")){
                 profilepic.style.border = "solid black 0.5px";
 
 
-                username.style.color = "black";
+                username.style.color = "white";
                 
            musicSelect.style.border="solid black";
            
@@ -1955,7 +1963,7 @@ if(!localStorage.getItem("colortheme")){
 
 
 
-                putinthecolorthemes("White", "Whitish", "lightgrey", "white");
+                putinthecolorthemes("White", "Whitish", "white", "white");
                 
                 
                 
@@ -2001,10 +2009,10 @@ if(!localStorage.getItem("colortheme")){
 
                 putinthecolorthemes("Brown", "Brownish", "#4b3620", "#4b3620");
 
-            } else if (localStorage.getItem("colortheme") === "blackish") {
+            } else if (localStorage.getItem("colortheme") === "whitish") {
                 hiit.style.color="white";
 
-                putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
+                putinthecolorthemes("White", "Whitish", "lightblue", "white");
 
             } else if (localStorage.getItem("colortheme") === "lemon") {
 
@@ -3319,10 +3327,18 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
         } else if (e.target.value === "blackish") {
 
 
-            putinthecolorthemes("Black", "Blackish", "black", "darkgrey");
+            
 
             localStorage.setItem("colortheme", "blackish");
             hiit.style.color="white";
+            
+            
+            
+            
+            setTimeout(()=>{
+                
+                setStylesatRuntime();
+            },100);
 
 
 
@@ -3495,6 +3511,12 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
   }else if (e.target.value==="Bruce_Lee"){
         
         localStorage.setItem("colortheme","Bruce_Lee");
+        new Audio("Bruce_Lee_sound.mp3").play();
+ clickThemeAnimationBG("Bruce_Lee_click.gif","100%",2000,"0%","-5%","100%","100%");
+ 
+ setTimeout(()=>{
+     clickThemeAnimation("Bruce_Lee_punching.gif","600px","0%","60%",2000,"1",false,"305");
+ },1900);
         
         setTimeout(()=>{
             
@@ -3755,6 +3777,11 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
 
         exitIcon.src = "exit-icon.png";
 
+        if (localStorage.getItem("colortheme") === "whitish" || localStorage.getItem("colortheme")==="fullywhitish") {
+
+            setWrap.style.background="linear-gradient(to right,lightblue,white)";
+        }
+
 
 
 
@@ -3764,7 +3791,12 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
             navSet.className = "navSet navSetGreen";
 
 
-        } else if (localStorage.getItem("colortheme") === "blueish") {
+        }else if (localStorage.getItem("colortheme") === "blackish") {
+
+            navSet.className = "navSet navSetBlack";
+
+
+       } else if (localStorage.getItem("colortheme") === "blueish") {
 
             navSet.className = "navSet navSetBlue";
 
@@ -3844,7 +3876,18 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
             navSet.className = "navSet navSetOrange";
 
 
+        }else if (localStorage.getItem("colortheme") === "Bruce_Lee") {
+
+            navSet.className = "navSet navSetYellow";
+
+
+        }else if (localStorage.getItem("colortheme") === "Mike_Tyson") {
+
+            navSet.className = "navSet navSetRed";
+
+
         }
+        
         
 
 
@@ -3885,7 +3928,12 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
             acceptSetButt.className = "acceptSetButt acceptSetButtGreen";
 
 
-        } else if (localStorage.getItem("colortheme") === "blueish") {
+        }else if (localStorage.getItem("colortheme") === "blackish") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtBlack";
+
+
+        }else if (localStorage.getItem("colortheme") === "blueish") {
 
             acceptSetButt.className = "acceptSetButt acceptSetButtBlue";
 
@@ -3947,6 +3995,12 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
         }else if (localStorage.getItem("colortheme") === "fullywhitish") {
 
             acceptSetButt.className = "acceptSetButt acceptSetButtWhite";
+        }else if (localStorage.getItem("colortheme") === "Bruce_Lee") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtYellow";
+        }else if (localStorage.getItem("colortheme") === "Mike_Tyson") {
+
+            acceptSetButt.className = "acceptSetButt acceptSetButtRed";
         }
 
 
@@ -6333,7 +6387,7 @@ setTimeout(()=> {
         fireAnima2Wrap.style.display = "none";
         fireAnima2.style.display = "none";
         fireAnima.src = "fireball.gif";
-        fireAnima.style.transform = "rotate(25deg)";
+     //   fireAnima.style.transform = "rotate(25deg)";
         fireAnima2.src = "fyah.gif";
         secs = 0;
         mins = 0;
@@ -6417,7 +6471,7 @@ function setFireAnimations(){
                     
                 
                     
-               fireAnimaw.style.transform = "rotate(0deg) scale(2.5) translateX(-15%) translateY(-10%)"; 
+               fireAnimaWrap.style.transform = "rotate(0deg) scale(2.5) translateX(-10%) translateY(-10%)"; 
                       
       fireAnima2Wrap.style.opacity="0.9";
                       

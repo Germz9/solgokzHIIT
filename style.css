@@ -365,6 +365,7 @@ body{
 
 
 .mainBlock {
+    position: relative;
 
 
 
@@ -390,6 +391,7 @@ body{
     
 }
 .numsBlock {
+    position: relative;
 
 
     display: flex;
@@ -1280,7 +1282,7 @@ background: linear-gradient(to right, lightblue,white)
     border: solid 1px var(--waiting-color);
     outline: solid;
     outline-color: #FFFFFF;
-    background: linear-gradient(to right,darkgrey,#000000);
+    background: linear-gradient(to right,var(--waiting-color),#000000);
     
     transform: scale(1);
     
@@ -1392,8 +1394,8 @@ background: linear-gradient(to right, lightblue,white)
 
 .navSetWhite{
     
-    background: linear-gradient(to right, lightblue,#FFFFFF);
-    
+ //   background: linear-gradient(to right, //lightblue,#FFFFFF);
+    background: white;
     
 }
 
@@ -2521,19 +2523,22 @@ color: dodgerblue;
 .setsLeftWrap{
     display: none;
    
-    justify-content: center;
-    align-items: center;
-    
+ //   justify-content: center;
+   // align-items: center;
+   //  top: calc( 10% + 82px);
     
     position: absolute;
     
-    left: 49%;
+  left: 50%;
+  bottom:0%;
+  
+  
     transform: translateX(-50%);
-    top: calc( 10% + 82px);
-    width:9% ;
-    height: 45px;
-    border-bottom: solid transparent;//var(--waiting-color);
    
+    width:9% ;
+   height: 120px;
+    border-bottom: solid transparent;//var(--waiting-color);
+   z-index: 1000;
     
 }
 
@@ -2545,7 +2550,7 @@ color: dodgerblue;
     font-weight: bold;
     transform: translateX(-50%);
     left:50%;
-    bottom: -3px;
+    bottom:calc(0% + 10px);
     
     text-shadow: 0 0 3px #FFFFFF, 0 0 1px #FFFFFF, 0 0 2px #FFFFFF ,0 0 1px #FFFFFF, 0 0 2px #FFFFFF;
     
@@ -2553,12 +2558,19 @@ color: dodgerblue;
     color:#000000;// var(--waiting-color);
 }
 .setsLeft{
-    
+    position: absolute;
     font-family: topNums;
-    font-size: 2rem;
+    font-size: 2em;
     color: var(--waiting-color);
     text-shadow: 0 0 2px #000000,0 0 2px #FFFFFF,0 0 2px #000000,0 0 2px #FFFFFF,0 0 2px #000000;
-    align-content: center;
+  //  align-content: center;
+    
+    
+  left: 50%;
+  bottom:calc(0% - 0px);
+  
+  
+    transform: translateX(-50%);
 
 }
 
@@ -2586,9 +2598,13 @@ color: dodgerblue;
 .myCanvas{
     display: none;
     position: absolute;
-    top: calc( 10% + 70px);
-    left: 49%;
-    transform: translateX(-50%);
+  
+    left: 50%;
+   top:calc( 50% - 15px);
+  
+  
+    transform: translate(-50%,-50%);
+    
     z-index: 100;
     
 }
