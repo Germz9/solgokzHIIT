@@ -2962,6 +2962,9 @@ musicTitlesArr.forEach((theme, index)=>{
         
         
         function clickThemeAnimationBG(bgname,bgsize,seconds,left,top,width,height,opacity,zIndex="250") {
+            
+            
+            if(!running){
             global.style.display="none";
             let animation = document.createElement("img");
             
@@ -3013,13 +3016,19 @@ musicTitlesArr.forEach((theme, index)=>{
         },
             seconds);
 
-
+}else{
+    
+    return;
+}
     }
 
 
 
 
         function clickThemeAnimation(path, width, topPercent,leftPercent,seconds,opacity,turnaround,zindex="250") {
+            
+            
+            if(!running){
 
             let animation = document.createElement("img");
 
@@ -3072,7 +3081,11 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
         },
             seconds);
 
-
+}else{
+    
+    
+    return;
+}
     }
 
 
@@ -3095,6 +3108,13 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
 
        e.target.selectedIndex =getthemeSelected();
         console.log(getthemeSelected(), " mi chupa podia??? ");
+        
+        setButt.style.background="";
+        setButt.style.border="";
+        setButt.style.boxShadow="";
+        startButt.style.border="";
+       barHtml.style.background="";
+         
         setStylesatRuntime();
         
         
@@ -3338,7 +3358,7 @@ animation.style.transform = "translateX(-50%) rotateY(180deg) ";
             setTimeout(()=>{
                 
                 setStylesatRuntime();
-            },100);
+            },250);
 
 
 
@@ -3515,7 +3535,7 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
  clickThemeAnimationBG("Bruce_Lee_click.gif","100%",2000,"0%","-5%","100%","100%");
  
  setTimeout(()=>{
-     clickThemeAnimation("Bruce_Lee_punching.gif","600px","0%","60%",2000,"1",false,"305");
+     clickThemeAnimation("Bruce_Lee_punching.gif","600px","0%","60%",1500,"1",false,"305");
  },1900);
         
         setTimeout(()=>{
@@ -3564,9 +3584,10 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
             }
             
             
-            if(localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "dragonball_z" ||
+        /*    if(localStorage.getItem("colortheme")!= "dragonball_super" || localStorage.getItem("colortheme")!= "dragonball_z" ||
             localStorage.getItem("colortheme")!= "Bruce_Lee" ||
-            localStorage.getItem("colortheme")!= "Mike_Tyson" )
+            localStorage.getItem("colortheme")!= "Mike_Tyson"  ||
+           localStorage.getItem("colortheme") != "blackish" ) 
             
             {
                 
@@ -3574,15 +3595,14 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
              setButt.style.boxShadow="0 0 5px 2px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5px 0px var(--waiting-color), 0 0 5px 2px var(--waiting-color), 0 0 5pc 0px var(--waiting-color), 0 0 5px 0px var(--waiting-color)";
              setButt.style.background="";
              barHtml.style.background="";
-           //  setButt.className=""
+         //   setButt.className="";
              
              
              
              
-            }
+            }*/
             
             
-         
             
             if(localStorage.getItem("colortheme")!= "fullywhitish" ){
                 
@@ -3692,7 +3712,11 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
         let br = document.createElement("br");
 
 
-
+        let numsRowWrap = document.createElement("div");
+        
+       let  numsRowWrapNav = document.createElement("div");
+        
+        
 
 
         let numsRow = document.createElement("div");
@@ -3774,6 +3798,8 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
         backShadow.className = "backShadow";
         setWrap.className = "setWrap";
         exitIcon.className = "exitIcon";
+        numsRowWrap.className="numsRowWrap";
+        numsRowWrapNav.className="numsRowWrapNav";
 
         exitIcon.src = "exit-icon.png";
 
@@ -3794,6 +3820,11 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
         }else if (localStorage.getItem("colortheme") === "blackish") {
 
             navSet.className = "navSet navSetBlack";
+          numsRowWrap.style.background="black";
+          
+          
+          numsRowWrap.style.opacity="0.5";
+
 
 
        } else if (localStorage.getItem("colortheme") === "blueish") {
@@ -3878,7 +3909,9 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
 
         }else if (localStorage.getItem("colortheme") === "Bruce_Lee") {
 
-            navSet.className = "navSet navSetYellow";
+            navSet.className = "navSet navSetBlack";
+            
+            
 
 
         }else if (localStorage.getItem("colortheme") === "Mike_Tyson") {
@@ -4083,14 +4116,18 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
 
         setWrap.appendChild(navSet);
         setWrap.appendChild(br);
-        setWrap.appendChild(numsRow);
-        setWrap.appendChild(numsRow2);
-        setWrap.appendChild(numsRow3);
-        setWrap.appendChild(numsRow4);
+        setWrap.appendChild(numsRowWrap);
+        
+        numsRowWrap.appendChild(numsRowWrapNav);
+        numsRowWrap.appendChild(numsRow);
+        numsRowWrap.appendChild(numsRow);
+        numsRowWrap.appendChild(numsRow2);
+        numsRowWrap.appendChild(numsRow3);
+        numsRowWrap.appendChild(numsRow4);
         //   setWrap.appendChild(numsRow7);
         //  setWrap.appendChild(numsRow8);
-        setWrap.appendChild(numsRow6);
-        setWrap.appendChild(numsRow5);
+        numsRowWrap.appendChild(numsRow6);
+        numsRowWrap.appendChild(numsRow5);
 
         setWrap.appendChild(exitIcon);
 
@@ -4820,7 +4857,14 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
 
 
 
-        } else if (localStorage.getItem("colortheme") === "blueish") {
+        }else if (localStorage.getItem("colortheme") === "blackish") {
+
+            topBar.className = "topBartimeup topBartimeupBlack";
+
+
+
+        } 
+        else if (localStorage.getItem("colortheme") === "blueish") {
 
 
             topBar.className = "topBartimeup topBartimeupBlue";
@@ -4896,6 +4940,18 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
 
             topBar.className = "topBartimeup topBartimeupWhite";
 
+        }else if (localStorage.getItem("colortheme") === "Bruce_Lee") {
+
+
+            topBar.className = "topBartimeup topBartimeupBlack";
+             accept.className="acceptButt acceptButtYellow";
+
+        }else if (localStorage.getItem("colortheme") === "Mike_Tyson") {
+
+
+            topBar.className = "topBartimeup topBartimeupRed";
+            accept.className=" acceptButt acceptButtRed";
+
         }
 
 
@@ -4912,7 +4968,13 @@ clickThemeAnimationBG("gokudbzselection.gif","100%",1800,"0%","25%","130%","165%
 
 
 
-        } else if (localStorage.getItem("colortheme") === "blueish") {
+        } else if (localStorage.getItem("colortheme") === "blackish") {
+
+         accept.className = "acceptButt acceptButtBlack";
+
+
+        } 
+        else if (localStorage.getItem("colortheme") === "blueish") {
 
             accept.className = "acceptButt acceptButtBlue";
 
@@ -6408,7 +6470,7 @@ setTimeout(()=> {
 let isReversedNeeded=false;
 
 function setFireAnimations(){
-    
+
     if(isReversedNeeded===true) {
        fireAnima2Wrap.style.transform="rotateY(0deg)";
         
